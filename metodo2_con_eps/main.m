@@ -11,8 +11,8 @@ Km=0.8031 * 70;
 n=1.32;
 MC=10000;
 Ti=84;
-%Test=[0:0.02:10];
-%Test(end+1:end+301)=10;1
+Test=[0:0.02:10];
+Test(end+1:end+301)=10;1
 
 Test_cost=7;
 
@@ -23,49 +23,54 @@ S=1;
 
 Tamb0=20;
 
-tu=70;
+
+
 %% simulazione
+Gp=300;
 
-[T,X]=ode45(@DinamicaScambiatore,[t0 tf],Tamb0,[],Ti,Km,K,MC,Test_cost,Gu,cs,Alfa,S,tu,n)
+NUT=3.4;
 
-%Gp=350%313.8;
-%[T,X]=ode45(@DinamicaScambiatore2,[t0 tf],Tamb0,[],Ti,Km,K,MC,Test_cost,Gu,cs,Alfa,S,Gp,n)
+Gmin=min([Gp Gu]);
+Gmax=max([Gp Gu]);
 
-%[T,X]=ode45(@DinamicaScambiatore3,[t0 tf],Tamb0,[],Ti,Km,K,MC,Test_cost,Gu,cs,Alfa,S,Gp,n)
+eps=(1-exp(-(1-(Gmin/Gmax))*NUT))/(1 - (Gmin/Gmax)*exp(-(1-(Gmin/Gmax))*NUT))
+%eps=0.84;
+
+[T,X]=ode45(@DinamicaScambiatore,[t0 tf],Tamb0,[],Ti,Km,K,MC,Test_cost,Gu,cs,Alfa,S,Gp,n,eps)
 
 
 %% PLOTs
 plot(T,X)
 
-for i=1:length(X)
-ti_temp=[X(i):0.001:tu];
-err1=Km*((tu+ti_temp)/2 - X(i)).^n - Gu*(tu-ti_temp);
-[m1,pos1]=min(abs(err1));
-ti_vec(i)=ti_temp(pos1);
-end
-
-for k=1:length(X)
-H=(Gu*(tu-ti_vec(k)))/(Alfa*S);
-To_temp=[ti_vec(k):0.001:75];
-err2=(((Ti-tu)-(To_temp-ti_vec(k))) ./ (log(Ti-tu) - log(To_temp - ti_vec(k)))) - H;
-[m2,pos2]=min(abs(err2));
-To_vec(k)=To_temp(pos2);
-end
-
-Gp_vec= (Gu*(tu-ti_vec)./(Ti-To_vec));
-
-figure, plot(T,ti_vec,'b')
-hold on, plot(T,To_vec,'r')
-
-figure, plot(T,Gp_vec)
-
-%bilanciamento potenze termiche
-Q1=Gp_vec.*(Ti-To_vec);
-Q2=Gu*(tu-ti_vec);
-Q3=Alfa*S*((Ti-tu)-(To_vec-ti_vec))./(log(Ti-tu) - log(To_vec-ti_vec));
-Q4=Km*((tu+ti_vec)/2 - X').^n;
-
-figure, plot(T,Q1,'b',T,Q2,'g',T,Q3,'r',T,Q4,'k')
+% for i=1:length(X)
+% ti_temp=[X(i):0.001:tu];
+% err1=Km*((tu+ti_temp)/2 - X(i)).^n - Gu*(tu-ti_temp);
+% [m1,pos1]=min(abs(err1));
+% ti_vec(i)=ti_temp(pos1);
+% end
+% 
+% for k=1:length(X)
+% H=(Gu*(tu-ti_vec(k)))/(Alfa*S);
+% To_temp=[ti_vec(k):0.001:75];
+% err2=(((Ti-tu)-(To_temp-ti_vec(k))) ./ (log(Ti-tu) - log(To_temp - ti_vec(k)))) - H;
+% [m2,pos2]=min(abs(err2));
+% To_vec(k)=To_temp(pos2);
+% end
+% 
+% Gp_vec= (Gu*(tu-ti_vec)./(Ti-To_vec));
+% 
+% figure, plot(T,ti_vec,'b')
+% hold on, plot(T,To_vec,'r')
+% 
+% figure, plot(T,Gp_vec)
+% 
+% %bilanciamento potenze termiche
+% Q1=Gp_vec.*(Ti-To_vec);
+% Q2=Gu*(tu-ti_vec);
+% Q3=Alfa*S*((Ti-tu)-(To_vec-ti_vec))./(log(Ti-tu) - log(To_vec-ti_vec));
+% Q4=Km*((tu+ti_vec)/2 - X').^n;
+% 
+% figure, plot(T,Q1,'b',T,Q2,'g',T,Q3,'r',T,Q4,'k')
 
 %% metodo lungo
 % teta_amb=0;
