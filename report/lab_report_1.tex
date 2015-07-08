@@ -278,6 +278,34 @@ Per aumentare l'efficienza e per ridurre al massimo gli sprechi si \`e  pensato 
 
 Il fabbisogno energetico  aumenta al diminuire  della temperatura esterna e viceversa. Si vuole procedere in questo modo perché pi\`u  le temperature di ritorno sono basse pi\`u  il rendimento \`e  elevato ed utilizzando una regolazione di questo tipo nello scambiatore di utenza, si potrebbero avere temperature di ritorno tanto pi\`u  basse tanto \`e  minore il carico termico richiesto.
 
+\section{ToDo}
+Tramite l'uso di matlab andremo a simulare tre diversi scenari:
+\begin{enumerate}
+\item[1.] sistema scambiatore utenza senza alcun tipo di regolazione
+\item[2.] sistema scambiatore utenza con regolazione fissa , dipendente dalla temperatura esterna (climatica): si imposta una temperatura in mandata $t_o$ sul secondario in funzione della temperatura esterna (regolare la temperatura in mandata implica regolare la portata sul primario)  
+\item[3.] sistema scambiatore utenza con regolazione variabile in funzione della temperatura ambiente desiderata: si tratta di implementare un controllore MPC che ottimizza la temperatura di ritorno dell'acqua dati una funzione di costo e dei vincoli.
+\end{enumerate}
+
+\section{Risultati della simulazione}
+\subsection{Potenze scambiate e temperature al variare delle portate}
+I primi risultati ottenuti durante la simulazione riguardano l'andamento delle temperature e della potenza termica scambiata al variare delle portate.
+
+\textbf{Porata sul primario $G_p$ variabile e portata sul secondario $G_u$ costante}: Maggiore \`e la portata sul primario maggiore \`e la potenza scambiata dallo scambiatore ed inoltre la temperatura di ritorno $T_o$ subisce un innalzamento e viceversa.
+
+\textbf{Porata sul primario $G_p$ costante e portata sul secondario $G_u$ variabile}:Maggiore \`e la portata sul secondario minore risulta a differenza di temperatura tra $t_o$ e $t_i$ e viceversa. Un risultato pi\`u significativo ci mostra che variando la portata sul secondario, variano le temperature $t_o$ e $t_i$ ma variano in modo tale che la loro temperatura media ($\frac{t_o + t_i}{2}$ ) rimane costante come anche la temperatura di ritorno del primario $T_o$, visibile in figura \ref{fig:scambiatore_garico_temperature}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.95\textwidth]{scambiatore_garico_temperature} % Include the image placeholder.png
+\caption{rappresentazione schematica della variazione delle temperature al variare della portata sul secondario}
+\label{fig:scambiatore_garico_temperature}
+\end{center}
+\end{figure}
+
+In conclusione possiamo affermare che la potenza scambiata e la temperatura di ritorno $T_o$ dipende solamente dalla portata in mandata sul primario.\\
+
+ La regolazione che dovremo implementare dovr\`a essere fatta sulla portata del primario in modo da limitare il ritorno di temperatura al minimo possibile ma tale da garantire la temperatura ambiente che \`e stata settata nel termostato. 
+
 \section{Ulteriori considerazioni}
 La portata delle pompe del circuito che porta l'acqua alle utenze non deve mettere in crisi le ultime abitazioni (la portata nelle prime utenze sar\`a  maggiore che nelle ultime). Se delle centraline di utenza regolassero le portate in ingresso agli scambiatori (utilizzando solamente quella strettamente necessaria) si ridurrebbe il problema. Si potrebbe controllare la portata dell'intero circuito con un sensore posizionato nell'ultima utenza dell'impianto per gestire la portata delle pompe.\\
 
