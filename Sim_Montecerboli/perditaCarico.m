@@ -1,4 +1,4 @@
-function [Qu,Q2,P12,P3_new]=perditaCarico2(par,Q1,dP,P3,Qreg)
+function [Qu,Q2,P12,P3_new]=perditaCarico(par,Q1,dP,P3)
 
 % Qu = portata in arrivo all'utenza
 % Q2 = portata dopo il prelievo dell'utenza
@@ -32,13 +32,10 @@ P0=P3+dP;
 
 P12=(P0-P01)-(P3+P23);
 
-Qu=sqrt(P12/((2*lamb*lu*16)/(pi^2*Du^5) +k)) *3600;
+Qu=sqrt(P12/(k + ((lamb*lu*16)/(pi^2*Du^5*g)) )) * 3600;
 
-if Qu>=Qreg
-    Qu=Qreg;
-    flag=1;
-else
-    flag=0;
+if Qu>Q1
+    Qu=Q1;
 end
 
 Q2=Q1-Qu;

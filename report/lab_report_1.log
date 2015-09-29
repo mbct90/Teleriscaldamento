@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.20)  13 JUL 2015 15:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.20)  10 SEP 2015 13:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -594,17 +594,17 @@ Overfull \hbox (51.7479pt too wide) in paragraph at lines 97--98
  []
 
 [2 <./schema_impianto.pdf>]
-<scambiatore.pdf, id=49, 597.23125pt x 279.29625pt>
+<scambiatore.pdf, id=49, 595.86407pt x 301.75917pt>
 File: scambiatore.pdf Graphic file (type pdf)
  <use scambiatore.pdf>
 Package pdftex.def Info: scambiatore.pdf used on input line 124.
-(pdftex.def)             Requested size: 362.25105pt x 169.4073pt.
+(pdftex.def)             Requested size: 362.25105pt x 183.45583pt.
 
 Overfull \hbox (17.25105pt too wide) in paragraph at lines 124--125
  [] 
  []
 
-[3 <./scambiatore.pdf>] <grafico_scambiatore.png, id=80, 770.88pt x 224.84pt>
+[3 <./scambiatore.pdf>] <grafico_scambiatore.png, id=84, 770.88pt x 224.84pt>
 File: grafico_scambiatore.png Graphic file (type png)
 
 <use grafico_scambiatore.png>
@@ -618,14 +618,14 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 166.
-
-<schema_radiatore.png, id=82, 918.43124pt x 591.20876pt>
+ [4 <./grafico_scambiatore.png>] <schema_radiatore.png, id=95, 918.43124pt x 59
+1.20876pt>
 File: schema_radiatore.png Graphic file (type png)
 
 <use schema_radiatore.png>
 Package pdftex.def Info: schema_radiatore.png used on input line 178.
 (pdftex.def)             Requested size: 258.75pt x 166.5567pt.
- [4 <./grafico_scambiatore.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 186--188
 
  []
@@ -642,7 +642,7 @@ eps-converted-to.pdf grafico_scambio_radiatore.eps>
 (epstopdf)             \includegraphics on input line 193.
 Package epstopdf Info: Output file is already uptodate.
 
-<grafico_scambio_radiatore-eps-converted-to.pdf, id=92, 703.62875pt x 620.3175p
+<grafico_scambio_radiatore-eps-converted-to.pdf, id=96, 703.62875pt x 620.3175p
 t>
 File: grafico_scambio_radiatore-eps-converted-to.pdf Graphic file (type pdf)
  <use grafico_scambio_radiatore-eps-converted-to.pdf>
@@ -653,16 +653,16 @@ Package pdftex.def Info: grafico_scambio_radiatore-eps-converted-to.pdf used on
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Tcostante.png, id=93, 920.43875pt x 403.5075pt>
+<Tcostante.png, id=97, 920.43875pt x 403.5075pt>
 File: Tcostante.png Graphic file (type png)
  <use Tcostante.png>
 Package pdftex.def Info: Tcostante.png used on input line 203.
 (pdftex.def)             Requested size: 258.75pt x 113.43079pt.
-
+ [5 <./schema_radiatore.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Tvariabile.png, id=94, 923.45pt x 401.5pt>
+<Tvariabile.png, id=102, 923.45pt x 401.5pt>
 File: Tvariabile.png Graphic file (type png)
  <use Tvariabile.png>
 Package pdftex.def Info: Tvariabile.png used on input line 213.
@@ -671,9 +671,8 @@ Package pdftex.def Info: Tvariabile.png used on input line 213.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5 <./schema_radiatore.png>] [6 <./grafico_scambio_radiatore-eps-converted-to.p
-df> <./Tcostante.png>] [7 <./Tvariabile.png>]
-<sistema_scamb_casa.jpg, id=113, 963.6pt x 465.74pt>
+[6 <./grafico_scambio_radiatore-eps-converted-to.pdf>] [7 <./Tcostante.png> <./
+Tvariabile.png>] <sistema_scamb_casa.jpg, id=117, 963.6pt x 465.74pt>
 File: sistema_scamb_casa.jpg Graphic file (type jpg)
 
 <use sistema_scamb_casa.jpg>
@@ -691,7 +690,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
-<temperature.pdf, id=117, 668.4975pt x 249.93375pt>
+<temperature.pdf, id=121, 668.4975pt x 249.93375pt>
 File: temperature.pdf Graphic file (type pdf)
  <use temperature.pdf>
 Package pdftex.def Info: temperature.pdf used on input line 275.
@@ -701,7 +700,7 @@ Package pdftex.def Info: temperature.pdf used on input line 275.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [9] [10 <./temperature.pdf>]
-<scambiatore_garico_temperature.png, id=139, 1172.38pt x 745.78625pt>
+<scambiatore_garico_temperature.png, id=143, 1172.38pt x 745.78625pt>
 File: scambiatore_garico_temperature.png Graphic file (type png)
 
 <use scambiatore_garico_temperature.png>
@@ -724,7 +723,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
 [11
 
-] <resistenza.pdf, id=143, 844.58156pt x 341.89227pt>
+] <resistenza.pdf, id=147, 844.58156pt x 341.89227pt>
 File: resistenza.pdf Graphic file (type pdf)
  <use resistenza.pdf>
 Package pdftex.def Info: resistenza.pdf used on input line 317.
@@ -760,10 +759,10 @@ mr5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
 pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pf
 b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 
-Output written on lab_report_1.pdf (13 pages, 643967 bytes).
+Output written on lab_report_1.pdf (13 pages, 647411 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 152 compressed objects within 2 object streams
+ 228 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
