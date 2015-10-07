@@ -54,10 +54,10 @@ Q2t=sqrt((P12 -((k2+k)*C))/(2*ku)) *3600;
 Qu2=sqrt(C)*3600;
 Qu1=A*Qu2;
 
-if (Qu1+Qu2)>Q1
-    Qu1=(A*Q1)/(1+A);
-    Qu2=Q1-Qu1;
-end
+% if (Qu1+Qu2)>Q1
+%     Qu1=(A*Q1)/(1+A);
+%     Qu2=Q1-Qu1;
+% end
 
 Q2=Q1-(Qu1+Qu2);
 P3_new = P3 + P23;

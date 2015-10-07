@@ -62,10 +62,10 @@ if Qu2>=Qreg2
     Qu2=Qreg2;
 end
 
-if (Qu1+Qu2)>Q1
-    Qu1=(A*Q1)/(1+A);
-    Qu2=Q1-Qu1;
-end
+% if (Qu1+Qu2)>Q1
+%     Qu1=(A*Q1)/(1+A);
+%     Qu2=Q1-Qu1;
+% end
 
 
 Q2=Q1-(Qu1+Qu2);

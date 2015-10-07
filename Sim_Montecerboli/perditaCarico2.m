@@ -40,9 +40,9 @@ else
     Qu=Qut;
 end
 
-if Qu>Q1
-    Qu=Q1;
-end
+% if Qu>Q1
+%     Qu=Q1;
+% end
 
 
 Q2=Q1-Qu;

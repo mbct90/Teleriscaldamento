@@ -4,17 +4,23 @@ t0=0;
 tf=200;
 t=[t0:1:100];
 
+%
+V=300;
+Qtot=V*30;
+
 %% parametri
-cs=1;
-K=1.37*300;
-Km=0.8031 * 70;
+Km1=0.8031;
 n=1.32;
+cs=1;
+K=Qtot/25;%1.37*300; 
+Km=Qtot/(50^n);%0.8031 * 70; 
+
 MC=10000;
 Ti=84;
 %Test=[0:0.02:10];
 %Test(end+1:end+301)=10;1
 
-Test_cost=7;
+Test_cost=0;
 
 Gu=600;
 
@@ -23,7 +29,7 @@ S=1;
 
 Tamb0=20;
 
-tu=70;
+tu=75;
 %% simulazione
 
 [T,X]=ode45(@DinamicaScambiatore,[t0 tf],Tamb0,[],Ti,Km,K,MC,Test_cost,Gu,cs,Alfa,S,tu,n)

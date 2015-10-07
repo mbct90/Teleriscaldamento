@@ -2,8 +2,8 @@ clear all, close all, clc
 
 parametri_utenze
 
-Q= 10.742%6.54
-dP=25.66%10
+Q= 6.5  %6.5%10.742%6.54
+dP= 9.9377   %10%25.66%10
 P3=2
 
 P12=dP;

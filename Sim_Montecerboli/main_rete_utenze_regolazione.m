@@ -2,8 +2,8 @@ clear all, close all, clc
 
 parametri_utenze
 
-Q= 5.676%5.678; % portata Q sezione n-esima [m3/h]
-dP=10%15;
+Q= 5.68%5.676%5.678; % portata Q sezione n-esima [m3/h]
+dP=9.5%15;
 P3=2;
 
 P12=dP;
