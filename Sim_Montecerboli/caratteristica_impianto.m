@@ -4,7 +4,7 @@ parametri_utenze
 
 Q= [0.1:0.1:29.2];
 dP=[0.0:0.5:50];
-P3=3;
+P3=2;
 for j=1:length(dP)
     for k=1:length(Q)
 
@@ -26,7 +26,7 @@ for j=1:length(dP)
             end
         end
         
-        if Qu>0.516
+        if Qu>=0.516
             flag1(k)=1;
         else
             flag1(k)=0;
