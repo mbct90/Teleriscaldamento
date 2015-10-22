@@ -1,7 +1,17 @@
-function dTamb=DinamicaScambiatore(t,Tamb,Ti,Km,K,MC,Test,Gu,cs,Alfa,S,tu,n)
+function dX=DinamicaScambiatorePid(t,X,Ti,Km,K,MC,Test,Gu,cs,Alfa,S,Target,n,Kp,Ki)
 
-ti_temp=[Tamb:0.001:tu];
-err1=Km*((tu+ti_temp)/2 - Tamb).^n - Gu*(tu-ti_temp);
+tu=X(2) + Kp*(Target-X(1))
+
+if tu>Ti-8
+    tu=Ti-8
+end
+if tu<50
+    tu=50
+end
+
+
+ti_temp=[X(1):0.001:tu];
+err1=Km*((tu+ti_temp)/2 - X(1)).^n - Gu*(tu-ti_temp);
 [m1,pos1]=min(abs(err1));
 ti=ti_temp(pos1)
 %ti= ( (Km*Tamb) - (tu*((Km/2) - Gu)) ) / ( Gu+(Km/2) )
@@ -19,7 +29,9 @@ To=To_temp(pos2)
 
 Gp= (Gu*(tu-ti)/(Ti-To))
 
-Tamb
-dTamb = (Km*((ti+tu)/2 - Tamb)^(n) - K*(Tamb - Test))/MC;
+dX1 = (Km*((ti+tu)/2 - X(1))^(n) - K*(X(1) - Test))/MC
+dX2 = Ki*(Target - X(1))
+
+dX=[dX1 dX2]'
 
 end

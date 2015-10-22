@@ -1,4 +1,3 @@
-%function [Pot,Pot_min,Q_star,H_star]=potenze_assorbite(Q,P_c)
 function [Pot,Pot_min,Q_star,H_star]=potenze_assorbite(Qtot,Ptot,flag2,QQ,PP)
 
 %curva pompa
@@ -7,7 +6,7 @@ y1=[46 46 45 44 42.5 40 36 33 32.5]
 p1 = polyfit(x1,y1,2) % coeff. caratteristica pompa
 H_nom=polyval(p1,QQ)
 
-% curva rendimento
+% curva rendimento nominale
 x2=[7 9 11.2 14 16 19 23 27.2 29.2]
 y2=[0.3 0.35 0.4 0.45 0.475 0.5 0.525 0.5 0.475]
 p2 = polyfit(x2,y2,4) % coeff. curva rendimento pompa
@@ -40,6 +39,7 @@ H=Ptot((end-sum(flag2)+1:end));
 
 for i=1:length(Q)
     n(i)=Q(i)/Q_funzionamento;
+    
 end
 
 %H_real=n.^2.*H_funzionamento

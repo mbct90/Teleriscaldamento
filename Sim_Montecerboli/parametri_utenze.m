@@ -107,6 +107,9 @@ par_u(8,5)= 37.2;   % diametro tubo intermedio [mm]
 par_u(8,6)= 1;    % gamma
 par_u(8,7)= 2.4337e+08;   % k
 
+par_u(9,:)=par_u(8,:);
+
+
 u1(1)= 34.5;   % lunghezza tubo utenza 1 [m]
 u1(2)= 24.2;   % diametro tubo utenza 1 [mm]
 

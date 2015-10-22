@@ -23,7 +23,7 @@ MLSLSF_INCLUDES  = \
     -I"/Applications/MATLAB_R2014b.app/simulink/include" \
     -I"/Applications/MATLAB_R2014b.app/stateflow/c/mex/include" \
     -I"/Applications/MATLAB_R2014b.app/rtw/c/src" \
-    -I"/Users/marcobecattini/Desktop/tele_matlab2/slprj/_sfprj/ModelloCasaScambiatore/_self/sfun/src" 
+    -I"/Users/marcobecattini/GitHub/Teleriscaldamento/metodo1/slprj/_sfprj/ModelloCasaScambiatore/_self/sfun/src" 
 
 THIRD_PARTY_INCLUDES = 
 

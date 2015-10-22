@@ -27,7 +27,7 @@ Gu=600;
 Alfa=1000;
 S=1;
 
-Tamb0=20;
+Tamb0=15;
 
 tu=75;
 %% simulazione

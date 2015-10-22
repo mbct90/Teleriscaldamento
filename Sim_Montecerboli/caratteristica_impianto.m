@@ -43,7 +43,6 @@ for i=1:length(dP)
     Qff(i)=Q(r(i));
 end
 
-%[Pot,Pot_min,Q_star,H_star]=potenze_assorbite(Qff(end-sum(flag2)+1:end),dP(end-sum(flag2)+1:end)+P3(1))
 [Pot,Pot_min,Q_star,H_star]=potenze_assorbite(Qff,dP+P3(1),flag2,Q,dP+P3(1))
 
 
