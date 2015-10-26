@@ -30,7 +30,8 @@ for i=1:length(par_u(:,1))
         end
     end
 end
-        if Qu>=0.516
+Qu
+if Qu>=0.516
             flag1(k)=1;
         else
             flag1(k)=0;

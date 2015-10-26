@@ -3,11 +3,11 @@ function dX=DinamicaScambiatorePid(t,X,Ti,Km,K,MC,Test,Gu,cs,Alfa,S,Target,n,Kp,
 tu = X(2) + Kp*(Target-X(1)); % temperatura in uscita dallo scambiatore (lato utenza)
 
 % conrtollo sulla temperatura in uscita (vincoli)
-if tu > Ti-5
-    tu = Ti-5;
+if tu > Ti-8
+    tu = Ti-8;
 end
-if tu < 50
-    tu = 50;
+if tu < 40
+    tu = 40;
 end
 
 % calcolo temperatura in ingresso allo scambiatore (lato utenza: temp. ritorno dai radiatori)
