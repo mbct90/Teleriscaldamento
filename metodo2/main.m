@@ -1,8 +1,8 @@
 clear all, close all, clc
 % TELERISCALDAMENTO
 t0=0;
-tf=200;
-t=[t0:1:100];
+tf=100;
+t=[t0:1:tf];
 
 %% parametri
 cs=1;
@@ -21,7 +21,7 @@ Gu=600;
 Alfa=1000;
 S=1;
 
-Tamb0=20;
+Tamb0=15;
 
 %% simulazione
 Gp=500;

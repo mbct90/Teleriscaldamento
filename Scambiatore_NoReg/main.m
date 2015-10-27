@@ -1,11 +1,8 @@
 clear all, close all, clc
 % TELERISCALDAMENTO
-% tempo di simulazione
 t0=0;
 tf=100;
 t=[t0:1:tf];
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -32,6 +29,7 @@ Km=Qtot/(50^n); % coeff scambio totale radiatori   %0.8031 * 70;
 MC=par(5);
 
 Ti=82; % temperatura ingresso allo scambiatore [rete principale] 
+tu=75;
 
 Gu=par(6); % portata in l/h rete dell'utenza
 
@@ -42,53 +40,31 @@ S=par(8);
 Test=0; % temperatura esterna
 
 % parametri iniziali per la simulazione
-Tamb0=[par(10) 0]; % condizioni iniziali: [Temperatura ambiente iniziale ; valore iniziale stato di controllo]
+Tamb0=par(10); % condizioni iniziali: [Temperatura ambiente iniziale ; valore iniziale stato di controllo]
 
-% parametri controllore PI
-Kp=15; % coefficiente proporzionale
-Ki=2; % coefficiente integrale
+
 %% simulazione
+Gp=620;
 
-[T,X]=ode45(@DinamicaScambiatorePid,[t0 tf],Tamb0,[],Ti,Km,K,MC,Test,Gu,cs,Alfa,S,Target,n,Kp,Ki)
+[T,X]=ode45(@DinamicaScambiatoreNoReg,[t0 tf],Tamb0,[],Ti,Km,K,MC,Test,Gu,cs,Alfa,S,Gp,n)
 
 
 %% PLOTs
-% Andamento della temperatura ambiente dell' utenza
-plot(T,X(:,1))
-title('Andamento della temperatura utenza')
-xlabel('Time[]')
-ylabel('temperature [°C]')
+plot(T,X)
 
+Tamb=X
 % estrapolazione dati dalla simulazione
-for i=1:length(X(:,1))
-    tu(i)=X(i,2) + Kp.*(Target-X(i,1));
-    if tu(i)>Ti-5
-        tu(i)=Ti-5;
-    end
-    if tu(i)<40
-        tu(i)=40;
-    end
-
-ti_temp=[X(i,1):0.001:tu(i)];
-err1=Km*((tu(i)+ti_temp)/2 - X(i,1)).^n - Gu*(tu(i)-ti_temp);
-[m1,pos1]=min(abs(err1));
-ti_vec(i)=ti_temp(pos1); % vettore temperature in ingresso allo scambiatore (lato utenza)
-
+for i=1:length(X)
+    fun = @(x) myfun(x,Km,Tamb(i),Gu,Gp,Ti,cs,Alfa,S,n);
+    x0=[52 64];
+    Z=fsolve(fun,x0);
+    ti_vec(i)=Z(1);
+    tu_vec(i)=Z(2);
+    To_vec(i)=(Ti - (Gu*(tu_vec(i)-ti_vec(i)))/(Gp));
 end
 
-for k=1:length(X)
-
-H=(Gu*(tu(k)-ti_vec(k)))/(Alfa*S);
-To_temp=[ti_vec(k):0.001:Ti-2];
-err2=(((Ti-tu(k))-(To_temp-ti_vec(k))) ./ (log(Ti-tu(k)) - log(To_temp - ti_vec(k)))) - H;
-[m2,pos2]=min(abs(err2));
-To_vec(k)=To_temp(pos2); % vettore temperature in uscita allo scambiatore (lato principale)
-end
-tu_vec=tu;
-
-Gp_vec= (Gu*(tu_vec-ti_vec)./(Ti-To_vec)); % vettore portate lato principale
-
-Ti_vec=Ti*ones(1,length(T)); % vettore temperature in ingresso allo scambiatore (lato principale) -> COSTANTE
+Ti_vec=Ti*ones(1,length(T));
+Gp_vec=Gp*ones(1,length(T));
 
 % plot andamento delle temperature dello scambiatore
 figure, plot(T,ti_vec,'b',T,tu_vec,'r',...
@@ -116,5 +92,3 @@ xlabel('Time []')
 ylabel('Potenza [Kcal]')
 legend('Pot termica scambiata ingresso scambiatore','Pot termica scambiata uscita scambiatore',...
     'Potenza termica scambiata','Calore ceduto radiatori')
-
-

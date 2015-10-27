@@ -15,7 +15,7 @@ Km1=par_u(3); % coeff. scambio radiatore
 n=par_u(4); % esponente radiatore
 cs=1; % calore specifico acqua
 K=Qtot/25; %costante di dispersione termica   %1.37*300; 
-Km=Qtot/(50^n); % coeff scambio totale radiatori   %0.8031 * 70; 
+Km=Qtot/(40^n); % coeff scambio totale radiatori   %0.8031 * 70; 
 
 MC=par_u(5);
 

@@ -18,7 +18,7 @@ ti = ti_temp(pos1);
 
 % calcolo temperatura in uscita allo scambiatore (lato principale)
 H=(Gu*(tu-ti))/(Alfa*S);
-To_temp=[ti:0.001:Ti];
+To_temp=[ti:0.001:Ti-2];
 err2=(((Ti-tu)-(To_temp-ti)) ./ (log(Ti-tu) - log(To_temp - ti))) - H;
 [~,pos2]=min(abs(err2));
 To = To_temp(pos2);
