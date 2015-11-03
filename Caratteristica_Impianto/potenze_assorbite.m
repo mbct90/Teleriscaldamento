@@ -21,15 +21,7 @@ x0=10;
 Q_funzionamento = fsolve(fun,x0)
 H_funzionamento = polyval(p3,Q_funzionamento)
 
-% plot curve pompe impianto e rendimento
-figure, 
-subplot(2,1,1)
-plot(Qtot,polyval(p3,Qtot))
-hold on
-plot(QQ,H_nom)
-plot(Q_funzionamento,H_funzionamento,'*k')
-subplot(2,1,2)
-plot(QQ,ni)
+
 
 
 Q=Qtot((end-sum(flag2)+1:end));
@@ -49,5 +41,20 @@ Pot=((9.81*1000).*(Q./3600).*H)./ni((end-sum(flag2)+1:end))
 [Pot_min,k]=min(Pot);
 Q_star=Q(k)
 H_star=H(k)
+
+% plot curve pompe impianto e rendimento
+c=sqrt(H_funzionamento/H_star)
+
+figure, 
+subplot(2,1,1)
+plot(Qtot,polyval(p3,Qtot))
+hold on
+plot(QQ,H_nom)
+plot(QQ./c,(polyval(p1,QQ))./(c^2))
+plot(Q_funzionamento,H_funzionamento,'*k')
+subplot(2,1,2)
+plot(QQ,ni)
+hold on
+plot(QQ./c,ni)
 
 end

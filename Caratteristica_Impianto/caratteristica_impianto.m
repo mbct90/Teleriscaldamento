@@ -1,6 +1,6 @@
 clear all, close all, clc
 
-parametri_utenze
+parametri_rete
 
 Q= [0.1:0.1:29.2];
 dP=[0.0:0.5:50];
@@ -11,17 +11,17 @@ for j=1:length(dP)
     P12=dP(j);
     Q2=Q(k);
 
-        for i=1:length(par_u(:,1))
+        for i=1:length(par_r(:,1))
 
             if(i==8)
-                [Qu(i),Qu(i+1),Q2(i+1),P12(i+1),P3(i+1)]=perditaCarico_doppio(par_u(i,:),u1,u2,Q2(i),P12(i),P3(i));
+                [Qu(i),Qu(i+1),Q2(i+1),P12(i+1),P3(i+1)]=perditaCarico_doppio(par_r(i,:),u1,u2,Q2(i),P12(i),P3(i));
             else
                 if (i==9)
                     Q2(i+1)=Q2(i);
                     P3(i+1)=P3(i);
                     P12(i+1)=P12(i);
                 else
-                    [Qu(i),Q2(i+1),P12(i+1),P3(i+1)]=perditaCarico(par_u(i,:),Q2(i),P12(i),P3(i));
+                    [Qu(i),Q2(i+1),P12(i+1),P3(i+1)]=perditaCarico(par_r(i,:),Q2(i),P12(i),P3(i));
                 end
             end
         end
@@ -56,8 +56,3 @@ hold on
 plot(Q_star,Pot_min/1000,'xr','LineWidth',5)
 ylabel('Potenza [kW]')
 xlabel('Portata [m^3/h]')
-
-% plot(Qu,'*')
-% 
-% figure, plot(P3)
-% hold on, plot (P3+P12)

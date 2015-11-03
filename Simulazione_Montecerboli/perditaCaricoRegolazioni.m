@@ -22,6 +22,7 @@ k=par(7);
 
 v1=(Q1/3600)/((pi*D1^2)/4);
 v2=v1;
+% % % inserire vincolo sulla velocità
 
 %perdite di carico
 P01= ((lamb*l1*(v1)^2)/(D1*2*g))*gamma;

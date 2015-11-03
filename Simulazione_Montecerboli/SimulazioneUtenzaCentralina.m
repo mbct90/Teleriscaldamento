@@ -38,17 +38,10 @@ Tamb0=[par_u(10) 0]; % condizioni iniziali: [Temperatura ambiente iniziale ; val
 
 %% simulazione
 
-[T,X]=ode45(@DinamicaScambiatorePid,[t0 tf],Tamb0,[],Ti,Km,K,MC,Test,Gu,cs,Alfa,S,Target,n,Kp,Ki);
+[T,X]=ode45(@DinamicaScambiatorePid,[t0 : 1 : tf],Tamb0,[],Ti,Km,K,MC,Test,Gu,cs,Alfa,S,Target,n,Kp,Ki);
 
 
-%% PLOTs
-% Andamento della temperatura ambiente dell' utenza
-% plot(T,X(:,1))
-% title('Andamento della temperatura utenza')
-% xlabel('Time[]')
-% ylabel('temperature [°C]')
-
-% estrapolazione dati dalla simulazione
+%% estrapolazione dati dalla simulazione
 for i=1:length(X(:,1))
     tu(i)=X(i,2) + Kp.*(Target-X(i,1));
     if tu(i)>Ti-8
@@ -78,33 +71,3 @@ tu_vec=tu;
 Gp_vec= (Gu*(tu_vec-ti_vec)./(Ti-To_vec)); % vettore portate lato principale
 
 end
-%Ti_vec=Ti*ones(length(T)); % vettore temperature in ingresso allo scambiatore (lato principale) -> COSTANTE
-
-% % plot andamento delle temperature dello scambiatore
-% figure, plot(T,ti_vec,'b',T,tu_vec,'r',...
-%     T,To_vec,'c',T,Ti_vec,'m')
-% legend('T ritorno (FREDDA)','T mandata (CALDA)','T ritorno (FREDDA)','T mandata (CALDA)')
-% title('Temperature ingresso e uscita lato utenza')
-% xlabel('Time []')
-% ylabel('Temperature [°C]')
-% 
-% % plot andamento della portata lato principale
-% figure, plot(T,Gp_vec)
-% title('Variazione portata ingresso scambiatore')
-% xlabel('Time []')
-% ylabel('Portata [l/h]')
-% 
-% % plot bilanciamento potenze termiche
-% Q1=Gp_vec.*(Ti-To_vec);
-% Q2=Gu*(tu_vec-ti_vec);
-% Q3=Alfa*S*((Ti-tu_vec)-(To_vec-ti_vec))./(log(Ti-tu_vec) - log(To_vec-ti_vec));
-% Q4=Km*((tu_vec+ti_vec)/2 - X(:,1)').^n;
-% 
-% figure, plot(T,Q1,'b',T,Q2,'g',T,Q3,'r',T,Q4,'k')
-% title('Bilanciamento potenze termiche')
-% xlabel('Time []')
-% ylabel('Potenza [Kcal]')
-% legend('Pot termica scambiata ingresso scambiatore','Pot termica scambiata uscita scambiatore',...
-%     'Potenza termica scambiata','Calore ceduto radiatori')
-% 
-

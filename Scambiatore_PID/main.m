@@ -62,8 +62,8 @@ ylabel('temperature [°C]')
 % estrapolazione dati dalla simulazione
 for i=1:length(X(:,1))
     tu(i)=X(i,2) + Kp.*(Target-X(i,1));
-    if tu(i)>Ti-5
-        tu(i)=Ti-5;
+    if tu(i)>Ti-3
+        tu(i)=Ti-3;
     end
     if tu(i)<40
         tu(i)=40;

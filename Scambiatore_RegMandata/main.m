@@ -45,7 +45,7 @@ Tamb0=par(10); % condizioni iniziali: [Temperatura ambiente iniziale ; valore in
 
 %% simulazione
 
-[T,X]=ode45(@DinamicaScambiatoreNoReg,[t0 tf],Tamb0,[],Ti,Km,K,MC,Test,Gu,cs,Alfa,S,tu,n)
+[T,X]=ode45(@DinamicaScambiatoreRegMandata,[t0 tf],Tamb0,[],Ti,Km,K,MC,Test,Gu,cs,Alfa,S,tu,n)
 
 
 %% PLOTs

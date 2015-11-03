@@ -32,7 +32,7 @@ P0=P3+dP;
 
 P12=(P0-P01)-(P3+P23);
 
-Qut=sqrt(P12/(k + ((lamb*lu*16)/(pi^2*Du^5*g)) )) * 3600;
+Qut=sqrt(P12/(k + ((lamb*lu*16)/(pi^2*Du^5*g)) )) * 3600
 
 if Qut>=Qreg
     Qu=Qreg;
@@ -40,9 +40,9 @@ else
     Qu=Qut;
 end
 
-% if Qu>Q1
-%     Qu=Q1;
-% end
+if Qu>Q1
+    Qu=Q1;
+end
 
 
 Q2=Q1-Qu;

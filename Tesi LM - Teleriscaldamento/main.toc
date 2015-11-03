@@ -1,0 +1,15 @@
+\select@language {italian}
+\select@language {italian}
+\contentsline {chapter}{\numberline {1}Geotermia e Teleriscaldamento}{3}
+\contentsline {chapter}{\numberline {2}Tecnologie degli impianti di teleriscaldamento}{4}
+\contentsline {section}{\numberline {2.1}Centrale termica e di scambio}{4}
+\contentsline {section}{\numberline {2.2}Stazioni di Pompaggio}{6}
+\contentsline {subsection}{\numberline {2.2.1}Regolazione a pressione costante}{7}
+\contentsline {subsection}{\numberline {2.2.2}Regolazione a differenza di temperatura costante}{8}
+\contentsline {section}{\numberline {2.3}Rete di distribuzione}{8}
+\contentsline {section}{\numberline {2.4}Analisi degli elementi critici}{9}
+\contentsline {chapter}{\numberline {3}Modelli Matematici}{10}
+\contentsline {chapter}{\numberline {4}Risultati della simulazione}{11}
+\contentsline {chapter}{\numberline {5}Conclusioni}{12}
+\contentsline {chapter}{Appendice A: Dettagli}{13}
+\contentsline {chapter}{Bibliografia}{14}
