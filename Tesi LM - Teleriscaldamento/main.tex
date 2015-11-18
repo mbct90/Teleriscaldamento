@@ -54,7 +54,7 @@
 %% Don't use it as a model for a new frontispiece, use the
 %% `frontespizio' environment in you document instead.
 \Universita {Siena}
-\Logo [4cm]{logosm.jpg}
+\Logo [4.7cm]{logosm.jpg}
 \Facolta {Ingegneria}
 \Dipartimento {Ingegneria dell’Informazione e Scienze Matematiche}
 \Corso [Laurea Magistrale]{Computer and Automation Engineering\\curricula: Robotics and Automation}
@@ -124,11 +124,13 @@ Tutte le soluzioni studiate, sono state simulate in ambiente \textsc{Matlab} e c
 %\label{Capitolo3}
 Un impianto di teleriscaldamento è un  sistema di riscaldamento a distanza di un quartiere o di una città 
 che utilizza il calore prodotto da una centrale termica, da un impianto di cogenerazione 
-o da una sorgente geotermica distribuendolo agli edifici tramite una rete di tubazioni in cui fluisce l'acqua calda che verrà utilizzata per la produzione di acqua igienico sanitaria e il riscaldamento di edifici residenziali e commerciali.  \\
+o da una sorgente geotermica distribuendolo agli edifici tramite una rete di tubazioni in cui fluisce l'acqua calda che verrà utilizzata per la produzione di acqua igienico sanitaria e il riscaldamento di edifici residenziali e commerciali. Indipendentemente dal tipo di fonte di calore usata per la produzione di energia termica, la struttura e gli elementi principali di un impianto di teleriscaldamento rimangono invariate, come anche le problematiche relative all'ottimizzazione dei costi di gestione. Gli impianti sui quali è rivolto lo studio, sono quelli alimentati fa fonte di calore geotermica. In questo tipo di impianto l'energia elettrica usata per il pompaggio dell'acqua sono responsabili di una significante parte del totale utilizzo di energia elettrica. Risulta quindi di interesse ridurre il più possibile questi consumi, facendo un analisi su quali sono gli aspetti che influenzano maggiormente il fenomeno e quali soluzioni poter applicare. \\
+
+\section{Struttura di un impianto}
 Le componenti principali di un sistema di teleriscaldamento sono come riportato in figura \ref{fig:schema1}: una centrale termica, dove viene prodotto il calore, una rete di distribuzione, costituita da tubazioni 
 coibentate interrate, e un insieme di sotto-centrali. Queste ultime, situate nei singoli 
 edifici da servire, sono costituite da scambiatori di calore, che permettono di realizzare 
-lo scambio termico tra il fluido termovettore  della rete primaria del teleriscaldamento con l'acqua del circuito delle utenze, senza che vi sia così miscelazione tra i due fluidi semplificando quindi di molto la progettazione dell'intera rete. Lo scambiatore infatti andrà semplicemente a sostituire la  caldaia convenzionale mantenendo invariato l'impianto già esistente dell'utenza.
+lo scambio termico tra il fluido termovettore  della rete primaria di teleriscaldamento con l'acqua del circuito delle utenze, senza che vi sia così miscelazione tra i due fluidi semplificando quindi di molto la progettazione dell'intera rete. Lo scambiatore infatti andrà semplicemente a sostituire la  caldaia convenzionale mantenendo invariato l'impianto già esistente dell'utenza.
 
 \begin{figure}[h]
 \begin{center}
@@ -138,29 +140,13 @@ lo scambio termico tra il fluido termovettore  della rete primaria del telerisca
 \end{center}
 \end{figure}
 
-La centrale termica riscalda l'acqua che viene distribuita ai diversi edifici attraverso la rete di distribuzione con l'ausilio di pompe. Giunta allo scambiatore, l'acqua della rete trasferisce all'acqua dell'impianto di distribuzione interno dell' edificio, il calore necessario per riscaldare gli ambienti e per la produzione di acqua calda sanitaria. L'acqua, ormai raffreddata, ritorna in centrale per essere nuovamente riscaldata. 
-%Il teleriscaldamento riesce ad essere economicamente conveniente a patto che si riesca a trovare un bacino di utenze concentrate in un'area relativamente ridotta. La traduzione inglese di teleriscaldamento "district heating" che letteralmente tradotta vuol dire "riscaldamento distrettuale", rende l'idea della concentrazione che l'utenza 
-%dovrebbe avere per far sì che questo metodo sia economicamente vantaggioso. \\
+La centrale termica riscalda l'acqua che viene distribuita ai diversi edifici attraverso la rete di distribuzione con l'ausilio di pompe. Giunta allo scambiatore, l'acqua della rete trasferisce all'acqua dell'impianto di distribuzione interno dell'edificio, il calore necessario per riscaldare gli ambienti e per la produzione di acqua calda sanitaria. L'acqua, ormai raffreddata, ritorna in centrale per essere nuovamente riscaldata. 
+%Il teleriscaldamento riesce ad essere economicamente conveniente a patto che si riesca a trovare un bacino di utenze concentrate in un'area relativamente ridotta. La traduzione inglese di teleriscaldamento "district heating" che letteralmente tradotta vuol dire "riscaldamento distrettuale", rende l'idea della concentrazione che l'utenza dovrebbe avere per far sì che questo metodo sia economicamente vantaggioso. \\
 In seguito si analizzerà più approfonditamente ogni elemento dell'impianto.
 
-\section{Centrale termica e di scambio}
-Le centrali termiche, analizzate nell'elaborato, sfruttano il vapore geotermico non idoneo alla generazione di energia elettrica. Le centrali di scambio si occupano dello scambio di calore tra due diversi circuiti. La centrale termica può essere interpretata come una centrale di scambio in quanto non fa altro che estrarre dal vapore l'energia termica necessaria per l'intero impianto di teleriscaldamento. Il vapore, dunque, arriva in centrale a circa $240 ^{\circ}C$ e cede la sua energia termica attraverso gruppi di scambio termico costituito da uno scambiatore vapore-acqua surriscaldata a circa $120 ^{\circ}C$ e da un desurriscaldatore di condensa acqua acqua. La portata del vapore è controllata attraverso  valvole a due vie di tipo NC, in funzione della temperatura  di uscita dell'acqua surriscaldata nel circuito primario. La condensa viene raccolta in un serbatoio atmosferico e reiniettata nel punto di raccolta gestito da ENEL con pompe centrifughe multistadio, in modo da mantenere e rinnovare la risorsa geotermica. L'acqua surriscaldata viene inviata attraverso una linea feeder ad una seconda centrale di scambio, posta nei pressi del centro abitativo, dove cede la sua energia termica attraverso gruppi di scambio termico costituiti da uno scambiatore acqua surriscaldata - acqua calda. La portata di acqua surriscaldata è controllata attraverso valvole a due vie di tipo NC, in funzione della temperatura in uscita dell'acqua calda che varia tra gli $80-90 ^{\circ}C$ nel circuito secondario. Questo ulteriore scambio permette di separare la linea dell'acqua surriscaldata  dai circuiti urbani, che sono più estesi, riducendo così la potenza dell'impianto di pompaggio, le perdite di calore e il costo della rete. Inoltre, l'utilizzo di acqua calda anziché surriscaldata nei centri urbani, aumenta il livello di sicurezza e riduce gli interventi di manutenzione dovuti alla maggiore complessità degli impianti di utenza ad acqua surriscaldata. La circolazione sia nel circuito primario che secondario sono garantite da elettropompe centrifughe ubicate nella stessa centrale di scambio [figura \ref{fig:schema2}].
+\subsection{Centrale termica e di scambio}
+Le centrali termiche, analizzate nell'elaborato, sfruttano il vapore geotermico non idoneo alla generazione di energia elettrica. Le centrali di scambio si occupano dello scambio di calore tra due diversi circuiti. La centrale termica può essere interpretata come una centrale di scambio in quanto non fa altro che estrarre dal vapore l'energia termica necessaria per l'intero impianto di teleriscaldamento. Il vapore, dunque, arriva in centrale a circa $240 ^{\circ}C$ e cede la sua energia termica attraverso gruppi di scambio termico costituito da uno scambiatore vapore-acqua surriscaldata a circa $120 ^{\circ}C$ e da un desurriscaldatore di condensa acqua acqua. La portata del vapore è controllata attraverso  valvole a due vie di tipo NC, in funzione della temperatura  di uscita dell'acqua surriscaldata desiderata nel circuito primario. La condensa viene raccolta in un serbatoio atmosferico e reiniettata nel punto di raccolta gestito da ENEL con pompe centrifughe multistadio, in modo da mantenere e rinnovare la risorsa geotermica. L'acqua surriscaldata viene inviata attraverso una linea feeder ad una seconda centrale di scambio, posta nei pressi del centro abitativo, dove cede la sua energia termica attraverso gruppi di scambio termico costituiti da uno scambiatore acqua surriscaldata - acqua calda. La portata di acqua surriscaldata è controllata attraverso valvole a due vie di tipo NC, in funzione della temperatura in uscita dell'acqua calda nel circuito secondario. Questo ulteriore scambio permette di separare la linea dell'acqua surriscaldata  dai circuiti urbani, che sono più estesi, riducendo così la potenza dell'impianto di pompaggio, le perdite di calore e il costo della rete. Inoltre, l'utilizzo di acqua calda anziché surriscaldata nei centri urbani, aumenta il livello di sicurezza e riduce gli interventi di manutenzione dovuti alla maggiore complessità degli impianti di utenza ad acqua surriscaldata. La circolazione sia nel circuito primario che secondario sono garantite da elettropompe centrifughe ubicate nella stessa centrale di scambio [figura \ref{fig:schema2}].
 Nel caso in cui la centrale termica si trovi nei pressi delle utenze sarà possibile omettere la seconda centrale di scambio ed effettuare direttamente uno scambio di calore da vapore ad acqua calda [figura \ref{fig:schema3}].
-%\begin{figure}[h]
-%\begin{center}
-%\includegraphics[width=1.0\textwidth]{figure/schema_impianto2}
-%\caption{Schema impianto di teleriscaldamento con due stazioni di scambio}
-%\label{fig:schema2}
-%\end{center}
-%\end{figure}
-
-%\begin{figure}[h]
-%\begin{center}
-%\includegraphics[width=1.0\textwidth]{figure/schema_impianto3}
-%\caption{Schema impianto di teleriscaldamento con singola stazione di scambio}
-%\label{fig:schema3}
-%\end{center}
-%\end{figure}
 
  \begin{figure}[h]
  \centering
@@ -172,52 +158,149 @@ Nel caso in cui la centrale termica si trovi nei pressi delle utenze sarà possi
  \caption{Possibili configurazioni di un impianto di teleriscaldamento alimentato da fonte geotermica}
  \end{figure}
 
+%lavorano a regime variabile 
+\subsection{Stazioni di pompaggio}
+Le stazioni di pompaggio si occupano del trasporto dell'acqua verso le sotto-centrali di scambio delle utenze. Le pompe solitamente usate sono pompe centrifughe, la cui curva caratteristica, in funzione della portata e della prevalenza, rimane abbastanza piatta per gran parte del range di portata. In base alla resistenza offerta dalla rete la pompa lavorerà su uno specifico punto di funzionamento. Le stazioni di pompaggio hanno il compito garantire un flusso di acqua tale da fornire alle utenze l'energia termica richiesta ed inoltre, devono fornire alle utenze più sfavorite una differenza di pressione in modo che sia possibile il passaggio di acqua all'interno dello scambiatore d'utenza.
+Questa differenza di pressione deve essere mantenuta dalla stazione di pompaggio centrale, solitamente localizzata dentro la centrale di scambio. Quando la portata è elevata, le perdite di pressione nella rete aumentano, e le pompe dovranno lavorare più duramente. La pressione sarà sempre sufficiente nelle nelle sotto-stazioni vicine alla centrale, ma se la capacità limite della pompa viene raggiunta, la pressione nelle parti distanti della rete  possono decadere e gli scambiatori di calore di quelle zone non potranno lavorare correttamente. I radiatori di queste utenze svantaggiate saranno freddi.
 
-\section{Stazioni di Pompaggio}
-Le stazioni di pompaggio lavorano a regime variabile e sono gli elementi responsabili dei consumi di un impianto di teleriscaldamento. Risulta dunque fondamentale avere una regolazione per evitare lo spreco di energia di pompaggio. 
-Nel caso vi siano due stazioni di pompaggio, e quindi due centrali di scambio, possiamo regolare  sia le pompe che alimentano il circuito primario che quelle della rete di distribuzione. Le pompe che alimentano il circuito primario sono regolate in base al grado di laminazione della valvola nella seconda centrale di scambio, la quale garantisce che la temperatura dell'acqua in mandata nella rete di distribuzione rimanga costante al valore desiderato.  Più che la valvola risulta laminata più che aumenta la resistenza idraulica sul circuito primario, portando, di conseguenza, ad una riduzione della portata e ad un aumento della prevalenza nel circuito. La regolazione delle pompe che alimentano la rete di distribuzione dipendono dalle diverse esigenze di utilizzo idrico durante l'arco della giornata. 
-In impianti dove è presente una sola centrale di scambio l'unica taratura verrà effettuata sulla velocità delle pompe che inviano acqua nella rete di distribuzione affinché tutte le utenze possano usufruire della portata necessaria per soddisfare il proprio fabbisogno termico.
-Dal momento che gli elementi che dovrebbero fornire informazioni sulla regolazione della velocità delle pompe si  trovano in luoghi diversi e distanti rispetto al posizionamento delle stazioni di pompaggio, sono adottati i seguenti metodi di regolazione della potenza delle pompe:
-\begin{enumerate}
-\item Regolazione a pressione costante
-\item Regolazione a differenza di temperatura costante
-\end{enumerate}
-
-\subsection{Regolazione a pressione costante}
-Nel seguente tipo di regolazione viene misurata la pressione in mandata del circuito primario e la pressione sul ritorno dello stesso circuito.  Laminando la valvola di regolazione otteniamo una dispersione di energia sulla valvola stessa tanto più grande tanto è maggiore il suo livello di chiusura. La laminazione comporta un aumento della resistenza idraulica e lo spostamento del punto di funzionamento della pompa. Il fenomeno è descritto in figura \ref{fig:dP}.
-
-Con i sistemi di regolazione  a pressione costante la pompa in servizio viene pilotata a velocità variabile mediante un convertitore di frequenza (Inverter). La velocità di rotazione dell'elettropompa viene adeguata istantaneamente in base alla pressione differenziale di erogazione impostata. Il punto di funzionamento perciò si posizionerà sulla retta orizzontale che definisce la variazione di prevalenza $\Delta H$ di set-point, rendendo necessario far lavorare la pompa a giri ridotti riducendo i consumi.
-
-$P_1$, il punto di funzionamento con valvola tutta aperta con portata $G_1$ e prevalenza $H_1$. Chiudendo la regolazione la resistenza idraulica aumenta facendo alzare più velocemente la curva caratteristica dell'impianto primario spostando il punto di funzionamento in $P_2$ con portata  $G_2$ e prevalenza $H_2$. 
+Come già citato,le pompe sono i principali elementi responsabili dei consumi di un impianto di teleriscaldamento perciò è necessario introdurre delle regolazioni che limitino il più possibile gli sprechi di energia di pompaggio ma allo stesso tempo si deve far si che in tutte le utenze sia garantita una differenza di pressione che permetta il corretto funzionamento degli scambiatori. 
 
 
-\subsection{Regolazione a differenza di temperatura costante}
+%Le pompe solitamente usate sono pompe centrifughe, la cui curva caratteristica in funzione della portata e della prevalenza rimane abbastanza piatta per gran parte del range di portata. In base alla resistenza che offerta dalla rete la pompa lavorerà su uno specifico punto di funzionamento, il quale a sua volta è responsabile  
+%Risulta dunque fondamentale avere una regolazione per evitare lo spreco di energia di pompaggio. 
+%Nel caso vi siano due stazioni di pompaggio, e quindi due centrali di scambio, possiamo regolare  sia le pompe che alimentano il circuito primario che quelle della rete di distribuzione. Le pompe che alimentano il circuito primario sono regolate in base al grado di laminazione della valvola nella seconda centrale di scambio, la quale garantisce che la temperatura dell'acqua in mandata nella rete di distribuzione rimanga costante al valore desiderato.  Più che la valvola risulta laminata più che aumenta la resistenza idraulica sul circuito primario, portando, di conseguenza, ad una riduzione della portata e ad un aumento della prevalenza nel circuito. La regolazione delle pompe che alimentano la rete di distribuzione dipendono dalle diverse esigenze di utilizzo idrico durante l'arco della giornata. 
+%In impianti dove è presente una sola centrale di scambio l'unica taratura verrà effettuata sulla velocità delle pompe che inviano acqua nella rete di distribuzione affinché tutte le utenze possano usufruire della portata necessaria per soddisfare il proprio fabbisogno termico.
+%Dal momento che gli elementi che dovrebbero fornire informazioni sulla regolazione della velocità delle pompe si  trovano in luoghi diversi e distanti rispetto al posizionamento delle stazioni di pompaggio, sono adottati i seguenti metodi di regolazione della potenza delle pompe:
+%\begin{enumerate}
+%\item Regolazione a pressione costante
+%\item Regolazione a differenza di temperatura costante
+%\end{enumerate}
+%
+%%\subsection{Regolazione a pressione costante}
+%Nel seguente tipo di regolazione viene misurata la pressione in mandata del circuito primario e la pressione sul ritorno dello stesso circuito.  Laminando la valvola di regolazione otteniamo una dispersione di energia sulla valvola stessa tanto più grande tanto è maggiore il suo livello di chiusura. La laminazione comporta un aumento della resistenza idraulica e lo spostamento del punto di funzionamento della pompa. Il fenomeno è descritto in figura \ref{fig:dP}.
+%
+%Con i sistemi di regolazione  a pressione costante la pompa in servizio viene pilotata a velocità variabile mediante un convertitore di frequenza (Inverter). La velocità di rotazione dell'elettropompa viene adeguata istantaneamente in base alla pressione differenziale di erogazione impostata. Il punto di funzionamento perciò si posizionerà sulla retta orizzontale che definisce la variazione di prevalenza $\Delta H$ di set-point, rendendo necessario far lavorare la pompa a giri ridotti riducendo i consumi.
+%
+%$P_1$, il punto di funzionamento con valvola tutta aperta con portata $G_1$ e prevalenza $H_1$. Chiudendo la regolazione la resistenza idraulica aumenta facendo alzare più velocemente la curva caratteristica dell'impianto primario spostando il punto di funzionamento in $P_2$ con portata  $G_2$ e prevalenza $H_2$. 
+%
+%
+%\subsection{Regolazione a differenza di temperatura costante}
 
-\section{Rete di distribuzione}
+\subsection{Rete di distribuzione}
 La rete di distribuzione è la linea che trasporta acqua calda alle utenze verso le sotto-centrali di scambio. La rete è composta da tubazioni interrate che  devono  essere adeguatamente isolate  in  modo  da  evitare  che  la temperatura  del fluido termovettore si abbassi troppo lungo il tragitto. 
 Il  lemma  inglese  stesso,  district  heating,  indica  l'importanza  che  ha  il  fattore  di localizzazione  di un sistema  di  teleriscaldamento, infatti,  l'area  teleriscaldabile  deve  essere  preferibilmente  un distretto  urbano,  cioè  un'area  ad  alta  densità  abitativa,  dove  le  costruzioni  sono abbastanza concentrate.
 Aree  con  edifici  troppo  isolati  tra  loro  non  sono  infatti  convenienti  da  teleriscaldare, poiché
 la rete di tubazioni si estenderebbe troppo e aumenterebbero le dispersioni di calore.
 I terminali della rete di distribuzione sono le sotto-centrali di scambio (scambiatori). Da un punto di vista idraulico gli scambiatori di utenza vengono visti come una resistenza variabile che definiscono la caratteristica dell'impianto. 
 Se nella rete di distribuzione non vi sono regolazioni sulla portata in ingresso alla sotto-centrale di scambio delle utenze, tutta la portata circolerà nei primi scambiatori e per alimentare gli ultimi si dovrà pompare un maggior quantitativo di acqua. Inoltre, avendo le prime utenze un surplus in portata, il calore disponibile sarà di gran lunga superiore a quello necessario perciò si scambierà solo una piccola parte di energia con la conseguenza che le temperature di ritorno saranno più alte.
-L'introduzione di centraline di utenza, ovvero di elementi che regolano la portata in ingresso allo scambiatore in base calore necessario all'utenza, risultano fondamentali per l'ottimizzazione di un impianto.  Centraline d'utenza ben configurate dovrebbero assicurare:
-\begin{itemize}
-\item limite sulla portata allo stretto indispensabile
-\item riduzione delle temperature di ritorno dello scambiatore
-\item aiutare l'utilizzatore a fare efficienza ovvero ridurre i consumi
-\end{itemize} 
-Questi elementi di regolazione sono inoltre un luogo dove si possono rilevare molte informazioni utili per l'ottimizzazione del circuito ad esempio le condizioni di arrivo dei fluidi nei punti estremi della rete non facilmente prevedibili istante per istante in quanto dipendono dalle richieste del momento di tutte le utenze precedenti .
-Dalle centraline si possono inoltre fare analisi di predittiva sullo stato di funzionamento degli scambiatori con segnalazione di anomalie che portano ad interventi programmati invece che in accidentale .
+L'introduzione di elementi che regolano la portata in ingresso allo scambiatore in base calore necessario all'utenza, risultano fondamentali per l'ottimizzazione di un impianto. 
 
-\section{Analisi degli elementi critici}
-L'alimentazione da fonte geotermica di un impianto di teleriscaldamento garantisce un notevole risparmio in termini di gestione dell'impianto in quanto la potenza termica a disposizione risulta quasi a costo zero. Ne consegue che i principali consumi siano dovuti all' energia elettrica necessaria per il pompaggio delle acque di circolazione. Questa caratteristica,  che contraddistingue questi impianti di teleriscaldamento garantisce agli utenti dei costi di gran lunga inferiore rispetto agli impianti che devono produrre calore autonomamente. 
-Le stazioni di pompaggio lavorano a regime variabile e per una ottimizzazione del sistema, bisogna far si che le pompe sprechino minor energia possibile. 
-L'allacciamento di molte nuove utenze alle reti già esistenti e quindi la relativa  espansione della rete di distribuzione del calore, la mancanza di regolazioni nella rete distributiva e la non ottimizzazione della velocità delle pompe ha reso gli impianti inefficienti, con un conseguente aumento dei costi in bolletta. Questa situazione è ancor più amplificata nella stagione estiva in quanto le utenze utilizzano l'impianto di teleriscaldamento soltanto per la produzione di acqua calda sanitaria. L'energia di pompaggio per garantire all'utenza più critica la quantità di acqua necessaria al suo fabbisogno, supera di gran lunga l'energia realmente consumata dalle utenze. Questo ha portato all'inevitabile conseguenza della chiusura degli impianti in quel periodo.
+% Centraline d'utenza ben configurate dovrebbero assicurare:
+%\begin{itemize}
+%\item limite sulla portata allo stretto indispensabile
+%\item riduzione delle temperature di ritorno dello scambiatore
+%\item aiutare l'utilizzatore a fare efficienza ovvero ridurre i consumi
+%\end{itemize} 
+%Questi elementi di regolazione sono inoltre un luogo dove si possono rilevare molte informazioni utili per l'ottimizzazione del circuito ad esempio le condizioni di arrivo dei fluidi nei punti estremi della rete non facilmente prevedibili istante per istante in quanto dipendono dalle richieste del momento di tutte le utenze precedenti .
+%Dalle centraline si possono inoltre fare analisi di predittiva sullo stato di funzionamento degli scambiatori con segnalazione di anomalie che portano ad interventi programmati invece che in accidentale .
+
+%\section{Analisi degli elementi critici}
+%L'alimentazione da fonte geotermica di un impianto di teleriscaldamento garantisce un notevole risparmio in termini di gestione dell'impianto in quanto la potenza termica a disposizione risulta quasi a costo zero. Ne consegue che i principali consumi siano dovuti all' energia elettrica necessaria per il pompaggio delle acque di circolazione. Questa caratteristica,  che contraddistingue questi impianti di teleriscaldamento garantisce agli utenti dei costi di gran lunga inferiore rispetto agli impianti che devono produrre calore autonomamente. 
+%Le stazioni di pompaggio lavorano a regime variabile e per una ottimizzazione del sistema, bisogna far si che le pompe sprechino minor energia possibile. 
+%L'allacciamento di molte nuove utenze alle reti già esistenti e quindi la relativa  espansione della rete di distribuzione del calore, la mancanza di regolazioni nella rete distributiva e la non ottimizzazione della velocità delle pompe ha reso gli impianti inefficienti, con un conseguente aumento dei costi in bolletta. Questa situazione è ancor più amplificata nella stagione estiva in quanto le utenze utilizzano l'impianto di teleriscaldamento soltanto per la produzione di acqua calda sanitaria. L'energia di pompaggio per garantire all'utenza più critica la quantità di acqua necessaria al suo fabbisogno, supera di gran lunga l'energia realmente consumata dalle utenze. Questo ha portato all'inevitabile conseguenza della chiusura degli impianti in quel periodo.
 %Gli elementi della rete che influiscono su questo fenomeno sono:
 %\begin{enumerate}
 %\item Stazioni di pompaggio
 %\item Rete di distribuzione
 %\end{enumerate}
+
+\section{Effetti delle temperature di esercizio in un impianto di teleriscaldamento}
+Le temperature di esercizio in una rete di teleriscaldamento  influenzano la quantità di calore fornito alla rete, le perdite di calore e l'energia di pompaggio per il trasporto dell'acqua.
+
+Vi sono due differenti temperature da tenere in considerazione: la temperatura di mandata e la temperatura di ritorno alla centrale di scambio. La prima è la temperatura alla quale viene inviata l'acqua verso le utenze. Questa temperatura è prodotta dalla centrale termica. La seconda, è la temperatura di ritorno dagli scambiatori di utenza, quindi a temperatura più bassa. La temperatura di ritorno non è un parametro che può essere settato ad un certo valore, ma è il risultato di uno scambio di calore che avviene nello scambiatore delle utenze. Questa temperatura è quindi influenzata principalmente dalle utenze.
+
+Gli effetti dei cambiamenti di queste due temperature sono descritti in seguito da un punto di vista generale. 
+
+\subsection{Influenze sulla capacità termica in mandata}
+Nelle reti di teleriscaldamento ci sono due parametri che controllano la potenza termica inviata alle utenze. L'equazione \ref{eq:Potenza} mostra come la potenza $P$ in arrivo alla sotto-centrale di scambio dipende dalla differenza di temperatura tra acqua in ingresso e quella in uscita dallo scambiatore $\Delta T$, dalla portata $\dot{m}$ e dalla capacità termica $C_p$ del fluido termovettore.
+\begin{equation}
+P = \dot{m} \ C_p \ \Delta T 
+\label{eq:Potenza}
+\end{equation} 
+
+\begin{equation}
+\Delta T = T_{mandata} - T_{ritorno}
+\label{eq:dT}
+\end{equation}
+
+$C_p$ è una proprietà che dipende dal fluido per questo non viene considerata come un parametro che può influenzare la variazione di potenza inviata. Soltanto la portata e la differenza di temperatura   possono essere usate a questo scopo. La temperatura di ritorno $T_{ritorno}$ non è determinata dalla centrale di produzione. Soltanto la temperatura in mandata $T_{mandata}$ e la portata possono essere modificate dal gestore dell'impianto.
+
+Questi due parametri sono gli strumenti che la centrale possiede per fornire la giusta quantità di calore in ogni momento.
+% Si può variare anche soltanto un paramentro alla volta...
+
+Dall'equazione \ref{eq:Potenza} è possibile notare come la potenza inviata alla rete di distribuzione sia proporzionale alla differenza di temperatura del fluido. Ovvero, ogni volta che diminuisce la temperatura di ritorno oppure cresce la temperatura di mandata si ha una crescita della potenza totale trasportata a parità di portata.
+Un sistema di teleriscaldamento efficiente ha due caratteristiche: una temperatura in mandata bassa e una differenza di temperatura tra mandata e ritorno alta. Una temperatura in mandata bassa fa diminuire le perdita di calore durante il trasporto, mentre, un $\Delta T$ alto comporta una riduzione della portata e dunque risparmio di energia elettrica per il pompaggio.
+
+Dal momento che la temperatura di ritorno non è un parametro che può essere deciso a priori, in quanto dipende dalle utenze, il maggiore sforzo che deve essere fatto nelle reti di teleriscaldamento per aumentare la loro efficienza sta nel regolare e ottimizzare le sotto-stazioni di scambio delle utenze così da ottenere in ogni momento la più bassa temperatura di ritorno in base al reale fabbisogno dell'utenza ed individuare malfunzionamenti che riducono l'efficienza degli scambiatori. 
+%Return temperatures depends mostly on the house heating systems. The old systems are designed to work with supply temperatures of 80 oC and return of 60 oC, whereas the modern ones use 60/45 oC
+\subsection{Influenza sull'energia di pompaggio}
+L'energia di pompaggio è l'energia necessaria al trasporto dell'acqua calda dalla centrale termica verso le utenze e per riportarla indietro alla centrale stessa. La perdita di pressione della rete deve essere misurata lontano dalla stazione di pompaggio e se la differenza di pressione tra mandata e ritorno non è sufficientemente elevata si ordina alla pompa di dare più pressione.
+
+Queste pompe devono inviare una pressione  tale da far fronte alle perdite che si hanno lungo la rete dovute alla frizione che ha l'acqua con le tubazioni e tale da fornire una differenza di pressione che permetta il corretto funzionamento degli scambiatori. Questa frizione non ha una relazione lineare con la portata, ma è approssimativamente proporzionale alla terza potenza della portata. Ciò implica che una diminuzione del flusso ha un grande impatto sul consumo di energia delle pompe.
+
+Dando uno sguardo all'equazione \ref{eq:Potenza} possiamo notare che a parità di potenza inviata alla rete, un aumento della differenza di temperatura comporta una diminuzione della portata del fluido e, dunque,una diminuzione dei costi di pompaggio.
+
+Concludendo, l'aumento della differenza di temperatura ha un impatto notevole sul risparmio di energia elettrica.
+
+
+\subsection{Influenza sulle perdite di calore}
+Le perdite di calore in una rete di teleriscaldamento sono proporzionali alla differenza di temperatura tra l'ambiente e l'acqua nelle tubazioni. Dal momento che la temperatura ambiente è una variabile non decisionale, le perdite di calore dipendono dalla temperatura in mandata, da quella di ritorno e dalla portata. Le perdite di calore non sono un elemento da sottovalutare, infatti, in media il calore disperso in una rete è più alto del $10\%$ dell'energia fornita. Per questo motivo è importante tenere in considerazione le perdite di calore quando vogliamo determinare le temperature di esercizio ottimali di un impianto teleriscaldato.
+
+Si potrebbe pensare che ridurre il più possibile la temperatura in mandata eliminerebbe il problema delle perdite di calore nei tubi. Se da una parte una temperatura in mandata molto bassa ridurrebbe queste perdite dall'altra si avrebbe che le pompe dovrebbero inviare un flusso di acqua molto maggiore per raggiungere la stessa potenza termica desiderata. Un studio che può essere fatto, è trovare quali sono le temperature e le portate  della rete che minimizzano l'energia elettrica necessaria alle pompe sommata all'energia termica persa. Questa somma dovrà essere pesata in funzione dei diversi costi tra l'energia elettrica per alimentare le pompe e la produzione di calore disperso nella rete.
+Un altro vincolo importante sulla temperatura in mandata è che questa non potrà essere inferiore alla temperatura di funzionamento dei radiatori.  
+
+\section{Effetti degli utenti sulla rete}
+Gli utenti svolgono un ruolo importante nell'ottimizzazione di un impianto di teleriscaldamento. Al fine di minimizzare l'energia elettrica consumata dalle stazioni di pompaggio, la differenza di temperatura tra mandata e ritorno deve essere massimizzata. La temperatura di mandata è un parametro prodotto dalla centrale termica, ma non la temperatura di ritorno. Quest'ultima dipende principalmente dagli utenti. Una bassa temperatura di ritorno è possibile soltanto se l'impianto dell'utenza è progettato a dovere e funziona correttamente.
+
+%confronto con rete elettrica
+
+La rete di distribuzione, ovvero la rete di tubi tra la centrale termica e le sottostazioni di scambio delle utenze deve fornire alle utenze la potenza necessaria al proprio fabbisogno, quindi la velocità delle pompe dovrà essere settata in modo tale da raggiungere tale potenza in funzione della temperatura in mandata e quella di ritorno. Quando nel circuito dell'utenza non viene mantenuta un alta differenza di temperatura tra mandata e ritorno, più portata sarà richiesta nel circuito di distribuzione per trasferire la stessa potenza termica. Per questa ragione, quando l'utenza ritorna acqua ad alta temperatura, nella sottostazione dovrà essere fornito un flusso maggiore, che comporta un aumento dell'energia di pompaggio ed un rischio per le altre utenze di non ricevere sufficiente calore.
+
+La differenza di temperatura deve essere massimizzata al fine di lavorare con il minimo flusso di acqua richiesto. Questa considerazione è valida sia per la rete di distribuzione che per il circuito dell'utenza a causa di una stretta relazione tra i due. Quando si aumenta la portata dovuta per esempio ad un aumento della temperatura di ritorno e quindi ad una diminuzione della differenza di temperatura del lato utenza si avrà una maggiore temperatura di ritorno anche nel lato della rete di distribuzione perché l'aumento di portata, da una parte aumenta la quantità di energia termica ma allo stesso tempo la maggiore velocità fa raffreddare meno il fluido per unità di tempo. 
+
+Nella rete di distribuzione il flusso di acqua è regolato in accordo al carico termico richiesto. Durante l'inverno, dove la domanda è più alta, il flusso di fluido termovettore sarà più alto rispetto all'estate. Un flusso variabile nella rete è la strada necessaria da percorrere per ottimizzare le spese di pompaggio.
+
+Nel circuito delle utenze può essere fatta la stessa considerazione. Tre differenti soluzioni per regolare la portata in arrivo alle sotto-centrali di scambio delle utenze verranno analizzate in seguito, tenendo condo di quanto e come influenzano la rete.
+
+\subsection{Regolazione con valvola a tre vie}
+La prima soluzione che verrà descritta lavora con un flusso costante di acqua che arriva allo scambiatore d'utenza, una valvola a tre vie regola la quantità di fluito termovettore che verrà usato dall'utenza. Vi è quindi un flusso variabile, ma la pressione rimane costante. Lo schema di funzionamento è illustrato in figura .
+
+% figura
+
+La portata nella sotto-stazione dipende dalla quantità di calore necessario all'utenza. Quando questa ha bisogno di più energia, la temperatura sul ritorno inizia a diminuire a causa del consumo di calore. La valvola a due vie sul primario  rileva una temperatura più bassa sulla rete di distribuzione e di conseguenza aumenta il flusso in modo da avere un più alto trasferimento di calore dal primario alla rete di distribuzione.
+
+Nel sistema descritto, la valvola a tre vie decide in ogni momento quale è la portata necessaria in base al carico termico richiesto. Il resto dell'acqua è rimandato nella tubazione di ritorno attraverso il by-pass senza essere raffreddata. Conseguentemente, la temperatura di ritorno sarà più alta tanta più acqua è deviata. Più alta è la temperatura sul ritorno dell'utenza     più flusso di acqua sarà necessario per spedire la stessa potenza. In questo sistema la pompa sulla rete di distribuzione lavora sempre a massimo carico, senza dipendere dalla domanda di calore. Conseguentemente la vita delle pompe sarà più breve e le spese di pompaggio saranno alte.
+
+\subsection{Regolazione con valvola di laminazione}
+In questo caso, il flusso di acqua non è costante, ma dipende dalla necessità di calore delle utenze. Una valvola di laminazione (a due vie) regola la portata in base alla necessità di calore. 
+
+Inoltre la pompa lavora in base alla richiesta di portata. Questo implica che il consumo di energia sarà proporzionale alla quantità di energia termica richiesta, non come nel primo caso con la valvola a tre vie. Lo schema di funzionamento è mostrato in figura .
+
+% figura
+
+La rete di distribuzione diventa un sistema con portata e pressione variabile. Viene solitamente scelto dagli ingegneri in quanto ha bisogno di poca manutenzione, riduce i consumi di energia elettrica per il pompaggio e assicura una bassa temperatura di ritorno.
+
+\subsection{Regolazione con pompe a pressione differenziale}
+Anche questo sistema, come quello precedente, utilizza una valvola di laminazione ed inoltre la velocità delle pompe è controllata in funzione di un parametro di controllo come il calo di pressione, cosicché il consumo di elettricità per il pompaggio è ridotto al massimo. In figura sono analizzati i cambiamenti portati dai due miglioramenti.
+
+% figure
+
+Il punto 1 rappresenta un alta domanda di calore, quindi la portata sarà a sua volta alta. Se la domanda di calore decresce, la valvola di laminazione inizia a chiudersi facendo aumentare la resistenza del circuito e quindi la curva caratteristica della rete cresce più rapidamente. Il punto si lavoro si sposta quindi da 1 a 2. Questo è il funzionamento della valvola di laminazione descritto in (sezione precedente). Se però viene introdotta una pompa a pressione differenziale costante, il punto di funzionamento da 1 verrà spostato a 3. Se la velocità della pompa è diminuita, la caratteristica della pompa verrà descritta da una nuova curva ed anche la curva caratteristica dell'impianto cambia, avremo come risultato due curve che si intersecano nel punto 3.      
+
+La regolazione della velocità delle pompe è uno dei modi migliori per diminuire al massimo i consumi delle pompe e ed è anche una delle migliori soluzioni per i gestori dell'impianto e per i consumatori. Con questo tipo di regolazione si dovrebbe ottenere il minore consumo di energia e la più alta differenza di temperatura possibile.
+
+\section{Effetti della temperatura esterna sulle utenze}  
+
 
 \chapter{Modelli Matematici}
 

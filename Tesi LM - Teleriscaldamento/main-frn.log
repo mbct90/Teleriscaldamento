@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.20)  3 NOV 2015 18:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.20)  3 NOV 2015 21:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -453,12 +453,23 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box29
+Package epstopdf Info: Source file: <logosm.eps>
+(epstopdf)                    date: 2015-06-05 14:22:04
+(epstopdf)                    size: 50032 bytes
+(epstopdf)             Output file: <logosm-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-02 17:15:58
+(epstopdf)                    size: 64538 bytes
+(epstopdf)             Command: <repstopdf --outfile=logosm-eps-converted-to.pd
+f logosm.eps>
+(epstopdf)             \includegraphics on input line 27.
+Package epstopdf Info: Output file is already uptodate.
 
-<logosm.jpg, id=1, 622.325pt x 642.4pt>
-File: logosm.jpg Graphic file (type jpg)
- <use logosm.jpg>
-Package pdftex.def Info: logosm.jpg used on input line 27.
-(pdftex.def)             Requested size: 110.24742pt x 113.81102pt.
+<logosm-eps-converted-to.pdf, id=1, 622.325pt x 642.4pt>
+File: logosm-eps-converted-to.pdf Graphic file (type pdf)
+
+<use logosm-eps-converted-to.pdf>
+Package pdftex.def Info: logosm-eps-converted-to.pdf used on input line 27.
+(pdftex.def)             Requested size: 129.54309pt x 133.72786pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -468,24 +479,24 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./logos
-m.jpg>] ) 
+m-eps-converted-to.pdf>] ) 
 Here is how much of TeX's memory you used:
  3133 strings out of 493117
- 43985 string characters out of 6135433
- 121661 words of memory out of 5000000
+ 44053 string characters out of 6135433
+ 121663 words of memory out of 5000000
  6556 multiletter control sequences out of 15000+600000
  7598 words of font info for 27 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,14n,35p,250b,238s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
-x12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcs
-c10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
-pfb>
-Output written on main-frn.pdf (1 page, 94439 bytes).
+</usr/local/texlive/2014/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr12.pfb>
+Output written on main-frn.pdf (1 page, 112068 bytes).
 PDF statistics:
- 25 PDF objects out of 1000 (max. 8388607)
- 16 compressed objects within 1 object stream
+ 28 PDF objects out of 1000 (max. 8388607)
+ 18 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

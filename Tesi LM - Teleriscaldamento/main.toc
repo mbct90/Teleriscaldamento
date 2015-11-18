@@ -2,14 +2,21 @@
 \select@language {italian}
 \contentsline {chapter}{\numberline {1}Geotermia e Teleriscaldamento}{3}
 \contentsline {chapter}{\numberline {2}Tecnologie degli impianti di teleriscaldamento}{4}
-\contentsline {section}{\numberline {2.1}Centrale termica e di scambio}{4}
-\contentsline {section}{\numberline {2.2}Stazioni di Pompaggio}{6}
-\contentsline {subsection}{\numberline {2.2.1}Regolazione a pressione costante}{7}
-\contentsline {subsection}{\numberline {2.2.2}Regolazione a differenza di temperatura costante}{8}
-\contentsline {section}{\numberline {2.3}Rete di distribuzione}{8}
-\contentsline {section}{\numberline {2.4}Analisi degli elementi critici}{9}
-\contentsline {chapter}{\numberline {3}Modelli Matematici}{10}
-\contentsline {chapter}{\numberline {4}Risultati della simulazione}{11}
-\contentsline {chapter}{\numberline {5}Conclusioni}{12}
-\contentsline {chapter}{Appendice A: Dettagli}{13}
-\contentsline {chapter}{Bibliografia}{14}
+\contentsline {section}{\numberline {2.1}Struttura di un impianto}{4}
+\contentsline {subsection}{\numberline {2.1.1}Centrale termica e di scambio}{5}
+\contentsline {subsection}{\numberline {2.1.2}Stazioni di pompaggio}{6}
+\contentsline {subsection}{\numberline {2.1.3}Rete di distribuzione}{7}
+\contentsline {section}{\numberline {2.2}Effetti delle temperature di esercizio in un impianto di teleriscaldamento}{7}
+\contentsline {subsection}{\numberline {2.2.1}Influenze sulla capacit\IeC {\`a} termica in mandata}{8}
+\contentsline {subsection}{\numberline {2.2.2}Influenza sull'energia di pompaggio}{8}
+\contentsline {subsection}{\numberline {2.2.3}Influenza sulle perdite di calore}{9}
+\contentsline {section}{\numberline {2.3}Effetti degli utenti sulla rete}{9}
+\contentsline {subsection}{\numberline {2.3.1}Regolazione con valvola a tre vie}{10}
+\contentsline {subsection}{\numberline {2.3.2}Regolazione con valvola di laminazione}{11}
+\contentsline {subsection}{\numberline {2.3.3}Regolazione con pompe a pressione differenziale}{11}
+\contentsline {section}{\numberline {2.4}Effetti della temperatura esterna sulle utenze}{12}
+\contentsline {chapter}{\numberline {3}Modelli Matematici}{14}
+\contentsline {chapter}{\numberline {4}Risultati della simulazione}{15}
+\contentsline {chapter}{\numberline {5}Conclusioni}{16}
+\contentsline {chapter}{Appendice A: Dettagli}{17}
+\contentsline {chapter}{Bibliografia}{18}
