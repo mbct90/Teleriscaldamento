@@ -266,14 +266,15 @@ Gli utenti svolgono un ruolo importante nell'ottimizzazione di un impianto di te
 
 La rete di distribuzione, ovvero la rete di tubi tra la centrale termica e le sottostazioni di scambio delle utenze deve fornire alle utenze la potenza necessaria al proprio fabbisogno, quindi la velocità delle pompe dovrà essere settata in modo tale da raggiungere tale potenza in funzione della temperatura in mandata e quella di ritorno. Quando nel circuito dell'utenza non viene mantenuta un alta differenza di temperatura tra mandata e ritorno, più portata sarà richiesta nel circuito di distribuzione per trasferire la stessa potenza termica. Per questa ragione, quando l'utenza ritorna acqua ad alta temperatura, nella sottostazione dovrà essere fornito un flusso maggiore, che comporta un aumento dell'energia di pompaggio ed un rischio per le altre utenze di non ricevere sufficiente calore.
 
-La differenza di temperatura deve essere massimizzata al fine di lavorare con il minimo flusso di acqua richiesto. Questa considerazione è valida sia per la rete di distribuzione che per il circuito dell'utenza a causa di una stretta relazione tra i due. Quando si aumenta la portata dovuta per esempio ad un aumento della temperatura di ritorno e quindi ad una diminuzione della differenza di temperatura del lato utenza si avrà una maggiore temperatura di ritorno anche nel lato della rete di distribuzione perché l'aumento di portata, da una parte aumenta la quantità di energia termica ma allo stesso tempo la maggiore velocità fa raffreddare meno il fluido per unità di tempo. 
+La differenza di temperatura deve essere massimizzata al fine di lavorare con il minimo flusso di acqua richiesto. Questa considerazione è valida sia per la rete di distribuzione che per il circuito dell'utenza a causa di una stretta relazione tra i due. 
+Quando c'è una diminuzione del $\Delta T$ nel lato utenze si avrà un aumento della temperatura di ritorno anche dal lato della rete di distribuzione. Ciò avviene perché per mantenere la stessa potenza dobbiamo aumentare la portata e questo aumento di flusso da una parte aumenta la quantità di energia termica ma allo stesso tempo la maggiore velocità fa raffreddare meno il fluido per unità di tempo. 
 
 Nella rete di distribuzione il flusso di acqua è regolato in accordo al carico termico richiesto. Durante l'inverno, dove la domanda è più alta, il flusso di fluido termovettore sarà più alto rispetto all'estate. Un flusso variabile nella rete è la strada necessaria da percorrere per ottimizzare le spese di pompaggio.
 
 Nel circuito delle utenze può essere fatta la stessa considerazione. Tre differenti soluzioni per regolare la portata in arrivo alle sotto-centrali di scambio delle utenze verranno analizzate in seguito, tenendo condo di quanto e come influenzano la rete.
 
 \subsection{Regolazione con valvola a tre vie}
-La prima soluzione che verrà descritta lavora con un flusso costante di acqua che arriva allo scambiatore d'utenza, una valvola a tre vie regola la quantità di fluito termovettore che verrà usato dall'utenza. Vi è quindi un flusso variabile, ma la pressione rimane costante. Lo schema di funzionamento è illustrato in figura .
+La prima soluzione che verrà descritta lavora con un flusso costante di acqua che arriva allo scambiatore d'utenza, una valvola a tre vie regola la quantità di fluido termovettore che verrà usato dall'utenza. Vi è quindi un flusso variabile, ma la pressione rimane costante. Lo schema di funzionamento è illustrato in figura .
 
 % figura
 
@@ -299,10 +300,284 @@ Il punto 1 rappresenta un alta domanda di calore, quindi la portata sarà a sua 
 
 La regolazione della velocità delle pompe è uno dei modi migliori per diminuire al massimo i consumi delle pompe e ed è anche una delle migliori soluzioni per i gestori dell'impianto e per i consumatori. Con questo tipo di regolazione si dovrebbe ottenere il minore consumo di energia e la più alta differenza di temperatura possibile.
 
-\section{Effetti della temperatura esterna sulle utenze}  
+\section{Metodi per ridurre la temperatura di ritorno}  
+In una comune utenza la potenza termica necessaria al riscaldamento per raggiungere un certo set point dipende principalmente dalla temperatura esterna. Più all'esterno è freddo più saranno le perdite di calore dell'abitazione.
 
+% ecc..
+
+\subsection{Termoregolazione climatica}
+Poiché il calore necessario per mantenere le condizioni di comfort in ambiente è legato alle dispersioni dell'edificio ed alla temperatura esterna, il fabbisogno termico aumenta all'aumentare delle dispersioni dell'edificio e al diminuire della temperatura esterna. Le regolazioni di tipo climatico permettono di selezionare una curva climatica all'interno di una famiglia di curve, in modo da adeguare la regolazione allo specifico edificio. 
+
+Fissata la curva climatica, la temperatura di mandata all'impianto viene regolata in modo automatico in funzione della temperatura esterna, adeguando l'apporto di calore al fabbisogno termico dell'edificio, per garantire sempre le migliori prestazioni in termini di comfort. 
+
+Per ottenere questi risultati si utilizza una centralina elettronica digitale, a cui sono collegate due sonde di temperatura (una di mandata all'impianto e una esterna) ed un servomotore che aziona la valvola miscelatrice. 
 
 \chapter{Modelli Matematici}
+\section{Scambiatore di calore}
+Gli scambiatori di calore sono  delle apparecchiature in cui si realizza lo scambio di energia termica tra due fluidi aventi temperature diverse. Negli impianti di teleriscaldamento si utilizzano scambiatori a piastre. I due fluidi scorrono tra delle piastre metalliche piane, dotate di particolari rilievi per aumentare la superficie di scambio termico. In essi la trasmissione del calore tra i due fluidi avviene per convezione tra i fluidi e le rispettive superfici solide lambite e per conduzione attraverso la parete del tubo che li separa. Il tipo di contatto è di tipo indiretto in quanto non vi è miscelazione dei fluidi.
+Il loro funzionamento è garantito soltanto dalla presenza di due fluidi a differente temperatura. La temperatura del corpo più caldo diminuisce, mentre la temperatura di quello più freddo aumenta. La progressiva riduzione della differenza di temperatura deve essere ricondotta a uno scambio di energia, scambio che persiste finché esiste la differenza di temperatura, ovvero quando si raggiunge l'equilibrio termico. 
+
+Le variabili in gioco sono elencate in seguito:
+\begin{itemize}
+\item[] $G_p$ = portata del circuito primario
+\item[]$G_u$ = portata del circuito secondario (parte utenza)
+\item[]$c_s$ = calore specifico dell'acqua
+\item[]$T_i$ = Temperatura di ingresso scambiatore dalla parte del circuito primario (acqua calda)
+\item[]$T_u$ = Temperatura in uscita dallo scambiatore dalla parte del circuito primario (acqua fredda)
+\item[]$t_i$ = Temperatura di ingresso scambiatore dalla parte del circuito secondario (acqua fredda)
+\item[]$t_u$ = Temperatura in uscita dallo scambiatore dalla parte del circuito secondario (acqua calda)
+\end{itemize}
+
+% CAMBIARE IMMAGINE
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.65\textwidth]{figure/scambiatore} % Include the image placeholder.png
+\caption{Schema di uno scambiatore d'utenza}
+\label{fig:scamb}
+\end{center}
+\end{figure}
+
+Applicando le equazioni di bilancio di massa e di energia al fluido caldo ed al fluido freddo, assumendo che non vi siano dispersioni di calore durante lo scambio, si ottengono le seguenti formule per il calcolo della potenza termica globale, $W_t$. Nello studio degli scambiatori di calore è  utile riferirsi alla cosiddetta portata termica (oraria), $C$, data dal prodotto tra la portata massica ed il calore specifico:
+\begin{equation}
+C_p=G_p c_s  \ \ \ ; \ \ \ C_u=G_u c_s
+\end{equation}
+In tal caso le due equazioni di bilancio  possono scriversi nella seguente forma:
+\begin{equation}
+W_t=C_p(T_i - T_u) \ \ \ ; \ \ \ W_t=C_u(t_u - t_i)
+\end{equation}
+A queste due equazioni di bilancio energetico, si può associare una equazione di scambio termico; quest'ultima associa la potenza termica scambiata tra i due fluidi alle temperature di ingresso e/o di uscita, alle portate, al coefficiente di scambio termico globale ed all'area di scambio. Questa equazione deriva dal metodo della media logaritmica delle differenze di temperatura (o MLDT) dove  la potenza termica scambiata tra i due fluidi viene legata alla differenza di temperatura tra il fluido caldo ed il fluido freddo dalla seguente relazione:
+\begin{equation}
+W_t=\alpha S \Delta T_{ml} \\
+\end{equation}
+\begin{equation}
+ \Delta T_{ml} = \frac{(\Delta T_1)-(\Delta T_2)}{log\left( \frac{\Delta T_1}{\Delta T_2} \right)} \\
+ \end{equation}
+ \begin{center}
+ Se scambiatore in corrente : $ \Delta T_1 = T_i - t_i $  \ \ ; \ \ $ \Delta T_2 = T_u - t_u $  \\
+ 
+ Se scambiatore in controcorrente : $ \Delta T_1 = T_i - t_u $  \ \ ; \ \ $ \Delta T_2 = T_u - t_i $ 
+\end{center}
+dove $S$ \`e  la superficie attraverso cui avviene lo scambio ed $\alpha$ \`e  il cosiddetto coefficiente di scambio termico globale o conduttanza termica unitaria. 
+
+In figura \ref{fig:andamento} è  possibile vedere l'andamento delle temperature negli scambiatori in corrente (a) e in controcorrente (b).
+Nel caso dello scambiatore equicorrente si ha una forte differenza di temperatura all'ingresso e una differenza  minima  all'uscita.  Nel  caso  dello  scambiatore in controcorrente  la  differenza  è invece più costante e il fluido freddo può uscire dallo scambiatore a temperatura maggiore di  quella  dell'uscita del fluido  caldo. 
+Termodinamicamente quindi  questa  configurazione  è superiore, per  la  minore  caduta di temperatura dell'energia termica.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.95\textwidth]{figure/grafico_scambiatore} % Include the image placeholder.png
+\caption{Andamento delle temperature negli scambiatori }
+\label{fig:andamento}
+\end{center}
+\end{figure}
+
+\section{Radiatori}
+I radiatori sono gli elementi all'interno dell'utenza che trasferiscono calore all'ambiente per scaldarlo. 
+La potenza emessa da un corpo scaldante dipende dalla sua temperatura media tra il fluido caldo in ingresso al radiatore e quello freddo in uscita dalla seguente relazione:
+\begin{equation}
+\dot{Q}_r= K_m(\frac{t_u + t_i}{2} - \Theta_{amb})^n
+\end{equation}
+con $K_m$ e $n$ coefficienti costanti che dipendono dal tipo di radiatore utilizzato. 
+Il funzionamento di questi elementi di riscaldamento è garantito da una pompa di circolazione solitamente a velocità fissa che permette la circolazione di acqua calda all'interno dell'abitazione. 
+
+Una considerazione  importante riguarda il comportamento dei radiatori in termini di calore scambiato al variare della portata. Considerando la temperatura in mandata ai radiatori costante, la temperatura di ritorno dipende  dalla velocità con cui scorre il fluido nei radiatori, quindi la portata è uno dei fattori determinanti della temperatura media e quindi della potenza emessa dai radiatori. Maggiore è la portata minore sarà il tempo per scambiare calore, avendo così una temperatura di ritorno e una conseguente temperatura media più alta e viceversa. Si può fare riferimento all'equazione \ref{eq:Potenza}, valida anche per i radiatori, per notare come la portata sia direttamente proporzionale alla potenza termica scambiata. 
+
+E' possibile ottenere  le stesse potenze termiche con due portate diverse facendo variare la differenza di temperatura tra fluido caldo e freddo, e di conseguenza alzando o abbassando le temperature di mandata dei radiatori [figura \ref{fig:portata}]. 
+%Diminuendo la portata il radiatore scambia di più  e ciò  comporta una riduzione dell'acqua di ritorno dal radiatore. Se però  la temperatura in mandata rimane la stessa avremo una potenza scambiata dal radiatore minore in quanto si \`e  abbassata la temperatura media del fluido all'interno del radiatore (figura \ref{fig:portata}).
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.95\textwidth]{figure/portata} % Include the image placeholder.png
+\caption{Mantenimento delle potenze scambiate dal radiatore costante variando la temperatura di mandata e la portata.}
+\label{fig:portata}
+\end{center}
+\end{figure}
+
+Dal momento che, come detto in precedenza, le pompe solitamente lavorano a velocità costante, se vogliamo ottenere una potenza maggiore l'unica opzione possibile è quella di aumentare la temperatura in mandata in modo da far aumentare la temperatura media [figura \ref{fig:portata2}].
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.95\textwidth]{figure/portata2} % Include the image placeholder.png
+\caption{Variazione delle potenze scambiate radiatore variando la temperatura di mandata variabile e mantenendo la portata costante.}
+\label{fig:portata2}
+\end{center}
+\end{figure}
+
+\section{Dinamica dell'utenza}
+\label{sec:dinamicautenza}
+In seguito è descritto il modello utilizzato in simulazione per modellare gli scambi termici all'interno di un edificio. 
+Il trasferimento di calore tra due mezzi può avvenire per conduzione o convezione ed è proporzionale alla differenza di temperatura tra i due mezzi coinvolti. Il trasferimento di calore per conduzione e convezione può quindi essere modellato utilizzando una resistenza termica,
+\begin{equation}
+\dot{Q} = \frac{1}{R} (T_1-T_2)
+\label{eq:q1}
+\end{equation}
+dove $T_1$ e $T_2$ sono le temperature di ogni mezzo coinvolto nello scambio di calore mentre $R$ è la resistenza opposta al trasferimento l'energia termica.
+
+L'altro aspetto importante da tenere in considerazione è la capacità termica che descrive la capacità di un materiale di accumulare calore. Nella seguente equazione è descritta la relazione che lega la capacità termica $C$ con il calore trasferito $\dot{Q}$ e la temperatura $T$.
+\begin{equation}
+\dot{Q} = C(T) \frac{dT}{dt} \approxeq C \frac{dT}{dt}
+\label{eq:q2}
+\end{equation}
+Dal momento che l'intervallo di temperature in cui opera la casa è piccolo, possiamo quindi assumere la capacità termica come costante.
+
+La termodinamica dell'utenza è modellata su una grande stanza circondata da pareti ed i flussi termici sono schematizzati in figura \ref{fig:scambio}. Gli scambi di calore che possono avvenire sono: Scambio di calore tra i radiatori e l'aria della stanza, scambio di calore tra l'aria della stanza e le pareti, scambio di calore tra le pareti e l'esterno.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.05\textwidth]{figure/scambio_casa}
+\caption{Scambi di calore di un abitazione generica}
+\label{fig:scambio}
+\end{center}
+\end{figure}
+
+Le grandezze che verranno usate nel modello sono le seguenti:
+\begin{itemize}
+\item[] $\dot{Q}_r$ = calore fornito dai radiatori
+\item[]$C_i$ = capacità termica dell'aria all'interno dell'abitazione
+\item[]$C_p$ = Capacità termica delle pareti
+\item[]$R_{ip}$ = Resistenza termica tra l'aria interna alla casa e la parete
+\item[]$R_{pe}$ = Resistenza termica tra la parete le l'aria all'esterno della casa
+\item[]$R_{conv,i}$ = Resistenza termica per convezione   parete interna della casa
+\item[]$R_{conv,e}$ = Resistenza termica per convezione  parete esterna della casa
+\item[]$R_{cond}$ = Resistenza termica per conduzione della parete della casa
+\item[]$T_{e}$ = Temperatura dell'aria all'esterno della casa
+\item[]$\Theta_i$ = Temperatura dell'aria all'interno dalla casa
+\item[]$\Theta_e$ = Temperatura della superficie della parete all'interno dalla casa 
+\item[]$A$ = Superficie di scambio delle pareti
+\end{itemize}
+
+
+A causa delle analogie tra le equazioni \ref{eq:q1} e \ref{eq:q2} con resistenze e capacità elettriche, possiamo modellare la termodinamica dell'abitazione come una rete elettrica, costituita da resistenze e condensatori, con le temperature equivalenti alle tensioni e il flusso di calore equivalente al flusso di cariche elettriche, ovvero alla corrente. Il circuito elettrico equivalente degli scambi di calore è mostrato in figura \ref{fig:RC}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{figure/schema_trasf_calore}
+\caption{Circuito equivalente RC per gli scambi di calore}
+\label{fig:RC}
+\end{center}
+\end{figure}
+ 
+Vediamo adesso in dettaglio come viene considerato lo scambio tra aria pareti ed esterno. L'aria interna che precedentemente ha ricevuto calore dai radiatori cede calore alla superficie interna delle pareti per convezione secondo la legge:
+\begin{equation}
+\dot{Q} = A \frac{(\Theta_i - \Theta_p)}{R_{ip}} 
+\end{equation} 
+Dal momento che la temperatura delle pareti a cui facciamo riferimento è quella della superficie interna dell'edificio la resistenza termica sarà data soltanto dalla resistenza termica per convezione, ovvero:
+\begin{center}
+$R_{ip} = R_{conv,i}$
+\end{center}
+
+mentre lo scambio tra la parete e l'ambiente esterno è dato dalla differenza di temperatura tra la parete interna e l'aria  esterna, considerando come resistenza termica la resistenza conduttiva $R_{cond}$ degli strati della parete e la resistenza convettiva sulla superficie esterna $R_{conv,e}$ per cui:
+\begin{equation}
+\dot{Q} = A \frac{(\Theta_p - T_{est})}{R_{pe}} 
+%R_{conv,e} = \frac{1}{h_{conv,e}}
+\end{equation} 
+\begin{center}
+$R_{pe} = R_{cond} + R_{conv_e}$
+\end{center}
+
+Il modello può essere formulato come un modello condensato a due stati di temperatura. La temperatura dell'aria all'interno della casa $\Theta_i$ e la temperatura delle pareti $\Theta_p$.
+
+Riassumendo, l'aria, riscaldata dai radiatori a temperatura $\Theta_i$, scambia calore con la superficie interna delle pareti che si troverà a temperatura $\Theta_p$. In base alla superficie di scambio, la differenza di temperatura tra i due mezzi e la resistenza termica $R_{ip}$ tra aria e pareti, si otterrà un certo scambio termico verso le pareti. L'energia scambiata viene accumulata dalla parete stessa che funziona come un condensatore di capacità $C_p$. Parte dell'energia totale delle pareti invece viene ceduta all'esterno. Il calore ceduto dipenderà dalla superficie di scambio, dalla differenza di temperatura tra la parete interna e l'aria all'esterno dell'edificio, e la resistenza termica $R_{pe}$ che offre la parete con l'aria esterna.  Un equivalente elettrico del modello della parete è visibile in figura \ref{fig:RC_parete}.
+Quando la potenza scambiata dalla aria interna alla parete è maggiore di quella dispersa all'esterno si avrà un aumento della temperatura delle pareti stesse.
+Un ulteriore considerazione da fare è che la temperatura all'interno della parete non è uniforme. Infatti, se prendessimo una sezione di una parete vedremmo che in base alla distanza dalla superficie interna della parete la temperatura decresce come mostrato in figura \ref{fig:temp_parete}.  Nel modello scelto si considera come temperatura di riferimento della parete la temperature della superficie interna della stessa. La scelta è stata fatta solamente per comodità, infatti si sarebbe potuto tenere in considerazione la temperatura della superficie esterna della parete anziché quella interna. In base al punto al quale si fa riferimento per la temperatura della parete, sarà necessario impostare  i valori di $R_{ip}$ e $R_{pe}$ appropriatamente.   
+
+ \begin{figure}[h]
+ \centering
+ \subfigure[Circuito equivalente RC di una parete.\label{fig:RC_parete}]
+   {\includegraphics[width=4.6cm]{figure/RC_parete}}
+ \hspace{5mm}
+ \subfigure[Andamento della temperatura in una parete.\label{fig:temp_parete}]
+   {\includegraphics[width=6.2cm]{figure/temp_parete}}
+ \caption{Schemi di funzionamento degli scambi termici in una parete di un'abitazione}
+ \end{figure}
+%\subsection{Utenza}
+%Esiste ovviamente una formula matematica che consente un calcolo approssimativo del fabbisogno termico. Bisogna però tenere presente che è  un risultato indicativo e, appunto, approssimativo, poiché ci sono moltissime variabili che possono incidere sul reale fabbisogno dell'abitazione, alcune delle quali difficilmente quantificabili. 
+%
+%Il calcolo matematico fornisce il totale delle $Kcal$ necessarie a scaldare l'abitazione utilizzando come dati di partenza
+%\begin{itemize}
+%\item  il totale dei metri cubi da scaldare,
+%\item    un coefficiente termico che indica le calorie necessarie per metro cubo e che può  oscillare tra un valore che va da 30 a 40 $\frac{Kcal}{m^3}$, a seconda delle condizioni termiche dell'abitazione.
+%\end{itemize}
+%Dunque il fabbisogno termico della casa può essere descritto dal prodotto tra il volume dell'utenza per il coefficiente termico scelto in base al tipo di abitazione.
+%
+%%Nei futuri calcoli considereremo  un appartamento di 100 $m^2$ con soffitti non pi\`u  alti di 3 $m$ e coefficiente termico di 30 $\frac{Kcal}{m^3}$. Il fabbisogno termico di risulter\`a  di circa 9000 $Kcal$ (10440 $W$).
+%%
+%%Questo valore ci da un indice di quanta energia i radiatori dovranno fornire alla casa per scaldarla.
+%
+%\subsubsection{Radiatori}
+
+\section{Dinamica e interazioni tra scambiatore e utenza}
+Per quanto riguarda la creazione di un simulatore dobbiamo trovare un modello matematico che descriva le interazioni che avvengono tra lo scambiatore di calore e l'utenza. In particolare è interessante sapere come si evolvono le temperature dell'acqua nello scambiatore e come varia la temperatura interna dell'abitazione al variare di alcuni parametri come la temperatura in ingresso allo scambiatore, la temperatura in mandata verso i radiatori, la portata, sia del lato della rete di distribuzione che del circuito dell'utenza e la temperatura esterna.
+In figura \ref{fig:scamb_utenza}) è rappresentato lo schema che descrive le interazioni e i parametri in gioco nel sistema composto dallo scambiatore di calore e dall'utenza. 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.95\textwidth]{figure/scamb_utenza} % Include the image placeholder.png
+\caption{rappresentazione schematica sistema scambiatore e utenza}
+\label{fig:scamb_utenza}
+\end{center}
+\end{figure}
+
+Come descritto nella sezione \ref{sec:dinamicautenza} faremo riferimento ad un sistema dinamico con due variabili di stato: la temperatura interna all'utenza  $\Theta_i$  e dalla temperatura della superficie interna delle pareti  $\Theta_p$. Il sistema è  descritto  da due equazioni differenziali:
+\begin{center}
+$M_aC_a \dot{\Theta}_i = \dot{Q}_{ri} - \dot{Q}_{ip}$ 
+\end{center}
+\begin{center}
+$M_pC_p \dot{\Theta}_p = \dot{Q}_{ip} - \dot{Q}_{pe}$
+\end{center}
+con $\dot{Q}_{ri}$ il\ calore scambiato tra i radiatori e l'aria interna alla casa, $\dot{Q}_{ip}$ il calore scambiato tra l'aria e la parete interna, $M_a$ la massa dell'aria all'interno dell'abitazione e $C_a$ la capacità termica dell'aria. Per la seconda equazione $ \dot{Q}_{pe}$ è il calore scambiato tra le pareti e l'ambiente esterno, $M_p$ la massa delle pareti e $C_p$ il calore specifico delle pareti.
+Più in particolare:
+\begin{equation}
+K_m\left(\frac{t_u + t_i}{2} - \Theta_{i}\right)^n - \left(\frac{\Theta_{i} - \Theta_p}{R_{ip}}\right) = M_aC_a \dot{\Theta_i}
+\end{equation}
+\begin{equation}
+\left(\frac{\Theta_{i} - \Theta_p}{R_{ip}}\right) - \left(\frac{\Theta_{p} - T_e}{R_{pe}}\right) = M_pC_p \dot{\Theta_p}
+\end{equation}
+\begin{itemize}
+\item[] $K_m$ = costante $K_m$
+\item[]$n$ = esponente
+\item[]$K$ = coefficiente di dispersione termica
+\item[]$\Theta_{amb}$ = Temperatura ambiente (variabile di stato)
+\item[]$\Theta_{est}$ = Temperatura esterna
+\item[]$M$ = Massa dell'utenza
+\item[]$C$ = capacit\`a  termica
+\end{itemize}
+
+Le variabili note sono: $G_u, T_i, t_u$\\
+Le variabili incognite sono: $G_p, T_u, t_i$\\
+
+Le incognite si possono ricavare da un sistema tre equazioni tre incognite. Facendo l'assunzione che la potenza termica scambiata dallo scambiatore \`e  uguale alla potenza scambiata dai radiatori otteniamo il seguente sistema di equazioni:
+\begin{equation}
+\left \{
+\begin{array}{rl}
+K_m(\frac{t_u + t_i}{2} - \Theta_{amb})^n = C_u(t_u - t_i)\\
+\\
+C_p(T_i - T_u) = C_u(t_u - t_i)\\
+\\
+C_u(t_u - t_i) = \alpha S \frac{(T_i - t_u)-(T_u - t_i )}{log\left( \frac{T_i - t_u}{T_u - t_i } \right)}\\
+\end{array}
+\right.
+\end{equation}
+
+Il  lavoro successivo sar\`a  quello di inserire un riferimento per la temperatura ambiente e regolare il sistema in modo da mantenere la temperatura desiderata all'interno dell'utenza.
+I modi per regolare il calore fornito all'utenza sono:
+\begin{itemize}
+\item agire sulla valvola di laminazione regolando la portata sul circuito primario e quindi la temperatura in mandata dell'acqua.
+\item con la premessa di avere pompe a regime variabile, regolare la portata sul secondario (utenza).
+\end{itemize}
+L'obiettivo principale come detto in precedenza sarà  quello di trovare un metodo che permetta di avere la temperatura di ritorno alla centrale di scambio pi\`u  bassa possibile in modo da aumentare il rendimento dell'impianto e diminuire gli sprechi.\\
+
+%Per aumentare l'efficienza e per ridurre al massimo gli sprechi si \`e  pensato di introdurre un ulteriore regolazione. Solitamente l'utenza regola con termostato e il comportamento dell'utenza nei riguardi della regolazione di quest'ultimo dipende molto dalla modalit\`a  di fatturazione; infatti con fatturazione a forfait la regolazione del termostato sar\`a  sempre pi\`u  vicina ai 30 che ai 20 gradi. Questo comporta che il carico termico del sistema di teleriscaldamento \`e sempre vicino al massimo invernale. Un metodo pensato per cautelarsi rispetto a  condizioni di cattiva gestione della regolazione della temperatura all'interno delle abitazioni \`e  quella di regolare la temperatura massima in mandata nell'utenza in funzione della temperatura esterna (figura \ref{fig:tem} ).
+%
+%\begin{figure}[h]
+%\begin{center}
+%\includegraphics[width=0.95\textwidth]{figure/temperature} % Include the image placeholder.png
+%\caption{rappresentazione schematica sistema scambiatore e utenza}
+%\label{fig:tem}
+%\end{center}
+%\end{figure}
+%
+%Il fabbisogno energetico  aumenta al diminuire  della temperatura esterna e viceversa. Si vuole procedere in questo modo perché pi\`u  le temperature di ritorno sono basse pi\`u  il rendimento \`e  elevato ed utilizzando una regolazione di questo tipo nello scambiatore di utenza, si potrebbero avere temperature di ritorno tanto pi\`u  basse tanto \`e  minore il carico termico richiesto.
 
 \chapter{Risultati della simulazione}
 

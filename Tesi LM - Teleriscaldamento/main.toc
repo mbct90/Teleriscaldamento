@@ -14,9 +14,14 @@
 \contentsline {subsection}{\numberline {2.3.1}Regolazione con valvola a tre vie}{10}
 \contentsline {subsection}{\numberline {2.3.2}Regolazione con valvola di laminazione}{11}
 \contentsline {subsection}{\numberline {2.3.3}Regolazione con pompe a pressione differenziale}{11}
-\contentsline {section}{\numberline {2.4}Effetti della temperatura esterna sulle utenze}{12}
+\contentsline {section}{\numberline {2.4}Metodi per ridurre la temperatura di ritorno}{12}
+\contentsline {subsection}{\numberline {2.4.1}Termoregolazione climatica}{12}
 \contentsline {chapter}{\numberline {3}Modelli Matematici}{14}
-\contentsline {chapter}{\numberline {4}Risultati della simulazione}{15}
-\contentsline {chapter}{\numberline {5}Conclusioni}{16}
-\contentsline {chapter}{Appendice A: Dettagli}{17}
-\contentsline {chapter}{Bibliografia}{18}
+\contentsline {section}{\numberline {3.1}Scambiatore di calore}{14}
+\contentsline {section}{\numberline {3.2}Radiatori}{16}
+\contentsline {section}{\numberline {3.3}Dinamica dell'utenza}{18}
+\contentsline {section}{\numberline {3.4}Dinamica e interazioni tra scambiatore e utenza}{21}
+\contentsline {chapter}{\numberline {4}Risultati della simulazione}{24}
+\contentsline {chapter}{\numberline {5}Conclusioni}{25}
+\contentsline {chapter}{Appendice A: Dettagli}{26}
+\contentsline {chapter}{Bibliografia}{27}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.20)  16 NOV 2015 12:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.20)  20 NOV 2015 19:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -578,25 +578,122 @@ hema_impianto3.png>]
 Capitolo 3.
 [14
 
-]
+] <figure/scambiatore.png, id=113, 614.295pt x 422.57875pt>
+File: figure/scambiatore.png Graphic file (type png)
+
+<use figure/scambiatore.png>
+Package pdftex.def Info: figure/scambiatore.png used on input line 334.
+(pdftex.def)             Requested size: 233.9978pt x 160.96848pt.
+ [15 <./figure/scambiatore.png>]
+<figure/grafico_scambiatore.png, id=120, 770.88pt x 224.84pt>
+File: figure/grafico_scambiatore.png Graphic file (type png)
+
+<use figure/grafico_scambiatore.png>
+Package pdftex.def Info: figure/grafico_scambiatore.png used on input line 368.
+
+(pdftex.def)             Requested size: 341.9989pt x 99.74985pt.
+ [16 <./figure/grafico_scambiatore.png>]
+<figure/portata.png, id=125, 963.6pt x 340.27126pt>
+File: figure/portata.png Graphic file (type png)
+ <use figure/portata.png>
+Package pdftex.def Info: figure/portata.png used on input line 390.
+(pdftex.def)             Requested size: 341.9989pt x 120.76857pt.
+
+<figure/portata2.png, id=126, 963.6pt x 332.24126pt>
+File: figure/portata2.png Graphic file (type png)
+ <use figure/portata2.png>
+Package pdftex.def Info: figure/portata2.png used on input line 400.
+(pdftex.def)             Requested size: 341.9989pt x 117.91858pt.
+
+[17 <./figure/portata.png> <./figure/portata2.png>]
+<figure/scambio_casa.png, id=132, 963.6pt x 542.025pt>
+File: figure/scambio_casa.png Graphic file (type png)
+
+<use figure/scambio_casa.png>
+Package pdftex.def Info: figure/scambio_casa.png used on input line 427.
+(pdftex.def)             Requested size: 378.0011pt x 212.62122pt.
+
+Overfull \hbox (18.0011pt too wide) in paragraph at lines 427--428
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18] <figure/schema_trasf_calore.jpg, id=137, 858.20625pt x 345.29pt>
+File: figure/schema_trasf_calore.jpg Graphic file (type jpg)
+
+<use figure/schema_trasf_calore.jpg>
+Package pdftex.def Info: figure/schema_trasf_calore.jpg used on input line 454.
+
+(pdftex.def)             Requested size: 270.0pt x 108.62993pt.
+ [19 <./figure/scambio_casa.png (PNG copy)> <./figure/schema_trasf_calore.jpg>]
+
+<figure/RC_parete.png, id=141, 455.7025pt x 542.025pt>
+File: figure/RC_parete.png Graphic file (type png)
+
+<use figure/RC_parete.png>
+Package pdftex.def Info: figure/RC_parete.png used on input line 487.
+(pdftex.def)             Requested size: 130.88284pt x 155.67796pt.
+
+<figure/temp_parete.png, id=142, 617.30624pt x 542.025pt>
+File: figure/temp_parete.png Graphic file (type png)
+
+<use figure/temp_parete.png>
+Package pdftex.def Info: figure/temp_parete.png used on input line 490.
+(pdftex.def)             Requested size: 176.407pt x 154.89226pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[20] <figure/scamb_utenza.png, id=148, 919.435pt x 493.845pt>
+File: figure/scamb_utenza.png Graphic file (type png)
+
+<use figure/scamb_utenza.png>
+Package pdftex.def Info: figure/scamb_utenza.png used on input line 515.
+(pdftex.def)             Requested size: 341.9989pt x 183.69185pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21 <./figure/RC_parete.png> <./figure/temp_parete.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 546--548
+
+ []
+
+[22 <./figure/scamb_utenza.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 565.
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 565.
+
+Underfull \hbox (badness 10000) in paragraph at lines 568--569
+
+ []
+
+[23]
 Capitolo 4.
-[15
+[24
 
 ]
 Capitolo 5.
-[16
+[25
 
-] (./AppendiceA.tex) (./main.bbl [17
+] (./AppendiceA.tex) (./main.bbl [26
 
 
-]) [18
+]) [27
 
 ] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 4154 strings out of 493117
- 53406 string characters out of 6135433
- 136101 words of memory out of 5000000
- 7495 multiletter control sequences out of 15000+600000
+ 4231 strings out of 493117
+ 55055 string characters out of 6135433
+ 136261 words of memory out of 5000000
+ 7559 multiletter control sequences out of 15000+600000
  19738 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,11n,26p,2141b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -604,27 +701,33 @@ Here is how much of TeX's memory you used:
 -super-t1.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmcsc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/
+/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cme
+xtra/cmex8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi6.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmmi8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 r10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-2.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
-fb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/loca
-l/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/
-texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on main.pdf (23 pages, 674948 bytes).
+2.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.p
+fb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
+Output written on main.pdf (32 pages, 1005700 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
- 127 compressed objects within 2 object streams
+ 252 PDF objects out of 1000 (max. 8388607)
+ 165 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
