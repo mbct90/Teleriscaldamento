@@ -314,6 +314,7 @@ Per ottenere questi risultati si utilizza una centralina elettronica digitale, a
 
 \chapter{Modelli Matematici}
 \section{Scambiatore di calore}
+\label{subsec:scambiatore_di_calore}
 Gli scambiatori di calore sono  delle apparecchiature in cui si realizza lo scambio di energia termica tra due fluidi aventi temperature diverse. Negli impianti di teleriscaldamento si utilizzano scambiatori a piastre. I due fluidi scorrono tra delle piastre metalliche piane, dotate di particolari rilievi per aumentare la superficie di scambio termico. In essi la trasmissione del calore tra i due fluidi avviene per convezione tra i fluidi e le rispettive superfici solide lambite e per conduzione attraverso la parete del tubo che li separa. Il tipo di contatto è di tipo indiretto in quanto non vi è miscelazione dei fluidi.
 Il loro funzionamento è garantito soltanto dalla presenza di due fluidi a differente temperatura. La temperatura del corpo più caldo diminuisce, mentre la temperatura di quello più freddo aumenta. La progressiva riduzione della differenza di temperatura deve essere ricondotta a uno scambio di energia, scambio che persiste finché esiste la differenza di temperatura, ovvero quando si raggiunge l'equilibrio termico. 
 
@@ -337,20 +338,22 @@ Le variabili in gioco sono elencate in seguito:
 \end{center}
 \end{figure}
 
-Applicando le equazioni di bilancio di massa e di energia al fluido caldo ed al fluido freddo, assumendo che non vi siano dispersioni di calore durante lo scambio, si ottengono le seguenti formule per il calcolo della potenza termica globale, $W_t$. Nello studio degli scambiatori di calore è  utile riferirsi alla cosiddetta portata termica (oraria), $C$, data dal prodotto tra la portata massica ed il calore specifico:
+Applicando le equazioni di bilancio di massa e di energia al fluido caldo ed al fluido freddo, assumendo che non vi siano dispersioni di calore durante lo scambio, si ottengono le seguenti formule per il calcolo della potenza termica globale, $\dot{Q}$. Nello studio degli scambiatori di calore è  utile riferirsi alla cosiddetta portata termica (oraria), $C$, data dal prodotto tra la portata massica ed il calore specifico:
 \begin{equation}
 C_p=G_p c_s  \ \ \ ; \ \ \ C_u=G_u c_s
 \end{equation}
 In tal caso le due equazioni di bilancio  possono scriversi nella seguente forma:
 \begin{equation}
-W_t=C_p(T_i - T_u) \ \ \ ; \ \ \ W_t=C_u(t_u - t_i)
+\dot{Q}=C_p(T_i - T_u) \ \ \ ; \ \ \ \dot{Q}=C_u(t_u - t_i)
+\label{eq:scambiatore1}
 \end{equation}
 A queste due equazioni di bilancio energetico, si può associare una equazione di scambio termico; quest'ultima associa la potenza termica scambiata tra i due fluidi alle temperature di ingresso e/o di uscita, alle portate, al coefficiente di scambio termico globale ed all'area di scambio. Questa equazione deriva dal metodo della media logaritmica delle differenze di temperatura (o MLDT) dove  la potenza termica scambiata tra i due fluidi viene legata alla differenza di temperatura tra il fluido caldo ed il fluido freddo dalla seguente relazione:
 \begin{equation}
-W_t=\alpha S \Delta T_{ml} \\
+\dot{Q}=\alpha S \Delta T_{ml} \\
 \end{equation}
 \begin{equation}
  \Delta T_{ml} = \frac{(\Delta T_1)-(\Delta T_2)}{log\left( \frac{\Delta T_1}{\Delta T_2} \right)} \\
+ \label{eq:scambiatore2}
  \end{equation}
  \begin{center}
  Se scambiatore in corrente : $ \Delta T_1 = T_i - t_i $  \ \ ; \ \ $ \Delta T_2 = T_u - t_u $  \\
@@ -372,10 +375,12 @@ Termodinamicamente quindi  questa  configurazione  è superiore, per  la  minore
 \end{figure}
 
 \section{Radiatori}
+\label{subsec:radiatori}
 I radiatori sono gli elementi all'interno dell'utenza che trasferiscono calore all'ambiente per scaldarlo. 
 La potenza emessa da un corpo scaldante dipende dalla sua temperatura media tra il fluido caldo in ingresso al radiatore e quello freddo in uscita dalla seguente relazione:
 \begin{equation}
-\dot{Q}_r= K_m(\frac{t_u + t_i}{2} - \Theta_{amb})^n
+\dot{Q}_{ri}= K_m(\frac{t_u + t_i}{2} - \Theta_{amb})^n
+\label{eq:potenza_radiatori}
 \end{equation}
 con $K_m$ e $n$ coefficienti costanti che dipendono dal tipo di radiatore utilizzato. 
 Il funzionamento di questi elementi di riscaldamento è garantito da una pompa di circolazione solitamente a velocità fissa che permette la circolazione di acqua calda all'interno dell'abitazione. 
@@ -430,9 +435,9 @@ La termodinamica dell'utenza è modellata su una grande stanza circondata da par
 \end{center}
 \end{figure}
 
-Le grandezze che verranno usate nel modello sono le seguenti:
+Le grandezze che verranno usate nel modello da questo punto in avanti sono le seguenti:
 \begin{itemize}
-\item[] $\dot{Q}_r$ = calore fornito dai radiatori
+\item[] $\dot{Q}_{ri}$ = calore fornito dai radiatori
 \item[]$C_i$ = capacità termica dell'aria all'interno dell'abitazione
 \item[]$C_p$ = Capacità termica delle pareti
 \item[]$R_{ip}$ = Resistenza termica tra l'aria interna alla casa e la parete
@@ -508,7 +513,7 @@ Un ulteriore considerazione da fare è che la temperatura all'interno della pare
 
 \section{Dinamica e interazioni tra scambiatore e utenza}
 Per quanto riguarda la creazione di un simulatore dobbiamo trovare un modello matematico che descriva le interazioni che avvengono tra lo scambiatore di calore e l'utenza. In particolare è interessante sapere come si evolvono le temperature dell'acqua nello scambiatore e come varia la temperatura interna dell'abitazione al variare di alcuni parametri come la temperatura in ingresso allo scambiatore, la temperatura in mandata verso i radiatori, la portata, sia del lato della rete di distribuzione che del circuito dell'utenza e la temperatura esterna.
-In figura \ref{fig:scamb_utenza}) è rappresentato lo schema che descrive le interazioni e i parametri in gioco nel sistema composto dallo scambiatore di calore e dall'utenza. 
+In figura \ref{fig:scamb_utenza} è rappresentato lo schema che descrive le interazioni e i parametri in gioco nel sistema composto dallo scambiatore di calore e dall'utenza. 
 
 \begin{figure}[h]
 \begin{center}
@@ -533,51 +538,80 @@ K_m\left(\frac{t_u + t_i}{2} - \Theta_{i}\right)^n - \left(\frac{\Theta_{i} - \T
 \begin{equation}
 \left(\frac{\Theta_{i} - \Theta_p}{R_{ip}}\right) - \left(\frac{\Theta_{p} - T_e}{R_{pe}}\right) = M_pC_p \dot{\Theta_p}
 \end{equation}
+
+
+
+\`E possibile analizzare due differenti scenari:
 \begin{itemize}
-\item[] $K_m$ = costante $K_m$
-\item[]$n$ = esponente
-\item[]$K$ = coefficiente di dispersione termica
-\item[]$\Theta_{amb}$ = Temperatura ambiente (variabile di stato)
-\item[]$\Theta_{est}$ = Temperatura esterna
-\item[]$M$ = Massa dell'utenza
-\item[]$C$ = capacit\`a  termica
+\item \textbf{Scambiatore senza regolazione di portata}: si tratta di avere uno scambiatore d'utenza senza alcun tipo di regolazione sulla portata. In questo caso non è possibile definire nessun set point di temperatura in mandata ai radiatori. Le  e variabili note sono $G_u, T_i, G_p$ mentre quelle incognite sono: $T_u, t_u, t_i$
+
+\item \textbf{Scambiatore con regolazione di portata} si analizza uno scambiatore con regolazione in portata. Con questo tipo di configurazione vi è la possibilità di fissare la temperatura in mandata ai radiatori. Questa temperatura viene mantenuta costante agendo su una valvola di laminazione che regola la portata in arrivo allo scambiatore dal lato della rete di distribuzione.   Le  e variabili note sono $G_u, T_i, t_u$ mentre quelle incognite sono: $G_p, T_u, t_i$
 \end{itemize}
-
-Le variabili note sono: $G_u, T_i, t_u$\\
-Le variabili incognite sono: $G_p, T_u, t_i$\\
-
-Le incognite si possono ricavare da un sistema tre equazioni tre incognite. Facendo l'assunzione che la potenza termica scambiata dallo scambiatore \`e  uguale alla potenza scambiata dai radiatori otteniamo il seguente sistema di equazioni:
+Assumendo che la potenza termica scambiata dallo scambiatore sia uguale alla potenza emessa dai radiatori, le incognite degli scenari sopra citati, si possono ricavare dal seguente sistema tre equazioni tre incognite: 
 \begin{equation}
 \left \{
 \begin{array}{rl}
-K_m(\frac{t_u + t_i}{2} - \Theta_{amb})^n = C_u(t_u - t_i)\\
+K_m(\dfrac{t_u + t_i}{2} - \Theta_{amb})^n = C_u(t_u - t_i)\\
 \\
 C_p(T_i - T_u) = C_u(t_u - t_i)\\
 \\
-C_u(t_u - t_i) = \alpha S \frac{(T_i - t_u)-(T_u - t_i )}{log\left( \frac{T_i - t_u}{T_u - t_i } \right)}\\
+C_u(t_u - t_i) = \alpha S \dfrac{(T_i - t_u)-(T_u - t_i )}{log\left( \dfrac{T_i - t_u}{T_u - t_i } \right)}\\
 \end{array}
 \right.
 \end{equation}
 
-Il  lavoro successivo sar\`a  quello di inserire un riferimento per la temperatura ambiente e regolare il sistema in modo da mantenere la temperatura desiderata all'interno dell'utenza.
-I modi per regolare il calore fornito all'utenza sono:
-\begin{itemize}
-\item agire sulla valvola di laminazione regolando la portata sul circuito primario e quindi la temperatura in mandata dell'acqua.
-\item con la premessa di avere pompe a regime variabile, regolare la portata sul secondario (utenza).
-\end{itemize}
-L'obiettivo principale come detto in precedenza sarà  quello di trovare un metodo che permetta di avere la temperatura di ritorno alla centrale di scambio pi\`u  bassa possibile in modo da aumentare il rendimento dell'impianto e diminuire gli sprechi.\\
+Le equazioni mettono in relazione la potenza emessa dai radiatori descritta nell' equazione \ref{eq:potenza_radiatori} con il bilancio termico e la potenza scambiata dallo scambiatore descritta nelle equazioni \ref{eq:scambiatore1} e \ref{eq:scambiatore2} rispettivamente.
 
-%Per aumentare l'efficienza e per ridurre al massimo gli sprechi si \`e  pensato di introdurre un ulteriore regolazione. Solitamente l'utenza regola con termostato e il comportamento dell'utenza nei riguardi della regolazione di quest'ultimo dipende molto dalla modalit\`a  di fatturazione; infatti con fatturazione a forfait la regolazione del termostato sar\`a  sempre pi\`u  vicina ai 30 che ai 20 gradi. Questo comporta che il carico termico del sistema di teleriscaldamento \`e sempre vicino al massimo invernale. Un metodo pensato per cautelarsi rispetto a  condizioni di cattiva gestione della regolazione della temperatura all'interno delle abitazioni \`e  quella di regolare la temperatura massima in mandata nell'utenza in funzione della temperatura esterna (figura \ref{fig:tem} ).
-%
-%\begin{figure}[h]
-%\begin{center}
-%\includegraphics[width=0.95\textwidth]{figure/temperature} % Include the image placeholder.png
-%\caption{rappresentazione schematica sistema scambiatore e utenza}
-%\label{fig:tem}
-%\end{center}
-%\end{figure}
-%
-%Il fabbisogno energetico  aumenta al diminuire  della temperatura esterna e viceversa. Si vuole procedere in questo modo perché pi\`u  le temperature di ritorno sono basse pi\`u  il rendimento \`e  elevato ed utilizzando una regolazione di questo tipo nello scambiatore di utenza, si potrebbero avere temperature di ritorno tanto pi\`u  basse tanto \`e  minore il carico termico richiesto.
+\section{Dinamica della rete di distribuzione}
+Qualsiasi rete di tubature attraversata da fluidi in pressione sono affette da perdite di carico ovvero da perdite di pressione dovute all’insieme delle forze passive (scabrosità dei materiali, dislivelli, curve e derivazioni) che, in una tubazione, oppongono una resistenza allo scorrimento dell’acqua. L'espressione più generale che lega la perdita di carico $J$ per unità di lunghezza $L$ della condotta di un fluido incomprimibile in moto permanente è quella di Darcy-Weisbach:
+\begin{equation}
+J = \frac{\lambda v^2}{2 g D}
+\end{equation}
+avendo indicato con $D$ diametro della condotta, $v$ la velocità del fluido, $g$ l'accelerazione di gravità e $\lambda$ un coefficiente adimensionale di resistenza funzione, in generale, della scabrezza relativa del tubo e del numero di Reynolds:
+\begin{equation}
+R_e = \frac{\rho v D}{\mu}
+\end{equation}
+con $\rho$ e $\mu$ la densità e la viscosità dinamica del fluido rispettivamente. 
+Per trovare la perdita di carico in una condotta dal punto $i$ al punto $j$ di lunghezza $L$ non si dovrà altro che moltiplicare la perdita di carico per unità di lunghezza $J$ per la lunghezza del tubo:
+\begin{equation}
+\Delta P_{ij} = J \cdot L
+\end{equation} 
+ 
+Più in particolare in figura \ref{fig:perdite_carico} è illustrato uno schema di una piccola parte della rete di distribuzione dell'impianto.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{figure/perdite_carico} % Include the image placeholder.png
+\caption{Schema di rappresentativo delle perdite di carico di una porzione della rete di distribuzione}
+\label{fig:perdite_carico}
+\end{center}
+\end{figure}
+
+Dal punto 1 al punto 2 vi è la condotta della rete principale con diametro $D$ che trasporta l'acqua calda mentre da 3 a 4 è la condotta, sempre della rete principale con diametro uguale a quello della condotta da 1 a 2 che trasporta l'acqua raffreddata in ritorno alla centrale di scambio. Entrambe le due condotte sono di lunghezza $L$ identica, in quanto negli impianti le condotte sono sempre poste l'una affianco all'altra. L'acqua scorre a velocità $v$
+
+Il punto 2 è il punto in cui avviene il prelievo dalla rete principale per portare l'acqua calda all'utenza. Da 2 a 3 abbiamo quindi la condotta porta l'acqua all'utenza e che dall'utenza riporta l'acqua alla condotta di ritorno dell'acqua raffreddata con velocità $v_u$. La lunghezza totale è $2 \cdot l_u$ ed il diametro è $D_u$.
+
+Ad ogni condotta può essere associata una certa resistenza che la condotta stessa oppone al flusso dell'acqua. Nella condotta da 1 a 2 oltre alle perdita di carico dovute alle tubazioni vi è anche la perdita di carico che offre lo scambiatore di calore:
+\begin{equation}
+\Delta P_s = K \ G^2_u
+\end{equation}
+con K costante.
+
+Le equazioni che descrivono le perdite di carico del sistema sono:
+
+\begin{equation}
+\begin{cases}
+\Delta P_{12} = \dfrac{\lambda v^2}{2 g D} L = \Delta P_{34} \\
+\\
+\Delta P_{23} = \dfrac{\lambda v_u^2}{ g D_u} l_u + \Delta P_s
+\end{cases}
+\end{equation}
+
+Le precedenti equazioni sono usate per ricavare le portate in arrivo alle utenze $G_u$, che rappresentano le variabili incognite d'interesse del sistema descritto. Le portate $G_u$ dipendono principalmente dalla differenza di pressione $\Delta P_{23}$ infatti se questa non è sufficientemente grande non sarà garantito il corretto funzionamento dello scambiatore.
+
+Dal momento che si tratta di un modello fortemente non lineare, si procede all'analisi della rete in modo iterativo. Partendo da dei valori di portata e prevalenza emessi dalla pompa ci ricaviamo la portata $G_u$ della prima utenza incontrata e la portata restante $G_2$ che andrà ad alimentare tutte le utenze restanti. A questo punto possiamo continuare l'analisi della rete ripetendo le operazioni fatte precedentemente considerando la portata $G_2$ come $G_1$ e così via fino a quando tutte le utenze non sono state analizzate.
+
+Nel caso in cui lo scambiatore disponga di una regolazione della portata in ingresso 
 
 \chapter{Risultati della simulazione}
 

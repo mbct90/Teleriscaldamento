@@ -21,7 +21,8 @@
 \contentsline {section}{\numberline {3.2}Radiatori}{16}
 \contentsline {section}{\numberline {3.3}Dinamica dell'utenza}{18}
 \contentsline {section}{\numberline {3.4}Dinamica e interazioni tra scambiatore e utenza}{21}
-\contentsline {chapter}{\numberline {4}Risultati della simulazione}{24}
-\contentsline {chapter}{\numberline {5}Conclusioni}{25}
-\contentsline {chapter}{Appendice A: Dettagli}{26}
-\contentsline {chapter}{Bibliografia}{27}
+\contentsline {section}{\numberline {3.5}Rete di distribuzione}{23}
+\contentsline {chapter}{\numberline {4}Risultati della simulazione}{25}
+\contentsline {chapter}{\numberline {5}Conclusioni}{26}
+\contentsline {chapter}{Appendice A: Dettagli}{27}
+\contentsline {chapter}{Bibliografia}{28}
