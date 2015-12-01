@@ -8,6 +8,8 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[swapnames,signatures]{frontespizio}
+
+\usepackage{multirow}
 %\usepackage{fancyhdr}
 
 
@@ -159,7 +161,13 @@ Nel caso in cui la centrale termica si trovi nei pressi delle utenze sarà possi
 
 %lavorano a regime variabile 
 \subsection{Stazioni di pompaggio}
-Le stazioni di pompaggio si occupano del trasporto dell'acqua verso le sotto-centrali di scambio delle utenze. Le pompe solitamente usate sono pompe centrifughe, la cui curva caratteristica, in funzione della portata e della prevalenza, rimane abbastanza piatta per gran parte del range di portata. 
+Le stazioni di pompaggio si occupano del trasporto dell'acqua verso le sotto-centrali di scambio delle utenze.
+ 
+I parametri di maggiore rilevanza che contraddistinguono le pompe sono la portata e la prevalenza.\\
+\textbf{Portata:} La portata della pompa è il volume d'acqua, misurato in litri o metri cubi, che viene mosso dalla pompa nell'unità di tempo (generalmente secondi o minuti). La portata si misura pertanto in litri al secondo ($l/sec$), litri al minuto ($l/min$), metri cubi all'ora ($m^3/h$), ecc...\\
+\textbf{Prevalenza:} La prevalenza della pompa rappresenta l'incremento di energia acquisito da 1 $kg$ di liquido fra la sezione di entrata e quella di uscita della pompa stessa; generalmente si indica con $H$ e si misura in $J/kg$ oppure in metri ($m$) di liquido trasportato. Molto più comodo è parlare non di prevalenza bensì di prevalenza manometrica, indicata con $Hm$ e misurata in $m \ C.A.$ (metri di colonna d'acqua).
+
+Le pompe solitamente usate sono pompe centrifughe, la cui curva caratteristica, in funzione della portata e della prevalenza, rimane abbastanza piatta per gran parte del range di portata. 
 Il punto di funzionamento, ovvero la portata e la prevalenza emessa delle pompe, dipende dalla resistenza offerta dalla rete dell'impianto. 
 Le stazioni di pompaggio sono solitamente localizzate dentro la centrale di scambio ed hanno il compito assicurare un flusso di acqua tale da offrire ai complessi abitativi l'energia termica richiesta. Per di più, devono fornire alle utenze più sfavorite una differenza di pressione tale da garantire il passaggio di acqua all'interno dello scambiatore d'utenza. 
 Quando la portata è elevata, le perdite di pressione nella rete aumentano e le pompe dovranno lavorare più duramente. La pressione sarà sempre sufficiente nelle nelle sotto-stazioni vicine alla centrale, ma se la capacità limite della pompa viene raggiunta, la pressione nelle parti distanti della rete  possono decadere e gli scambiatori di calore di quelle zone non potranno lavorare correttamente. I radiatori di queste utenze svantaggiate saranno freddi.
@@ -600,16 +608,16 @@ Le equazioni mettono in relazione la potenza emessa dai radiatori descritta nell
 \section{Dinamica della rete di distribuzione}
 Qualsiasi rete di tubature attraversata da fluidi in pressione sono affette da perdite di carico ovvero da perdite di pressione dovute all'insieme delle forze passive (scabrosità dei materiali, dislivelli, curve e derivazioni) che oppongono una resistenza allo scorrimento dell'acqua. L'espressione più generale che lega la perdita di carico $J$ per unità di lunghezza della condotta di un fluido incomprimibile in moto permanente è quella di Darcy-Weisbach:
 \begin{equation}
-J = \frac{\lambda v^2}{2 g D}
+J = \frac{\lambda \ v^2}{2 \ g \ D}
 \end{equation}
 avendo indicato con $D$ diametro della condotta, $v$ la velocità del fluido, $g$ l'accelerazione di gravità e $\lambda$ un coefficiente adimensionale di resistenza funzione, in generale, della scabrezza relativa del tubo e del numero di Reynolds:
 \begin{equation}
-R_e = \frac{\rho v D}{\mu}
+R_e = \frac{\rho \ v \ D}{\mu}
 \end{equation}
 con $\rho$ e $\mu$ la densità e la viscosità dinamica del fluido rispettivamente. 
 Per trovare la perdita di carico in una condotta dal punto $i$ al punto $j$ di lunghezza $L$ non si dovrà altro che moltiplicare la perdita di carico per unità di lunghezza $J$ per la lunghezza del tubo:
 \begin{equation}
-\Delta P_{ij} = J \cdot L
+\Delta P_{ij} = J \ L
 \end{equation} 
  
 Più in particolare in figura \ref{fig:perdite_carico} è illustrato uno schema di una piccola parte della rete di distribuzione dell'impianto.
@@ -677,7 +685,7 @@ Nei sistemi di teleriscaldamento visionati nell'elaborato la circolazione dell'a
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.75\textwidth]{figure/pompa_centrifuga} 
+\includegraphics[width=0.65\textwidth]{figure/pompa_centrifuga} 
 \caption{Pompa centrifuga con diffusore a palette}
 \label{fig:pompa_centrifuga}
 \end{figure}
@@ -695,7 +703,7 @@ La portata e la prevalenza delle pompe centrifughe variano in funzione del numer
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.75\textwidth]{figure/curve_car} 
+\includegraphics[width=0.65\textwidth]{figure/curve_car} 
 \caption{Curve caratteristiche di una pompa centrifuga al variare del numero di giri (linea continua) e curve di rendimento collinari (linea tratteggiata)}
 \label{fig:curve_car}
 \end{figure}
@@ -711,44 +719,98 @@ Congiungendo tutti i punti nei quali il rendimento ha lo stesso valore, si otten
 
 \subsection{Legge di affinità}
 Per le pompe centrifughe esiste una legge che mette in relazione portata, prevalenza e potenza con il numero di giri $n$.
-La portata $G$ di una pompa centrifuga varia proporzionalmente al numero di giri; la prevalenza $H$ varia proporzionalmente al quadrato del numero di giri; la potenza utile $P$, proporzionale al prodotto della portata per la prevalenza, varia proporzionalmente al cubo del numero di giri:
+La portata $G$ di una pompa centrifuga varia proporzionalmente al numero di giri; la prevalenza $H_m$ varia proporzionalmente al quadrato del numero di giri; la potenza utile $P$, proporzionale al prodotto della portata per la prevalenza, varia proporzionalmente al cubo del numero di giri:
 \begin{equation}
-\frac{Q_1}{Q_2}=\frac{n_1}{n_2} \quad \qquad  \frac{H_{1}}{H_{2}}=\left( \frac{n_1}{n_2}\right)^2 \quad \qquad  \frac{P_1}{P_2}=\left( \frac{n_1}{n_2}\right)^3
+\frac{Q_1}{Q_2}=\frac{n_1}{n_2} \quad \qquad  \frac{H_{m1}}{H_{m2}}=\left( \frac{n_1}{n_2}\right)^2 \quad \qquad  \frac{P_1}{P_2}=\left( \frac{n_1}{n_2}\right)^3
 \end{equation}
 Queste tre espressioni esprimono la legge d'affinità la quale permette di tracciare la curva caratteristica di una pompa ad un regime di rotazione $n_2$ quando è nota la curva relativa ad un regime di rotazione $n_1$, non molto dissimile da $n_2$.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.52\textwidth]{figure/affinita} 
+\includegraphics[width=0.65\textwidth]{figure/affinita} 
 \caption{Utilizzo della legge di affinità per ricavare da una curva caratteristica nota a regime di rotazione $n_1$ un'altra curva caratteristica avente regime di rotazione $n_2$}
 \label{fig:affinita}
 \end{figure}
 
-Facendo riferimento alla figura \ref{fig:affinita}, noti per il punto $A_1$ i valori di $G_1$ e $H_1$, si possono determinare:
+Facendo riferimento alla figura \ref{fig:affinita}, noti per il punto $A_1$ i valori di $G_1$ e $H_{m1}$, si possono determinare:
 
 \begin{center}
-$G_2 = \dfrac{n_2}{n_1} \ G_1 \qquad e \qquad H_2 = \left( \dfrac{n_2}{n_1}\right)^2  H_1$
+$G_2 = \dfrac{n_2}{n_1} \ G_1 \qquad e \qquad H_{m2} = \left( \dfrac{n_2}{n_1}\right)^2  H_{m1}$
 \end{center}
 
 che individuano il punto $A_2$. Procedendo in modo analogo per i punti $B_1$, $C_1$ si determinano i corrispondenti punti $B_2$, $C_2$.La curva ottenuta unendo tutti questi punti rappresenta la caratteristica della pompa al regime di rotazione $n_2$.
 
 I punti $A_1$ e $A_2$, $B_1$ e $B_2$, $C_1$ e $C_2$, appartengono a una parabola avente il vertice nell'origine degli assi, infatti dalla legge di affinità:
 \begin{center}
-$\dfrac{H_1}{H_2}=\left(\dfrac{n_1}{n_2} \right)^2 = \left(\dfrac{G_1}{G_2} \right)^2  \qquad$ ovvero   $\qquad \dfrac{H_1}{G_1^2}=\dfrac{H_2}{G_2^2}$ 
+$\dfrac{H_{m1}}{H_{m2}}=\left(\dfrac{n_1}{n_2} \right)^2 = \left(\dfrac{G_1}{G_2} \right)^2  \qquad$ ovvero   $\qquad \dfrac{H_{m1}}{G_1^2}=\dfrac{H_{m2}}{G_2^2}$ 
 \end{center}
-In generale quindi $H = K \ G^2$ che corrisponde all'equazione di una parabola passante per l'origine che descrive la resistenza che oppone il circuito alimentato dalla pompa.
+In generale quindi $H_m = K \ G^2$ che corrisponde all'equazione di una parabola passante per l'origine che descrive la resistenza che oppone il circuito alimentato dalla pompa.
 
 La legge di affinità implica che il rendimento della pompa resti invariato alle due velocità. Quindi, due punti appartenenti ala stessa parabola che descrive la caratteristica del circuito risultano avere lo stesso rendimento. In realtà, ciò non è completamente corretto.
 
 
 \subsection{Potenza assorbita da una pompa}
-%La pompa, per sollevare una portata d'acqua Q fornendole una prevalenza totale Ht compie un lavoro di sollevamento che richiede una potenza P (misurata in kilo- watt/ora), cioè un'energia, fornitale attraverso un motore, definita dalla seguente espressione:
-%
-%La potenza così espressa è la potenza utile, cioè quella strettamente necessaria per
-%sollevare la portata d'acqua Q all'altezza H. A causa delle inevitabili perdite d'energia la potenza utilizzata, cioè quella realmente necessaria per far funzionare la pompa, è maggiore e viene definita potenza assorbita.
-%Il rapporto fra la potenza utile e quella assorbita è definito rendimento. Il rendimento è sempre inferiore all'unità perché in qualsiasi macchina operatrice la potenza utile è sempre minore di quella assorbita.
+La pompa, per sollevare una portata d'acqua $G$ fornendole una prevalenza totale $H_m$ compie un lavoro di sollevamento che richiede una potenza $P_u$ (misurata in watt/ora), cioè un'energia, fornitale attraverso un motore, definita dalla seguente espressione:
+\begin{center}
+$P_u = \rho \ g \ Q \ H_m$
+\end{center}
+con $\rho$ uguale alla densità del fluido e $g$ l'accelerazione gravitazionale.
+La potenza così espressa è la potenza utile, cioè quella strettamente necessaria per sollevare la portata d'acqua $Q$ all'altezza $H_m$. A causa delle inevitabili perdite d'energia la potenza utilizzata, cioè quella realmente necessaria per far funzionare la pompa, è maggiore e viene definita potenza assorbita $P_a$:
+\begin{equation}
+P_a = \dfrac{\rho \ g \ Q \ H_m}{\eta}
+\end{equation}
+Il rapporto fra la potenza utile e quella assorbita è definito rendimento ($\eta$). Il rendimento è sempre inferiore all'unità perché in qualsiasi macchina operatrice la potenza utile è sempre minore di quella assorbita. 
 \chapter{Risultati della simulazione}
+L'ottimizzazione e il controllo delle reti di teleriscaldamento è di grande interesse per industria energetica a causa dei vantaggi tecnici, economici e ambientali che potrebbero essere guadagnati da una gestione adeguata. Tuttavia, i modelli di questi sistemi complessi, sono fortemente non lineari  e soffrono di incertezze rilevanti. Nel nostro lavoro abbiamo implementato una simulatore di una rete di teleriscaldamento per analizzare e confrontare diverse strategie di controllo che riducano al minimo i costi di gestione di un impianto.
+Il punto di partenza per ottimizzare l'intero impianto consiste   
+nell'aumentare l'efficienza delle utenze, abbattendo al massimo la temperatura dell'acqua di ritorno dagli scambiatori e riducendo gli sprechi anche in situazioni di cattiva gestione della regolazione della temperatura all'interno delle abitazioni.  
+La calibrazione dei risultati ottenuti con le simulazioni è stata eseguita confrontando questi con dati misurati sul campo.
+In simulazione è stato preso in esame un piccolo impianto di teleriscaldamento composto da undici utenze. Nonostante le ridotte dimensioni, il suo studio risulta di particolare interesse in quanto l'impianto a causa di un cattivo sistema di regolazioni fa si che i costi di gestione siano quasi sempre vicini al massimo stagionale (consumi che si hanno nel periodo più freddo dell'anno). Inoltre, le ridotte dimensioni ci hanno permesso di facilitarci nella simulazione e nella raccolta dei dati necessari alla calibrazione del sistema.  
 
+\section{motivazioni?}
+
+\section{Caratteristiche dell'impianto di Sant'Ippolito}
+
+
+\begin{table}[]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Tipologie di condotte nella rete di distribuzione}                                                                                                                                                   \\ \hline
+Nome & \begin{tabular}[c]{@{}c@{}}Diametro\\ interno {[}mm{]}\end{tabular} & \begin{tabular}[c]{@{}c@{}}Diametro \\ esterno {[}mm{]}\end{tabular} & \begin{tabular}[c]{@{}c@{}}Spessore \\ isolante {[}cm{]}\end{tabular} \\ \hline
+DN65 & 70,3                                                                & 73,2                                                                 & 2,895                                                                 \\ \hline
+DN50 & 54,5                                                                & 57,4                                                                 & 2,935                                                                 \\ \hline
+DN40 & 43,1                                                                & 45,7                                                                 & 2,785                                                                 \\ \hline
+DN32 & 37,2                                                                & 39,8                                                                 & 3,1                                                                   \\ \hline
+d.28 & 24,2                                                                & 28                                                                   & -                                                                     \\ \hline
+\end{tabular}
+\caption{My caption}
+\label{tab:condotte}
+\end{table}
+
+
+\begin{table}[]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{7}{|c|}{Rete di distribuzione S. Ippolito}                                                                                                                                                       \\ \hline
+\multicolumn{1}{|c|}{\multirow{2}{*}{Utenze}} & \multicolumn{2}{c|}{Condotta Primaria}                         & \multicolumn{2}{l|}{Condotta intermedia}          & \multicolumn{2}{c|}{Condotta secondaria} \\ \cline{2-7} 
+\multicolumn{1}{|c|}{}                        & Tipo                  & \multicolumn{1}{l|}{Lunghezza {[}m{]}} & \multicolumn{1}{l|}{Tipo} & Lunghezza {[}m{]}     & Tipo         & Lunghezza {[}m{]}         \\ \hline
+1                                             & \multirow{2}{*}{DN65} & \multirow{2}{*}{235,6}                 & \multirow{2}{*}{DN32}     & \multirow{2}{*}{12,7} & d.28         & 24,5                      \\ \cline{1-1} \cline{6-7} 
+2                                             &                       &                                        &                           &                       & d.28         & 3,5                       \\ \hline
+3                                             & DN65                  & 25,8                                   & -                         & -                     & d.28         & 57,6                      \\ \hline
+4                                             & DN65                  & 20                                     & -                         & -                     & d.28         & 12,4                      \\ \hline
+5                                             & DN65                  & 111                                    & -                         & -                     & d.28         & 33,7                      \\ \hline
+6                                             & DN65                  & 1082                                   & -                         & -                     & d.28         & 36                        \\ \hline
+7                                             & DN65                  & 65                                     & -                         & -                     & d.28         & 16,5                      \\ \hline
+8                                             & \multirow{2}{*}{DN50} & \multirow{2}{*}{168}                   & \multirow{2}{*}{DN32}     & \multirow{2}{*}{70}   & d.28         & 34,5                      \\ \cline{1-1} \cline{6-7} 
+9                                             &                       &                                        &                           &                       & d.28         & 40                        \\ \hline
+10                                            & DN50                  & 109,8                                  & -                         & -                     & d.28         & 7,3                       \\ \hline
+11                                            & DN50                  & 30,3                                   & -                         & -                     & DN40         & 341,2                     \\ \hline
+\end{tabular}
+\caption{My caption}
+\label{tab:rete_ippolito}
+\end{table}
 \chapter{Conclusioni}
 
 
