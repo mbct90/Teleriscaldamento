@@ -34,17 +34,18 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Influenza sulle perdite di calore}{10}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Effetti degli utenti sulla rete e tecnologie in uso per aumentare l'efficienza delle utenze}{10}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Regolazione con valvola a tre vie}{11}}
+\newlabel{subsec:3vie}{{2.3.1}{11}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Scema di funzionamento di una rete con valvola a tre vie}}{12}}
 \newlabel{fig:3vie}{{2.3}{12}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Regolazione con valvola di laminazione}{12}}
 \newlabel{subsec:2vie}{{2.3.2}{12}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Scema di funzionamento di una rete con valvola di laminazione(valvola a due vie)}}{13}}
 \newlabel{fig:2vie}{{2.4}{13}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Regolazione con pompe a pressione differenziale}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Regolazione con pompe a temperatura di ritorno costante}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.4}Regolazione con pompe a pressione differenziale}{14}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Cureve caratteristiche della pompa (linea continua) e curve di carico (linea tratteggiata)}}{14}}
 \newlabel{fig:giri_variabili}{{2.5}{14}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Metodi per ridurre la temperatura di ritorno}{14}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Termoregolazione climatica}{14}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Metodi per ridurre la temperatura di ritorno}{15}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Modelli Matematici}{16}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -92,23 +93,49 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Curve caratteristiche di una pompa centrifuga al variare del numero di giri (linea continua) e curve di rendimento collinari (linea tratteggiata)}}{29}}
 \newlabel{fig:curve_car}{{3.11}{29}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.7.2}Legge di affinit\IeC {\`a}}{30}}
+\newlabel{eq:affinita}{{3.19}{30}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Utilizzo della legge di affinit\IeC {\`a} per ricavare da una curva caratteristica nota a regime di rotazione $n_1$ un'altra curva caratteristica avente regime di rotazione $n_2$}}{30}}
 \newlabel{fig:affinita}{{3.12}{30}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.7.3}Potenza assorbita da una pompa}{31}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Risultati della simulazione}{32}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.8}Controllo PID}{31}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Risultati della simulazione}{33}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Caratteristiche dell'impianto di Sant'Ippolito}{32}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces My caption}}{32}}
-\newlabel{tab:condotte}{{4.1}{32}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces My caption}}{33}}
-\newlabel{tab:rete_ippolito}{{4.2}{33}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusioni}{34}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Caratteristiche di un'utenza termica}{33}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Temperature di funzionamento di vari tipi di elementi scaldanti al variare della temperatura esterna}}{34}}
+\newlabel{fig:elem_scaldanti}{{4.1}{34}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Funzionamento e importanza dell'utilizzo di centraline d'utenza}{34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Schema di una sottostazione d'utenza con centralina}}{35}}
+\newlabel{fig:centralina}{{4.2}{35}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Soluzioni per aumentare l'efficienza delle utenze diminuendo la temperatura dell'acqua di ritorno}{36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Termoregolazione a punto fisso}{36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Termoregolazione climatica}{36}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Nella regolazione a punto fisso l'acqua circola alla temperatura corrispondente al valore necessario per il giorno pi\IeC {\`u} freddo dell'inverno. Nel grafico sono mostrati i surplus di energia in funzione della temperatura esterna}}{37}}
+\newlabel{fig:surplus}{{4.3}{37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces La regolazione climatica regola la temperatura di mandata in funzione del calore necessario (funzione della temperatura esterna) e la pendenza della $t_u$ mandata dipende dal fabbisogno termico dell'edificio}}{37}}
+\newlabel{fig:surplus}{{4.4}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}La regolazione climatica evoluta PI}{38}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Schema a blocchi di un controllore PI usato per la termoregolazione di un'utenza}}{39}}
+\newlabel{fig:PI}{{4.5}{39}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Soluzioni per ridurre i consumi di energia di pompaggio}{40}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Vantaggi di utilizzare pompe a velocit\IeC {\`a} variabile}{40}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Caratteristiche dell'impianto di Sant'Ippolito}{40}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Rappresentazione dell'energia salvata riducendo la portata con valvola di laminazione}}{41}}
+\newlabel{fig:strozzatura}{{4.6}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Rappresentazione dell'energia salvata riducendo la portata variando la velocit\IeC {\`a} delle pompe}}{41}}
+\newlabel{fig:var_velocita}{{4.7}{41}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces My caption}}{42}}
+\newlabel{tab:condotte}{{4.1}{42}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Simulazione rete senza regolazioni}{42}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Simulazione rete con regolazione in mandata}{42}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces My caption}}{43}}
+\newlabel{tab:rete_ippolito}{{4.2}{43}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusioni}{44}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \bibstyle{IEEEbib}
 \bibdata{FileBiblio}
-\@writefile{toc}{\contentsline {chapter}{Appendice A: Dettagli}{35}}
+\@writefile{toc}{\contentsline {chapter}{Appendice A: Dettagli}{45}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \bibcite{Lin88_1}{1}
@@ -120,4 +147,4 @@
 \bibcite{Chen05_1}{7}
 \bibcite{Beretti_ele}{8}
 \bibcite{DeRobbio_ele}{9}
-\@writefile{toc}{\contentsline {chapter}{Bibliografia}{36}}
+\@writefile{toc}{\contentsline {chapter}{Bibliografia}{46}}
