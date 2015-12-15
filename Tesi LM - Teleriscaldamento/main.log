@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.20)  8 DEC 2015 15:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.20)  15 DEC 2015 18:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -524,12 +524,12 @@ ex.map}>]
 [1] [1] [1
 
 ] (./main.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 5.
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 5.
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -545,288 +545,463 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [2]
 Capitolo 1.
-[3
 
-]
-Capitolo 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--129
+Underfull \hbox (badness 10000) in paragraph at lines 124--126
 
  []
 
-<figure/schema_impianto1.png, id=67, 849.1725pt x 362.35374pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--131
+
+ []
+
+[3
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 136--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--144
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 145--148
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 151.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 151.
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--157
+
+ []
+
+[5]
+Overfull \hbox (2.7951pt too wide) in paragraph at lines 162--164
+\T1/cmr/m/n/10.95 Il te-le-ri-scal-da-men-to è com-par-so per la pri-ma vol-ta 
+nel mon-do al-la fi-ne dell'800.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--164
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 171--173
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--181
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--185
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 190--192
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 204--206
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--209
+
+ []
+
+[9] <figure/volumetria_teleriscaldata.png, id=89, 1137.24875pt x 672.5125pt>
+File: figure/volumetria_teleriscaldata.png Graphic file (type png)
+
+<use figure/volumetria_teleriscaldata.png>
+Package pdftex.def Info: figure/volumetria_teleriscaldata.png used on input lin
+e 216.
+(pdftex.def)             Requested size: 341.9989pt x 202.2376pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 246--249
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--253
+
+ []
+
+[10 <./figure/volumetria_teleriscaldata.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 259.
+
+[11] <figure/torta_energia.pdf, id=100, 304.33882pt x 201.6836pt>
+File: figure/torta_energia.pdf Graphic file (type pdf)
+
+<use figure/torta_energia.pdf>
+Package pdftex.def Info: figure/torta_energia.pdf used on input line 287.
+(pdftex.def)             Requested size: 270.0pt x 178.9408pt.
+
+<figure/energia_green.pdf, id=101, 401.82985pt x 246.58313pt>
+File: figure/energia_green.pdf Graphic file (type pdf)
+
+<use figure/energia_green.pdf>
+Package pdftex.def Info: figure/energia_green.pdf used on input line 299.
+(pdftex.def)             Requested size: 360.0pt x 220.92192pt.
+ [12 <./figure/torta_energia.pdf>]
+<figure/tep.pdf, id=121, 409.90059pt x 240.73538pt>
+File: figure/tep.pdf Graphic file (type pdf)
+ <use figure/tep.pdf>
+Package pdftex.def Info: figure/tep.pdf used on input line 309.
+(pdftex.def)             Requested size: 360.0pt x 211.44003pt.
+
+[13 <./figure/energia_green.pdf> <./figure/tep.pdf>]
+<figure/CO2.pdf, id=158, 391.18916pt x 242.30756pt>
+File: figure/CO2.pdf Graphic file (type pdf)
+ <use figure/CO2.pdf>
+Package pdftex.def Info: figure/CO2.pdf used on input line 320.
+(pdftex.def)             Requested size: 360.0pt x 222.9885pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--330
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
+
+ []
+
+[14 <./figure/CO2.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--340
+
+ []
+
+[15] [16] <figure/toscana.png, id=190, 542.025pt x 612.2875pt>
+File: figure/toscana.png Graphic file (type png)
+
+<use figure/toscana.png>
+Package pdftex.def Info: figure/toscana.png used on input line 383.
+(pdftex.def)             Requested size: 288.0011pt x 325.34233pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 392.
+
+[17] [18 <./figure/toscana.png>] [19]
+Capitolo 2.
+<figure/schema_impianto1.png, id=202, 849.1725pt x 362.35374pt>
 File: figure/schema_impianto1.png Graphic file (type png)
 
 <use figure/schema_impianto1.png>
-Package pdftex.def Info: figure/schema_impianto1.png used on input line 138.
+Package pdftex.def Info: figure/schema_impianto1.png used on input line 447.
 (pdftex.def)             Requested size: 360.0pt x 153.61955pt.
- [4
+ [20
 
-] [5 <./figure/schema_impianto1.png>]
-<figure/schema_impianto2.png, id=80, 963.6pt x 455.7025pt>
+] [21 <./figure/schema_impianto1.png>]
+<figure/schema_impianto2.png, id=211, 963.6pt x 455.7025pt>
 File: figure/schema_impianto2.png Graphic file (type png)
 
 <use figure/schema_impianto2.png>
-Package pdftex.def Info: figure/schema_impianto2.png used on input line 155.
+Package pdftex.def Info: figure/schema_impianto2.png used on input line 463.
 (pdftex.def)             Requested size: 355.65944pt x 168.19702pt.
 
-<figure/schema_impianto3.png, id=81, 645.41125pt x 454.69875pt>
+<figure/schema_impianto3.png, id=212, 645.41125pt x 454.69875pt>
 File: figure/schema_impianto3.png Graphic file (type png)
 
 <use figure/schema_impianto3.png>
-Package pdftex.def Info: figure/schema_impianto3.png used on input line 158.
+Package pdftex.def Info: figure/schema_impianto3.png used on input line 466.
 (pdftex.def)             Requested size: 241.84842pt x 170.37978pt.
- [6] [7 <./figure/schema_impianto2.png> <./figure/schema_impianto3.png>] [8] [9
-] [10]
-<figure/3vie.png, id=103, 847.165pt x 356.33125pt>
+ [22] [23 <./figure/schema_impianto2.png> <./figure/schema_impianto3.png>] [24]
+ [25] [26]
+<figure/3vie.png, id=232, 847.165pt x 356.33125pt>
 File: figure/3vie.png Graphic file (type png)
  <use figure/3vie.png>
-Package pdftex.def Info: figure/3vie.png used on input line 292.
+Package pdftex.def Info: figure/3vie.png used on input line 600.
 (pdftex.def)             Requested size: 323.9978pt x 136.27722pt.
 
-[11] <figure/2vie.png, id=107, 847.165pt x 356.33125pt>
+[27] <figure/2vie.png, id=236, 847.165pt x 356.33125pt>
 File: figure/2vie.png Graphic file (type png)
  <use figure/2vie.png>
-Package pdftex.def Info: figure/2vie.png used on input line 316.
+Package pdftex.def Info: figure/2vie.png used on input line 624.
 (pdftex.def)             Requested size: 323.9978pt x 136.27722pt.
 
-[12 <./figure/3vie.png>] [13 <./figure/2vie.png>]
-<figure/giri_variabili.png, id=117, 934.49126pt x 609.27625pt>
+[28 <./figure/3vie.png>] [29 <./figure/2vie.png>]
+<figure/giri_variabili.png, id=245, 934.49126pt x 609.27625pt>
 File: figure/giri_variabili.png Graphic file (type png)
 
 <use figure/giri_variabili.png>
-Package pdftex.def Info: figure/giri_variabili.png used on input line 340.
+Package pdftex.def Info: figure/giri_variabili.png used on input line 648.
 (pdftex.def)             Requested size: 288.0011pt x 187.77666pt.
- [14 <./figure/giri_variabili.png>] [15]
+ [30 <./figure/giri_variabili.png>] [31]
 Capitolo 3.
-[16
+[32
 
-] <figure/scambiatore.png, id=128, 614.295pt x 422.57875pt>
+] <figure/scambiatore.png, id=257, 614.295pt x 422.57875pt>
 File: figure/scambiatore.png Graphic file (type png)
 
 <use figure/scambiatore.png>
-Package pdftex.def Info: figure/scambiatore.png used on input line 379.
+Package pdftex.def Info: figure/scambiatore.png used on input line 687.
 (pdftex.def)             Requested size: 233.9978pt x 160.96848pt.
- [17 <./figure/scambiatore.png>]
-<figure/grafico_scambiatore.png, id=135, 770.88pt x 224.84pt>
+ [33 <./figure/scambiatore.png>]
+<figure/grafico_scambiatore.png, id=264, 770.88pt x 224.84pt>
 File: figure/grafico_scambiatore.png Graphic file (type png)
 
 <use figure/grafico_scambiatore.png>
-Package pdftex.def Info: figure/grafico_scambiatore.png used on input line 415.
+Package pdftex.def Info: figure/grafico_scambiatore.png used on input line 723.
 
 (pdftex.def)             Requested size: 341.9989pt x 99.74985pt.
- [18 <./figure/grafico_scambiatore.png>]
-<figure/portata.png, id=140, 963.6pt x 340.27126pt>
+ [34 <./figure/grafico_scambiatore.png>]
+<figure/portata.png, id=269, 963.6pt x 340.27126pt>
 File: figure/portata.png Graphic file (type png)
  <use figure/portata.png>
-Package pdftex.def Info: figure/portata.png used on input line 439.
+Package pdftex.def Info: figure/portata.png used on input line 747.
 (pdftex.def)             Requested size: 341.9989pt x 120.76857pt.
 
-<figure/portata2.png, id=141, 963.6pt x 332.24126pt>
+<figure/portata2.png, id=270, 963.6pt x 332.24126pt>
 File: figure/portata2.png Graphic file (type png)
  <use figure/portata2.png>
-Package pdftex.def Info: figure/portata2.png used on input line 449.
+Package pdftex.def Info: figure/portata2.png used on input line 757.
 (pdftex.def)             Requested size: 341.9989pt x 117.91858pt.
 
-[19 <./figure/portata.png> <./figure/portata2.png>]
-<figure/scambio_casa.png, id=148, 963.6pt x 542.025pt>
+[35 <./figure/portata.png> <./figure/portata2.png>]
+<figure/scambio_casa.png, id=276, 963.6pt x 542.025pt>
 File: figure/scambio_casa.png Graphic file (type png)
 
 <use figure/scambio_casa.png>
-Package pdftex.def Info: figure/scambio_casa.png used on input line 476.
+Package pdftex.def Info: figure/scambio_casa.png used on input line 784.
 (pdftex.def)             Requested size: 378.0011pt x 212.62122pt.
 
-Overfull \hbox (18.0011pt too wide) in paragraph at lines 476--477
+Overfull \hbox (18.0011pt too wide) in paragraph at lines 784--785
  [] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20] <figure/schema_trasf_calore.jpg, id=153, 858.20625pt x 345.29pt>
+[36] <figure/schema_trasf_calore.jpg, id=281, 858.20625pt x 345.29pt>
 File: figure/schema_trasf_calore.jpg Graphic file (type jpg)
 
 <use figure/schema_trasf_calore.jpg>
-Package pdftex.def Info: figure/schema_trasf_calore.jpg used on input line 503.
+Package pdftex.def Info: figure/schema_trasf_calore.jpg used on input line 811.
 
 (pdftex.def)             Requested size: 270.0pt x 108.62993pt.
- [21 <./figure/scambio_casa.png (PNG copy)> <./figure/schema_trasf_calore.jpg>]
+ [37 <./figure/scambio_casa.png (PNG copy)> <./figure/schema_trasf_calore.jpg>]
 
-<figure/RC_parete.png, id=157, 468.75125pt x 542.025pt>
+<figure/RC_parete.png, id=286, 468.75125pt x 542.025pt>
 File: figure/RC_parete.png Graphic file (type png)
 
 <use figure/RC_parete.png>
-Package pdftex.def Info: figure/RC_parete.png used on input line 537.
+Package pdftex.def Info: figure/RC_parete.png used on input line 845.
 (pdftex.def)             Requested size: 130.88284pt x 151.33589pt.
 
-<figure/temp_parete.png, id=158, 676.5275pt x 542.025pt>
+<figure/temp_parete.png, id=287, 676.5275pt x 542.025pt>
 File: figure/temp_parete.png Graphic file (type png)
 
 <use figure/temp_parete.png>
-Package pdftex.def Info: figure/temp_parete.png used on input line 540.
+Package pdftex.def Info: figure/temp_parete.png used on input line 848.
 (pdftex.def)             Requested size: 176.407pt x 141.3367pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22] <figure/scamb_utenza.png, id=163, 937.5025pt x 473.77pt>
+[38] <figure/scamb_utenza.png, id=292, 937.5025pt x 473.77pt>
 File: figure/scamb_utenza.png Graphic file (type png)
 
 <use figure/scamb_utenza.png>
-Package pdftex.def Info: figure/scamb_utenza.png used on input line 565.
+Package pdftex.def Info: figure/scamb_utenza.png used on input line 860.
 (pdftex.def)             Requested size: 323.9978pt x 163.73276pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[23 <./figure/RC_parete.png> <./figure/temp_parete.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 592.
-
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 592.
- [24 <./figure/scamb_utenza.png>] <figure/perdite_carico.png, id=173, 518.93875
-pt x 348.30125pt>
+[39 <./figure/RC_parete.png> <./figure/temp_parete.png>] [40 <./figure/scamb_ut
+enza.png>] <figure/perdite_carico.png, id=302, 518.93875pt x 348.30125pt>
 File: figure/perdite_carico.png Graphic file (type png)
 
 <use figure/perdite_carico.png>
-Package pdftex.def Info: figure/perdite_carico.png used on input line 630.
+Package pdftex.def Info: figure/perdite_carico.png used on input line 925.
 (pdftex.def)             Requested size: 251.9989pt x 169.13849pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[25] [26 <./figure/perdite_carico.png>] [27]
-<figure/pompa_centrifuga.png, id=185, 774.895pt x 685.56125pt>
+[41] [42 <./figure/perdite_carico.png>] [43]
+<figure/pompa_centrifuga.png, id=314, 774.895pt x 685.56125pt>
 File: figure/pompa_centrifuga.png Graphic file (type png)
 
 <use figure/pompa_centrifuga.png>
-Package pdftex.def Info: figure/pompa_centrifuga.png used on input line 691.
+Package pdftex.def Info: figure/pompa_centrifuga.png used on input line 986.
 (pdftex.def)             Requested size: 233.9978pt x 207.0194pt.
- [28 <./figure/pompa_centrifuga.png>]
-<figure/curve_car.png, id=190, 629.35126pt x 505.89pt>
+ [44 <./figure/pompa_centrifuga.png>]
+<figure/curve_car.png, id=319, 629.35126pt x 505.89pt>
 File: figure/curve_car.png Graphic file (type png)
 
 <use figure/curve_car.png>
-Package pdftex.def Info: figure/curve_car.png used on input line 709.
+Package pdftex.def Info: figure/curve_car.png used on input line 1004.
 (pdftex.def)             Requested size: 233.9978pt x 188.09496pt.
- [29 <./figure/curve_car.png>]
-<figure/affinita.png, id=195, 709.65125pt x 536.0025pt>
+ [45 <./figure/curve_car.png>]
+<figure/affinita.png, id=324, 709.65125pt x 536.0025pt>
 File: figure/affinita.png Graphic file (type png)
 
 <use figure/affinita.png>
-Package pdftex.def Info: figure/affinita.png used on input line 734.
+Package pdftex.def Info: figure/affinita.png used on input line 1029.
 (pdftex.def)             Requested size: 233.9978pt x 176.73415pt.
- [30 <./figure/affinita.png>] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 799--801
+ [46 <./figure/affinita.png>] [47]
+Underfull \hbox (badness 10000) in paragraph at lines 1094--1096
 
  []
 
-[32]
+[48]
 Capitolo 4.
-<figure/elem_scaldanti.png, id=208, 918.43124pt x 524.96124pt>
+<figure/elem_scaldanti.png, id=335, 918.43124pt x 524.96124pt>
 File: figure/elem_scaldanti.png Graphic file (type png)
 
 <use figure/elem_scaldanti.png>
-Package pdftex.def Info: figure/elem_scaldanti.png used on input line 819.
+Package pdftex.def Info: figure/elem_scaldanti.png used on input line 1114.
 (pdftex.def)             Requested size: 306.0022pt x 174.90387pt.
 
-Overfull \hbox (5.86388pt too wide) in paragraph at lines 824--824
+<figure/pot_radiatore.png, id=336, 700.6175pt x 447.6725pt>
+File: figure/pot_radiatore.png Graphic file (type png)
+
+<use figure/pot_radiatore.png>
+Package pdftex.def Info: figure/pot_radiatore.png used on input line 1121.
+(pdftex.def)             Requested size: 306.0022pt x 195.52835pt.
+
+Overfull \hbox (5.86388pt too wide) in paragraph at lines 1140--1140
 []\T1/cmr/bx/n/14.4 Funzionamento e im-por-tan-za del-l'u-ti-liz-zo di cen-
  []
 
-[33
+[49
 
-] <figure/centralina.png, id=212, 758.835pt x 490.83376pt>
+] [50 <./figure/elem_scaldanti.png> <./figure/pot_radiatore.png>]
+
+LaTeX Warning: Reference `fig:' on page 51 undefined on input line 1150.
+
+<figure/centralina.png, id=346, 758.835pt x 490.83376pt>
 File: figure/centralina.png Graphic file (type png)
 
 <use figure/centralina.png>
-Package pdftex.def Info: figure/centralina.png used on input line 838.
+Package pdftex.def Info: figure/centralina.png used on input line 1154.
 (pdftex.def)             Requested size: 306.0022pt x 197.93277pt.
- [34 <./figure/elem_scaldanti.png>] [35 <./figure/centralina.png>] <figure/surp
-lus.png, id=221, 819.06pt x 506.89375pt>
+ [51 <./figure/centralina.png>] [52]
+<figure/surplus.png, id=354, 819.06pt x 506.89375pt>
 File: figure/surplus.png Graphic file (type png)
-
-<use figure/surplus.png>
-Package pdftex.def Info: figure/surplus.png used on input line 884.
+ <use figure/surplus.png>
+Package pdftex.def Info: figure/surplus.png used on input line 1200.
 (pdftex.def)             Requested size: 306.0022pt x 189.38084pt.
 
-<figure/climatica.png, id=222, 860.21375pt x 506.89375pt>
+<figure/climatica.png, id=355, 860.21375pt x 506.89375pt>
 File: figure/climatica.png Graphic file (type png)
 
 <use figure/climatica.png>
-Package pdftex.def Info: figure/climatica.png used on input line 896.
+Package pdftex.def Info: figure/climatica.png used on input line 1212.
 (pdftex.def)             Requested size: 306.0022pt x 180.31593pt.
- [36] [37 <./figure/surplus.png> <./figure/climatica.png>] [38] <figure/PI.png,
- id=237, 950.55125pt x 272.01625pt>
+ [53 <./figure/surplus.png>] [54 <./figure/climatica.png>] <figure/PI.png, id=3
+65, 950.55125pt x 272.01625pt>
 File: figure/PI.png Graphic file (type png)
+ <use figure/PI.png>
+Package pdftex.def Info: figure/PI.png used on input line 1246.
+(pdftex.def)             Requested size: 341.9989pt x 97.86766pt.
 
-<use figure/PI.png>
-Package pdftex.def Info: figure/PI.png used on input line 930.
-(pdftex.def)             Requested size: 378.0011pt x 108.16953pt.
-
-Overfull \hbox (18.0011pt too wide) in paragraph at lines 930--931
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 938--942
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1258
 
  []
 
-[39 <./figure/PI.png>]
-<figure/strozzatura.png, id=242, 685.56125pt x 542.025pt>
+[55 <./figure/PI.png>]
+<figure/strozzatura.png, id=371, 685.56125pt x 542.025pt>
 File: figure/strozzatura.png Graphic file (type png)
 
 <use figure/strozzatura.png>
-Package pdftex.def Info: figure/strozzatura.png used on input line 961.
+Package pdftex.def Info: figure/strozzatura.png used on input line 1277.
 (pdftex.def)             Requested size: 270.0pt x 213.47308pt.
-
-<figure/var_velocita.png, id=243, 685.56125pt x 542.025pt>
+ [56]
+<figure/var_velocita.png, id=375, 685.56125pt x 542.025pt>
 File: figure/var_velocita.png Graphic file (type png)
 
 <use figure/var_velocita.png>
-Package pdftex.def Info: figure/var_velocita.png used on input line 970.
+Package pdftex.def Info: figure/var_velocita.png used on input line 1286.
 (pdftex.def)             Requested size: 270.0pt x 213.47308pt.
- [40] [41 <./figure/strozzatura.png> <./figure/var_velocita.png>]
+ [57 <./figure/strozzatura.png> <./figure/var_velocita.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 984.
+               Default added (so using `tbp') on input line 1300.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1001.
+               Default added (so using `tbp') on input line 1317.
 
-
-Overfull \hbox (46.37268pt too wide) in paragraph at lines 1003--1020
- [][] 
- []
-
-[42] [43]
+[58] [59]
 Capitolo 5.
-[44
+[60
 
-] (./AppendiceA.tex) (./main.bbl [45
+] (./AppendiceA.tex) (./main.bbl [61
 
 
-]) [46
+]) [62
 
 ] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4346 strings out of 493117
- 57442 string characters out of 6135433
- 135771 words of memory out of 5000000
- 7654 multiletter control sequences out of 15000+600000
+ 4392 strings out of 493117
+ 58482 string characters out of 6135433
+ 139899 words of memory out of 5000000
+ 7693 multiletter control sequences out of 15000+600000
  21437 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,13n,26p,2146b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,16n,26p,2146b,314s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
 /usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
@@ -854,10 +1029,10 @@ st/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2014/texmf-dist
 onts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2014/texmf-dist/fon
 ts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2014/texmf-dist/fonts
 /type1/public/cm-super/sfti1095.pfb>
-Output written on main.pdf (52 pages, 1752832 bytes).
+Output written on main.pdf (68 pages, 2410882 bytes).
 PDF statistics:
- 346 PDF objects out of 1000 (max. 8388607)
- 210 compressed objects within 3 object streams
+ 475 PDF objects out of 1000 (max. 8388607)
+ 300 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 136 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
