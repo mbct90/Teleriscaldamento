@@ -36,16 +36,23 @@
 \contentsline {chapter}{\numberline {4}Risultati della simulazione}{50}
 \contentsline {section}{\numberline {4.1}Caratteristiche di un'utenza termica}{50}
 \contentsline {section}{\numberline {4.2}Funzionamento e importanza dell'utilizzo di centraline d'utenza}{51}
-\contentsline {section}{\numberline {4.3}Soluzioni per aumentare l'efficienza delle utenze diminuendo la temperatura dell'acqua di ritorno}{53}
-\contentsline {subsection}{\numberline {4.3.1}Termoregolazione a punto fisso}{53}
-\contentsline {subsection}{\numberline {4.3.2}Termoregolazione climatica}{53}
-\contentsline {subsection}{\numberline {4.3.3}La regolazione climatica evoluta PI}{55}
-\contentsline {subsection}{\numberline {4.3.4}Variazione della velocit\IeC {\`a} delle pompe di circolazione interne all'utenza}{57}
-\contentsline {section}{\numberline {4.4}Soluzioni per ridurre i consumi di energia di pompaggio}{58}
-\contentsline {subsection}{\numberline {4.4.1}Vantaggi di utilizzare pompe a velocit\IeC {\`a} variabile}{58}
-\contentsline {section}{\numberline {4.5}Caratteristiche dell'impianto di Sant'Ippolito}{59}
-\contentsline {subsection}{\numberline {4.5.1}Simulazione rete senza regolazioni}{61}
-\contentsline {subsection}{\numberline {4.5.2}Simulazione rete con regolazione in mandata}{61}
-\contentsline {chapter}{\numberline {5}Conclusioni}{62}
-\contentsline {chapter}{Appendice A: Dettagli}{63}
-\contentsline {chapter}{Bibliografia}{64}
+\contentsline {section}{\numberline {4.3}Soluzioni per aumentare l'efficienza delle utenze diminuendo la temperatura dell'acqua di ritorno}{54}
+\contentsline {subsection}{\numberline {4.3.1}Termoregolazione a punto fisso}{55}
+\contentsline {subsection}{\numberline {4.3.2}Termoregolazione climatica}{56}
+\contentsline {subsection}{\numberline {4.3.3}La regolazione climatica evoluta PI}{57}
+\contentsline {subsection}{\numberline {4.3.4}Variazione della velocit\IeC {\`a} delle pompe di circolazione interne all'utenza}{58}
+\contentsline {section}{\numberline {4.4}Soluzioni per ridurre i consumi di energia di pompaggio}{60}
+\contentsline {subsection}{\numberline {4.4.1}Vantaggi di utilizzare pompe a velocit\IeC {\`a} variabile}{60}
+\contentsline {section}{\numberline {4.5}Caratteristiche dell'impianto di Sant'Ippolito}{61}
+\contentsline {subsection}{\numberline {4.5.1}Dati della rete}{64}
+\contentsline {subsection}{\numberline {4.5.2}Pompa di circolazione}{64}
+\contentsline {subsection}{\numberline {4.5.3}Simulazione rete senza regolazioni}{64}
+\contentsline {subsection}{\numberline {4.5.4}Simulazioni rete con regolazione in mandata (analizzare tutti i casi in sezioni diverse)}{64}
+\contentsline {section}{\numberline {4.6}Implementazioni future}{64}
+\contentsline {subsection}{\numberline {4.6.1}Modello predittivo per determinare la temperatura in mandata alla rete di distribuzione}{64}
+\contentsline {subsubsection}{Carica/scarica del sistema}{65}
+\contentsline {subsubsection}{Controllo ad anello aperto}{66}
+\contentsline {subsubsection}{Modello sperimentale}{66}
+\contentsline {chapter}{\numberline {5}Conclusioni}{68}
+\contentsline {chapter}{Appendice A: Dettagli}{69}
+\contentsline {chapter}{Bibliografia}{70}

@@ -1154,8 +1154,31 @@ In simulazione è stato preso in esame un piccolo impianto di teleriscaldamento 
 
 
 \section{Funzionamento e importanza dell'utilizzo di centraline d'utenza}
+\label{sec:centraline}
+Le centralina d'utenza rappresenta un elemento di regolazione dell'impianto di teleriscaldamento posizionato nell'abitazione. La centralina è posizionata nella sotto-centrale d'utenza i cui elementi principali sono: uno scambiatore nel caso in cui si utilizzi il teleriscaldamento soltanto per scaldare gli ambienti mentre da due nel caso si voglia produrre anche acqua calda ad uso sanitario; da una valvola di laminazione a due vie e da una pompa di circolazione. 
 
-Le centralina d'utenza rappresenta un elemento dell'impianto di teleriscaldamento posizionato nell'abitazione. La centralina è composta da uno oppure due scambiatori: il primo nel caso in cui si utilizzi il teleriscaldamento soltanto per scaldare gli ambienti mentre il secondo nel caso si voglia produrre anche acqua calda ad uso sanitario. Nella condotta che porta l'acqua calda alla sottostazione è posizionata un'elettrovalvola di laminazione  che permette la regolazione del flusso di acqua in ingresso allo scambiatore. Il grado di chiusura della valvola è determinato da una centralina in base al criterio di controllo scelto. Le regolazioni che possono essere implementate sono le seguenti e verranno approfondite in seguito:
+In figura \ref{fig:centralina} è mostrato come si presenta una sotto-centrale con centralina adibita alla produzione combinata del riscaldamento e dell'acqua igenico sanitaria mentre in figura \ref{fig:schema_centralina2} è rappresentato il suo layout idraulico.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\textwidth]{figure/centralina} 
+\caption{sottostazione d'utenza con centralina}
+\label{fig:centralina}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{figure/schema_centralina2} 
+\caption{Layout idrico di una sottostazione d'utenza con centralina}
+\label{fig:schema_centralina2}
+\end{figure}
+
+Si tratta di una sotto-centrali compatte appositamente studiate e progettate con dimensioni pari ad una caldaia tradizionale.
+Il comando di accensione del circuito riscaldamento avviene dal cronotermostato ambiente. Durante il funzionamento in riscaldamento la temperatura di mandata dell'acqua all'impianto potrà essere liberamente modificata in base al tipo di regolazione installata. Il controllo  avviene direttamente sul circuito primario tramite la valvola termoregolatrice a due vie.
+Il funzionamento sanitario si attiva attraverso il flussostato in modalità prioritaria o parallela; la regolazione modulerà la valvola termoregolatrice primaria per erogare l’acqua sanitaria alla temperatura desiderata.
+Durante il periodo estivo, se richiesto, la centralina è provvista di una funzione di "pronto" che manterrà lo scambiatore del sanitario in temperatura per garantire una rapida erogazione dell'acqua sanitaria.
+
+Il grado di chiusura della valvola di laminazione è determinato da una centralina in base al criterio di controllo scelto. Le regolazioni che possono essere implementate sono le seguenti e verranno approfondite in seguito:
 
 \begin{itemize}
 \item regolazione a punto fisso;
@@ -1163,23 +1186,19 @@ Le centralina d'utenza rappresenta un elemento dell'impianto di teleriscaldament
 \item regolazione climatica evoluta PI.
 \end{itemize}  
 
-Lo schema in figura \ref{fig:} rappresenta una centralina d'utenza adibita alla produzione combinata del riscaldamento e dell'acqua igenico sanitaria.
+In figura \ref{fig:schema_centralina} è stato rappresentato lo schema che mostra quali sono i possibili input e output della centralina.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\textwidth]{figure/centralina} 
-\caption{Schema di una sottostazione d'utenza con centralina}
-\label{fig:centralina}
+\includegraphics[width=0.95\textwidth]{figure/schema_centralina} 
+\caption{Schema dei possibili input e output di una centralina installata su una sottostazione d'utenza}
+\label{fig:schema_centralina}
 \end{figure}
 
-% spiegare funzionamento.
 
 Le sottostazioni d'utenza con centralina, devono permettere anche un'analisi di predittiva sullo stato di funzionamento degli scambiatori con segnalazione di anomalie che portano ad interventi programmati invece che in accidentale, il tutto per avere un sistema sempre funzionante al massimo dell'efficienza.
 
-Di notevole importanza è che le centraline delle utenze più svantaggiate (ovvero quelle che hanno la portata più bassa nel sistema) comunichino informazioni alla stazione di pompaggio per ottimizzare la portata delle pompe per garantire a tutte le utenze il necessario flusso di acqua per il proprio fabbisogno. 
-
-% spiegare meglio (più approfonditamente dicendo che ora i sensori sono nella centrale di scambio ed eventuali portate non sufficienti sono comunicate dagli utenti perchè i radiatori sono freddi)
-
+Di notevole importanza è che le centraline delle utenze più svantaggiate (ovvero quelle che hanno la portata più bassa nel sistema) comunichino informazioni alla stazione di pompaggio per ottimizzare la portata delle pompe per garantire a tutte le utenze il necessario flusso di acqua per il proprio fabbisogno. Attualmente gli unici sensori di pressione e misuratori di portata esistenti nell'impianto sono posizionati nella centrale di scambio. Questo posizionamento non è il più conveniente infatti, possiamo misurare se viene raggiunta una certa differenza di pressione tra mandata e ritorno ma non sapremo se il valore misurato è sufficiente al passaggio di acqua negli scambiatori delle utenze più svantaggiate. Eventuali carenze di pressione e/o portata sono comunicate direttamente dagli utenti perché sentono i radiatori freddi.
 
 Riassumendo, i sistemi di regolazione delle centraline d'utenza devono:
 \begin{itemize}
@@ -1379,11 +1398,89 @@ d.28 & 24,2                                                                & 28 
 \end{table}
 
 
+
+\subsection{Dati della rete}
+
+\subsection{Pompa di circolazione}
+
 \subsection{Simulazione rete senza regolazioni}
 
-\subsection{Simulazione rete con regolazione in mandata}
+\subsection{Simulazioni rete con regolazione in mandata (analizzare tutti i casi in sezioni diverse)}
+
+\section{Implementazioni future}
+
+Lo scopo di questo studio è stato quello di verificare se le temperature di ritorno alle centrali termiche, tramite opportune regolazioni, potessero essere ridotte il più possibile al fine di ridurre i costi di energia di pompaggio. Per far ciò è stato costruito un sistema dinamico per simulare l'andamento delle temperature e delle pressioni di un impianto di teleriscaldamento al variare della temperatura ambiente esterna. Le future implementazioni possono essere suddivise in due parti di cui una più pratica e una che riguarda la modellistica e la risoluzione di problemi di ottimizzazione: 
+\begin{itemize}
+\item  Realizzazione di una centralina d'utenza intelligente: una volta verificato che delle regolazioni sono necessarie per l'ottimizzazione dei consumi di un impianto si dovrà procedere alla costruzione di una centralina che permetta di soddisfare tutti le richieste descritte nella sezione \ref{sec:centraline} ed inoltre dovrà essere economica dato che è la stessa società  di gestione dell'impianto (GES) che fa carico dei costi di installazione e manutenzione delle sotto-centrali d'utenza.
+\item Sviluppo di un modello predittivo per determinare quale sia la migliore temperatura dell'acqua in mandata dalla centrale termica in base alla situazione climatica.
+\end{itemize}
+Il secondo punto è molto importante perché può permettere ulteriormente la riduzione dei consumi di energia elettrica ed è quindi meritevole di un ulteriore approfondimento. 
+ 
+\subsection{Modello predittivo per determinare la temperatura in mandata alla rete di distribuzione}
+I modelli utilizzati nel simulatore implementato nello studio sono affetti da diverse approssimazioni dovute al fatto che molte grandezze che influenzano una rete non sono facilmente predicibili e/o quantificabili.
+Certamente in un primo futuro si potrà migliorare l'accuratezza del simulatore grazie a modelli più accurati che descrivono il sistema. 
+%Inoltre, è possibile creare un sistema per determinare quale sia la migliore temperatura dell'acqua in mandata in base alla situazione climatica.
+Un altro aspetto molto importante riguardante la gestione di un impianto di teleriscaldamento è la determinazione della temperatura in mandata al circuito primario in funzione della temperatura esterna e del periodo temporale. Conoscere la stagione oppure anche l'ora del giorno può indicarci se si possono verificare dei picchi di richiesta di energia ed in tal caso fare le opportune regolazioni per affrontarli al meglio.
+
+Lo scopo è quello di indagare sulla possibilità di aumentare l'efficienza elettrica, cioè di ridurre i consumi di energia di pompaggio, regolando la temperatura di mandata.
+Il controllo di questo parametro dovrebbe essere possibile applicando una strategia di controllo dinamico e predittivo, utilizzando un modello appropriato del sistema di teleriscaldamento ed evitando che l'affidabilità della distribuzione del calore ai clienti venga compromessa.
+
+Il bisogno di riscaldamento e acqua calda varia in funzione delle condizioni metereologiche (che determinano le perdite di calore dagli edifici) e il comportamento delle persone che le utilizzano. Se queste variazioni possono essere previste, la temperatura di mandata potrebbe seguire la richiesta di calore. Il calore fornito  dipende dalla temperatura dell'acqua in uscita dall'impianto (che è controllato dalla centrale termica) e il flusso di acqua che attraversa la rete. 
+
+\subsubsection{Carica/scarica del sistema}
+Poiché il calore può essere inviato a temperature diverse, vi è la possibilità di caricare il sistema con energia supplementare.
+Aumentando la temperatura di mandata, la temperatura sulla rete cresce, e quindi anche la potenza termica. Se la portata è costante, il flusso dovrà diminuire, dato che una minore quantità di acqua dovrà passare allo scambiatore per dare la stessa quantità di calore. 
+
+L'innalzamento della temperatura dell'acqua in arrivo alle utenze non è istantaneo ed il tempo dipende sopratutto dalle dimensioni della rete. Questo processo è chiamato carica della rete. Per evitare flussi elevati nel circuito primario, il sistema può essere caricato in anticipo quando si prevedono carichi elevati, in modo che la necessità di un maggiore flusso sarà minore.
+
+Una volta che si varia la temperatura di mandata, prima che l'acqua in tutta la rete si stabilizzi al nuovo valore, trascorrerà del tempo che dipende da quanto  impiega il fluido ad arrivare dalla centrale a tutte le utenze. Ciò fa si che la potenza erogata in un momento specifico ai clienti non sia necessariamente uguale alla potenza fornita alla rete di teleriscaldamento.
+
+Se la rete di TLR è approssimata come un carico omogeneo equamente distribuito, il calore fornito è:
+
+\begin{equation}
+P_{inv}(t) = c_p G_p(t) \dfrac{\int_{t-\Delta t}^t T_i(\tau)d\tau - \int_{t}^{t + \Delta t } T_o(\tau)d\tau}{\Delta t}
+\end{equation}
+dove:
+\begin{itemize}
+\item[] $P_{inv}(t)$:  potenza fornita alla rete (carico)
+\item[] $\Delta t$: tempo di trasporto affinché l'acqua attraversi o la conduttura di mandata o di ritorno della rete principale
+\item[] $T_i$ e $T_o$: sono rispettivamente la temperatura di mandata alle utenze e di ritorno dalle stesse in funzione del tempo
+\item[] $G_p$: portata della rete principale
+\item[] $c_p$: calore specifico dell'acqua nella condotta principale
+\end{itemize}
+
+Si noti che mentre la temperatura di mandata in funzione del tempo è facile da determinare, poiché la temperatura dall'impianto si propaga attraverso la linea di alimentazione con l'acqua che scorre, il valore per la temperatura di ritorno è più di una approssimazione infatti, è data dalla miscelazione di tute la acque di ritorno dalle utenze. Non è perciò possibile distinguere la temperatura di ritorno in un momento specifico, ma l'espressione citata sopra fornirà un valore medio.
+
+\subsubsection{Controllo ad anello aperto}
+La temperatura di mandata di un impianto verrà controllata con un sistema di controllo ad anello aperto. L'idea è quella di usare le informazioni relative ad un disturbo del sistema misurabile (come la temperatura esterna) per compensare le variazioni sul carico della rete che esso stesso comporta. Ciò significa che un modello relativo al rapporto tra il carico e la temperatura esterna dovrà essere utilizzato per calcolare il punto di controllo della temperatura di mandata.
+La ragione per usare questo controllo è dovuta ai lunghi tempi di trasporto di acqua nel sistema. Se per il calcolo della temperatura di alimentazione si utilizzasse una retroazione, la risposta del sistema sarebbe si otterrebbe troppo in ritardo.
+La difficoltà con il controllo ad anello aperto è fare un buon modello che metta in relazione  il segnale di disturbo e l'uscita del sistema. Di solito, viene utilizzata una curva di controllo in cui la temperatura di mandata aumenta linearmente al diminuire della temperatura esterna sotto un certo punto di rottura. Il punto di rottura corrisponde alla temperatura più bassa di alimentazione che assicuri la giusta temperatura di acqua calda. 
 
 
+\subsubsection{Modello sperimentale}
+Un modello per il calcolo della temperatura in mandata dati alcuni parametri di ingresso è necessario.
+Di solito, si utilizzano semplici modelli statici, come curve di controllo ma un modello statico più complesso e un modello dinamico stimato da dati empirici risulta più una scelta migliore.
+
+L'implementazione di un  sistema di identificazione dei dati, significa costruire modelli matematici utilizzando i dati raccolti dal sistema modellato, piuttosto che utilizzare le relazioni fisiche del sistema. Il vantaggio di un modello sperimentale è che i sistemi complessi possono essere modellati senza conoscere le caratteristiche del sistema. Solo i segnali di ingresso e di uscita rilevanti del sistema hanno bisogno di essere conosciuti per stimare un modello di questo tipo.
+
+Da considerare però, è che la raccolta di dati risulta molto complessa, in particolare se tiene presente il fatto che le utenze allacciate ad un impianto possono essere centinaia e in alcuni casi anche migliaia. A questo punto, un simulatore affidabile per estrarre i dati velocemente è fondamentale. 
+
+Un modello dinamico utilizza non solo il segnale corrente ma anche segnali di ingresso e di uscita precedenti per calcolare l'uscita corrente.
+
+Un sistema di identificazione dei dati generale può essere scritto
+\begin{equation}
+y(t) = \dfrac{B(q)}{F(q)} u(t) + \dfrac{C(q)}{D(q)} e(t)
+\end{equation}
+dove
+\begin{itemize}
+\item[] $y(t)$:  è il segnale di output
+\item[] $u(t)$: è il segnale di input
+\item[] $e(t)$: è il rumore bianco
+\item[] $B(q), F(q), C(q), D(q)$: sono polinomi dell'operatore di  spostamento temporale $q$
+\end{itemize}
+I polinomi $B(q)$ e $F(q)$  modellano il segnale in ingresso sul segnale di uscita mentre i polinomi $C(q)$ e $D(q)$ modellano il rumore del sistema. L'operatore di spostamento $q$ è equivalente alla trasformata $Z$ , e sposta una serie temporale indietro o avanti nel tempo. È usato per descrivere  l'uscita in un momento specifico dipende non solo dall'uscita e dal rumore in quel momento, ma dai suoi valori precedenti di uscita, in ingresso e di rumore.
+
+Una volta che il modello è calibrato e convalidato, può essere usato per la simulazione e la determinazione della temperatura di mandata ottima. 
 
 \chapter{Conclusioni}
 

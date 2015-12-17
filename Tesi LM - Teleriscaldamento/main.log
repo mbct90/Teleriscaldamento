@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.20)  16 DEC 2015 17:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.20)  17 DEC 2015 17:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -905,94 +905,102 @@ Overfull \hbox (5.86388pt too wide) in paragraph at lines 1156--1156
 
 [50
 
-]
-
-LaTeX Warning: Reference `fig:' on page 51 undefined on input line 1166.
-
-<figure/centralina.png, id=343, 758.835pt x 490.83376pt>
+] <figure/centralina.png, id=343, 927.465pt x 576.1525pt>
 File: figure/centralina.png Graphic file (type png)
 
 <use figure/centralina.png>
-Package pdftex.def Info: figure/centralina.png used on input line 1170.
-(pdftex.def)             Requested size: 360.0pt x 232.85635pt.
- [51 <./figure/elem_scaldanti.png>] [52 <./figure/centralina.png>] <figure/surp
-lus.png, id=352, 819.06pt x 506.89375pt>
-File: figure/surplus.png Graphic file (type png)
+Package pdftex.def Info: figure/centralina.png used on input line 1164.
+(pdftex.def)             Requested size: 341.9989pt x 212.45218pt.
 
-<use figure/surplus.png>
-Package pdftex.def Info: figure/surplus.png used on input line 1216.
+<figure/schema_centralina2.png, id=344, 957.5775pt x 1101.11375pt>
+File: figure/schema_centralina2.png Graphic file (type png)
+
+<use figure/schema_centralina2.png>
+Package pdftex.def Info: figure/schema_centralina2.png used on input line 1171.
+
+(pdftex.def)             Requested size: 360.0pt x 413.95834pt.
+ [51 <./figure/elem_scaldanti.png>]
+<figure/schema_centralina.png, id=349, 758.835pt x 490.83376pt>
+File: figure/schema_centralina.png Graphic file (type png)
+
+<use figure/schema_centralina.png>
+Package pdftex.def Info: figure/schema_centralina.png used on input line 1193.
+(pdftex.def)             Requested size: 341.9989pt x 221.21767pt.
+ [52 <./figure/centralina.png>] [53 <./figure/schema_centralina2.png>] [54 <./f
+igure/schema_centralina.png>]
+<figure/surplus.png, id=362, 819.06pt x 506.89375pt>
+File: figure/surplus.png Graphic file (type png)
+ <use figure/surplus.png>
+Package pdftex.def Info: figure/surplus.png used on input line 1235.
 (pdftex.def)             Requested size: 306.0022pt x 189.38084pt.
 
-<figure/climatica.png, id=353, 860.21375pt x 506.89375pt>
+[55 <./figure/surplus.png>]
+<figure/climatica.png, id=368, 860.21375pt x 506.89375pt>
 File: figure/climatica.png Graphic file (type png)
 
 <use figure/climatica.png>
-Package pdftex.def Info: figure/climatica.png used on input line 1228.
+Package pdftex.def Info: figure/climatica.png used on input line 1247.
 (pdftex.def)             Requested size: 306.0022pt x 180.31593pt.
- [53] [54 <./figure/surplus.png> <./figure/climatica.png>] [55] <figure/PI.png,
- id=367, 950.55125pt x 272.01625pt>
+ [56 <./figure/climatica.png>]
+<figure/PI.png, id=374, 950.55125pt x 272.01625pt>
 File: figure/PI.png Graphic file (type png)
-
-<use figure/PI.png>
-Package pdftex.def Info: figure/PI.png used on input line 1262.
+ <use figure/PI.png>
+Package pdftex.def Info: figure/PI.png used on input line 1281.
 (pdftex.def)             Requested size: 341.9989pt x 97.86766pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1270--1274
+ [57]
+Underfull \hbox (badness 10000) in paragraph at lines 1289--1293
 
  []
 
-[56 <./figure/PI.png>]
-<figure/pompa_var_utenza.png, id=372, 964.60374pt x 716.6775pt>
+[58 <./figure/PI.png>]
+<figure/pompa_var_utenza.png, id=382, 964.60374pt x 716.6775pt>
 File: figure/pompa_var_utenza.png Graphic file (type png)
 
 <use figure/pompa_var_utenza.png>
-Package pdftex.def Info: figure/pompa_var_utenza.png used on input line 1293.
+Package pdftex.def Info: figure/pompa_var_utenza.png used on input line 1312.
 (pdftex.def)             Requested size: 306.0022pt x 227.35121pt.
- [57 <./figure/pompa_var_utenza.png>] [58]
-<figure/strozzatura.png, id=380, 685.56125pt x 542.025pt>
+ [59 <./figure/pompa_var_utenza.png>]
+<figure/strozzatura.png, id=388, 685.56125pt x 542.025pt>
 File: figure/strozzatura.png Graphic file (type png)
 
 <use figure/strozzatura.png>
-Package pdftex.def Info: figure/strozzatura.png used on input line 1317.
+Package pdftex.def Info: figure/strozzatura.png used on input line 1336.
 (pdftex.def)             Requested size: 270.0pt x 213.47308pt.
-
-<figure/var_velocita.png, id=381, 685.56125pt x 542.025pt>
+ [60]
+<figure/var_velocita.png, id=392, 685.56125pt x 542.025pt>
 File: figure/var_velocita.png Graphic file (type png)
 
 <use figure/var_velocita.png>
-Package pdftex.def Info: figure/var_velocita.png used on input line 1326.
+Package pdftex.def Info: figure/var_velocita.png used on input line 1345.
 (pdftex.def)             Requested size: 270.0pt x 213.47308pt.
- [59 <./figure/strozzatura.png>] [60 <./figure/var_velocita.png>]
+ [61 <./figure/strozzatura.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1340.
+               Default added (so using `tbp') on input line 1359.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1357.
+               Default added (so using `tbp') on input line 1376.
 
-[61]
+[62 <./figure/var_velocita.png>] [63] [64] [65] [66] [67]
 Capitolo 5.
-[62
+[68
 
-] (./AppendiceA.tex) (./main.bbl [63
+] (./AppendiceA.tex) (./main.bbl [69
 
 
-]) [64
+]) [70
 
 ] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4393 strings out of 493117
- 58533 string characters out of 6135433
- 135911 words of memory out of 5000000
- 7694 multiletter control sequences out of 15000+600000
+ 4405 strings out of 493117
+ 58899 string characters out of 6135433
+ 137945 words of memory out of 5000000
+ 7704 multiletter control sequences out of 15000+600000
  21437 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,16n,26p,2146b,314s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1023,10 +1031,10 @@ st/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2014/texmf-dist
 onts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2014/texmf-dist/fon
 ts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2014/texmf-dist/fonts
 /type1/public/cm-super/sfti1095.pfb>
-Output written on main.pdf (70 pages, 2487460 bytes).
+Output written on main.pdf (76 pages, 3054422 bytes).
 PDF statistics:
- 482 PDF objects out of 1000 (max. 8388607)
- 304 compressed objects within 4 object streams
+ 506 PDF objects out of 1000 (max. 8388607)
+ 318 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 171 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
