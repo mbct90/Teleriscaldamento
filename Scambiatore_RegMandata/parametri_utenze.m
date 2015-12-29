@@ -36,11 +36,11 @@ par_u(3,9)= 20;      % set point -> temperatura desiderata
 par_u(3,10)= 15;  % condizione iniziale: Temperatura ambiente iniziale 
 
 % utenza 4
-par_u(4,1)= 450;     % Volume dell' utenza da riscaldare [m^3]
+par_u(4,1)= 300;     % Volume dell' utenza da riscaldare [m^3]
 par_u(4,2)= 30;      % calore necessario per scaldare 1 m^3
 par_u(4,3)= 0.80316; % coeff. scambio radiatore
 par_u(4,4)= 1.32;    % esponente radiatore
-par_u(4,5)= 10000;   % capacità termica utenza
+par_u(4,5)= 3000;   % capacità termica utenza
 par_u(4,6)= 600;     % portata acqua circuito utenza [l/h]
 par_u(4,7)= 2000;    % Alfa
 par_u(4,8)= 1;       % S

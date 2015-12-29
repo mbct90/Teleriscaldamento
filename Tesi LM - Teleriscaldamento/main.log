@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.20)  17 DEC 2015 17:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.20)  27 DEC 2015 12:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -729,267 +729,271 @@ Package pdftex.def Info: figure/toscana.png used on input line 386.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 395.
 
-[17] [18 <./figure/toscana.png>] [19]
+[17] [18 <./figure/toscana.png>] [19] [20]
 Capitolo 2.
-<figure/schema_impianto1.png, id=201, 849.1725pt x 362.35374pt>
+<figure/schema_impianto1.png, id=204, 849.1725pt x 362.35374pt>
 File: figure/schema_impianto1.png Graphic file (type png)
 
 <use figure/schema_impianto1.png>
-Package pdftex.def Info: figure/schema_impianto1.png used on input line 465.
+Package pdftex.def Info: figure/schema_impianto1.png used on input line 463.
 (pdftex.def)             Requested size: 360.0pt x 153.61955pt.
- [20
+ [21
 
-] [21 <./figure/schema_impianto1.png>]
-<figure/schema_impianto2.png, id=210, 963.6pt x 455.7025pt>
+] [22 <./figure/schema_impianto1.png>]
+<figure/schema_impianto2.png, id=213, 963.6pt x 455.7025pt>
 File: figure/schema_impianto2.png Graphic file (type png)
 
 <use figure/schema_impianto2.png>
-Package pdftex.def Info: figure/schema_impianto2.png used on input line 481.
+Package pdftex.def Info: figure/schema_impianto2.png used on input line 479.
 (pdftex.def)             Requested size: 355.65944pt x 168.19702pt.
 
-<figure/schema_impianto3.png, id=211, 645.41125pt x 454.69875pt>
+<figure/schema_impianto3.png, id=214, 645.41125pt x 454.69875pt>
 File: figure/schema_impianto3.png Graphic file (type png)
 
 <use figure/schema_impianto3.png>
-Package pdftex.def Info: figure/schema_impianto3.png used on input line 484.
+Package pdftex.def Info: figure/schema_impianto3.png used on input line 482.
 (pdftex.def)             Requested size: 241.84842pt x 170.37978pt.
- [22] [23 <./figure/schema_impianto2.png> <./figure/schema_impianto3.png>] [24]
- [25] [26]
-<figure/3vie.png, id=232, 848.16875pt x 329.23pt>
+ [23] [24 <./figure/schema_impianto2.png> <./figure/schema_impianto3.png>] [25]
+ [26] [27]
+<figure/3vie.png, id=235, 848.16875pt x 329.23pt>
 File: figure/3vie.png Graphic file (type png)
  <use figure/3vie.png>
-Package pdftex.def Info: figure/3vie.png used on input line 624.
+Package pdftex.def Info: figure/3vie.png used on input line 622.
 (pdftex.def)             Requested size: 360.0pt x 139.73753pt.
 
-[27] [28 <./figure/3vie.png>]
-<figure/2vie.png, id=240, 847.165pt x 327.2225pt>
+[28] [29 <./figure/3vie.png>]
+<figure/2vie.png, id=243, 847.165pt x 327.2225pt>
 File: figure/2vie.png Graphic file (type png)
  <use figure/2vie.png>
-Package pdftex.def Info: figure/2vie.png used on input line 645.
+Package pdftex.def Info: figure/2vie.png used on input line 643.
 (pdftex.def)             Requested size: 360.0pt x 139.05023pt.
 
-[29 <./figure/2vie.png>]
-<figure/giri_variabili.png, id=245, 934.49126pt x 609.27625pt>
+[30 <./figure/2vie.png>]
+<figure/giri_variabili.png, id=248, 934.49126pt x 609.27625pt>
 File: figure/giri_variabili.png Graphic file (type png)
 
 <use figure/giri_variabili.png>
-Package pdftex.def Info: figure/giri_variabili.png used on input line 669.
+Package pdftex.def Info: figure/giri_variabili.png used on input line 667.
 (pdftex.def)             Requested size: 288.0011pt x 187.77666pt.
- [30 <./figure/giri_variabili.png>] [31]
+ [31 <./figure/giri_variabili.png>] [32]
 Capitolo 3.
-[32
+[33
 
-] <figure/scambiatore.png, id=257, 614.295pt x 422.57875pt>
+] <figure/scambiatore.png, id=260, 614.295pt x 422.57875pt>
 File: figure/scambiatore.png Graphic file (type png)
 
 <use figure/scambiatore.png>
-Package pdftex.def Info: figure/scambiatore.png used on input line 708.
+Package pdftex.def Info: figure/scambiatore.png used on input line 706.
 (pdftex.def)             Requested size: 233.9978pt x 160.96848pt.
- [33 <./figure/scambiatore.png>]
-<figure/grafico_scambiatore.png, id=264, 770.88pt x 224.84pt>
+ [34 <./figure/scambiatore.png>]
+<figure/grafico_scambiatore.png, id=267, 770.88pt x 224.84pt>
 File: figure/grafico_scambiatore.png Graphic file (type png)
 
 <use figure/grafico_scambiatore.png>
-Package pdftex.def Info: figure/grafico_scambiatore.png used on input line 744.
+Package pdftex.def Info: figure/grafico_scambiatore.png used on input line 742.
 
 (pdftex.def)             Requested size: 341.9989pt x 99.74985pt.
- [34 <./figure/grafico_scambiatore.png>]
-<figure/portata.png, id=269, 963.6pt x 340.27126pt>
+ [35 <./figure/grafico_scambiatore.png>]
+<figure/portata.png, id=272, 963.6pt x 340.27126pt>
 File: figure/portata.png Graphic file (type png)
  <use figure/portata.png>
-Package pdftex.def Info: figure/portata.png used on input line 768.
+Package pdftex.def Info: figure/portata.png used on input line 766.
 (pdftex.def)             Requested size: 341.9989pt x 120.76857pt.
 
-<figure/pot_radiatore.png, id=270, 700.6175pt x 447.6725pt>
+<figure/pot_radiatore.png, id=273, 700.6175pt x 447.6725pt>
 File: figure/pot_radiatore.png Graphic file (type png)
 
 <use figure/pot_radiatore.png>
-Package pdftex.def Info: figure/pot_radiatore.png used on input line 778.
+Package pdftex.def Info: figure/pot_radiatore.png used on input line 776.
 (pdftex.def)             Requested size: 306.0022pt x 195.52835pt.
- [35 <./figure/portata.png>]
-<figure/scambio_casa.png, id=275, 963.6pt x 542.025pt>
+ [36 <./figure/portata.png>]
+<figure/scambio_casa.png, id=278, 963.6pt x 542.025pt>
 File: figure/scambio_casa.png Graphic file (type png)
 
 <use figure/scambio_casa.png>
-Package pdftex.def Info: figure/scambio_casa.png used on input line 805.
+Package pdftex.def Info: figure/scambio_casa.png used on input line 803.
 (pdftex.def)             Requested size: 378.0011pt x 212.62122pt.
 
-Overfull \hbox (18.0011pt too wide) in paragraph at lines 805--806
+Overfull \hbox (18.0011pt too wide) in paragraph at lines 803--804
  [] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[36 <./figure/pot_radiatore.png>]
-<figure/schema_trasf_calore.jpg, id=281, 858.20625pt x 345.29pt>
+[37 <./figure/pot_radiatore.png>]
+<figure/schema_trasf_calore.jpg, id=285, 858.20625pt x 345.29pt>
 File: figure/schema_trasf_calore.jpg Graphic file (type jpg)
 
 <use figure/schema_trasf_calore.jpg>
-Package pdftex.def Info: figure/schema_trasf_calore.jpg used on input line 832.
+Package pdftex.def Info: figure/schema_trasf_calore.jpg used on input line 830.
 
 (pdftex.def)             Requested size: 270.0pt x 108.62993pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[37 <./figure/scambio_casa.png (PNG copy)>] [38 <./figure/schema_trasf_calore.j
-pg>] <figure/RC_parete.png, id=290, 692.5875pt x 492.84125pt>
+[38 <./figure/scambio_casa.png (PNG copy)>] [39 <./figure/schema_trasf_calore.j
+pg>] <figure/RC_parete.png, id=293, 692.5875pt x 492.84125pt>
 File: figure/RC_parete.png Graphic file (type png)
 
 <use figure/RC_parete.png>
-Package pdftex.def Info: figure/RC_parete.png used on input line 866.
+Package pdftex.def Info: figure/RC_parete.png used on input line 864.
 (pdftex.def)             Requested size: 256.0748pt x 182.22055pt.
 
-<figure/temp_parete.png, id=291, 692.5875pt x 497.86pt>
+<figure/temp_parete.png, id=294, 692.5875pt x 497.86pt>
 File: figure/temp_parete.png Graphic file (type png)
 
 <use figure/temp_parete.png>
-Package pdftex.def Info: figure/temp_parete.png used on input line 869.
+Package pdftex.def Info: figure/temp_parete.png used on input line 867.
 (pdftex.def)             Requested size: 256.0748pt x 184.07617pt.
- [39 <./figure/RC_parete.png> <./figure/temp_parete.png>] <figure/scamb_utenza.
-png, id=297, 937.5025pt x 473.77pt>
+ [40 <./figure/RC_parete.png> <./figure/temp_parete.png>] <figure/scamb_utenza.
+png, id=300, 937.5025pt x 473.77pt>
 File: figure/scamb_utenza.png Graphic file (type png)
 
 <use figure/scamb_utenza.png>
-Package pdftex.def Info: figure/scamb_utenza.png used on input line 881.
+Package pdftex.def Info: figure/scamb_utenza.png used on input line 879.
 (pdftex.def)             Requested size: 360.0pt x 181.92126pt.
- [40 <./figure/scamb_utenza.png>] [41]
-<figure/perdite_carico.png, id=305, 518.93875pt x 348.30125pt>
+ [41 <./figure/scamb_utenza.png>] [42]
+<figure/perdite_carico.png, id=308, 518.93875pt x 348.30125pt>
 File: figure/perdite_carico.png Graphic file (type png)
 
 <use figure/perdite_carico.png>
-Package pdftex.def Info: figure/perdite_carico.png used on input line 946.
+Package pdftex.def Info: figure/perdite_carico.png used on input line 944.
 (pdftex.def)             Requested size: 251.9989pt x 169.13849pt.
- [42 <./figure/perdite_carico.png>] [43]
-<figure/pompa_centrifuga.png, id=314, 774.895pt x 685.56125pt>
+ [43 <./figure/perdite_carico.png>] [44]
+<figure/pompa_centrifuga.png, id=317, 774.895pt x 685.56125pt>
 File: figure/pompa_centrifuga.png Graphic file (type png)
 
 <use figure/pompa_centrifuga.png>
-Package pdftex.def Info: figure/pompa_centrifuga.png used on input line 1007.
+Package pdftex.def Info: figure/pompa_centrifuga.png used on input line 1005.
 (pdftex.def)             Requested size: 233.9978pt x 207.0194pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[44] <figure/curve_car.png, id=318, 629.35126pt x 505.89pt>
+[45] <figure/curve_car.png, id=321, 629.35126pt x 505.89pt>
 File: figure/curve_car.png Graphic file (type png)
 
 <use figure/curve_car.png>
-Package pdftex.def Info: figure/curve_car.png used on input line 1025.
+Package pdftex.def Info: figure/curve_car.png used on input line 1023.
 (pdftex.def)             Requested size: 233.9978pt x 188.09496pt.
- [45 <./figure/pompa_centrifuga.png>]
-<figure/affinita.png, id=323, 709.65125pt x 536.0025pt>
+ [46 <./figure/pompa_centrifuga.png>]
+<figure/affinita.png, id=326, 709.65125pt x 536.0025pt>
 File: figure/affinita.png Graphic file (type png)
 
 <use figure/affinita.png>
-Package pdftex.def Info: figure/affinita.png used on input line 1050.
+Package pdftex.def Info: figure/affinita.png used on input line 1048.
 (pdftex.def)             Requested size: 233.9978pt x 176.73415pt.
- [46 <./figure/curve_car.png>] [47 <./figure/affinita.png>] [48]
-Underfull \hbox (badness 10000) in paragraph at lines 1116--1118
+ [47 <./figure/curve_car.png>] [48 <./figure/affinita.png>] [49]
+Underfull \hbox (badness 10000) in paragraph at lines 1114--1116
 
  []
 
-[49]
+[50]
 Capitolo 4.
-<figure/elem_scaldanti.png, id=339, 918.43124pt x 524.96124pt>
+<figure/elem_scaldanti.png, id=342, 918.43124pt x 524.96124pt>
 File: figure/elem_scaldanti.png Graphic file (type png)
 
 <use figure/elem_scaldanti.png>
-Package pdftex.def Info: figure/elem_scaldanti.png used on input line 1136.
+Package pdftex.def Info: figure/elem_scaldanti.png used on input line 1134.
 (pdftex.def)             Requested size: 306.0022pt x 174.90387pt.
 
-Overfull \hbox (5.86388pt too wide) in paragraph at lines 1156--1156
+Overfull \hbox (5.86388pt too wide) in paragraph at lines 1154--1154
 []\T1/cmr/bx/n/14.4 Funzionamento e im-por-tan-za del-l'u-ti-liz-zo di cen-
  []
 
-[50
+[51
 
-] <figure/centralina.png, id=343, 927.465pt x 576.1525pt>
+] <figure/centralina.png, id=346, 927.465pt x 576.1525pt>
 File: figure/centralina.png Graphic file (type png)
 
 <use figure/centralina.png>
-Package pdftex.def Info: figure/centralina.png used on input line 1164.
+Package pdftex.def Info: figure/centralina.png used on input line 1162.
 (pdftex.def)             Requested size: 341.9989pt x 212.45218pt.
 
-<figure/schema_centralina2.png, id=344, 957.5775pt x 1101.11375pt>
+<figure/schema_centralina2.png, id=347, 957.5775pt x 1101.11375pt>
 File: figure/schema_centralina2.png Graphic file (type png)
 
 <use figure/schema_centralina2.png>
-Package pdftex.def Info: figure/schema_centralina2.png used on input line 1171.
+Package pdftex.def Info: figure/schema_centralina2.png used on input line 1169.
 
 (pdftex.def)             Requested size: 360.0pt x 413.95834pt.
- [51 <./figure/elem_scaldanti.png>]
-<figure/schema_centralina.png, id=349, 758.835pt x 490.83376pt>
+ [52 <./figure/elem_scaldanti.png>]
+<figure/schema_centralina.png, id=352, 758.835pt x 490.83376pt>
 File: figure/schema_centralina.png Graphic file (type png)
 
 <use figure/schema_centralina.png>
-Package pdftex.def Info: figure/schema_centralina.png used on input line 1193.
+Package pdftex.def Info: figure/schema_centralina.png used on input line 1191.
 (pdftex.def)             Requested size: 341.9989pt x 221.21767pt.
- [52 <./figure/centralina.png>] [53 <./figure/schema_centralina2.png>] [54 <./f
+ [53 <./figure/centralina.png>] [54 <./figure/schema_centralina2.png>] [55 <./f
 igure/schema_centralina.png>]
-<figure/surplus.png, id=362, 819.06pt x 506.89375pt>
+<figure/surplus.png, id=366, 819.06pt x 506.89375pt>
 File: figure/surplus.png Graphic file (type png)
  <use figure/surplus.png>
-Package pdftex.def Info: figure/surplus.png used on input line 1235.
+Package pdftex.def Info: figure/surplus.png used on input line 1233.
 (pdftex.def)             Requested size: 306.0022pt x 189.38084pt.
 
-[55 <./figure/surplus.png>]
-<figure/climatica.png, id=368, 860.21375pt x 506.89375pt>
+[56 <./figure/surplus.png>]
+<figure/climatica.png, id=371, 860.21375pt x 506.89375pt>
 File: figure/climatica.png Graphic file (type png)
 
 <use figure/climatica.png>
-Package pdftex.def Info: figure/climatica.png used on input line 1247.
+Package pdftex.def Info: figure/climatica.png used on input line 1245.
 (pdftex.def)             Requested size: 306.0022pt x 180.31593pt.
- [56 <./figure/climatica.png>]
-<figure/PI.png, id=374, 950.55125pt x 272.01625pt>
+ [57 <./figure/climatica.png>]
+<figure/PI.png, id=377, 950.55125pt x 272.01625pt>
 File: figure/PI.png Graphic file (type png)
  <use figure/PI.png>
-Package pdftex.def Info: figure/PI.png used on input line 1281.
+Package pdftex.def Info: figure/PI.png used on input line 1279.
 (pdftex.def)             Requested size: 341.9989pt x 97.86766pt.
- [57]
-Underfull \hbox (badness 10000) in paragraph at lines 1289--1293
+ [58]
+Underfull \hbox (badness 10000) in paragraph at lines 1287--1291
 
  []
 
-[58 <./figure/PI.png>]
-<figure/pompa_var_utenza.png, id=382, 964.60374pt x 716.6775pt>
+[59 <./figure/PI.png>]
+<figure/pompa_var_utenza.png, id=386, 964.60374pt x 716.6775pt>
 File: figure/pompa_var_utenza.png Graphic file (type png)
 
 <use figure/pompa_var_utenza.png>
-Package pdftex.def Info: figure/pompa_var_utenza.png used on input line 1312.
+Package pdftex.def Info: figure/pompa_var_utenza.png used on input line 1310.
 (pdftex.def)             Requested size: 306.0022pt x 227.35121pt.
- [59 <./figure/pompa_var_utenza.png>]
-<figure/strozzatura.png, id=388, 685.56125pt x 542.025pt>
+ [60 <./figure/pompa_var_utenza.png>]
+<figure/strozzatura.png, id=391, 685.56125pt x 542.025pt>
 File: figure/strozzatura.png Graphic file (type png)
 
 <use figure/strozzatura.png>
-Package pdftex.def Info: figure/strozzatura.png used on input line 1336.
+Package pdftex.def Info: figure/strozzatura.png used on input line 1334.
 (pdftex.def)             Requested size: 270.0pt x 213.47308pt.
- [60]
-<figure/var_velocita.png, id=392, 685.56125pt x 542.025pt>
+ [61]
+<figure/var_velocita.png, id=396, 685.56125pt x 542.025pt>
 File: figure/var_velocita.png Graphic file (type png)
 
 <use figure/var_velocita.png>
-Package pdftex.def Info: figure/var_velocita.png used on input line 1345.
+Package pdftex.def Info: figure/var_velocita.png used on input line 1343.
 (pdftex.def)             Requested size: 270.0pt x 213.47308pt.
- [61 <./figure/strozzatura.png>]
+ [62 <./figure/strozzatura.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1359.
+               Default added (so using `tbp') on input line 1357.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1376.
+               Default added (so using `tbp') on input line 1374.
 
-[62 <./figure/var_velocita.png>] [63] [64] [65] [66] [67]
+[63 <./figure/var_velocita.png>] [64] [65] [66] [67] [68]
 Capitolo 5.
-[68
+[69
 
-] (./AppendiceA.tex) (./main.bbl [69
+] (./AppendiceA.tex) (./main.bbl [70
 
 
-]) [70
+]
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) [71
 
 ] (./main.aux)
 
@@ -997,10 +1001,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4405 strings out of 493117
- 58899 string characters out of 6135433
- 137945 words of memory out of 5000000
- 7704 multiletter control sequences out of 15000+600000
+ 4393 strings out of 493117
+ 58747 string characters out of 6135433
+ 137972 words of memory out of 5000000
+ 7692 multiletter control sequences out of 15000+600000
  21437 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,16n,26p,2146b,314s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1031,10 +1035,10 @@ st/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2014/texmf-dist
 onts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2014/texmf-dist/fon
 ts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2014/texmf-dist/fonts
 /type1/public/cm-super/sfti1095.pfb>
-Output written on main.pdf (76 pages, 3054422 bytes).
+Output written on main.pdf (77 pages, 3049116 bytes).
 PDF statistics:
- 506 PDF objects out of 1000 (max. 8388607)
- 318 compressed objects within 4 object streams
+ 509 PDF objects out of 1000 (max. 8388607)
+ 320 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
