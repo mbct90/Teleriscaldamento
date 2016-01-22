@@ -1,3 +1,9 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{sandou2005predictive}
+G~Sandou, S~Font, S~Tebbani, A~Hiret, and C~Mondon.
+\newblock Predictive control of a complex district heating network.
+\newblock In {\em IEEE Conference on Decision and Control}, volume~44, page
+  7372. IEEE; 1998, 2005.
 
 \end{thebibliography}

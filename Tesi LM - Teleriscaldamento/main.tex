@@ -62,12 +62,13 @@
 \Corso [Laurea Magistrale]{Computer and Automation Engineering\\curricula: Robotics and Automation}
 \Annoaccademico {2015-2016}
 \Titoletto {Tesi di Laurea Magistrale}
-\Titolo {Simulazione e ottimizzazione dei consumi di un impianto di teleriscaldamento alimentato da fonte geotermica}
+\Titolo {Ottimizzazione e controllo di un sistema di teleriscaldamento da energia geotermica}
 \Sottotitolo {}
 \Candidato {Marco Becattini}
 \Relatore {Prof. A. Vicino}
 \Correlatore {Prof. A. Giannitrapani}
 \Correlatore {Prof. S. Paoletti}
+\Correlatore {Ing. R. Parri}
 \Margini {3cm}{2cm}{3cm}{2cm}
 \end{frontespizio}
 
@@ -1125,9 +1126,33 @@ della regolazione della temperatura all'interno delle abitazioni.
 La calibrazione dei risultati ottenuti con le simulazioni è stata eseguita confrontando questi con dati misurati sul campo.
 In simulazione è stato preso in esame un piccolo impianto di teleriscaldamento composto da undici utenze. Nonostante le ridotte dimensioni, il suo studio risulta di particolare interesse in quanto l'impianto a causa di un cattivo sistema di regolazioni fa si che i costi di gestione siano quasi sempre vicini al massimo stagionale (consumi che si hanno nel periodo più freddo dell'anno). Inoltre, le ridotte dimensioni ci hanno permesso di facilitarci nella simulazione e nella raccolta dei dati necessari alla calibrazione del sistema.  
 
-\section{Caratteristiche di un'utenza termica}
+\section{Influenza della temperatura esterna sulla gestione di un sistema di teleriscaldamento}
+Le stazioni termiche sono progettate in modo da fornire agli utenti il calore necessario per il riscaldamento delle abitazioni nei periodi più freddi dell'anno.
 
-\textit{spiegare come il calore richiesto dipende dalla temperatura esterna e inserire immagine e dire che maggiore potenza è fornita (temp in mandata più alta) si avrà un ritorno più alto}
+In figura \ref{fig:profilo_temp} è mostrato l'andamento della temperatura media esterna riferita all'area geografica del comune di Pomarance(PI).
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\textwidth]{figure/profilo_temp} 
+\caption{Rappresentazione della temperatura minima media, massima media e media durante l'arco di 1 anno nel comune di Pomarance(PI). La zona del grafico evidenziata in rosso rappresenta il periodo in cui per legge il riscaldamento deve essere spento. }
+\label{fig:profilo_temp}
+\end{figure}
+
+ Il grafico mostra che le temperature più basse rappresentano circa il 5\%. Quindi, Se l'impianto di teleriscaldamento è dimensionato per coprire il fabbisogno massimo di energia, vuol dire che nel restante 95\% dell'anno, il sistema risulta sovradimensionato e fornisce più calore del necessario.  Per il 60\% dell'anno il riscaldamento rimane spento per legge (da Maggio fino a Novembre circa) e l'energia termica fornita dall'impianto servirà soltanto per la produzione di acqua igenico sanitaria.
+
+Le utenze hanno bisogno di più calore tanto più la temperatura esterna è bassa. Ciò si verifica perché cresce la differenza di temperatura tra interno ed esterno e di conseguenza aumentano le perdite di calore. 
+
+Generalmente, fornendo una temperatura dell'acqua in uscita dalla centrale costante, la temperatura di ritorno è più alta quando la domanda diminuisce.
+
+Uno degli obiettivi principali nella gestione di un sistema di teleriscaldamento è quello  di fornire ai consumatori la corretta quantità di calore secondo le condizioni climatiche esterne evitando gli sprechi.
+
+Per controllare al meglio l'impianto si può optare su due diverse soluzioni: la prima consiste nel mantenere la temperatura di mandata dell'acqua costante facendo però variare la portata; l'altra invece mantiene costante il numero di giri della pompa e fa variare la temperatura di mandata dell'acqua. Quest'ultimo metodo è più complicato perché mentre la variazione di portata risulta istantanea, la variazione di temperatura ha bisogno di una certa quantità di tempo  che dipende dalla velocità con cui si propaga l'acqua nella rete.
+
+Come già citato la potenza termica fornita alle utenze dipende dalla portata e dalla differenza di temperatura tra mandata e ritorno dell'acqua secondo una relazione direttamente proporzionale. Facendo riferimento a regolazioni con pompe a giri variabili, avere una temperatura di ritorno più bassa possibile, permette di ridurre la portata a parità di calore fornito, in quanto aumenta il $\Delta T$, riducendo così i costi di pompaggio.
+
+Per ridurre le perdite di calore invece, è necessario avere una temperatura di mandata più bassa possibile. Il limite minimo di questo parametro è dato dai tipi di impianto che sono installati nelle utenze. I riscaldamenti con radiatori sono i più diffusi, ma sono anche quelli che necessitano una temperatura di funzionamento più alta. Il riscaldamento a pavimento è quello invece che necessita temperature di funzionamento più basse come è mostrato in figura \ref{fig:elem_scaldanti}. 
+
+Data l'eterogeneità degli impianti di riscaldamento presenti nelle utenze abitative di una normale rete il gestore dovrà garantire una temperatura in mandata che permetta il corretto funzionamento dell'elemento riscaldante che lavora a temperatura più alta.
 
 \begin{figure}[!ht]
 \centering
@@ -1136,19 +1161,17 @@ In simulazione è stato preso in esame un piccolo impianto di teleriscaldamento 
 \label{fig:elem_scaldanti}
 \end{figure}
 
+\section{Fabbisogno termico massimale di un'abitazione}
+Esiste ovviamente una formula matematica che consente un calcolo approssimativo del fabbisogno termico. Bisogna però tenere presente che è  un risultato indicativo poiché ci sono moltissime variabili che possono incidere sul reale fabbisogno dell'abitazione, alcune delle quali difficilmente quantificabili. 
 
-%Esiste ovviamente una formula matematica che consente un calcolo approssimativo del fabbisogno termico. Bisogna però tenere presente che è  un risultato indicativo poiché ci sono moltissime variabili che possono incidere sul reale fabbisogno dell'abitazione, alcune delle quali difficilmente quantificabili. 
-%
-%Il calcolo matematico fornisce il totale delle $Watt$ necessarie a scaldare l'abitazione utilizzando come dati di partenza
-%\begin{itemize}
-%\item  il totale dei metri cubi da scaldare;
-%\item  un coefficiente termico che indica le calorie necessarie. per metro cubo e che può  oscillare tra un valore che va da 30 a 40 $\frac{Kcal}{m^3}$, a seconda delle condizioni termiche dell'abitazione.
-%\end{itemize}
-%Dunque il fabbisogno termico della casa può essere descritto dal prodotto tra il volume dell'utenza per il coefficiente termico scelto in base al tipo di abitazione.
+Il calcolo matematico fornisce il totale delle $Kcal$ necessarie a scaldare l'abitazione utilizzando come dati di partenza
+\begin{itemize}
+\item  il totale dei metri cubi da scaldare;
+\item  un coefficiente termico che indica le calorie necessarie. per metro cubo e che può  oscillare tra un valore che va da 30 a 40 $\frac{Kcal}{m^3}$, a seconda delle condizioni termiche dell'abitazione.
+\end{itemize}
+Dunque il fabbisogno termico della casa può essere descritto dal prodotto tra il volume dell'utenza per il coefficiente termico scelto in base al tipo di abitazione.
 
-%Nei futuri calcoli considereremo  un appartamento di 100 $m^2$ con soffitti non pi\`u  alti di 3 $m$ e coefficiente termico di 30 $\frac{Kcal}{m^3}$. Il fabbisogno termico di risulter\`a  di circa 9000 $Kcal$ (10440 $W$).
-%
-%Questo valore ci da un indice di quanta energia i radiatori dovranno fornire alla casa per scaldarla.
+%Questo valore ci da un indice di quanta energia i radiatori dovranno fornire alla casa per scaldarla nelle condizioni climatiche esterne peggiori.
 
 
 \section{Funzionamento e importanza dell'utilizzo di centraline d'utenza}
@@ -1213,9 +1236,79 @@ Esistono centraline nel mercato che però non realizzano tutti questi obiettivi.
 Nonostante i problemi che comportano le reti di distribuzione senza regolazioni di portata in arrivo alle utenze, circa duemila sono gli scambiatori gestiti da GES che ne sono privi.
 Dettò ciò andremo a studiare alcuni tipi di regolazioni che aumentino l'efficienza delle abitazioni. 
 Come base di paragone per tutte le simulazioni future verrà preso in considerazione uno scambiatore senza limitatore di portata: tutto il flusso di acqua in arrivo allo scambiatore verrà utilizzato per fornire calore all'acqua del circuito dell'utenza. 
+L'analisi è stata effettuata  simulando i diversi scenari analizzando quali di questi permettono di ottenere una temperatura di ritorno dell'acqua più bassa.
 
+Tutte le simulazioni di questa sezione fanno riferimento ad un abitazione con le seguenti caratteristiche (le variabili che andremo a definire sono descritte nel capitolo 3) e si vorrà mantenere una temperatura di $20 ^{\circ}C$:\\
+\textbf{parametri abitazione }
+\begin{itemize}
+\item[] Volumetria 300 $m^3$: abitazione di 100 $m^2$ con pareti alte 3 $m$
+\item[] $C_i$ = 0,44 $Kcal/^{\circ}C$
+\item[] $C_p$ = 0,80 $Kcal/^{\circ}C$: pareti composte da tre strati:
+\begin{itemize}
+\item[] Muratura in laterizi forati (10 cm di spessore): $C_{p1}$ = 0,20 $Kcal/^{\circ}C$
+\item[] Strato di isolante leggero (5 cm di spessore): $C_{p2}$ = 0,40 $Kcal/^{\circ}C$ 
+\item[] Termolaterizio POROTON (20 cm di spessore): $C_{p3}$ = 0,20 $Kcal/^{\circ}C$ 
+\end{itemize}
+\item[] $M_a$ = 12363 $kg$
+\item[] $M_p$ = 62725 $kg$ : pareti composte da tre strati:
+\begin{itemize}
+\item[] Muratura in laterizi forati (10 cm di spessore): $M_{p1}$ = 19630 $kg$
+\item[] Strato di isolante leggero (5 cm di spessore): $M_{p2}$ = 211 $kg$
+\item[] Termolaterizio POROTON (20 cm di spessore): $M_{p3}$ = 42884 $kg$ 
+\end{itemize}
+\item[] $R_{ip}$ = $5.0095 \cdot 10^{-4} \ m^2 \cdot ^{\circ}C / Kcal$
+\item[] $R_{pe}$ = $7.7 \cdot 10^{-3}  \ m^2 \cdot ^{\circ}C / Kcal$
+
+\end{itemize}
+
+\textbf{paramentri radiatore}
+\begin{itemize}
+\item[]$Km = 51,5 Kcal/h / ^{\circ}C$  
+\item[]$n = 1,32$
+\item[]$G_p = 600 l/h$
+\end{itemize}
+
+\textbf{parametri scambiatore}
+\begin{itemize}
+\item[]$\alpha = 2000$
+\item[]$S = 0,45 $
+\item[]$T_i = 82 ^{\circ}C$
+\end{itemize}
+
+\textbf{parametri iniziali}
+\begin{itemize}
+\item[]$\Theta_i(0) = 18 ^{\circ}C$
+\item[]$\Theta_p(0) = 15 ^{\circ}C$
+\end{itemize}
+
+\textbf{parametri esterni}
+\begin{itemize}
+\item[] La temperatura esterna $\Theta_e$ segue il profilo illustrato in figura \ref{fig:temp_est} che mostra l'andamento di temperatura giornaliero (24 h) in una giornata invernale dalle 8:00 del mattino fino alla stessa ora del giorno successivo. 
+\end{itemize}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{figure/temp_est} 
+\caption{Andamento della temperatura esterna per 24h in una giornata invernale}
+\label{fig:temp_est}
+\end{figure}
+
+Per convenzione quando la pompa di utenza è spenta le temperature $t_u$ e $t_i$ vanno a zero per indicare che non vi è scambio di calore con i radiatori. Nel caso di sottostazioni con regolazione anche $T_i$ e $T_u$ quando vanno a zero indica che la valvola di laminazione è completamente chiusa e non è quindi permesso il passaggio di acqua. 
 
 %La regolazione dell'impianto può seguire due principi: a punto fisso, cioè con temperatura di mandata fissata indipendentemente dalle condizioni esterne; climatica, cioè con adeguamento continuo alla situazione di temperatura esterna. La climatica del futuro ormai prossimo, sarà una regolazione evoluta, che ottimizza i consumi in funzione del comfort, tutto questo sarà possibile grazie all'algoritmo PI.
+\subsection{Regolazione di portata assente}
+In figura \ref{fig:no_reg} è mostrato l'andamento della temperatura ambiente, delle temperature in gioco nello scambiatore e la portata nel caso di un utenza che dispone di uno scambiatore senza alcun tipo di regolazione sulla portata in ingresso alla sotto-stazione di scambio. La temperatura sul termostato è settata a 20 $^{\circ}C$ mentre la portata $G_p$ è di 1500 $l/h$ (si considera un utenza posta nelle vicinanze della centrale di scambio che quindi dispone di una portata abbastanza elevata). 
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{figure/no_reg} 
+\caption{Andamento della temperatura ambiente, delle temperature in gioco nello scambiatore e la portata per una sotto-centrale senza regolazioni sulla portata.}
+\label{fig:no_reg}
+\end{figure}
+
+Con questa configurazione quando si raggiunge la temperatura di set-point si spegne la pompa così da terminare lo scambio di calore. La pompa si riattiverà quando viene misurata una temperatura ambiente troppo bassa. Quando la pompa d'utenza è spenta l'acqua calda $T_i$ in ingresso allo scambiatore non scambia calore e la temperatura di uscita $T_u$ sarà più o meno uguale a $T_i$. Questo vale a dire che la temperatura di ritorno sarà molto alta e il sistema risulterà inefficiente perché utilizziamo energia elettrica per pompare acqua calda senza che vi sia alcuno scambio di energia termica.
+
+%valutare se inserire una tabella con dati di altre simulazioni
 
 \subsection{Termoregolazione a punto fisso}
 Si tratta del sistema di regolazione più semplice. La regolazione a punto fisso garantisce all'impianto una temperatura del fluido di mandata costante. 
@@ -1231,9 +1324,21 @@ Quando la temperatura in ambiente è scesa fino ad essere inferiore a quella ric
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.85\textwidth]{figure/surplus} 
-\caption{Nella regolazione a punto fisso l'acqua circola alla temperatura corrispondente al valore necessario per il giorno più freddo dell'inverno. Nel grafico sono mostrati i surplus di energia in funzione della temperatura esterna}
+\caption{Nella regolazione a punto fisso l'acqua circola alla temperatura corrispondente al valore necessario per il giorno più freddo dell'inverno. Nel grafico sono mostrati i surplus di energia in funzione della temperatura esterna.}
 \label{fig:surplus}
 \end{figure}
+
+Ii figura \ref{fig:reg_mandata} viene mostrato come si comporta uno scambiatore con regolazione di mandata a punto fisso. La temperatura di mandata ai radiatori $t_u$ è impostata a 70  $^{\circ}C$.  
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{figure/reg_mandata} 
+\caption{Andamento della temperatura ambiente, delle temperature in gioco nello scambiatore e la portata per una sotto-centrale con termoregolazione a punto fisso.}
+\label{fig:reg_mandata}
+\end{figure}
+
+Quando il termostato spegne il riscaldamento, la valvola di laminazione si chiude impedendo che vi sia un ritorno di acqua calda alla centrale. Inoltre rispetto al caso di scambiatore senza regolazione la temperature di ritorno $T_o$ risulta più bassa.
+
 
 \subsection{Termoregolazione climatica}
 Poiché il calore necessario per mantenere le condizioni di comfort in ambiente è legato alle dispersioni dell'edificio ed alla temperatura esterna, il fabbisogno termico aumenta all'aumentare delle dispersioni dell'edificio e al diminuire della temperatura esterna. Le regolazioni di tipo climatico permettono di selezionare una curva climatica all'interno di una famiglia di curve, in modo da adeguare la regolazione allo specifico edificio. 
@@ -1257,6 +1362,28 @@ La curva climatica o curva di riscaldamento è il rapporto tra la temperatura es
 \item Temperatura massima di mandata all'impianto di riscaldamento
 \end{itemize}
 Conosciuti questi valori si andranno a congiungere le due rette corrispondenti sul grafico, trovando in questo modo la curva da inserire.
+
+
+ Per questo tipo di regolazione si deve definire una curva di compensazione la quale descrive in base alla temperatura esterna, misurata da una sonda, quale dovrà essere la temperatura in mandata ai radiatori. La curva provvede a mantenere una temperatura teorica di 20 $^{\circ}C$ interna alla casa per temperature esterne comprese tra $+20$ $^{\circ}C$ e $-20$ $^{\circ}C$. La scelta della curva dipende dalla temperatura esterna minima di progetto e dalla temperatura di mandata di progetto (e quindi dal tipo di impianto). La curva  utilizzata per questa simulazione è rappresentata in figura \ref{fig:curva_comp}.
+ 
+ \begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{figure/curva_comp} 
+\caption{Curva di compensazione del riscaldamento.}
+\label{fig:curva_comp}
+\end{figure}
+
+
+In figura \ref{fig:reg_climatica} sono rappresentata le grandezze in gioco in uno scambiatore con termoregolazione climatica.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{figure/reg_climatica} 
+\caption{Andamento della temperatura ambiente, delle temperature in gioco nello scambiatore e la portata per una sotto-centrale con termoregolazione climatica.}
+\label{fig:reg_climatica}
+\end{figure}
+
+Ben si nota come le temperatura di ritorno $T_u$ e le portate più basse  $G_p$ si hanno quando la temperatura esterna è più alta. Questo indica che non si fornisce un surplus di energia riuscendo comunque a raggiungere il livello di comfort desiderato.
 
 \subsection{La regolazione climatica evoluta PI}
 Una regolazione climatica evoluta è in grado di gestire in modo ottimale il comfort indoor per quanto riguarda la climatizzazione invernale.
@@ -1293,6 +1420,18 @@ Questo fenomeno fa sì che il sistema dopo aver raggiunto la condizione di error
 
 La soluzione che utilizza un controllo PI per regolare il calore fornito ai radiatori, elimina le oscillazioni della temperatura interna dell'abitazione e richiede in ogni momento sempre la minima quantità di calore necessario per il comfort richiesto. Le temperature di ritorno dell'acqua alla centrale di scambio, saranno tanto più basse tanto è minore il carico termico richiesto. 
 
+In figura \ref{fig:reg_PID} si mostra l'andamento delle temperature e portate nella simulazione di una sotto-centrale con regolazione PI.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{figure/reg_PID} 
+\caption{Andamento della temperatura ambiente, delle temperature in gioco nello scambiatore e la portata per una sotto-centrale con regolazione climatica evoluta PI.}
+\label{fig:reg_PID}
+\end{figure}
+
+La pompa di circolazione dell'utenza può non essere mai spenta in quanto sarà la centralina a determinare il giusto grado di laminazione della valvola per avere in casa la temperatura desiderata. Inizialmente richiede portata elevata in quanto il PI è stato configurato per raggiungere la temperatura desiderata velocemente. Una volta raggiunta la temperatura di comfort, questa regolazione è quella che spreca meno energia termica utilizzando esattamente il calore necessario a mantenere la temperatura interna costante. È la regolazione che richiede il minor flusso di acqua e fa tornare in centrale l'acqua alla più bassa temperatura possibile.  Inoltre, si evitano picchi di richiesta di calore dovuti all'accensione e allo spegnimento del riscaldamento che si hanno con i termostati comuni. 
+
+
 \subsection{Variazione della velocità delle pompe di circolazione interne all'utenza}
 
 %Potenze scambiate e temperature al variare delle por- tate
@@ -1303,7 +1442,7 @@ Per verificare se questa regolazione effettivamente può portare a dei benefici 
 
 Impostando la portata sul primario $G_p$ costante e la portata sul circuito dell'utenza $G_u$ variabile ottteniamo i seguenti risultati:
 maggiore è la portata sul secondario minore risulta la differenza di temperatura tra $t_o$ e $t_i$ e viceversa. Il risultato più significativo ci mostra che variando la portata sul secondario, variano le temperature di mandata e ritorno ma variano in
-modo tale che la loro temperatura media rimanga costante come anche la temperatura di ritorno della rete di distribuzione $T_o$, rappresentati nel grafico in figura \ref{fig:pompa_var_utenza}.
+modo tale che la loro temperatura media rimanga costante come anche la temperatura di ritorno della rete di distribuzione $T_u$, rappresentati nel grafico in figura \ref{fig:pompa_var_utenza}.
 
 \begin{figure}[!ht]
 \centering
@@ -1312,8 +1451,38 @@ modo tale che la loro temperatura media rimanga costante come anche la temperatu
 \label{fig:pompa_var_utenza}
 \end{figure}
 
-In conclusione possiamo affermare che la potenza scambiata e la temperatura di ritorno $T_o$ dipende solamente dalla portata in mandata sul primario.
+In conclusione possiamo affermare che la potenza scambiata e la temperatura di ritorno $T_u$ dipende solamente dalla portata in mandata sul primario.
 Questo ci conferma ulteriormente che la regolazione da implementare dovrà essere necessariamente inserita sulla portata del circuito primario in modo da limitare il ritorno di temperatura al minimo possibile ma tale da garantire la temperatura ambiente impostata nel termostato di casa.
+
+\subsection{Regolazioni delle sotto-centrali di scambio a confronto}
+Utilizzando come base di riferimento uno scambiatore senza regolazioni analizzeremo come varia l'andamento della temperatura di ritorno alla centrale $T_u$ e la portata in arrivo allo scambiatore dal lato della rete di distribuzione $G_p$ confrontando i seguenti tipi di regolazione: termoregolazione a punto fisso, termoregolazione climatica e regolazione climatica evoluta PI.
+
+Utilizzando i dati ottenuti dalle simulazioni precedenti, in figura \ref{fig:To_confronto}  si mostra l'andamento della  temperatura $T_u$ dei vari tipi di regolazione.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{figure/To_confronto} 
+\caption{Confronto tra l'andamento temperatura di ritorno alla centrale $T_u$ con diversi metodi di regolazione durante una simulazione di 24 h.}
+\label{fig:To_confronto}
+\end{figure}
+
+In figura \ref{fig:portate_confronto} invece è rappresentato il grafico della portata in ingresso $G_p$ in ingresso allo scambiatore d'utenza delle regolazioni studiate. 
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{figure/portate_confronto} 
+\caption{Confronto tra l'andamento delle portate con diversi metodi di regolazione durante una simulazione di 24 h.}
+\label{fig:portate_confronto}
+\end{figure}
+
+\textbf{Considerazioni sulle diverse regolazioni}
+\begin{itemize}
+\item Scambiatore senza regolazione: non essendoci alcun tipo di regolazione, quando il sistema di riscaldamento dell'utenza è spento, l'acqua circola comunque nello scambiatore senza però cedere colore perciò l'acqua ritornerà in centrale alla stessa temperatura di quella a cui è stata mandata. La stazione di pompaggio spreca energia di pompaggio senza che sia consumata energia termica. Questa configurazione è sicuramente la meno efficiente.
+\item Termoregolazione a punto fisso: rispetto a scambiatori senza regolazione si ha una riduzione della temperatura di ritorno alla  centrale e quando il riscaldamento è spento la valvola di laminazione si chiude in modo da non permettere il passaggio di acqua nello scambiatore. La temperatura di set point deve essere fissata ad una valore che permette di scaldare la casa nelle condizioni peggiori possibili. Quindi, quando la temperatura esterna è maggiore di tale temperatura si fornirà più calore di quanto è realmente necessario. Questo tipo di regolazione è economica ma sicuramente non la più efficiente.
+\item Termoregolazione climatica: il funzionamento è molto simile alla termoregolazione a punto fisso, ma il set point di temperatura in mandata ai radiatori varia secondo una curva di compensazione in funzione della temperatura esterna. Minore è la temperatura esterna, maggiore sarà la temperatura di mandata $t_u$. Gli sprechi sono dunque ridotti al minimo e quando la temperatura esterna non è critica abbiamo delle temperature più basse rispetto alla regolazione a punto fisso e di conseguenza anche la portata necessaria sarà minore. Tra le regolazioni che prevedono l'utilizzo di un termostato è sicuramente la migliore in termini di efficienza.
+\item Regolazione climatica evoluta PI: indubbiamente la migliore regolazione da installare in una sotto-centrale di utenza. Una volta che la temperatura ambiente si stabilizza al valore di comfort desiderato i valori di temperatura di ritorno alla centrale e dunque di portata saranno i minimi raggiungibili. Utilizzando un controllore PI invece di un termostato (che produce un andamento oscillatorio tra due valori), possiamo non spegnere mai la pompa di circolazione d'utenza e quindi limitare al massimo i picchi di richiesta di calore.
+\end{itemize}
+
 
 
 \section{Soluzioni per ridurre i consumi di energia di pompaggio}
@@ -1436,13 +1605,13 @@ Una volta che si varia la temperatura di mandata, prima che l'acqua in tutta la 
 Se la rete di TLR è approssimata come un carico omogeneo equamente distribuito, il calore fornito è:
 
 \begin{equation}
-P_{inv}(t) = c_p G_p(t) \dfrac{\int_{t-\Delta t}^t T_i(\tau)d\tau - \int_{t}^{t + \Delta t } T_o(\tau)d\tau}{\Delta t}
+P_{inv}(t) = c_p G_p(t) \dfrac{\int_{t-\Delta t}^t T_i(\tau)d\tau - \int_{t}^{t + \Delta t } T_u(\tau)d\tau}{\Delta t}
 \end{equation}
 dove:
 \begin{itemize}
 \item[] $P_{inv}(t)$:  potenza fornita alla rete (carico)
 \item[] $\Delta t$: tempo di trasporto affinché l'acqua attraversi o la conduttura di mandata o di ritorno della rete principale
-\item[] $T_i$ e $T_o$: sono rispettivamente la temperatura di mandata alle utenze e di ritorno dalle stesse in funzione del tempo
+\item[] $T_i$ e $T_u$: sono rispettivamente la temperatura di mandata alle utenze e di ritorno dalle stesse in funzione del tempo
 \item[] $G_p$: portata della rete principale
 \item[] $c_p$: calore specifico dell'acqua nella condotta principale
 \end{itemize}
@@ -1499,8 +1668,9 @@ Una volta che il modello è calibrato e convalidato, può essere usato per la si
 %\input{biblio}           % Bibliografia
 %
 
+\cite{sandou2005predictive}
 
-\bibliographystyle{IEEEbib}
+\bibliographystyle{IEEEbib} %plain
 %\bibliographystyle{unsrt}
 %\bibliography{library}
 \bibliography{FileBiblio}

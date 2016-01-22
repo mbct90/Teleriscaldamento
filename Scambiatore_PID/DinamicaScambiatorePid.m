@@ -7,9 +7,19 @@ c=3;
 if tu > Ti-c
     tu = Ti-c;
 end
-if tu < 50
-    tu = 50;
+if tu < X(1)
+    tu = X(1);
 end
+
+% if tu<50
+%     Km=0;
+% end
+if t==0
+    d=1
+else
+    d=find(t)
+end
+
 
 % calcolo temperatura in ingresso allo scambiatore (lato utenza: temp. ritorno dai radiatori)
 ti_temp=[X(1):0.001:tu];
@@ -19,7 +29,7 @@ ti = ti_temp(pos1);
 
 % calcolo temperatura in uscita allo scambiatore (lato principale)
 H=(Gu*(tu-ti))/(Alfa*S);
-To_temp=[ti:0.001:Ti-2];
+To_temp=[ti+0.000000001:0.001:Ti-2];
 err2=(((Ti-tu)-(To_temp-ti)) ./ (log(Ti-tu) - log(To_temp - ti))) - H;
 [~,pos2]=min(abs(err2));
 To = To_temp(pos2);
@@ -27,15 +37,15 @@ To = To_temp(pos2);
 % calcolo portata lato principale
 Gp= (Gu*(tu-ti)/(Ti-To));
 
-if Gp > 1000
-    Gp=1000;
+if Gp > 1500
+    Gp=1500;
     Km*((tu+ti_temp)/2 - X(1)).^n - Gu*(tu-ti_temp);
     To = ( Ti - (Gu*(tu-ti))/(Gp)  );
 end
 
 % calcolo variabile di stato
 dXa = (Km*((ti+tu)/2 - X(1)).^(n) - Ka*(X(1)-X(2)) )/(MCa);
-dXp = (Ka*(X(1) - X(2)) - Kpar*(X(2) - Test))/(MCp);
+dXp = (Ka*(X(1) - X(2)) - Kpar*(X(2) - Test(d)))/(MCp);
 dXtu = Ki*(Target - X(1));
 
 

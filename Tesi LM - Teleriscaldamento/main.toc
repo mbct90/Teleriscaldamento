@@ -34,25 +34,28 @@
 \contentsline {subsection}{\numberline {3.7.3}Potenza assorbita da una pompa}{48}
 \contentsline {section}{\numberline {3.8}Controllo PID}{49}
 \contentsline {chapter}{\numberline {4}Risultati della simulazione}{51}
-\contentsline {section}{\numberline {4.1}Caratteristiche di un'utenza termica}{51}
-\contentsline {section}{\numberline {4.2}Funzionamento e importanza dell'utilizzo di centraline d'utenza}{52}
-\contentsline {section}{\numberline {4.3}Soluzioni per aumentare l'efficienza delle utenze diminuendo la temperatura dell'acqua di ritorno}{55}
-\contentsline {subsection}{\numberline {4.3.1}Termoregolazione a punto fisso}{56}
-\contentsline {subsection}{\numberline {4.3.2}Termoregolazione climatica}{57}
-\contentsline {subsection}{\numberline {4.3.3}La regolazione climatica evoluta PI}{58}
-\contentsline {subsection}{\numberline {4.3.4}Variazione della velocit\IeC {\`a} delle pompe di circolazione interne all'utenza}{59}
-\contentsline {section}{\numberline {4.4}Soluzioni per ridurre i consumi di energia di pompaggio}{61}
-\contentsline {subsection}{\numberline {4.4.1}Vantaggi di utilizzare pompe a velocit\IeC {\`a} variabile}{61}
-\contentsline {section}{\numberline {4.5}Caratteristiche dell'impianto di Sant'Ippolito}{62}
-\contentsline {subsection}{\numberline {4.5.1}Dati della rete}{65}
-\contentsline {subsection}{\numberline {4.5.2}Pompa di circolazione}{65}
-\contentsline {subsection}{\numberline {4.5.3}Simulazione rete senza regolazioni}{65}
-\contentsline {subsection}{\numberline {4.5.4}Simulazioni rete con regolazione in mandata (analizzare tutti i casi in sezioni diverse)}{65}
-\contentsline {section}{\numberline {4.6}Implementazioni future}{65}
-\contentsline {subsection}{\numberline {4.6.1}Modello predittivo per determinare la temperatura in mandata alla rete di distribuzione}{65}
-\contentsline {subsubsection}{Carica/scarica del sistema}{66}
-\contentsline {subsubsection}{Controllo ad anello aperto}{67}
-\contentsline {subsubsection}{Modello sperimentale}{67}
-\contentsline {chapter}{\numberline {5}Conclusioni}{69}
-\contentsline {chapter}{Appendice A: Dettagli}{70}
-\contentsline {chapter}{Bibliografia}{71}
+\contentsline {section}{\numberline {4.1}Influenza della temperatura esterna sulla gestione di un sistema di teleriscaldamento}{51}
+\contentsline {section}{\numberline {4.2}Fabbisogno termico massimale di un'abitazione}{53}
+\contentsline {section}{\numberline {4.3}Funzionamento e importanza dell'utilizzo di centraline d'utenza}{54}
+\contentsline {section}{\numberline {4.4}Soluzioni per aumentare l'efficienza delle utenze diminuendo la temperatura dell'acqua di ritorno}{57}
+\contentsline {subsection}{\numberline {4.4.1}Regolazione di portata assente}{59}
+\contentsline {subsection}{\numberline {4.4.2}Termoregolazione a punto fisso}{60}
+\contentsline {subsection}{\numberline {4.4.3}Termoregolazione climatica}{61}
+\contentsline {subsection}{\numberline {4.4.4}La regolazione climatica evoluta PI}{64}
+\contentsline {subsection}{\numberline {4.4.5}Variazione della velocit\IeC {\`a} delle pompe di circolazione interne all'utenza}{67}
+\contentsline {subsection}{\numberline {4.4.6}Regolazioni delle sotto-centrali di scambio a confronto}{69}
+\contentsline {section}{\numberline {4.5}Soluzioni per ridurre i consumi di energia di pompaggio}{71}
+\contentsline {subsection}{\numberline {4.5.1}Vantaggi di utilizzare pompe a velocit\IeC {\`a} variabile}{71}
+\contentsline {section}{\numberline {4.6}Caratteristiche dell'impianto di Sant'Ippolito}{72}
+\contentsline {subsection}{\numberline {4.6.1}Dati della rete}{75}
+\contentsline {subsection}{\numberline {4.6.2}Pompa di circolazione}{75}
+\contentsline {subsection}{\numberline {4.6.3}Simulazione rete senza regolazioni}{75}
+\contentsline {subsection}{\numberline {4.6.4}Simulazioni rete con regolazione in mandata (analizzare tutti i casi in sezioni diverse)}{75}
+\contentsline {section}{\numberline {4.7}Implementazioni future}{75}
+\contentsline {subsection}{\numberline {4.7.1}Modello predittivo per determinare la temperatura in mandata alla rete di distribuzione}{75}
+\contentsline {subsubsection}{Carica/scarica del sistema}{76}
+\contentsline {subsubsection}{Controllo ad anello aperto}{77}
+\contentsline {subsubsection}{Modello sperimentale}{77}
+\contentsline {chapter}{\numberline {5}Conclusioni}{79}
+\contentsline {chapter}{Appendice A: Dettagli}{80}
+\contentsline {chapter}{Bibliografia}{81}

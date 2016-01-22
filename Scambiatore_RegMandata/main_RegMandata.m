@@ -2,11 +2,15 @@ clear all, close all, clc
 % TELERISCALDAMENTO
 % tempo di simulazione
 t0=0;
-tf=5;
+tf=24;
 tc=0.01;
 t=[t0:tc:tf];
 
-
+x_1=[0 3 6 9 12 15 18 21 24];
+y_1=[0.5 5 10 6 2.5 1.5 0.5 -0.5 0];
+p_temp = polyfit(x_1,y_1,3)
+%p_temp=[0.0062 -0.2679 2.9591 -2,6767];
+temper=polyval(p_temp,t);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -29,16 +33,24 @@ Target= par(9); %Temperatura ambiente desiderata nell'utenza
 Km1=par(3); % coeff. scambio radiatore
 n=par(4); % esponente radiatore
 cs=1; % [kcal/h] calore specifico acqua
-Km=Qtot/(50^n); % coeff scambio totale radiatori; 
+%Km=V/3*0.8 %Qtot/(50^n); % coeff scambio totale radiatori; 
+Km=Qtot/(50^n);
 
-Sl=380 %par(5);
-MCa=1.21*V*(1005/4186) + 8000*0.2
-MCp=Sl*(65*840 + 0.7*1670 + 142*840)/4186
-Ka=6.61*Sl
-Kp=0.43*Sl 
+l=sqrt(V/3)
+
+Sf=l*3*4*0.15
+Sl=l*3*4 - Sf %par(5);
+Ss=l*l;
+Si=Ss;
+
+Stot=Sl+Ss+Si
+MCa=1.21*V*(1005/4186) + 40*V*0.2
+MCp=Stot*(65*840 + 0.7*1670 + 142*840)/4186 
+Ka=6.61*Stot + 0,67*Sf
+Kp=0.43*Stot 
 
 Ti=82; % temperatura ingresso allo scambiatore [rete principale] 
-tu=75;
+tu=70;
 
 Gu=par(6); % portata in l/h rete dell'utenza
 
@@ -51,16 +63,17 @@ Test=7; % temperatura esterna
 % parametri iniziali per la simulazione
 Tamb0=par(10); % condizioni iniziali: [Temperatura ambiente iniziale ; valore iniziale stato di controllo]
 
-X0=[14 14]
+X0=[18 15]
 %% simulazione
   %simulazione con termostato
-    [X1,X2,ti_vec,To_vec,Gp_vec]=DinamicaScambiatoreRegMandata_Termostato(tf,tc,X0,Ti,Km,Ka,Kp,MCa,MCp,Test,Gu,cs,Alfa,S,tu,n,Target)
+    [X1,X2,ti_vec,To_vec,Gp_vec,Gu_vec,kk,tu_vec,Ti_vec]=DinamicaScambiatoreRegMandata_Termostato(tf,tc,X0,Ti,Km,Ka,Kp,MCa,MCp,temper,Gu,cs,Alfa,S,tu,n,Target)
     
-    Ti_vec=Ti*ones(1,length(t)-1); % vettore temperature in ingresso allo scambiatore (lato principale) -> COSTANTE
-    tu_vec=tu*ones(1,length(t)-1); % vettore portate in ingresso allo scambiatore (lato principale) -> COSTANTE
+    %Ti_vec=Ti*ones(1,length(t)-1); % vettore temperature in ingresso allo scambiatore (lato principale) -> COSTANTE
+    %tu_vec=tu*ones(1,length(t)-1); % vettore portate in ingresso allo scambiatore (lato principale) -> COSTANTE
 
     Plots_Termostato
 
+    Ptot= sum(Q4.*tc)
 
 
 %% simulazione evoluzione libera

@@ -1,5 +1,4 @@
-function [X1,X2,ti_vec,To_vec,tu_vec,Gp_vec,Gu_vec,kk]=DinamicaScambiatoreNoReg_Termostato(tf,tc,X0,Ti,Km,Test,Gu,cs,Alfa,S,Gp,n,MCa,MCp,Ka,Kp,Target)
-
+function [X1,X2,ti_vec,To_vec,Gp_vec,Gu_vec,kk] = DinamicaScambiatoreRegMandata_Termostato(tf,tc,X0,Ti,Km,Ka,Kp,MCa,MCp,Test,Gu,cs,Alfa,S,tu,n,Target)
 
 h=tc;  % h  e'   il  passo  temporale.
 t=0:h:tf;  % inizializzazione    dell'intervallo   temporale.
@@ -11,21 +10,24 @@ s=1;
 
 for  i=1:length(t)-1, 
 
-fun = @(x) myfun(x,Km,X1(i),Gu,Gp,Ti,cs,Alfa,S,n);
-x0=[70 75];
-Z=fsolve(fun,x0);
+ti_temp=[X1(i):0.001:tu];
+err1=Km*((tu+ti_temp)./2 - X1(i)).^n - Gu*(tu-ti_temp);
+[m1,pos1]=min(abs(err1));
+ti=ti_temp(pos1);
 
-ti=Z(1);
-tu=Z(2);
-To=(Ti - (Gu*(tu-ti))/(Gp));
+H=(Gu*(tu-ti))/(Alfa*S);
+To_temp=[ti:0.001:Ti];
+err2=(((Ti-tu)-(To_temp-ti)) ./ (log(Ti-tu) - log(To_temp - ti))) - H;
+[m2,pos2]=min(abs(err2));
+To=To_temp(pos2);
 
-ti_vec(i)=ti;
-tu_vec(i)=tu;
-To_vec(i)=To;
-
-Gp_vec(i)=Gp;
+Gp= (Gu*(tu-ti)/(Ti-To));
 
 Gu_vec(i)=Gu;
+
+ti_vec(i)=ti;
+Gp_vec(i)=Gp;
+To_vec(i)=To;
 
 if s==1
     if (X1(i)>=Target+0.7)
@@ -34,9 +36,8 @@ if s==1
         s=0;
         Gu_vec(i)=0;
         Gp_vec(i)=0;
-        To_vec(i)=Ti;
+        To_vec(i)=0;
         ti_vec(i)=0;
-        tu_vec(i)=0;
 
         
     else
@@ -53,19 +54,19 @@ else
         kk(i)=0;
         Gu_vec(i)=0;
         Gp_vec(i)=0;
-        To_vec(i)=Ti;
+        To_vec(i)=0;
         ti_vec(i)=0;
-        tu_vec(i)=0;
     end
     
 end
 
-k1= (Kmt*((ti+tu)/2 - X1(i)).^(n) - Ka*(X1(i)-X2(i)) )/(MCa);    %  calcolo  della   derivata;
+
+
+    k1= (Kmt*((ti+tu)/2 - X1(i)).^(n) - Ka*(X1(i)-X2(i)) )/(MCa);    %  calcolo  della   derivata;
     X1(i+1)=X1(i) + h*k1;    %          stima          del          nuovo          valore          di          y;
     
-    k2=( Ka*(X1(i)-X2(i)) - Kp*(X2(i) - Test(i)))/(MCp);
+    k2=( Ka*(X1(i)-X2(i)) - Kp*(X2(i) - Test))/(MCp);
     X2(i+1)=X2(i) + h*k2;
-
 end
 
 end

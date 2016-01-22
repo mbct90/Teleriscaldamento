@@ -15,12 +15,63 @@ legend('temperatura interna','temperatura pareti')
 
 %plot delle temperature dell'acqua dello scambiatore
 
-figure, plot(t(1:end-1),ti_vec,'b',t(1:end-1),tu_vec,'r',...
-    t(1:end-1),To_vec,'c',t(1:end-1),Ti_vec,'m','LineWidth',5)
-legend('to (FREDDA)','ti  (CALDA)','To (FREDDA)','Ti (CALDA)')
-title('Temperature ingresso e uscita lato utenza')
-xlabel('Time []')
-ylabel('Temperature [°C]')
+figure,
+subplot(6,1,1)
+plot(t,X1,'g','LineWidth',5)
+hold on
+plot(t,20*ones(1,length(t)),'k-.')
+legend('T interna','set point')
+title('Andamento della temperatura utenza')
+set(gca,'FontSize', 18)
+
+ylabel('Temperatura [°C]')
+
+subplot(6,1,2)
+plot(t(1:end-1),ti_vec,'b','LineWidth',5)
+legend('t_i (fredda)')
+title('Temperatura ingresso allo scambiatore lato utenza')
+
+ylabel('Temperatura [°C]')
+set(gca,'FontSize', 18)
+
+subplot(6,1,3)
+plot(t(1:end-1),tu_vec,'r','LineWidth',5)
+legend('t_u (calda)')
+title('Temperatura uscita allo scambiatore lato utenza')
+
+ylabel('Temperatura [°C]')
+set(gca,'FontSize', 18)
+
+subplot(6,1,4)
+plot(t(1:end-1),Ti_vec,'m','LineWidth',5)
+legend('T_i (calda)')
+title('Temperatura uscita allo scambiatore lato rete distribuzione')
+
+ylabel('Temperatura [°C]')
+set(gca,'FontSize', 18)
+
+subplot(6,1,5)
+plot(t(1:end-1),To_vec,'c','LineWidth',5)
+legend('T_u (fredda)')
+title('Temperatura ingresso allo scambiatore lato rete distribuzione')
+
+ylabel('Temperatura [°C]')
+set(gca,'FontSize', 18)
+
+subplot(6,1,6)
+plot(t(1:end-1),Gp_vec,'k','LineWidth',5)
+legend('T_i (calda)')
+title('Variazione portata ingresso scambiatore')
+xlabel('Time [h]')
+ylabel('Portata [l/h]')
+set(gca,'FontSize', 18)
+
+% figure, plot(t(1:end-1),ti_vec,'b',t(1:end-1),tu_vec,'r',...
+%     t(1:end-1),To_vec,'c',t(1:end-1),Ti_vec,'m','LineWidth',5)
+% legend('to (FREDDA)','ti  (CALDA)','To (FREDDA)','Ti (CALDA)')
+% title('Temperature ingresso e uscita lato utenza')
+% xlabel('Time []')
+% ylabel('Temperature [°C]')
 
 % plot andamento della portata lato principale
 figure, plot(t(1:end-1),Gp_vec,'LineWidth',5)
