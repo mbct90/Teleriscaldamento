@@ -1,4 +1,4 @@
-function [X1,X2,ti_vec,To_vec,tu_vec,Gp_vec,Gu_vec,kk]=DinamicaScambiatoreNoReg_Termostato(tf,tc,X0,Ti,Km,Test,Gu,cs,Alfa,S,Gp,n,MCa,MCp,Ka,Kp,Target)
+function [X1,X2,ti_vec,To_vec,tu_vec,Gp_vec,Gu_vec,kk]=DinamicaScambiatoreNoReg_Termostato(tf,tc,X0,Ti,Km,Test,Gu,cs,Alfa,S,Gp,n,MCa,MCp,Ka,Kp,Kf,Target)
 
 
 h=tc;  % h  e'   il  passo  temporale.
@@ -60,7 +60,7 @@ else
     
 end
 
-k1= (Kmt*((ti+tu)/2 - X1(i)).^(n) - Ka*(X1(i)-X2(i)) )/(MCa);    %  calcolo  della   derivata;
+k1= (Kmt*((ti+tu)/2 - X1(i)).^(n) - Ka*(X1(i)-X2(i)) - Kf*(X1(i)-Test(i)) )/(MCa);    %  calcolo  della   derivata;
     X1(i+1)=X1(i) + h*k1;    %          stima          del          nuovo          valore          di          y;
     
     k2=( Ka*(X1(i)-X2(i)) - Kp*(X2(i) - Test(i)))/(MCp);

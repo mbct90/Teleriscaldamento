@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.20)  22 JAN 2016 20:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.20)  25 JAN 2016 19:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -439,20 +439,20 @@ LaTeX Warning: Label `fig:surplus' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Info: Redefining \it@ocap on input line 52.
-LaTeX Info: Redefining \it@ccap on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Info: Redefining \it@ocap on input line 74.
+LaTeX Info: Redefining \it@ccap on input line 74.
  (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count112
@@ -511,17 +511,32 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box31
+Package epstopdf Info: Source file: <logosm.eps>
+(epstopdf)                    date: 2015-06-05 14:22:04
+(epstopdf)                    size: 50032 bytes
+(epstopdf)             Output file: <logosm-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-02 17:15:58
+(epstopdf)                    size: 64538 bytes
+(epstopdf)             Command: <repstopdf --outfile=logosm-eps-converted-to.pd
+f logosm.eps>
+(epstopdf)             \includegraphics on input line 75.
+Package epstopdf Info: Output file is already uptodate.
 
-<main-frn.pdf, id=1, 597.50829pt x 845.0471pt>
-File: main-frn.pdf Graphic file (type pdf)
- <use main-frn.pdf>
-Package pdftex.def Info: main-frn.pdf used on input line 54.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
- [1
+<logosm-eps-converted-to.pdf, id=1, 622.325pt x 642.4pt>
+File: logosm-eps-converted-to.pdf Graphic file (type pdf)
 
- <./main-frn.pdf{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdft
-ex.map}>]
-[1] [1] [1
+<use logosm-eps-converted-to.pdf>
+Package pdftex.def Info: logosm-eps-converted-to.pdf used on input line 75.
+(pdftex.def)             Requested size: 82.6903pt x 85.35826pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
+
+ []
+
+[1
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./logos
+m-eps-converted-to.pdf>] [1] [1] [1
 
 ] (./main.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 4.
@@ -546,403 +561,422 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] [2]
 Capitolo 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--130
+Underfull \hbox (badness 10000) in paragraph at lines 150--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+LaTeX Warning: Citation `heating2015cooling' on page 3 undefined on input line 
+153.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--135
+Underfull \hbox (badness 10000) in paragraph at lines 155--157
 
  []
 
 [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 140--143
+Underfull \hbox (badness 10000) in paragraph at lines 162--165
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--148
+Underfull \hbox (badness 10000) in paragraph at lines 166--170
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 149--152
+Underfull \hbox (badness 10000) in paragraph at lines 171--174
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 155.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 177.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 155.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 177.
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--161
+Underfull \hbox (badness 10000) in paragraph at lines 180--183
 
  []
 
 [5]
-Overfull \hbox (2.7951pt too wide) in paragraph at lines 166--168
+Overfull \hbox (2.7951pt too wide) in paragraph at lines 188--190
 \T1/cmr/m/n/10.95 Il te-le-ri-scal-da-men-to è com-par-so per la pri-ma vol-ta 
 nel mon-do al-la fi-ne dell'800.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--168
+Underfull \hbox (badness 10000) in paragraph at lines 188--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--177
+Underfull \hbox (badness 10000) in paragraph at lines 197--199
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--185
+Underfull \hbox (badness 10000) in paragraph at lines 205--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--189
+Underfull \hbox (badness 10000) in paragraph at lines 208--211
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 194--196
+Underfull \hbox (badness 10000) in paragraph at lines 216--218
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 208--210
+Underfull \hbox (badness 10000) in paragraph at lines 230--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--213
+Underfull \hbox (badness 10000) in paragraph at lines 233--235
 
  []
 
-<figure/volumetria_teleriscaldata.png, id=83, 1137.24875pt x 672.5125pt>
+<figure/volumetria_teleriscaldata.png, id=67, 1137.24875pt x 672.5125pt>
 File: figure/volumetria_teleriscaldata.png Graphic file (type png)
 
 <use figure/volumetria_teleriscaldata.png>
 Package pdftex.def Info: figure/volumetria_teleriscaldata.png used on input lin
-e 220.
+e 242.
 (pdftex.def)             Requested size: 341.9989pt x 202.2376pt.
  [9]
-Underfull \hbox (badness 10000) in paragraph at lines 250--253
+Underfull \hbox (badness 10000) in paragraph at lines 272--275
 
  []
 
 [10 <./figure/volumetria_teleriscaldata.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 255--257
+Underfull \hbox (badness 10000) in paragraph at lines 277--279
 
  []
 
-<figure/torta_energia.pdf, id=94, 304.33882pt x 201.6836pt>
+<figure/torta_energia.pdf, id=77, 304.33882pt x 201.6836pt>
 File: figure/torta_energia.pdf Graphic file (type pdf)
 
 <use figure/torta_energia.pdf>
-Package pdftex.def Info: figure/torta_energia.pdf used on input line 291.
+Package pdftex.def Info: figure/torta_energia.pdf used on input line 313.
 (pdftex.def)             Requested size: 270.0pt x 178.9408pt.
  [11]
-<figure/energia_green.pdf, id=98, 401.82985pt x 246.58313pt>
+<figure/energia_green.pdf, id=81, 401.82985pt x 246.58313pt>
 File: figure/energia_green.pdf Graphic file (type pdf)
 
 <use figure/energia_green.pdf>
-Package pdftex.def Info: figure/energia_green.pdf used on input line 303.
+Package pdftex.def Info: figure/energia_green.pdf used on input line 325.
 (pdftex.def)             Requested size: 360.0pt x 220.92192pt.
 
-<figure/tep.pdf, id=99, 409.90059pt x 240.73538pt>
+<figure/tep.pdf, id=82, 409.90059pt x 240.73538pt>
 File: figure/tep.pdf Graphic file (type pdf)
  <use figure/tep.pdf>
-Package pdftex.def Info: figure/tep.pdf used on input line 313.
+Package pdftex.def Info: figure/tep.pdf used on input line 335.
 (pdftex.def)             Requested size: 360.0pt x 211.44003pt.
 
 [12 <./figure/torta_energia.pdf>]
-<figure/CO2.pdf, id=119, 391.18916pt x 242.30756pt>
+<figure/CO2.pdf, id=102, 391.18916pt x 242.30756pt>
 File: figure/CO2.pdf Graphic file (type pdf)
  <use figure/CO2.pdf>
-Package pdftex.def Info: figure/CO2.pdf used on input line 324.
+Package pdftex.def Info: figure/CO2.pdf used on input line 345.
 (pdftex.def)             Requested size: 360.0pt x 222.9885pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--330
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
 
  []
 
 [13 <./figure/energia_green.pdf> <./figure/tep.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 331--334
+Underfull \hbox (badness 10000) in paragraph at lines 352--355
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--338
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
 
-[14 <./figure/CO2.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 342--344
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--365
 
  []
 
-[15] [16] <figure/toscana.png, id=186, 542.025pt x 612.2875pt>
+[14 <./figure/CO2.pdf>] [15] [16]
+<figure/toscana.png, id=169, 542.025pt x 612.2875pt>
 File: figure/toscana.png Graphic file (type png)
-
-<use figure/toscana.png>
-Package pdftex.def Info: figure/toscana.png used on input line 387.
+ <use figure/toscana.png>
+Package pdftex.def Info: figure/toscana.png used on input line 408.
 (pdftex.def)             Requested size: 288.0011pt x 325.34233pt.
 
+[17 <./figure/toscana.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 396.
+               Default added (so using `tbp') on input line 417.
 
-[17] [18 <./figure/toscana.png>] [19] [20]
+[18] [19]
 Capitolo 2.
-<figure/schema_impianto1.png, id=201, 849.1725pt x 362.35374pt>
+<figure/schema_impianto1.png, id=181, 849.1725pt x 362.35374pt>
 File: figure/schema_impianto1.png Graphic file (type png)
 
 <use figure/schema_impianto1.png>
-Package pdftex.def Info: figure/schema_impianto1.png used on input line 464.
+Package pdftex.def Info: figure/schema_impianto1.png used on input line 485.
 (pdftex.def)             Requested size: 360.0pt x 153.61955pt.
- [21
+ [20
 
-] [22 <./figure/schema_impianto1.png>]
-<figure/schema_impianto2.png, id=210, 963.6pt x 455.7025pt>
+] [21 <./figure/schema_impianto1.png>]
+<figure/schema_impianto2.png, id=190, 963.6pt x 455.7025pt>
 File: figure/schema_impianto2.png Graphic file (type png)
 
 <use figure/schema_impianto2.png>
-Package pdftex.def Info: figure/schema_impianto2.png used on input line 480.
+Package pdftex.def Info: figure/schema_impianto2.png used on input line 501.
 (pdftex.def)             Requested size: 355.65944pt x 168.19702pt.
 
-<figure/schema_impianto3.png, id=211, 645.41125pt x 454.69875pt>
+<figure/schema_impianto3.png, id=191, 645.41125pt x 454.69875pt>
 File: figure/schema_impianto3.png Graphic file (type png)
 
 <use figure/schema_impianto3.png>
-Package pdftex.def Info: figure/schema_impianto3.png used on input line 483.
+Package pdftex.def Info: figure/schema_impianto3.png used on input line 504.
 (pdftex.def)             Requested size: 241.84842pt x 170.37978pt.
- [23] [24 <./figure/schema_impianto2.png> <./figure/schema_impianto3.png>] [25]
- [26] [27]
-<figure/3vie.png, id=232, 848.16875pt x 329.23pt>
+ [22] [23 <./figure/schema_impianto2.png> <./figure/schema_impianto3.png>] [24]
+ [25] [26]
+<figure/3vie.png, id=212, 848.16875pt x 329.23pt>
 File: figure/3vie.png Graphic file (type png)
  <use figure/3vie.png>
-Package pdftex.def Info: figure/3vie.png used on input line 623.
+Package pdftex.def Info: figure/3vie.png used on input line 645.
 (pdftex.def)             Requested size: 360.0pt x 139.73753pt.
 
-[28] [29 <./figure/3vie.png>]
-<figure/2vie.png, id=240, 847.165pt x 327.2225pt>
+[27] [28 <./figure/3vie.png>]
+<figure/2vie.png, id=220, 847.165pt x 327.2225pt>
 File: figure/2vie.png Graphic file (type png)
  <use figure/2vie.png>
-Package pdftex.def Info: figure/2vie.png used on input line 644.
+Package pdftex.def Info: figure/2vie.png used on input line 666.
 (pdftex.def)             Requested size: 360.0pt x 139.05023pt.
 
-[30 <./figure/2vie.png>]
-<figure/giri_variabili.png, id=245, 934.49126pt x 609.27625pt>
+[29 <./figure/2vie.png>]
+<figure/giri_variabili.png, id=225, 934.49126pt x 609.27625pt>
 File: figure/giri_variabili.png Graphic file (type png)
 
 <use figure/giri_variabili.png>
-Package pdftex.def Info: figure/giri_variabili.png used on input line 668.
+Package pdftex.def Info: figure/giri_variabili.png used on input line 690.
 (pdftex.def)             Requested size: 288.0011pt x 187.77666pt.
- [31 <./figure/giri_variabili.png>] [32]
+ [30 <./figure/giri_variabili.png>] [31]
 Capitolo 3.
-[33
+[32
 
-] <figure/scambiatore.png, id=257, 614.295pt x 422.57875pt>
+] <figure/scambiatore.png, id=237, 614.295pt x 422.57875pt>
 File: figure/scambiatore.png Graphic file (type png)
 
 <use figure/scambiatore.png>
-Package pdftex.def Info: figure/scambiatore.png used on input line 707.
+Package pdftex.def Info: figure/scambiatore.png used on input line 729.
 (pdftex.def)             Requested size: 233.9978pt x 160.96848pt.
- [34 <./figure/scambiatore.png>]
-<figure/grafico_scambiatore.png, id=264, 770.88pt x 224.84pt>
+ [33 <./figure/scambiatore.png>]
+<figure/grafico_scambiatore.png, id=244, 770.88pt x 224.84pt>
 File: figure/grafico_scambiatore.png Graphic file (type png)
 
 <use figure/grafico_scambiatore.png>
-Package pdftex.def Info: figure/grafico_scambiatore.png used on input line 743.
+Package pdftex.def Info: figure/grafico_scambiatore.png used on input line 766.
 
 (pdftex.def)             Requested size: 341.9989pt x 99.74985pt.
- [35 <./figure/grafico_scambiatore.png>]
-<figure/portata.png, id=269, 963.6pt x 340.27126pt>
+ [34 <./figure/grafico_scambiatore.png>]
+<figure/portata.png, id=249, 963.6pt x 340.27126pt>
 File: figure/portata.png Graphic file (type png)
  <use figure/portata.png>
-Package pdftex.def Info: figure/portata.png used on input line 767.
+Package pdftex.def Info: figure/portata.png used on input line 790.
 (pdftex.def)             Requested size: 341.9989pt x 120.76857pt.
 
-<figure/pot_radiatore.png, id=270, 700.6175pt x 447.6725pt>
+<figure/pot_radiatore.png, id=250, 700.6175pt x 447.6725pt>
 File: figure/pot_radiatore.png Graphic file (type png)
 
 <use figure/pot_radiatore.png>
-Package pdftex.def Info: figure/pot_radiatore.png used on input line 777.
+Package pdftex.def Info: figure/pot_radiatore.png used on input line 800.
 (pdftex.def)             Requested size: 306.0022pt x 195.52835pt.
- [36 <./figure/portata.png>]
-<figure/scambio_casa.png, id=275, 963.6pt x 542.025pt>
+
+Underfull \hbox (badness 1859) in paragraph at lines 801--801
+[]\T1/cmr/m/n/10 Figura 3.4: Va-ria-zio-ne del-le po-ten-ze scam-bia-te dal ra-
+dia-to-re va-rian-do la
+ []
+
+[35 <./figure/portata.png>]
+<figure/scambio_casa.png, id=255, 963.6pt x 542.025pt>
 File: figure/scambio_casa.png Graphic file (type png)
 
 <use figure/scambio_casa.png>
-Package pdftex.def Info: figure/scambio_casa.png used on input line 804.
+Package pdftex.def Info: figure/scambio_casa.png used on input line 827.
 (pdftex.def)             Requested size: 378.0011pt x 212.62122pt.
 
-Overfull \hbox (18.0011pt too wide) in paragraph at lines 804--805
+Overfull \hbox (18.0011pt too wide) in paragraph at lines 827--828
  [] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[37 <./figure/pot_radiatore.png>]
-<figure/schema_trasf_calore.jpg, id=282, 858.20625pt x 345.29pt>
+[36 <./figure/pot_radiatore.png>]
+<figure/schema_trasf_calore.jpg, id=260, 858.20625pt x 345.29pt>
 File: figure/schema_trasf_calore.jpg Graphic file (type jpg)
 
 <use figure/schema_trasf_calore.jpg>
-Package pdftex.def Info: figure/schema_trasf_calore.jpg used on input line 831.
+Package pdftex.def Info: figure/schema_trasf_calore.jpg used on input line 854.
 
 (pdftex.def)             Requested size: 270.0pt x 108.62993pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[38 <./figure/scambio_casa.png (PNG copy)>] [39 <./figure/schema_trasf_calore.j
-pg>] <figure/RC_parete.png, id=290, 692.5875pt x 492.84125pt>
+[37 <./figure/scambio_casa.png (PNG copy)>] [38 <./figure/schema_trasf_calore.j
+pg>] <figure/RC_parete.png, id=269, 692.5875pt x 492.84125pt>
 File: figure/RC_parete.png Graphic file (type png)
 
 <use figure/RC_parete.png>
-Package pdftex.def Info: figure/RC_parete.png used on input line 865.
+Package pdftex.def Info: figure/RC_parete.png used on input line 888.
 (pdftex.def)             Requested size: 256.0748pt x 182.22055pt.
 
-<figure/temp_parete.png, id=291, 692.5875pt x 497.86pt>
+<figure/temp_parete.png, id=270, 692.5875pt x 497.86pt>
 File: figure/temp_parete.png Graphic file (type png)
 
 <use figure/temp_parete.png>
-Package pdftex.def Info: figure/temp_parete.png used on input line 868.
+Package pdftex.def Info: figure/temp_parete.png used on input line 891.
 (pdftex.def)             Requested size: 256.0748pt x 184.07617pt.
- [40 <./figure/RC_parete.png> <./figure/temp_parete.png>] <figure/scamb_utenza.
-png, id=297, 937.5025pt x 473.77pt>
+ [39 <./figure/RC_parete.png> <./figure/temp_parete.png>] <figure/scamb_utenza.
+png, id=276, 926.46124pt x 472.76625pt>
 File: figure/scamb_utenza.png Graphic file (type png)
 
 <use figure/scamb_utenza.png>
-Package pdftex.def Info: figure/scamb_utenza.png used on input line 880.
-(pdftex.def)             Requested size: 360.0pt x 181.92126pt.
- [41 <./figure/scamb_utenza.png>] [42]
-<figure/perdite_carico.png, id=305, 518.93875pt x 348.30125pt>
+Package pdftex.def Info: figure/scamb_utenza.png used on input line 903.
+(pdftex.def)             Requested size: 360.0pt x 183.7072pt.
+ [40 <./figure/scamb_utenza.png>]
+
+LaTeX Warning: Citation `darcy' on page 41 undefined on input line 950.
+
+[41] <figure/perdite_carico.png, id=284, 518.93875pt x 348.30125pt>
 File: figure/perdite_carico.png Graphic file (type png)
 
 <use figure/perdite_carico.png>
-Package pdftex.def Info: figure/perdite_carico.png used on input line 945.
+Package pdftex.def Info: figure/perdite_carico.png used on input line 968.
 (pdftex.def)             Requested size: 251.9989pt x 169.13849pt.
- [43 <./figure/perdite_carico.png>] [44]
-<figure/pompa_centrifuga.png, id=314, 774.895pt x 685.56125pt>
+ [42 <./figure/perdite_carico.png>] [43]
+<figure/pompa_centrifuga.png, id=293, 774.895pt x 685.56125pt>
 File: figure/pompa_centrifuga.png Graphic file (type png)
 
 <use figure/pompa_centrifuga.png>
-Package pdftex.def Info: figure/pompa_centrifuga.png used on input line 1006.
+Package pdftex.def Info: figure/pompa_centrifuga.png used on input line 1029.
 (pdftex.def)             Requested size: 233.9978pt x 207.0194pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[45] <figure/curve_car.png, id=318, 629.35126pt x 505.89pt>
+[44] <figure/curve_car.png, id=297, 629.35126pt x 505.89pt>
 File: figure/curve_car.png Graphic file (type png)
 
 <use figure/curve_car.png>
-Package pdftex.def Info: figure/curve_car.png used on input line 1024.
+Package pdftex.def Info: figure/curve_car.png used on input line 1047.
 (pdftex.def)             Requested size: 233.9978pt x 188.09496pt.
- [46 <./figure/pompa_centrifuga.png>]
-<figure/affinita.png, id=323, 709.65125pt x 536.0025pt>
+ [45 <./figure/pompa_centrifuga.png>]
+<figure/affinita.png, id=302, 709.65125pt x 536.0025pt>
 File: figure/affinita.png Graphic file (type png)
 
 <use figure/affinita.png>
-Package pdftex.def Info: figure/affinita.png used on input line 1049.
+Package pdftex.def Info: figure/affinita.png used on input line 1070.
 (pdftex.def)             Requested size: 233.9978pt x 176.73415pt.
- [47 <./figure/curve_car.png>] [48 <./figure/affinita.png>] [49]
-Underfull \hbox (badness 10000) in paragraph at lines 1115--1117
+ [46 <./figure/curve_car.png>] [47 <./figure/affinita.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1109--1110
 
  []
 
-[50]
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 1137--1139
+
+ []
+
+[49]
 Capitolo 4.
-<figure/profilo_temp.png, id=339, 760.8425pt x 513.92pt>
+<figure/profilo_temp.png, id=318, 760.8425pt x 513.92pt>
 File: figure/profilo_temp.png Graphic file (type png)
 
 <use figure/profilo_temp.png>
-Package pdftex.def Info: figure/profilo_temp.png used on input line 1136.
+Package pdftex.def Info: figure/profilo_temp.png used on input line 1158.
 (pdftex.def)             Requested size: 341.9989pt x 231.01091pt.
- [51
+ [50
 
-] [52 <./figure/profilo_temp.png>]
-<figure/elem_scaldanti.png, id=347, 918.43124pt x 524.96124pt>
+] [51 <./figure/profilo_temp.png>]
+<figure/elem_scaldanti.png, id=326, 918.43124pt x 524.96124pt>
 File: figure/elem_scaldanti.png Graphic file (type png)
 
 <use figure/elem_scaldanti.png>
-Package pdftex.def Info: figure/elem_scaldanti.png used on input line 1159.
+Package pdftex.def Info: figure/elem_scaldanti.png used on input line 1181.
 (pdftex.def)             Requested size: 306.0022pt x 174.90387pt.
- [53 <./figure/elem_scaldanti.png>]
-Overfull \hbox (5.86388pt too wide) in paragraph at lines 1177--1177
+ [52 <./figure/elem_scaldanti.png>]
+Overfull \hbox (5.86388pt too wide) in paragraph at lines 1199--1199
 []\T1/cmr/bx/n/14.4 Funzionamento e im-por-tan-za del-l'u-ti-liz-zo di cen-
  []
 
-<figure/centralina.png, id=352, 927.465pt x 576.1525pt>
+<figure/centralina.png, id=331, 927.465pt x 576.1525pt>
 File: figure/centralina.png Graphic file (type png)
 
 <use figure/centralina.png>
-Package pdftex.def Info: figure/centralina.png used on input line 1185.
+Package pdftex.def Info: figure/centralina.png used on input line 1207.
 (pdftex.def)             Requested size: 341.9989pt x 212.45218pt.
 
-<figure/schema_centralina2.png, id=353, 957.5775pt x 1101.11375pt>
+<figure/schema_centralina2.png, id=332, 957.5775pt x 1101.11375pt>
 File: figure/schema_centralina2.png Graphic file (type png)
 
 <use figure/schema_centralina2.png>
-Package pdftex.def Info: figure/schema_centralina2.png used on input line 1192.
+Package pdftex.def Info: figure/schema_centralina2.png used on input line 1214.
 
 (pdftex.def)             Requested size: 360.0pt x 413.95834pt.
- [54]
-<figure/schema_centralina.png, id=357, 758.835pt x 490.83376pt>
+ [53]
+<figure/schema_centralina.png, id=336, 758.835pt x 490.83376pt>
 File: figure/schema_centralina.png Graphic file (type png)
 
 <use figure/schema_centralina.png>
-Package pdftex.def Info: figure/schema_centralina.png used on input line 1214.
+Package pdftex.def Info: figure/schema_centralina.png used on input line 1236.
 (pdftex.def)             Requested size: 341.9989pt x 221.21767pt.
- [55 <./figure/centralina.png>] [56 <./figure/schema_centralina2.png>] [57 <./f
+ [54 <./figure/centralina.png>] [55 <./figure/schema_centralina2.png>] [56 <./f
 igure/schema_centralina.png>]
-Overfull \hbox (4.60815pt too wide) in paragraph at lines 1248--1249
+Overfull \hbox (4.60815pt too wide) in paragraph at lines 1270--1271
 []\T1/cmr/m/n/10.95 Muratura in la-te-ri-zi fo-ra-ti (10 cm di spes-so-re): $\O
 ML/cmm/m/it/10.95 C[]$ \T1/cmr/m/n/10.95 = 0,20 $\OML/cmm/m/it/10.95 Kcal=[]C$ 
 
  []
 
 
-Overfull \hbox (11.83861pt too wide) in paragraph at lines 1250--1251
+Overfull \hbox (11.83861pt too wide) in paragraph at lines 1271--1272
 []\T1/cmr/m/n/10.95 Termolaterizio PO-RO-TON (20 cm di spes-so-re): $\OML/cmm/m
 /it/10.95 C[]$ \T1/cmr/m/n/10.95 = 0,20 $\OML/cmm/m/it/10.95 Kcal=[]C$ 
  []
@@ -955,67 +989,70 @@ Package epstopdf Info: Source file: <figure/temp_est.eps>
 (epstopdf)                    size: 26821 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/temp_est-eps-conver
 ted-to.pdf figure/temp_est.eps>
-(epstopdf)             \includegraphics on input line 1291.
+(epstopdf)             \includegraphics on input line 1311.
 Package epstopdf Info: Output file is already uptodate.
-<figure/temp_est-eps-converted-to.pdf, id=371, 1141.26375pt x 541.02126pt>
+<figure/temp_est-eps-converted-to.pdf, id=350, 1141.26375pt x 541.02126pt>
 File: figure/temp_est-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/temp_est-eps-converted-to.pdf>
 Package pdftex.def Info: figure/temp_est-eps-converted-to.pdf used on input lin
-e 1291.
+e 1311.
 (pdftex.def)             Requested size: 360.0pt x 170.65373pt.
- [58]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[57]
 Package epstopdf Info: Source file: <figure/no_reg.eps>
-(epstopdf)                    date: 2016-01-22 19:59:58
-(epstopdf)                    size: 286669 bytes
+(epstopdf)                    date: 2016-01-24 19:45:44
+(epstopdf)                    size: 313407 bytes
 (epstopdf)             Output file: <figure/no_reg-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-01-22 20:17:37
-(epstopdf)                    size: 50224 bytes
+(epstopdf)                    date: 2016-01-24 22:19:22
+(epstopdf)                    size: 63129 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/no_reg-eps-converte
 d-to.pdf figure/no_reg.eps>
-(epstopdf)             \includegraphics on input line 1304.
+(epstopdf)             \includegraphics on input line 1324.
 Package epstopdf Info: Output file is already uptodate.
-
-<figure/no_reg-eps-converted-to.pdf, id=375, 1284.8pt x 1363.0925pt>
+ <figure/no_reg-eps-converted-to.pdf, id=354, 1284.8pt x 1363.0925pt>
 File: figure/no_reg-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/no_reg-eps-converted-to.pdf>
 Package pdftex.def Info: figure/no_reg-eps-converted-to.pdf used on input line 
-1304.
+1324.
 (pdftex.def)             Requested size: 360.0pt x 381.93369pt.
- [59 <./figure/temp_est-eps-converted-to.pdf>] [60 <./figure/no_reg-eps-convert
+ [58 <./figure/temp_est-eps-converted-to.pdf>] [59 <./figure/no_reg-eps-convert
 ed-to.pdf>]
-<figure/surplus.png, id=399, 819.06pt x 506.89375pt>
+<figure/surplus.png, id=377, 819.06pt x 506.89375pt>
 File: figure/surplus.png Graphic file (type png)
  <use figure/surplus.png>
-Package pdftex.def Info: figure/surplus.png used on input line 1326.
+Package pdftex.def Info: figure/surplus.png used on input line 1346.
 (pdftex.def)             Requested size: 306.0022pt x 189.38084pt.
 Package epstopdf Info: Source file: <figure/reg_mandata.eps>
-(epstopdf)                    date: 2016-01-22 11:44:58
-(epstopdf)                    size: 260057 bytes
+(epstopdf)                    date: 2016-01-24 20:37:07
+(epstopdf)                    size: 303077 bytes
 (epstopdf)             Output file: <figure/reg_mandata-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-01-22 14:48:33
-(epstopdf)                    size: 52664 bytes
+(epstopdf)                    date: 2016-01-24 22:19:26
+(epstopdf)                    size: 65323 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/reg_mandata-eps-con
 verted-to.pdf figure/reg_mandata.eps>
-(epstopdf)             \includegraphics on input line 1335.
+(epstopdf)             \includegraphics on input line 1355.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/reg_mandata-eps-converted-to.pdf, id=400, 1284.8pt x 1364.09625pt>
+<figure/reg_mandata-eps-converted-to.pdf, id=378, 1284.8pt x 1367.1075pt>
 File: figure/reg_mandata-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/reg_mandata-eps-converted-to.pdf>
 Package pdftex.def Info: figure/reg_mandata-eps-converted-to.pdf used on input 
-line 1335.
-(pdftex.def)             Requested size: 360.0pt x 382.21494pt.
- [61 <./figure/surplus.png>]
-<figure/climatica.png, id=406, 860.21375pt x 506.89375pt>
+line 1355.
+(pdftex.def)             Requested size: 360.0pt x 383.05867pt.
+
+<figure/climatica.png, id=379, 860.21375pt x 506.89375pt>
 File: figure/climatica.png Graphic file (type png)
 
 <use figure/climatica.png>
-Package pdftex.def Info: figure/climatica.png used on input line 1350.
+Package pdftex.def Info: figure/climatica.png used on input line 1370.
 (pdftex.def)             Requested size: 306.0022pt x 180.31593pt.
- [62 <./figure/reg_mandata-eps-converted-to.pdf>]
+ [60 <./figure/surplus.png>] [61 <./figure/reg_mandata-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figure/curva_comp.eps>
 (epstopdf)                    date: 2016-01-22 15:32:59
 (epstopdf)                    size: 102856 bytes
@@ -1024,185 +1061,308 @@ Package epstopdf Info: Source file: <figure/curva_comp.eps>
 (epstopdf)                    size: 27218 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/curva_comp-eps-conv
 erted-to.pdf figure/curva_comp.eps>
-(epstopdf)             \includegraphics on input line 1371.
+(epstopdf)             \includegraphics on input line 1391.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/curva_comp-eps-converted-to.pdf, id=418, 1277.77374pt x 516.93124pt>
+<figure/curva_comp-eps-converted-to.pdf, id=397, 1277.77374pt x 516.93124pt>
 File: figure/curva_comp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/curva_comp-eps-converted-to.pdf>
 Package pdftex.def Info: figure/curva_comp-eps-converted-to.pdf used on input l
-ine 1371.
+ine 1391.
 (pdftex.def)             Requested size: 360.0pt x 145.63896pt.
 Package epstopdf Info: Source file: <figure/reg_climatica.eps>
-(epstopdf)                    date: 2016-01-22 19:53:31
-(epstopdf)                    size: 323020 bytes
+(epstopdf)                    date: 2016-01-24 21:06:52
+(epstopdf)                    size: 331396 bytes
 (epstopdf)             Output file: <figure/reg_climatica-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-01-22 20:17:42
-(epstopdf)                    size: 85489 bytes
+(epstopdf)                    date: 2016-01-24 22:19:30
+(epstopdf)                    size: 90419 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/reg_climatica-eps-c
 onverted-to.pdf figure/reg_climatica.eps>
-(epstopdf)             \includegraphics on input line 1381.
+(epstopdf)             \includegraphics on input line 1401.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/reg_climatica-eps-converted-to.pdf, id=419, 1284.8pt x 1367.1075pt>
+<figure/reg_climatica-eps-converted-to.pdf, id=398, 1284.8pt x 1362.08875pt>
 File: figure/reg_climatica-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/reg_climatica-eps-converted-to.pdf>
 Package pdftex.def Info: figure/reg_climatica-eps-converted-to.pdf used on inpu
-t line 1381.
-(pdftex.def)             Requested size: 360.0pt x 383.05867pt.
- [63 <./figure/climatica.png>]
-[64 <./figure/curva_comp-eps-converted-to.pdf>]
-<figure/PI.png, id=436, 950.55125pt x 272.01625pt>
+t line 1401.
+(pdftex.def)             Requested size: 360.0pt x 381.65244pt.
+ [62 <./figure/climatica.png>]
+<figure/PI.png, id=404, 950.55125pt x 272.01625pt>
 File: figure/PI.png Graphic file (type png)
  <use figure/PI.png>
-Package pdftex.def Info: figure/PI.png used on input line 1406.
+Package pdftex.def Info: figure/PI.png used on input line 1426.
 (pdftex.def)             Requested size: 341.9989pt x 97.86766pt.
- [65 <./figure/reg_climatica-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1414--1418
+ [63 <./figure/curva_comp-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1434--1438
 
  []
 
+[64 <./figure/reg_climatica-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figure/reg_PID.eps>
-(epstopdf)                    date: 2016-01-22 12:56:38
-(epstopdf)                    size: 346770 bytes
+(epstopdf)                    date: 2016-01-24 22:08:03
+(epstopdf)                    size: 354361 bytes
 (epstopdf)             Output file: <figure/reg_PID-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-01-22 15:53:26
-(epstopdf)                    size: 88418 bytes
+(epstopdf)                    date: 2016-01-24 22:19:34
+(epstopdf)                    size: 83474 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/reg_PID-eps-convert
 ed-to.pdf figure/reg_PID.eps>
-(epstopdf)             \includegraphics on input line 1427.
+(epstopdf)             \includegraphics on input line 1447.
 Package epstopdf Info: Output file is already uptodate.
-<figure/reg_PID-eps-converted-to.pdf, id=448, 1284.8pt x 1369.115pt>
+
+<figure/reg_PID-eps-converted-to.pdf, id=427, 1284.8pt x 1414.28375pt>
 File: figure/reg_PID-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/reg_PID-eps-converted-to.pdf>
 Package pdftex.def Info: figure/reg_PID-eps-converted-to.pdf used on input line
- 1427.
-(pdftex.def)             Requested size: 360.0pt x 383.62117pt.
- [66 <./figure/PI.png>] [67 <./figure/reg_PID-eps-converted-to.pdf>]
-<figure/pompa_var_utenza.png, id=465, 964.60374pt x 716.6775pt>
+ 1447.
+(pdftex.def)             Requested size: 360.0pt x 396.2773pt.
+ [65 <./figure/PI.png>] [66 <./figure/reg_PID-eps-converted-to.pdf>]
+<figure/pompa_var_utenza.png, id=443, 964.60374pt x 716.6775pt>
 File: figure/pompa_var_utenza.png Graphic file (type png)
 
 <use figure/pompa_var_utenza.png>
-Package pdftex.def Info: figure/pompa_var_utenza.png used on input line 1449.
+Package pdftex.def Info: figure/pompa_var_utenza.png used on input line 1469.
 (pdftex.def)             Requested size: 306.0022pt x 227.35121pt.
- [68 <./figure/pompa_var_utenza.png>]
+ [67 <./figure/pompa_var_utenza.png>]
 Package epstopdf Info: Source file: <figure/To_confronto.eps>
-(epstopdf)                    date: 2016-01-22 20:29:10
-(epstopdf)                    size: 171018 bytes
+(epstopdf)                    date: 2016-01-24 22:18:56
+(epstopdf)                    size: 183438 bytes
 (epstopdf)             Output file: <figure/To_confronto-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-01-22 20:29:30
-(epstopdf)                    size: 53745 bytes
+(epstopdf)                    date: 2016-01-24 22:19:38
+(epstopdf)                    size: 60553 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/To_confronto-eps-co
 nverted-to.pdf figure/To_confronto.eps>
-(epstopdf)             \includegraphics on input line 1464.
+(epstopdf)             \includegraphics on input line 1484.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/To_confronto-eps-converted-to.pdf, id=470, 1284.8pt x 651.43375pt>
+<figure/To_confronto-eps-converted-to.pdf, id=449, 1284.8pt x 651.43375pt>
 File: figure/To_confronto-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figure/To_confronto-eps-converted-to.pdf>
 Package pdftex.def Info: figure/To_confronto-eps-converted-to.pdf used on input
- line 1464.
+ line 1484.
 (pdftex.def)             Requested size: 360.0pt x 182.52942pt.
 Package epstopdf Info: Source file: <figure/portate_confronto.eps>
-(epstopdf)                    date: 2016-01-22 20:11:33
-(epstopdf)                    size: 181276 bytes
+(epstopdf)                    date: 2016-01-24 22:17:29
+(epstopdf)                    size: 185512 bytes
 (epstopdf)             Output file: <figure/portate_confronto-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2016-01-22 20:17:51
-(epstopdf)                    size: 45884 bytes
+(epstopdf)                    date: 2016-01-24 22:19:42
+(epstopdf)                    size: 46012 bytes
 (epstopdf)             Command: <repstopdf --outfile=figure/portate_confronto-e
 ps-converted-to.pdf figure/portate_confronto.eps>
-(epstopdf)             \includegraphics on input line 1473.
+(epstopdf)             \includegraphics on input line 1493.
 Package epstopdf Info: Output file is already uptodate.
 
-<figure/portate_confronto-eps-converted-to.pdf, id=471, 1284.8pt x 651.43375pt>
+<figure/portate_confronto-eps-converted-to.pdf, id=450, 1284.8pt x 651.43375pt>
 File: figure/portate_confronto-eps-converted-to.pdf Graphic file (type pdf)
 <use figure/portate_confronto-eps-converted-to.pdf>
 Package pdftex.def Info: figure/portate_confronto-eps-converted-to.pdf used on 
-input line 1473.
+input line 1493.
 (pdftex.def)             Requested size: 360.0pt x 182.52942pt.
- [69 <./figure/To_confronto-eps-converted-to.pdf>] [70 <./figure/portate_confro
-nto-eps-converted-to.pdf>]
-<figure/strozzatura.png, id=494, 685.56125pt x 542.025pt>
+ [68 <./figure/To_confronto-eps-converted-to.pdf> <./figure/portate_confronto-e
+ps-converted-to.pdf>]
+[69] <figure/strozzatura.png, id=473, 685.56125pt x 542.025pt>
 File: figure/strozzatura.png Graphic file (type png)
 
 <use figure/strozzatura.png>
-Package pdftex.def Info: figure/strozzatura.png used on input line 1503.
+Package pdftex.def Info: figure/strozzatura.png used on input line 1523.
 (pdftex.def)             Requested size: 270.0pt x 213.47308pt.
- [71]
-<figure/var_velocita.png, id=498, 685.56125pt x 542.025pt>
+
+<figure/var_velocita.png, id=474, 685.56125pt x 542.025pt>
 File: figure/var_velocita.png Graphic file (type png)
 
 <use figure/var_velocita.png>
-Package pdftex.def Info: figure/var_velocita.png used on input line 1512.
+Package pdftex.def Info: figure/var_velocita.png used on input line 1532.
 (pdftex.def)             Requested size: 270.0pt x 213.47308pt.
- [72 <./figure/strozzatura.png>]
+ [70] [71 <./figure/strozzatura.png> <./figure/var_velocita.png>] [72]
+Package epstopdf Info: Source file: <figure/curve_pompa.eps>
+(epstopdf)                    date: 2016-01-25 00:02:30
+(epstopdf)                    size: 172848 bytes
+(epstopdf)             Output file: <figure/curve_pompa-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-01-25 00:05:32
+(epstopdf)                    size: 13082 bytes
+(epstopdf)             Command: <repstopdf --outfile=figure/curve_pompa-eps-con
+verted-to.pdf figure/curve_pompa.eps>
+(epstopdf)             \includegraphics on input line 1598.
+Package epstopdf Info: Output file is already uptodate.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1526.
+<figure/curve_pompa-eps-converted-to.pdf, id=486, 791.95876pt x 632.3625pt>
+File: figure/curve_pompa-eps-converted-to.pdf Graphic file (type pdf)
 
+<use figure/curve_pompa-eps-converted-to.pdf>
+Package pdftex.def Info: figure/curve_pompa-eps-converted-to.pdf used on input 
+line 1598.
+(pdftex.def)             Requested size: 360.0pt x 287.45522pt.
+ [73] [74 <./figure/curve_pompa-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figure/sim1_noreg.eps>
+(epstopdf)                    date: 2016-01-25 01:32:32
+(epstopdf)                    size: 92323 bytes
+(epstopdf)             Output file: <figure/sim1_noreg-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-01-25 02:03:30
+(epstopdf)                    size: 14252 bytes
+(epstopdf)             Command: <repstopdf --outfile=figure/sim1_noreg-eps-conv
+erted-to.pdf figure/sim1_noreg.eps>
+(epstopdf)             \includegraphics on input line 1647.
+Package epstopdf Info: Output file is already uptodate.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1543.
+<figure/sim1_noreg-eps-converted-to.pdf, id=507, 1284.8pt x 702.625pt>
+File: figure/sim1_noreg-eps-converted-to.pdf Graphic file (type pdf)
 
-[73 <./figure/var_velocita.png>] [74] [75] [76] [77] [78]
+<use figure/sim1_noreg-eps-converted-to.pdf>
+Package pdftex.def Info: figure/sim1_noreg-eps-converted-to.pdf used on input l
+ine 1647.
+(pdftex.def)             Requested size: 360.0pt x 196.87303pt.
+ [75]
+Package epstopdf Info: Source file: <figure/sim2_noreg.eps>
+(epstopdf)                    date: 2016-01-25 01:34:35
+(epstopdf)                    size: 31716 bytes
+(epstopdf)             Output file: <figure/sim2_noreg-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-01-25 02:15:39
+(epstopdf)                    size: 10667 bytes
+(epstopdf)             Command: <repstopdf --outfile=figure/sim2_noreg-eps-conv
+erted-to.pdf figure/sim2_noreg.eps>
+(epstopdf)             \includegraphics on input line 1672.
+Package epstopdf Info: Output file is already uptodate.
+
+<figure/sim2_noreg-eps-converted-to.pdf, id=511, 1284.8pt x 1370.11874pt>
+File: figure/sim2_noreg-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figure/sim2_noreg-eps-converted-to.pdf>
+Package pdftex.def Info: figure/sim2_noreg-eps-converted-to.pdf used on input l
+ine 1672.
+(pdftex.def)             Requested size: 360.0pt x 383.90242pt.
+ [76 <./figure/sim1_noreg-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figure/sim_regmandata.eps>
+(epstopdf)                    date: 2016-01-25 10:02:40
+(epstopdf)                    size: 70276 bytes
+(epstopdf)             Output file: <figure/sim_regmandata-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2016-01-25 11:55:00
+(epstopdf)                    size: 15719 bytes
+(epstopdf)             Command: <repstopdf --outfile=figure/sim_regmandata-eps-
+converted-to.pdf figure/sim_regmandata.eps>
+(epstopdf)             \includegraphics on input line 1692.
+Package epstopdf Info: Output file is already uptodate.
+
+<figure/sim_regmandata-eps-converted-to.pdf, id=527, 1284.8pt x 1195.46625pt>
+File: figure/sim_regmandata-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figure/sim_regmandata-eps-converted-to.pdf>
+Package pdftex.def Info: figure/sim_regmandata-eps-converted-to.pdf used on inp
+ut line 1692.
+(pdftex.def)             Requested size: 360.0pt x 334.96541pt.
+
+Underfull \hbox (badness 2452) in paragraph at lines 1693--1693
+[]\T1/cmr/m/n/10 Figura 4.23: Pre-va-len-za, por-ta-ta e po-ten-ze istan-ta-nee
+ del-la pom-pa con
+ []
+
+[77 <./figure/sim2_noreg-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figure/sim_climatica.eps>
+(epstopdf)                    date: 2016-01-25 10:18:54
+(epstopdf)                    size: 69381 bytes
+(epstopdf)             Output file: <figure/sim_climatica-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-01-25 12:13:59
+(epstopdf)                    size: 15478 bytes
+(epstopdf)             Command: <repstopdf --outfile=figure/sim_climatica-eps-c
+onverted-to.pdf figure/sim_climatica.eps>
+(epstopdf)             \includegraphics on input line 1716.
+Package epstopdf Info: Output file is already uptodate.
+
+<figure/sim_climatica-eps-converted-to.pdf, id=539, 1284.8pt x 1169.36874pt>
+File: figure/sim_climatica-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figure/sim_climatica-eps-converted-to.pdf>
+Package pdftex.def Info: figure/sim_climatica-eps-converted-to.pdf used on inpu
+t line 1716.
+(pdftex.def)             Requested size: 360.0pt x 327.65297pt.
+
+Underfull \hbox (badness 2452) in paragraph at lines 1717--1717
+[]\T1/cmr/m/n/10 Figura 4.24: Pre-va-len-za, por-ta-ta e po-ten-ze istan-ta-nee
+ del-la pom-pa con
+ []
+
+[78 <./figure/sim_regmandata-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figure/sim_PID.eps>
+(epstopdf)                    date: 2016-01-25 14:08:15
+(epstopdf)                    size: 69460 bytes
+(epstopdf)             Output file: <figure/sim_PID-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-01-25 14:09:30
+(epstopdf)                    size: 14173 bytes
+(epstopdf)             Command: <repstopdf --outfile=figure/sim_PID-eps-convert
+ed-to.pdf figure/sim_PID.eps>
+(epstopdf)             \includegraphics on input line 1734.
+Package epstopdf Info: Output file is already uptodate.
+
+<figure/sim_PID-eps-converted-to.pdf, id=552, 1284.8pt x 1168.365pt>
+File: figure/sim_PID-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figure/sim_PID-eps-converted-to.pdf>
+Package pdftex.def Info: figure/sim_PID-eps-converted-to.pdf used on input line
+ 1734.
+(pdftex.def)             Requested size: 360.0pt x 327.37173pt.
+ [79 <./figure/sim_climatica-eps-converted-to.pdf>] [80 <./figure/sim_PID-eps-c
+onverted-to.pdf>] [81] [82] [83]
+[84] [85]
 Capitolo 5.
-[79
+[86
 
-] (./AppendiceA.tex) (./main.bbl [80
+] (./AppendiceA.tex) (./main.bbl [87
 
 
-]) [81
+]) [88
 
 ] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4463 strings out of 493117
- 60642 string characters out of 6135433
- 138084 words of memory out of 5000000
- 7742 multiletter control sequences out of 15000+600000
- 21437 words of font info for 55 fonts, out of 8000000 for 9000
+ 4507 strings out of 493117
+ 62044 string characters out of 6135433
+ 149439 words of memory out of 5000000
+ 7778 multiletter control sequences out of 15000+600000
+ 22112 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,16n,26p,2146b,314s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2014/te
-xmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2014/texmf-
-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2014/texmf-di
-st/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2014/texmf-dist
-/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/texmf-dist/f
-onts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2014/texmf-dist/fon
-ts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2014/texmf-dist/fonts
-/type1/public/cm-super/sfti1095.pfb>
-Output written on main.pdf (87 pages, 3497163 bytes).
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2014/texmf-d
+ist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
+pe1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
+1/public/cm-super/sfti1095.pfb>
+Output written on main.pdf (94 pages, 3614111 bytes).
 PDF statistics:
- 612 PDF objects out of 1000 (max. 8388607)
- 388 compressed objects within 4 object streams
+ 681 PDF objects out of 1000 (max. 8388607)
+ 431 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
- 226 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 256 words of extra memory for PDF output out of 10000 (max. 10000000)
 

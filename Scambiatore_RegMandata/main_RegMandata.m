@@ -18,7 +18,7 @@ temper=polyval(p_temp,t);
 parametri_utenze %caricamento di tutti i paramentri delle utenze
  
 %selezionare utenza da prendere in considerazione
-nu=4; % inserire numero da 1 a 11
+nu=11; % inserire numero da 1 a 11
 par=par_u(nu,:);
 
 % parametri utenza
@@ -46,27 +46,30 @@ Si=Ss;
 Stot=Sl+Ss+Si
 MCa=1.21*V*(1005/4186) + 40*V*0.2
 MCp=Stot*(65*840 + 0.7*1670 + 142*840)/4186 
-Ka=6.61*Stot + 0,67*Sf
-Kp=0.43*Stot 
+%MCp=Stot*(65*840 + 142*840)/4186 
+Ka=6.61*Stot 
+Kp=(0.43*Stot) %+ (0.67*Sf)
+%Kpar=(0.843*Stot) 
+Kf=6.363*Sf;
 
 Ti=82; % temperatura ingresso allo scambiatore [rete principale] 
 tu=70;
 
-Gu=par(6); % portata in l/h rete dell'utenza
+Gu= Qtot/15%par(6); % portata in l/h rete dell'utenza
 
 Alfa=par(7);
 S= V*Qunitario/(Alfa*10)
 
 % parametri esterni
-Test=7; % temperatura esterna
+Test=0; % temperatura esterna
 
 % parametri iniziali per la simulazione
 Tamb0=par(10); % condizioni iniziali: [Temperatura ambiente iniziale ; valore iniziale stato di controllo]
 
-X0=[18 15]
+X0=[18 16]
 %% simulazione
   %simulazione con termostato
-    [X1,X2,ti_vec,To_vec,Gp_vec,Gu_vec,kk,tu_vec,Ti_vec]=DinamicaScambiatoreRegMandata_Termostato(tf,tc,X0,Ti,Km,Ka,Kp,MCa,MCp,temper,Gu,cs,Alfa,S,tu,n,Target)
+    [X1,X2,ti_vec,To_vec,Gp_vec,Gu_vec,kk,tu_vec,Ti_vec]=DinamicaScambiatoreRegMandata_Termostato(tf,tc,X0,Ti,Km,Ka,Kp,Kf,MCa,MCp,temper,Gu,cs,Alfa,S,tu,n,Target)
     
     %Ti_vec=Ti*ones(1,length(t)-1); % vettore temperature in ingresso allo scambiatore (lato principale) -> COSTANTE
     %tu_vec=tu*ones(1,length(t)-1); % vettore portate in ingresso allo scambiatore (lato principale) -> COSTANTE

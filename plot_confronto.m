@@ -1,11 +1,11 @@
-figure, plot(t(1:end-1),1500*ones(1,length(t)-1),'k',t(1:end-1),Gp_puntofisso,'m',t(1:end-1),Gp_climatica,'r',t(1:end-1),Gp_PID(1:end-1),'b','LineWidth',5)
+figure, plot(t(1:end-1),Gp_noreg,'k',t(1:end-1),Gp_regmandata,'m',t(1:end-1),Gp_climatica,'r',t(1:end-1),Gp_PID(1:end-1),'b','LineWidth',5)
 title('Andamento della portata G_p lato rete di distribuzione')
 xlabel('Time[h]')
 ylabel('Portata [l/h]')
 legend('no regolazione','punto fisso','climatica','PI')
 set(gca,'FontSize', 20)
 
-figure, plot(t(1:end-1),To_no_reg,'k',t(1:end-1),To_puntofisso,'m',t(1:end-1),To_climatica,'r',t(1:end-1),To_PID(1:end-1),'b','LineWidth',5)
+figure, plot(t(1:end-1),To_noreg,'k',t(1:end-1),To_regmandata,'m',t(1:end-1),To_climatica,'r',t(1:end-1),To_PID(1:end-1),'b','LineWidth',5)
 title('Andamento della Temperatura T_u')
 xlabel('Time[h]')
 ylabel('Temperatura [°C]')

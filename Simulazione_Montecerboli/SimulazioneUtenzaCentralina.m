@@ -1,4 +1,4 @@
-function [ti_vec,tu_vec,To_vec,Gp_vec,T,X] = SimulazioneUtenzaCentralina(t0,tf,tc,par,Ti,Test,Kp,Ki)
+function [ti_vec,tu_vec,To_vec,Gp_vec,T,X] = SimulazioneUtenzaCentralina(t0,tf,tc,par,Ti,Test,Kp,Ki,Gp_max)
 
 %% parametri
 
@@ -25,30 +25,34 @@ Si=Ss;
 
 Stot=Sl+Ss+Si;
 MCa=1.21*V*(1005/4186) + 40*V*0.2;
-MCp=Stot*(65*840 + 0.7*1670 + 142*840)/4186; 
-Ka=6.61*Stot + 0,67*Sf;
-Kpar=0.43*Stot ;
+%MCp=Stot*(65*840 + 0.7*1670 + 142*840)/4186; 
+MCp=Stot*(65*840 + 142*840)/4186; 
+Ka=6.61*Stot ;
+%Kpar=0.43*Stot ;
+Kpar=0.843*Stot ;
+Kf=6.363*Sf;
 
-Gu=par(6); % portata in l/h rete dell'utenza
+Gu=Qtot/15%par(6); % portata in l/h rete dell'utenza
 
 Alfa=par(7);
 S= V*Qunitario/(Alfa*10);
 
 % parametri iniziali per la simulazione
 %Tamb0=[par_u(10) 0]; % condizioni iniziali: [Temperatura ambiente iniziale ; valore iniziale stato di controllo]
-X0=[ 20 17 0];
+X0=[ 18 15 0];
 
 
 %% simulazione
 
-[T,X]=ode45(@DinamicaScambiatorePid,[t0: tc :tf],X0,[],Ti,Km,Ka,Kpar,MCa,MCp,Test,Gu,cs,Alfa,S,Target,n,Kp,Ki);
+[T,X]=ode45(@DinamicaScambiatorePid,[t0: tc :tf],X0,[],Ti,Km,Ka,Kpar,MCa,MCp,Test,Gu,cs,Alfa,S,Target,n,Kp,Ki,Kf,Gp_max);
 %%
 % estrapolazione dati dalla simulazione
 j=0;
 for i=1:length(X(:,1))
     tu_vec(i)=X(i,3) + Kp.*(Target-X(i,1));
-    if tu_vec(i)>Ti-3
-        tu_vec(i)=Ti-3;
+    y=-1.65.*Test(i) + 68;
+    if tu_vec(i)>y
+        tu_vec(i)=y;
     end
 %     if tu_vec(i)<50
 %         j=j+1;
@@ -75,8 +79,8 @@ for k=1:length(X)
     
     Gp_vec(k)= (Gu*(tu_vec(k)-ti_vec(k))./(Ti-To_vec(k))); % vettore portate lato principale
     
-    if Gp_vec(k) > 1500
-        Gp_vec(k)=1500;        
+    if Gp_vec(k) > Gp_max
+        Gp_vec(k)=Gp_max;        
         
         fun = @(x) myfun(x,Km,X(k,1),Gu,Gp_vec(k),Ti,cs,Alfa,S,n);
         x0=[70 75];

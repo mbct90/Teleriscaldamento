@@ -108,7 +108,7 @@ par_u(9,9)= 20;      % set point -> temperatura desiderata
 par_u(9,10)= 15;  % condizione iniziale: Temperatura ambiente iniziale 
 
 % utenza 10
-par_u(10,1)= 4100;     % Volume dell' utenza da riscaldare [m^3]
+par_u(10,1)= 2100;     % Volume dell' utenza da riscaldare [m^3]
 par_u(10,2)= 30;      % calore necessario per scaldare 1 m^3
 par_u(10,3)= 0.80316; % coeff. scambio radiatore
 par_u(10,4)= 1.32;    % esponente radiatore

@@ -1,4 +1,4 @@
-function [X1,X2,ti_vec,To_vec,Gp_vec,Gu_vec,kk,tu_vec,Ti_vec] = DinamicaScambiatoreRegMandata_Termostato(tf,tc,X0,Ti,Km,Ka,Kp,MCa,MCp,Test,Gu,cs,Alfa,S,tu,n,Target)
+function [X1,X2,ti_vec,To_vec,Gp_vec,Gu_vec,kk,tu_vec,Ti_vec] = DinamicaScambiatoreRegMandata_Termostato(tf,tc,X0,Ti,Km,Ka,Kp,Kf,MCa,MCp,Test,Gu,cs,Alfa,S,tu,n,Target)
 % 
 %  c=[-10 : tc : 15]
 %  y=-1.8*c + 68
@@ -12,8 +12,8 @@ function [X1,X2,ti_vec,To_vec,Gp_vec,Gu_vec,kk,tu_vec,Ti_vec] = DinamicaScambiat
 % legend('Temp mandata t_u','massima temperatura di mandata')
 % set(gca,'FontSize', 18)
 
-y=-1.5.*Test + 60
-%y=tu*ones(1,length(Test));
+y=-1.65.*Test + 68
+%y=tu*ones(1,length(0:tc:tf));
 % figure, plot(t,y)
 
 
@@ -85,7 +85,7 @@ end
 
 
 
-    k1= (Kmt*((ti+y(i))/2 - X1(i)).^(n) - Ka*(X1(i)-X2(i)) )/(MCa);    %  calcolo  della   derivata;
+    k1= (Kmt*((ti+y(i))/2 - X1(i)).^(n) - Ka*(X1(i)-X2(i)) - Kf*(X1(i)-Test(i)) )/(MCa);    %  calcolo  della   derivata;
     X1(i+1)=X1(i) + h*k1;    %          stima          del          nuovo          valore          di          y;
     
     k2=( Ka*(X1(i)-X2(i)) - Kp*(X2(i) - Test(i)))/(MCp);

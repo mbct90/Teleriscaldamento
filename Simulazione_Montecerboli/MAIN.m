@@ -7,15 +7,22 @@ tf=24;
 tc=0.1;
 t=[t0:tc:tf];
 
-% definisco la variabile "par_r" dove sono indicate tutte le info sulla rete di distribuzione 
-parametri_rete 
+x_1=[0 3 6 9 12 15 18 21 24];
+y_1=[0.5 5 10 6 2.5 1.5 0.5 -0.5 0];
+p_temp = polyfit(x_1,y_1,3)
+%p_temp=[0.0062 -0.2679 2.9591 -2,6767];
+temper=polyval(p_temp,t);
 
 % definisco la variabile "par_u" dove sono indicate tutte le info sulle car
 parametri_utenze
 
+% definisco la variabile "par_r" dove sono indicate tutte le info sulla rete di distribuzione 
+parametri_rete 
+
+
 % parametri globali
 %Test = [5 0]
-Test = 7; % temperatura esterna [°C] -> può essere fatta variare durante la simulazione
+Test = 0; % temperatura esterna [°C] -> può essere fatta variare durante la simulazione
             % in tal caso definirla come un vettore lungo quanto la
             % simulazione
 Ti= 82;    % temperatura in mandata circuito principale [°C] -> costante
@@ -35,14 +42,14 @@ P0=9; % pressione di base del vaso di espansione
 
 n_u=length(par_u(:,1));
 for i=1:n_u
-    [ti_vec,tu_vec,To_vec,Gp_vec,T,X] = SimulazioneUtenzaCentralina(t0,tf,tc,par_u(i,:),Ti,Test(1),Kp,Ki);
+    [ti_vec,tu_vec,To_vec,Gp_vec,T,X] = SimulazioneUtenzaCentralina(t0,tf,tc,par_u(i,:),Ti,temper,Kp,Ki,Gp_max(i));
     
-    ti_utenze(i,:)=ti_vec(50);
-    tu_utenze(i,:)=tu_vec(50);
-    To_utenze(i,:)=To_vec(50);
-    Gp_utenze(i,:)=Gp_vec(50);
-    Tamb_utenze(i,:)=X(50,1)';
-    T_utenze(i,:)=T(50)';
+%     ti_utenze(i,:)=ti_vec(50);
+%     tu_utenze(i,:)=tu_vec(50);
+%     To_utenze(i,:)=To_vec(50);
+%     Gp_utenze(i,:)=Gp_vec(50);
+%     Tamb_utenze(i,:)=X(50,1)';
+%     T_utenze(i,:)=T(50)';
     
     ti_tempo(i,:)=ti_vec'
     tu_tempo(i,:)=tu_vec';
@@ -52,9 +59,9 @@ for i=1:n_u
 end
 
 % calcolo temperatura di ritorno dalle utenze (media pesata)
-temp1=ti_utenze.* Gp_utenze;
-temp2=sum(temp1);
-ti_tot =temp2./(sum(Gp_utenze))
+% temp1=ti_utenze.* Gp_utenze;
+% temp2=sum(temp1);
+% ti_tot =temp2./(sum(Gp_utenze))
 
 %% Caratteristica Impianto con Regolazioni e Potenza assorbita dalle pompe
 % ------------------------------------------------------------------------------------------------
@@ -67,11 +74,11 @@ ti_tot =temp2./(sum(Gp_utenze))
 [Pot,Pot_min,Q_star,H_star,Q_funzionamento,H_funzionamento]=...
     potenze_assorbite_regolazioni(Qcaratteristica,dP+P0,flag2,Q_vec,dP+P0,p_pompa,p_rendimento)
 
-h=find(dP+P0==H_star,1)
+h=58%find(dP+P0==H_star,1)
 % Plot andamento delle portate
-plot(Qu_c(h,:).*1000,'r*','LineWidth',8)
+figure, plot(Qu_c(h,:).*1000,'r*','LineWidth',8)
 hold on
-plot(Gp_utenze,'*','LineWidth',8)
+plot(Gp_tempo(:,1),'*','LineWidth',8)
 title('Andamento portate impianto')
 xlabel('Utenze')
 ylabel('Portata [l/h]')
@@ -86,6 +93,7 @@ ylabel('Prevalenza [m]')
 figure, plot(Qcaratteristica.*1000,dP+P0,'-r')
 hold on
 plot(Qcaratteristica(end-sum(flag2)+1:end).*1000,dP(end-sum(flag2)+1:end)+P0,'-b')
+plot(Q_vec.*1000,polyval(p_pompa,Q_vec),'k')
 
 % plot sulla potenza dell'impianto al variare della portata
 Pot=Pot./1000 %trasformazione in kW
@@ -146,26 +154,61 @@ for k=1:length(Gp_tempo(1,:))
 [Qcaratteristica,Q_vec,dP,flag2]=caratteristicaImpiantoRegolazioniTempo(Q_nom,polyval(p_pompa,0),P0,par_r,u1,u2,Gp_tempo(:,k)./1000,p_pompa,p_rendimento);
 
 % curva rendimento
-ni=polyval(p_rendimento,Qcaratteristica);
+%ni=polyval(p_rendimento,Qcaratteristica);
 Q_necessaria=Qcaratteristica(end);
 
 Q=Qcaratteristica((end-sum(flag2)+1:end)); % portate che soddisfano il vincolo di portata
 H=P0+dP((end-sum(flag2)+1:end)); % prevalenze che soddisfano il vincolo di prevalenza
 
-Pot=((9.81*1000).*(Q./3600).*H)./ni((end-sum(flag2)+1:end));
+H_funzionamento = polyval(p_pompa,Q_necessaria);
+c=H_funzionamento./H;
+
+Q_r= Qcaratteristica(end-sum(flag2)+1:end).*sqrt(c);
+ni_=polyval(p_rendimento,Q_r);
+
+%Pot=((9.81*1000).*(Q./3600).*H)./ni((end-sum(flag2)+1:end));
+Pot=((9.81*1000).*(Q./3600).*H)./ni_;
+
+nni=polyval(p_rendimento,Q_necessaria);
 
 [Pot_min,z]=min(Pot);
 Q_star=Q(z); % portata ottima
-H_star=H(z); % prevalenza ottima
+
+if(H(z)<H_funzionamento)
+    H_star=H(z); % prevalenza ottima
+else
+    H_star=H_funzionamento;
+    Pot_min=((9.81*1000)*(Q_necessaria/3600)*H_funzionamento)/nni;
+end
 H_tempo(w)=H_star;
 P_tempo(w)=Pot_min;
+H50_tempo(w)=H_funzionamento;
+P50_tempo(w)=((9.81*1000)*(Q_necessaria/3600)*H_funzionamento)/nni;
 end
 figure, 
 subplot(3,1,1)
-plot(t,H_tempo)
+plot(t,H_tempo,'k','LineWidth',5)
+hold on
+plot(t,H50_tempo,'r','LineWidth',5)
+title('Prevalenza')
+legend('Prevalenza a giri ridotti','Prevalenza a pieno regime')
+ylabel('Prevalenza [m]')
+set(gca,'FontSize', 18)
 subplot(3,1,2)
-plot(t,sum(Gp_tempo))
+plot(t,sum(Gp_tempo),'k','LineWidth',5)
+title('Portata')
+legend('portata necessaria')
+ylabel('Portata [l/h]')
+set(gca,'FontSize', 18)
 subplot(3,1,3)
-plot(t,P_tempo)
+plot(t,P_tempo,'k','LineWidth',5)
+hold on
+plot(t,P50_tempo,'r','LineWidth',5)
+title('Potenza')
+legend('Potenza a giri ridotti','Potenza a pieno regime')
+xlabel('Time [h]')
+ylabel('Potenza [W]')
+set(gca,'FontSize', 18)
 
-Pcons_pompe=sum(P_tempo.*tc);
+Pcons_pompe=sum(P_tempo.*tc)
+Pcons_pompe50=sum(P50_tempo.*tc)

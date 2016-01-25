@@ -46,12 +46,15 @@ Si=Ss;
 Stot=Sl+Ss+Si
 MCa=1.21*V*(1005/4186) + 40*V*0.2
 MCp=Stot*(65*840 + 0.7*1670 + 142*840)/4186 
-Ka=6.61*Stot + 0,67*Sf
-Kpar=0.43*Stot 
+%MCp=Stot*(65*840 + 142*840)/4186 
+Ka=6.61*Stot 
+Kpar=(0.43*Stot) %+ (0.67*Sf)
+%Kpar=(0.843*Stot) 
+
 
 Ti=82; % temperatura ingresso allo scambiatore [rete principale]
 
-Gu=par(6); % portata in l/h rete dell'utenza
+Gu=600%par(6); % portata in l/h rete dell'utenza
 
 Alfa=par(7);
 S= V*Qunitario/(Alfa*10)
@@ -114,8 +117,8 @@ for k=1:length(X)
     
     Gp_vec(k)= (Gu*(tu_vec(k)-ti_vec(k))./(Ti-To_vec(k))); % vettore portate lato principale
     
-    if Gp_vec(k) > 1500
-        Gp_vec(k)=1500;
+    if Gp_vec(k) > 417
+        Gp_vec(k)=417;
         %To_vec(k) = ( Ti - (Gu*(tu_vec(k)-ti_vec(k)))/(Gp_vec(k))  );
         
         
@@ -187,7 +190,7 @@ set(gca,'FontSize', 18)
 
 ylabel('Temperatura [°C]')
 
-subplot(6,1,2)
+subplot(6,1,5)
 plot(t,ti_vec,'b','LineWidth',5)
 legend('t_i (fredda)')
 title('Temperatura ingresso allo scambiatore lato utenza')
@@ -195,7 +198,7 @@ title('Temperatura ingresso allo scambiatore lato utenza')
 ylabel('Temperatura [°C]')
 set(gca,'FontSize', 18)
 
-subplot(6,1,3)
+subplot(6,1,4)
 plot(t,tu_vec,'r','LineWidth',5)
 legend('t_u (calda)')
 title('Temperatura uscita allo scambiatore lato utenza')
@@ -203,7 +206,7 @@ title('Temperatura uscita allo scambiatore lato utenza')
 ylabel('Temperatura [°C]')
 set(gca,'FontSize', 18)
 
-subplot(6,1,4)
+subplot(6,1,2)
 plot(t,Ti_vec,'m','LineWidth',5)
 legend('T_i (calda)')
 title('Temperatura uscita allo scambiatore lato rete distribuzione')
@@ -211,7 +214,7 @@ title('Temperatura uscita allo scambiatore lato rete distribuzione')
 ylabel('Temperatura [°C]')
 set(gca,'FontSize', 18)
 
-subplot(6,1,5)
+subplot(6,1,3)
 plot(t,To_vec,'c','LineWidth',5)
 legend('T_u (fredda)')
 title('Temperatura ingresso allo scambiatore lato rete distribuzione')

@@ -1,11 +1,19 @@
-function dX=DinamicaScambiatorePid(t,X,Ti,Km,Ka,Kpar,MCa,MCp,Test,Gu,cs,Alfa,S,Target,n,Kp,Ki)
+function dX=DinamicaScambiatorePid(t,X,Ti,Km,Ka,Kpar,MCa,MCp,Test,Gu,cs,Alfa,S,Target,n,Kp,Ki,Kf,Gp_max)
+if t==0
+    d=1;
+else
+    d=find(t);
+end
+
+y=-1.65.*Test(d) + 68;
+
 
 tu = X(3) + Kp*(Target-X(1)); % temperatura in uscita dallo scambiatore (lato utenza)
 
 % conrtollo sulla temperatura in uscita (vincoli)
 c=3;
-if tu > Ti-c
-    tu = Ti-c;
+if tu > y
+    tu = y;
 end
 if tu < X(1)
     tu = X(1);
@@ -14,6 +22,8 @@ end
 % if tu<50
 %     Km=0;
 % end
+
+
 
 
 % calcolo temperatura in ingresso allo scambiatore (lato utenza: temp. ritorno dai radiatori)
@@ -32,15 +42,15 @@ To = To_temp(pos2);
 % calcolo portata lato principale
 Gp= (Gu*(tu-ti)/(Ti-To));
 
-if Gp > 1500
-    Gp=1500;
+if Gp > Gp_max
+    Gp=Gp_max;
     Km*((tu+ti_temp)/2 - X(1)).^n - Gu*(tu-ti_temp);
     To = ( Ti - (Gu*(tu-ti))/(Gp)  );
 end
 
 % calcolo variabile di stato
-dXa = (Km*((ti+tu)/2 - X(1)).^(n) - Ka*(X(1)-X(2)) )/(MCa);
-dXp = (Ka*(X(1) - X(2)) - Kpar*(X(2) - Test))/(MCp);
+dXa = (Km*((ti+tu)/2 - X(1)).^(n) - Ka*(X(1)-X(2)) - Kf*(X(1)-Test(d)))/(MCa);
+dXp = (Ka*(X(1) - X(2)) - Kpar*(X(2) - Test(d)))/(MCp);
 dXtu = Ki*(Target - X(1));
 
 

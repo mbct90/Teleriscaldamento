@@ -51,8 +51,11 @@ Si=Ss;
 Stot=Sl+Ss+Si
 MCa=1.21*V*(1005/4186) + 40*V*0.2
 MCp=Stot*(65*840 + 0.7*1670 + 142*840)/4186 
-Ka=6.61*Stot + 0,67*Sf
-Kp=0.43*Stot 
+%MCp=Stot*(65*840 + 142*840)/4186 
+Ka=6.61*Stot 
+Kp=(0.43*Stot) %+ (0.67*Sf)
+%Kpar=(0.843*Stot) 
+Kf=6.363*Sf;
 
 Ti=82; % temperatura ingresso allo scambiatore [rete principale] 
 %tu=75;
@@ -73,7 +76,7 @@ X0=[18 15]
 Gp=1500; %portata in igresso allo scambiatore lato rete di distribuzione
 
   %simulazione con termostato
-    [X1,X2,ti_vec,To_vec,tu_vec,~,Gu_vec,kk]=DinamicaScambiatoreNoReg_Termostato(tf,tc,X0,Ti,Km,temper,Gu,cs,Alfa,S,Gp,n,MCa,MCp,Ka,Kp,Target)
+    [X1,X2,ti_vec,To_vec,tu_vec,~,Gu_vec,kk]=DinamicaScambiatoreNoReg_Termostato(tf,tc,X0,Ti,Km,temper,Gu,cs,Alfa,S,Gp,n,MCa,MCp,Ka,Kp,Kf,Target)
     
     Ti_vec=Ti*ones(1,length(t)-1); % vettore temperature in ingresso allo scambiatore (lato principale) -> COSTANTE
     Gp_vec=Gp*ones(1,length(t)-1); % vettore portate in ingresso allo scambiatore (lato principale) -> COSTANTE
