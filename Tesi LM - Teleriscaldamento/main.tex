@@ -100,9 +100,9 @@
 %
 %\maketitle                  % pagina del titolo
 %
-\begin{abstract}          % Pagina del sommario
+%\begin{abstract}          % Pagina del sommario
   
-\end{abstract}             % pagina del sommario
+%\end{abstract}             % pagina del sommario
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % parte iniziale
@@ -110,7 +110,19 @@
 % \`{e} romana e le intestazioni sono semplici
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frontmatter
-Ringraziamenti            % ringraziamenti
+\chapter*{Ringraziamenti}
+
+Desidero ricordare tutti coloro che mi hanno aiutato nella stesura della tesi con suggerimenti, critiche ed osservazioni: a loro va la mia gratitudine, anche se a me spetta la responsabilità per ogni errore contenuto in questa tesi.\\
+
+Ringrazio anzitutto il  professor A. Vicino, Relatore,  ed i professori A. Giannitrapani e S. Paoletti,  Co-relatori, per i  preziosi insegnamenti e per la loro disponibilità. \\
+
+Un ringraziamento particolare all'Ing. R. Parri che senza il suo supporto la sua guida sapiente e sopratutto pazienza questa tesi non esisterebbe. \\
+
+Proseguo con l'Ing. R. Amidei che mi ha aiutato facilitandomi le ricerche e la raccolta dei dati utili per questo lavoro di Tesi.\\
+
+Un ringraziamento particolare va ai colleghi ed agli amici che mi hanno incoraggiato e sopportato durante questo lungo periodo di studi in particolare a Poppo, Matt , Mike e Bugs. \\
+
+Vorrei infine ringraziare la mia famiglia per avermi sempre sostenuto in ogni mia scelta e per aver reso possibile questo traguardo.            % ringraziamenti
 \
 %\input{dedica}
 \tableofcontents            % indice
@@ -142,10 +154,21 @@ Lo scopo del seguente elaborato è stato quello di cercare delle soluzioni per m
 Le stazioni di pompaggio lavorano a regime variabile e per un'ottimizzazione del sistema, bisogna far si che le pompe lavorino sempre in condizioni di buon rendimento e con il minimo consumo. Questo vuol dire far circolare la minima quantità possibile di acqua e far si che le temperature di ritorno siano più basse possibili. Se nella rete di distribuzione non vi sono regolazioni presso le abitazioni, come l'assenza di centraline d'utenza, tutta la portata circola nei primi scambiatori e per alimentare gli ultimi si deve pompare un maggior quantitativo di acqua; inoltre, le temperature di ritorno delle prime utenze saranno più alte. Le centraline di utenza ben realizzate risultano essere un elemento fondamentale per la regolazione e l'ottimizzazione di un impianto di teleriscaldamento in quanto possono  limitare la portata dell'utenza allo stretto indispensabile e ridurre la temperatura di ritorno alla centrale di scambio. Più le temperature di ritorno sono basse più energia si riesce a trasferire a pari portata. Le centraline di utenza sono inoltre il mezzo attraverso il quale si possono rilevare molte informazioni utili per l'ottimizzazione del circuito, ad esempio, le condizioni di arrivo dei fluidi nei punti estremi del circuito non facilmente prevedibili istante per istante, in quanto dipendono dalle richieste del momento di tutte le utenze precedenti.
 Dalle centraline si possono fare anche analisi predittive sullo stato di funzionamento degli scambiatori con segnalazione di anomalie che portano ad interventi programmati invece che in emergenza.
 Le centraline di utenza "intelligenti " possono inoltre aiutare i proprietari degli immobili a fare efficienza e ad evitare picchi di consumo nel circuito .
-Tutte le soluzioni studiate sono state simulate in ambiente \textsc{Matlab} e confrontate con dati reali misurati sul campo.
+Tutte le soluzioni studiate sono state simulate in ambiente \textsc{Matlab} e confrontate con dati reali misurati sul campo.\\
 
-\textit{Scrivere breve riassunto su ogni capitolo}
+Nel seguente lavoro di tesi  ... :
+\begin{itemize}
+\item[]Nel Capitolo 1 vengono descritti i vantaggi e benefici generali degli impianti di  teleriscaldamento, facendo una panoramica sugli impianti già esistenti presenti nel mondo e più in particolare in Italia. Si sofferma l'attenzione su quegli impianti che utilizzano fonti rinnovabili per la produzione di calore.\\
 
+\item[]Nel Capitolo 2  sono descritti in generale la struttura e gli elementi principali che caratterizzano un impianto di teleriscaldamento. Si analizzano anche gli effetti che comportano le diverse temperature di esercizio dell'acqua in mandata alla rete di distribuzione e gli effetti che gli utenti hanno sull'impianti. Si fa anche una panoramica delle possibili soluzioni per limitare la portata in ingresso agli scambiatori per avere una temperatura di ritorno più bassa.
+
+\item[]Nel Capitolo 3 sono elencati e spiegati tutti i modelli matematici  che verranno utilizzati nella simulazione riguardanti la dinamica dell'utenza, il funzionamento di uno scambiatore , lo scambio di calore dei radiatori, le perdite di pressione nella rete di distribuzione e il funzionamento delle pompe di circolazione.
+
+\item[]Nel Capitolo 4 si studiano le possibili soluzioni che permettono la riduzione dei costi di gestione di un impianto di teleriscaldamento. Sono inoltre mostrati ed analizzati i risultati delle simulazioni effettuate.
+
+\item[]Nel Capitolo 5 si trae le conclusioni sul seguente elaborato e si descrivono i possibili sviluppi futuri. 
+
+\end{itemize}
 \chapter{Teleriscaldamento e Geotermia}
 L'efficienza energetica è oggi non solo una prospettiva condivisa ma viene riconosciuta come la più efficace strada per ridurre la spesa energetica e le emissioni di gas serra. Tra i tanti cambiamenti avvenuti in questi anni proprio l'innovazione delle tecnologie, la ricerca e diffusione stanno permettendo di realizzare risultati fino a qualche tempo fa impensabili. Tutti i progetti proposti per effettuare la transizione energetica dalle fonti fossili a quelle rinnovabili, che hanno lo scopo di ridurre le emissioni in atmosfera ai livelli prefissati dai vari accordi internazionali, includono il teleriscaldamento.
 Il principale vantaggio che otteniamo con questi impianti è infatti quello di usare, attraverso il recupero del calore, energia già disponibile ma che andrebbe altrimenti dispersa, con conseguente riduzione sia dell'utilizzo di fonti energetiche primarie che delle emissioni di $CO_2$ in atmosfera.\\
@@ -1113,7 +1136,7 @@ P_a = \dfrac{\rho \ g \ Q \ H_m}{\eta}
 Il rapporto fra la potenza utile e quella assorbita è definito rendimento ($\eta$). Il rendimento è sempre inferiore all'unità perché in qualsiasi macchina operatrice la potenza utile è sempre minore di quella assorbita. 
 
 \section{Controllo PID}
-Il controllo Proporzionale-Integrale-Derivativo, comunemente abbreviato come PID \cite{visioli2006practical}, è un sistema in retroazione negativa ampiamente impiegato nei sistemi di controllo. È il sistema di controllo in retroazione di gran lunga più comune nell'industria, in particolare nella versione PI (senza azione derivativa). 
+Il controllo Proporzionale-Integrale-Derivativo, comunemente abbreviato come PID \cite{testolin2013controllori}, è un sistema in retroazione negativa ampiamente impiegato nei sistemi di controllo. È il sistema di controllo in retroazione di gran lunga più comune nell'industria, in particolare nella versione PI (senza azione derivativa). 
 La reazione all'errore può essere regolata e ciò rende questo sistema molto versatile.
 
 Il controllore acquisisce in ingresso un valore da un processo, e lo confronta con un valore di riferimento. La differenza, il cosiddetto segnale di errore, viene  usato per determinare il valore della variabile di uscita del controllore, che è la variabile manipolabile del processo, in maniera da tendere verso un errore nullo.\\
@@ -1809,14 +1832,37 @@ La regolazione della riga viene confrontata con quella indicata nella colonna.
 \label{tab:risp_pompa}
 \end{table}
 
-In Figura vediamo come è l'andamento nel tempo della portata della pompa con i vari tipi di regolazione. 
+In Figura \ref{fig:portate_confronto2} vediamo come è l'andamento nel tempo della portata della pompa con i diversi tipi di regolazione. 
 
-In Figura invece è mostrato l'andamento nel tempo della temperatura di ritorno $T_u$. 
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{figure/portate_confronto2} 
+\caption{Risultato della simulazione dell'andamento nel tempo della portata della pompa che alimenta la rete di S. Ippolito con i diversi tipi di regolazione.}
+\label{fig:portate_confronto2}
+\end{figure}
 
+In Figura \ref{fig:To_confronto2} invece è mostrato l'andamento nel tempo della temperatura di ritorno $T_u$. 
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{figure/To_confronto2} 
+\caption{Risultato della simulazione dell'andamento nel tempo della temperatura di ritorno alla centrale $T_u$ della rete di S. Ippolito con i diversi tipi di regolazione.}
+\label{fig:To_confronto2}
+\end{figure}
+
+La portata della pompa è molto variabile nella rete con sotto-stazioni d'utenza con regolazione a punto fisso e con termoregolazione climatica. La regolazione climatica evoluta PI è quella che permette di avere un portata della pompa più costante evitando picchi di portata.
+
+La temperatura di ritorno $T_u$  è più alta con l'impianto avente le regolazioni a punto fisso. Per metà del tempo della simulazione la temperatura di ritorno è praticamente uguale sia per le reti con termoregolazioni climatiche che per quelle con regolazioni climatiche evolute PI. Questo è dovuto al fatto che nella prima parte della simulazione le utenze vogliono raggiungere la temperatura interna desiderata. Quindi per entrambe le regolazioni si vorrà la temperatura di mandata $t_u$ ai radiatori più alta possibile rispetto alla temperatura esterna misurata per scaldare il più velocemente l'abitazione. In questa prima parte il calore erogato all'utenza è determinato dalla curva di compensazione climatica. Dal momento che le utenze raggiungono la temperatura desiderata (circa all'ora 10 della simulazione), gli andamenti si differenziano. Per le termoregolazioni climatiche, la temperatura di ritorno si alza perché la  temperatura esterna è più bassa, e dovendo fornire più calore  si dovrà alzare la temperatura di mandata $t_u$ ad un livello più alto comportando un aumento della temperatura di ritorno $T_o$. Nel caso di regolazione climatica evoluta PI si manderà ai radiatori l'acqua ad una temperatura tale da mantenere l'abitazione alla temperatura desiderata, sicuramente inferiore rispetto a quella fornita dalla regolazione climatica. Questo si traduce con una temperatura di ritorno mediamente più bassa rispetto alla termoregolazione climatica.
 
 \chapter{Conclusioni e sviluppi futuri}
 
-Lo scopo di questo studio è stato quello di verificare se le temperature di ritorno alle centrali termiche, tramite opportune regolazioni, potessero essere ridotte il più possibile al fine di ridurre i costi di energia di pompaggio. Per far ciò è stato costruito un sistema dinamico per simulare l'andamento delle temperature e delle pressioni di un impianto di teleriscaldamento al variare della temperatura ambiente esterna. 
+Lo scopo di questa tesi è quello di esaminare delle soluzioni per ottimizzare un sistema di teleriscaldamento da fonte geotermica che permettano di ridurre i suoi costi di gestione. Per questo tipo di impianto gli unici consumi di energia non rinnovabile derivano dalle stazioni di pompaggio. L'ottimizzazione di tali consumi è resa possibile grazie all'introduzione di centraline di utenza le quali controllano che i flussi all'interno degli scambiatori d'utenza siano quelli ottimali. L'introduzione di questi elementi di regolazione permettono di inserire un'ulteriore controllo direttamente sulla pompa che fa circolare l'acqua nella rete di distribuzione. Si può introdurre pompe a velocità variabile  che dovranno lavorare sempre in condizioni di buon rendimento e con il minimo consumo garantendo alle utenze allacciate alla rete i flussi d'acqua calda necessaria al proprio fabbisogno. 
+
+Per quanto riguarda la stazione di pompaggio il migliore controllo è il seguente: Le utenze appartenenti alla rete (oppure soltanto le utenze svantaggiate)  dovranno comunicare ad intervalli di tempo regolari alla pompa se la portata in ingresso allo scambiatore è sufficiente alle proprie necessità. Se una casa non ottiene il corretto flusso in ingresso allo scambiatore, la pompa provvederà subito aumentando la velocità ad un valore tale da garantire una portata sufficiente a tutte le utenze e tale da erogare una potenza istantanea più bassa possibile. La temperatura dell'acqua calda in mandata alla rete è mantenuta costante.
+
+Utilizzando pompe a giri variabili e una temperatura in mandata alla rete $T_i$ fissa, le centraline d'utenza che garantiscono i risparmi maggiori sono quelle che dispongono di termoregolazione climatica e quelle con regolazione climatica evoluta PI. I risparmi ottenuti sono paragonabili ed è difficile preferire una regolazione ad un'altra. La scelta dipenderà molto anche dai costi di installazione. Se però si volesse controllare anche la temperatura di mandata $T_i$, per un'ulteriore ottimizzazione dell'impianto, le centraline con regolazione climatica evoluta PI sono sicuramente le migliori. Nella rete, la variazione della temperatura di mandata $T_i$ non è immediata come la variazione di portata perciò una regolazione che limita a massimo i picchi di richiesta di calore è preferibile.
+
+Per quanto riguarda il gestore dell'impianto le centraline di utenza risultano essere un elemento fondamentale per la regolazione e l'ottimizzazione di un impianto di teleriscaldamento permettendo di ridurre i consumi allo stretto indispensabile.  Inoltre possono rilevare e comunicare   molte informazioni sullo stato di funzionamento degli scambiatori.
+
 
 \section{Sviluppi futuri}
 I futuri sviluppi possono essere suddivisi in due parti, di cui una più pratica e una che riguarda la modellistica e la risoluzione di problemi di ottimizzazione: 
