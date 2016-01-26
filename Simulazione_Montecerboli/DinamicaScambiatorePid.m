@@ -11,9 +11,10 @@ y=-1.65.*Test(d) + 68;
 tu = X(3) + Kp*(Target-X(1)); % temperatura in uscita dallo scambiatore (lato utenza)
 
 % conrtollo sulla temperatura in uscita (vincoli)
-c=3;
+c=1;
 if tu > y
     tu = y;
+    c=0;
 end
 if tu < X(1)
     tu = X(1);
@@ -51,7 +52,7 @@ end
 % calcolo variabile di stato
 dXa = (Km*((ti+tu)/2 - X(1)).^(n) - Ka*(X(1)-X(2)) - Kf*(X(1)-Test(d)))/(MCa);
 dXp = (Ka*(X(1) - X(2)) - Kpar*(X(2) - Test(d)))/(MCp);
-dXtu = Ki*(Target - X(1));
+dXtu = c*Ki*(Target - X(1));
 
 
 %dX1 = (Km*((ti+tu)/2 - X(1)).^(n) - K*(X(1) - Test))/MC; 

@@ -1,9 +1,24 @@
 \begin{thebibliography}{1}
 
+\bibitem{heating2015cooling}
+District Heating,
+\newblock ``District heating and cooling country by country survey,''
+\newblock {\em Euroheat \& Power, Brussels}, 2015.
+
+\bibitem{darcy}
+wikipedia,
+\newblock ,''
+\newblock in: https://en.wikipedia.org/wiki/Darcy%E2%80%93Weisbach_equation.
+
+\bibitem{visioli2006practical}
+Antonio Visioli,
+\newblock {\em Practical PID control},
+\newblock Springer Science \& Business Media, 2006.
+
 \bibitem{sandou2005predictive}
-G~Sandou, S~Font, S~Tebbani, A~Hiret, and C~Mondon.
-\newblock Predictive control of a complex district heating network.
-\newblock In {\em IEEE Conference on Decision and Control}, volume~44, page
-  7372. IEEE; 1998, 2005.
+G~Sandou, S~Font, S~Tebbani, A~Hiret, and C~Mondon,
+\newblock ``Predictive control of a complex district heating network,''
+\newblock in {\em IEEE Conference on Decision and Control}. IEEE; 1998, 2005,
+  vol.~44, p. 7372.
 
 \end{thebibliography}

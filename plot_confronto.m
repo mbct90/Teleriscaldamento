@@ -11,3 +11,18 @@ xlabel('Time[h]')
 ylabel('Temperatura [°C]')
 legend('no regolazione','punto fisso','climatica','PI')
 set(gca,'FontSize', 20)
+
+
+figure, plot(t(1:end-1),sum(Gp_rm),'m',t(1:end-1),sum(Gp_c),'r',t(1:end-1),sum(Gp_p(:,1:end-1)),'b','LineWidth',5)
+title('Andamento della portata G_p lato rete di distribuzione')
+xlabel('Time[h]')
+ylabel('Portata [l/h]')
+legend('punto fisso','climatica','PI')
+set(gca,'FontSize', 20)
+
+figure, plot(t(1:end-1),To_tot_rm,'m',t(1:end-1),To_tot_c,'r',t(1:end-1),To_tot_p(1:end-1),'b','LineWidth',5)
+title('Andamento della Temperatura T_u')
+xlabel('Time[h]')
+ylabel('Temperatura [°C]')
+legend('punto fisso','climatica','PI')
+set(gca,'FontSize', 20)

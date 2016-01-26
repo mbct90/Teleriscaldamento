@@ -89,8 +89,9 @@ ylabel('temperature [°C]')
 j=0;
 for i=1:length(X(:,1))
     tu_vec(i)=X(i,3) + Kp.*(Target-X(i,1));
-    if tu_vec(i)>Ti-3
-        tu_vec(i)=Ti-3;
+    y=-1.65.*temper(i) + 68;
+    if tu_vec(i)>y
+        tu_vec(i)=y;
     end
 %     if tu_vec(i)<50
 %         j=j+1;

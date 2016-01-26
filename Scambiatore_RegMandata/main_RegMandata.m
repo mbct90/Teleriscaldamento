@@ -18,7 +18,7 @@ temper=polyval(p_temp,t);
 parametri_utenze %caricamento di tutti i paramentri delle utenze
  
 %selezionare utenza da prendere in considerazione
-nu=11; % inserire numero da 1 a 11
+nu=4; % inserire numero da 1 a 11
 par=par_u(nu,:);
 
 % parametri utenza
