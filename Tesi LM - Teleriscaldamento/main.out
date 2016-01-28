@@ -1,0 +1,60 @@
+\BOOKMARK [0][-]{chapter.1}{Teleriscaldamento e Geotermia}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Considerazioni generali sul teleriscaldamento}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Panoramica sul teleriscaldamento nel mondo}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Teleriscaldamento in Italia}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Le rinnovabili termiche: energia geotermica}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.5}{La geotermia per il riscaldamento: il caso Toscana}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.6}{Geo Energy Service e criticit\340 degli impianti}{chapter.1}% 7
+\BOOKMARK [0][-]{chapter.2}{Tecnologie degli impianti di teleriscaldamento}{}% 8
+\BOOKMARK [1][-]{section.2.1}{Struttura di un impianto}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.1.1}{Centrale termica e di scambio}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.2}{Stazioni di pompaggio}{section.2.1}% 11
+\BOOKMARK [2][-]{subsection.2.1.3}{Rete di distribuzione}{section.2.1}% 12
+\BOOKMARK [1][-]{section.2.2}{Effetti delle temperature di esercizio in un impianto di teleriscaldamento}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.1}{Influenze sulla capacit\340 termica in mandata}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.2}{Influenza sull'energia di pompaggio}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.3}{Influenza sulle perdite di calore}{section.2.2}% 16
+\BOOKMARK [1][-]{section.2.3}{Effetti degli utenti sulla rete e tecnologie in uso per aumentare l'efficienza delle utenze}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.3.1}{Regolazione con valvola a tre vie}{section.2.3}% 18
+\BOOKMARK [2][-]{subsection.2.3.2}{Regolazione con valvola di laminazione}{section.2.3}% 19
+\BOOKMARK [2][-]{subsection.2.3.3}{Regolazione con pompe a temperatura di ritorno costante}{section.2.3}% 20
+\BOOKMARK [2][-]{subsection.2.3.4}{Regolazione con pompe a pressione differenziale}{section.2.3}% 21
+\BOOKMARK [0][-]{chapter.3}{Modelli Matematici}{}% 22
+\BOOKMARK [1][-]{section.3.1}{Scambiatore di calore}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.2}{Radiatori}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.3}{Dinamica dell'utenza}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.4}{Dinamica e interazioni tra scambiatore e utenza}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.5}{Dinamica della rete di distribuzione}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.6}{Perdite di calore nella rete}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.7}{Pompe di circolazione}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.7.1}{Curve caratteristiche}{section.3.7}% 30
+\BOOKMARK [2][-]{subsection.3.7.2}{Legge di affinit\340}{section.3.7}% 31
+\BOOKMARK [2][-]{subsection.3.7.3}{Potenza assorbita da una pompa}{section.3.7}% 32
+\BOOKMARK [1][-]{section.3.8}{Controllo PID}{chapter.3}% 33
+\BOOKMARK [0][-]{chapter.4}{Risultati di simulazione}{}% 34
+\BOOKMARK [1][-]{section.4.1}{Influenza della temperatura esterna sulla gestione di un sistema di teleriscaldamento}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.2}{Fabbisogno termico massimale di un'abitazione}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.3}{Funzionamento e importanza dell'utilizzo di centraline d'utenza}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.4}{Soluzioni per aumentare l'efficienza delle utenze diminuendo la temperatura dell'acqua di ritorno}{chapter.4}% 38
+\BOOKMARK [2][-]{subsection.4.4.1}{Regolazione di portata assente}{section.4.4}% 39
+\BOOKMARK [2][-]{subsection.4.4.2}{Termoregolazione a punto fisso}{section.4.4}% 40
+\BOOKMARK [2][-]{subsection.4.4.3}{Termoregolazione climatica}{section.4.4}% 41
+\BOOKMARK [2][-]{subsection.4.4.4}{La regolazione climatica evoluta PI}{section.4.4}% 42
+\BOOKMARK [2][-]{subsection.4.4.5}{Variazione della velocit\340 delle pompe di circolazione interne all'utenza}{section.4.4}% 43
+\BOOKMARK [2][-]{subsection.4.4.6}{Regolazioni delle sotto-centrali di scambio a confronto}{section.4.4}% 44
+\BOOKMARK [1][-]{section.4.5}{Soluzioni per ridurre i consumi di energia di pompaggio}{chapter.4}% 45
+\BOOKMARK [2][-]{subsection.4.5.1}{Vantaggi di utilizzare pompe a velocit\340 variabile}{section.4.5}% 46
+\BOOKMARK [1][-]{section.4.6}{Caratteristiche dell'impianto di Sant'Ippolito}{chapter.4}% 47
+\BOOKMARK [2][-]{subsection.4.6.1}{Dati della rete di distribuzione}{section.4.6}% 48
+\BOOKMARK [2][-]{subsection.4.6.2}{Pompa di circolazione}{section.4.6}% 49
+\BOOKMARK [2][-]{subsection.4.6.3}{Dati delle utenze allacciate alla rete}{section.4.6}% 50
+\BOOKMARK [1][-]{section.4.7}{Simulazioni}{chapter.4}% 51
+\BOOKMARK [2][-]{subsection.4.7.1}{Simulazione rete senza regolazioni}{section.4.7}% 52
+\BOOKMARK [2][-]{subsection.4.7.2}{Simulazione della rete con termoregolazione a punto fisso sulle utenze}{section.4.7}% 53
+\BOOKMARK [2][-]{subsection.4.7.3}{Simulazione della rete con termoregolazione climatica sulle utenze}{section.4.7}% 54
+\BOOKMARK [2][-]{subsection.4.7.4}{Simulazione della rete con regolazione climatica evoluta PI sulle utenze}{section.4.7}% 55
+\BOOKMARK [1][-]{section.4.8}{Confronto dei risultati ottenuti}{chapter.4}% 56
+\BOOKMARK [0][-]{chapter.5}{Conclusioni e sviluppi futuri}{}% 57
+\BOOKMARK [1][-]{section.5.1}{Sviluppi futuri}{chapter.5}% 58
+\BOOKMARK [2][-]{subsection.5.1.1}{Modello predittivo per determinare la temperatura in mandata alla rete di distribuzione}{section.5.1}% 59
+\BOOKMARK [0][-]{appendix*.6}{Appendice A: Dettagli}{}% 60

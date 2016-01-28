@@ -1,24 +1,149 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{lund_}
+Henrik Lund, Bernd M{\"o}ller, Brian~Vad Mathiesen, and A~Dyrelund,
+\newblock ``The role of district heating in future renewable energy systems,''
+\newblock {\em Energy}, vol. 35, no. 3, pp. 1381--1390, 2010.
 
 \bibitem{heating2015cooling}
 District Heating,
 \newblock ``District heating and cooling country by country survey,''
 \newblock {\em Euroheat \& Power, Brussels}, 2015.
 
-\bibitem{darcy}
-wikipedia,
-\newblock ,''
-\newblock in: https://en.wikipedia.org/wiki/Darcy%E2%80%93Weisbach_equation.
+\bibitem{snoek2002optimization}
+C.~Snoek,
+\newblock {\em Optimization of District Heating Systems by Maximizing Building
+  Heating System Temperature Differences},
+\newblock IEA district heating and cooling: International Energy Agency. NOVEM,
+  Netherlands Agency for Energy and the Environment, 2002.
 
-\bibitem{visioli2006practical}
-Antonio Visioli,
-\newblock {\em Practical PID control},
-\newblock Springer Science \& Business Media, 2006.
+\bibitem{woods1999optimisation}
+Paul Woods,
+\newblock {\em Optimization of operating temperatures and an appraisal of the
+  benefits of low temoerature district heating},
+\newblock Novem BV, 1999.
+
+\bibitem{pistocchini2010ottimizzazione}
+Lorenzo Pistocchini,
+\newblock ``Ottimizzazione termofluidodinamica e dimensionamento di uno
+  scambiatore di calore in controcorrente con layer adsorbenti e raffreddamento
+  evaporativi indiretto (ecos) per impianti innovativi di solar
+  air-conditioning destinati a utenti industriali e commerciali,''
+\newblock 2010.
+
+\bibitem{Beretti_ele}
+F.~M. Boschetto,
+\newblock ,'' [Online]. Available:
+  \url{http://www.fmboschetto.it/didattica/pdf/Trasmissione_del_calore.PDF},
+\newblock accesso Gen. 23, 2016.
+
+\bibitem{thavlov2020thermal}
+Anders Thavlov and Henrik~W Bindner,
+\newblock ``Thermal models for intelligent heating of buildings,''
+\newblock in {\em International Conference on Applied Energy (ICAE 2012)},
+  2020.
+
+\bibitem{darcy}
+Donald~F Elger, Barbara~C Williams, Clayton~T Crowe, and John~A Roberson,
+\newblock {\em Engineering fluid mechanics (10 ed.)},
+\newblock Wiley, 2014.
+
+\bibitem{lobanoff2013centrifugal}
+Val~S Lobanoff and Robert~R Ross,
+\newblock {\em Centrifugal Pumps: Design and Application: Design and
+  Application},
+\newblock Elsevier, 2013.
+
+\bibitem{testolin2013controllori}
+Giovanni Testolin,
+\newblock ``Controllori pid e tecniche" anti wind-up",''
+\newblock 2013.
 
 \bibitem{sandou2005predictive}
 G~Sandou, S~Font, S~Tebbani, A~Hiret, and C~Mondon,
 \newblock ``Predictive control of a complex district heating network,''
 \newblock in {\em IEEE Conference on Decision and Control}. IEEE; 1998, 2005,
   vol.~44, p. 7372.
+
+\bibitem{zinko}
+H~Zinko, L~Hoon, K~Bong-Kyun, K~Youn-Hong, HAKAN Lindkvist, ACHIM Loewen,
+  H~Seungkyu, H~Walletun, and M~Wigbels,
+\newblock ``Improvement of operational temperature differences in district
+  heating systems,''
+\newblock 2005.
+
+\bibitem{arvastson2001stochastic}
+Lars Arvastson,
+\newblock {\em Stochastic modeling and operational optimization in district
+  heating systems}, vol. 2001,
+\newblock Lund University, 2001.
+
+\bibitem{ccomakli2004evaluation}
+Kemal {\c{C}}omakl{\i}, Bedri Y{\"u}ksel, and {\"O}mer {\c{C}}omakl{\i},
+\newblock ``Evaluation of energy and exergy losses in district heating
+  network,''
+\newblock {\em Applied thermal engineering}, vol. 24, no. 7, pp. 1009--1017,
+  2004.
+
+\bibitem{saarinen2008modelling}
+Linn Saarinen,
+\newblock ``Modelling and control of a district heating system,''
+\newblock 2008.
+
+\bibitem{harvey2012handbook}
+Danny Harvey,
+\newblock {\em A handbook on low-energy buildings and district-energy systems:
+  fundamentals, techniques and examples},
+\newblock Routledge, 2012.
+
+\bibitem{benonysson1995operational}
+Atli Benonysson, Benny B{\o}hm, and Hans~F Ravn,
+\newblock ``Operational optimization in a district heating system,''
+\newblock {\em Energy conversion and management}, vol. 36, no. 5, pp. 297--314,
+  1995.
+
+\bibitem{nielsen2000predicting}
+Henrik~Aalborg Nielsen, Henrik Madsen, et~al.,
+\newblock {\em Predicting the heat consumption in district heating systems
+  using meteorological forecasts},
+\newblock Citeseer, 2000.
+
+\bibitem{bahadorani2009optimization}
+P~Bahadorani, GF~Naterer, and SB~Nokleby,
+\newblock ``Optimization of heat exchangers for geothermal district heating,''
+\newblock {\em Transactions of the Canadian Society for Mechanical
+  Engineering}, vol. 33, no. 2, pp. 79--96, 2009.
+
+\bibitem{sarbu1998energetic}
+Ioan S{\'a}rbu and Ioan Borza,
+\newblock ``Energetic optimization of water pumping in distribution systems,''
+\newblock {\em Mechanical Engineering}, vol. 42, no. 2, pp. 141--152, 1998.
+
+\bibitem{appunti}
+Paolo Di~Marco,
+\newblock ``Appunti ed esercizi di fisica tecnica e macchine termiche cap. 1.
+  nozioni introduttive di termodinamica,''
+\newblock .
+
+\bibitem{airu}
+Associazione Italiana~Riscaldamento Urbano, ,'' {www.airu.it}.
+
+\bibitem{hera}
+Gruppo HERA, ,'' {www.gruppohera.it}.
+
+\bibitem{iea}
+International~Energy Agency,
+\newblock ,''
+\newblock in: www.iea.org.
+
+\bibitem{idea}
+International District~Energy Association,
+\newblock ,''
+\newblock in: www.districtenergy.org.
+
+\bibitem{ugi}
+Unione~Geotermica Italiana,
+\newblock ,''
+\newblock in: http://www.unionegeotermica.it/.
 
 \end{thebibliography}

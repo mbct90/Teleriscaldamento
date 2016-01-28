@@ -35,31 +35,30 @@
 \contentsline {section}{\numberline {3.8}Controllo PID}{49}
 \contentsline {chapter}{\numberline {4}Risultati di simulazione}{52}
 \contentsline {section}{\numberline {4.1}Influenza della temperatura esterna sulla gestione di un sistema di teleriscaldamento}{52}
-\contentsline {section}{\numberline {4.2}Fabbisogno termico massimale di un'abitazione}{55}
+\contentsline {section}{\numberline {4.2}Fabbisogno termico di un'abitazione}{54}
 \contentsline {section}{\numberline {4.3}Funzionamento e importanza dell'utilizzo di centraline d'utenza}{55}
-\contentsline {section}{\numberline {4.4}Soluzioni per aumentare l'efficienza delle utenze diminuendo la temperatura dell'acqua di ritorno}{58}
+\contentsline {section}{\numberline {4.4}Soluzioni per aumentare l'efficienza delle utenze minimizzando la temperatura dell'acqua di ritorno}{58}
 \contentsline {subsection}{\numberline {4.4.1}Regolazione di portata assente}{60}
 \contentsline {subsection}{\numberline {4.4.2}Termoregolazione a punto fisso}{61}
 \contentsline {subsection}{\numberline {4.4.3}Termoregolazione climatica}{62}
-\contentsline {subsection}{\numberline {4.4.4}La regolazione climatica evoluta PI}{65}
-\contentsline {subsection}{\numberline {4.4.5}Variazione della velocit\IeC {\`a} delle pompe di circolazione interne all'utenza}{67}
+\contentsline {subsection}{\numberline {4.4.4}La regolazione climatica evoluta PI}{66}
+\contentsline {subsection}{\numberline {4.4.5}Variazione della velocit\IeC {\`a} delle pompe di circolazione interne all'utenza}{68}
 \contentsline {subsection}{\numberline {4.4.6}Regolazioni delle sotto-centrali di scambio a confronto}{69}
 \contentsline {section}{\numberline {4.5}Soluzioni per ridurre i consumi di energia di pompaggio}{71}
 \contentsline {subsection}{\numberline {4.5.1}Vantaggi di utilizzare pompe a velocit\IeC {\`a} variabile}{72}
-\contentsline {section}{\numberline {4.6}Caratteristiche dell'impianto di Sant'Ippolito}{72}
+\contentsline {section}{\numberline {4.6}Caratteristiche dell'impianto di Sant'Ippolito}{74}
 \contentsline {subsection}{\numberline {4.6.1}Dati della rete di distribuzione}{74}
-\contentsline {subsection}{\numberline {4.6.2}Pompa di circolazione}{74}
-\contentsline {subsection}{\numberline {4.6.3}Dati delle utenze allacciate alla rete}{74}
+\contentsline {subsection}{\numberline {4.6.2}Pompa di circolazione}{75}
+\contentsline {subsection}{\numberline {4.6.3}Dati delle utenze allacciate alla rete}{75}
 \contentsline {section}{\numberline {4.7}Simulazioni}{76}
 \contentsline {subsection}{\numberline {4.7.1}Simulazione rete senza regolazioni}{77}
 \contentsline {subsection}{\numberline {4.7.2}Simulazione della rete con termoregolazione a punto fisso sulle utenze}{78}
 \contentsline {subsection}{\numberline {4.7.3}Simulazione della rete con termoregolazione climatica sulle utenze}{79}
 \contentsline {subsection}{\numberline {4.7.4}Simulazione della rete con regolazione climatica evoluta PI sulle utenze}{80}
 \contentsline {section}{\numberline {4.8}Confronto dei risultati ottenuti}{81}
-\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{85}
-\contentsline {section}{\numberline {5.1}Sviluppi futuri}{86}
-\contentsline {subsection}{\numberline {5.1.1}Modello predittivo per determinare la temperatura in mandata alla rete di distribuzione}{86}
-\contentsline {subsubsection}{Carica/scarica del sistema}{87}
-\contentsline {subsubsection}{Termine feedforward}{87}
-\contentsline {chapter}{Appendice A: Dettagli}{89}
+\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{86}
+\contentsline {section}{\numberline {5.1}Sviluppi futuri}{87}
+\contentsline {subsection}{\numberline {5.1.1}Modello predittivo per determinare la temperatura in mandata alla rete di distribuzione}{87}
+\contentsline {subsubsection}{Carica/scarica del sistema}{88}
+\contentsline {subsubsection}{Termine feedforward}{88}
 \contentsline {chapter}{Bibliografia}{90}

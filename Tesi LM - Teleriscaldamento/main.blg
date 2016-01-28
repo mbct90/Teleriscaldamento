@@ -3,48 +3,63 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: IEEEbib.bst
 Database file #1: FileBiblio.bib
-Warning--empty booktitle in darcy
-Warning--empty year in darcy
+Warning--entry type for "airu" isn't style-file defined
+--line 189 of file FileBiblio.bib
+Warning--entry type for "hera" isn't style-file defined
+--line 195 of file FileBiblio.bib
+Warning--empty journal in pistocchini2010ottimizzazione
+Warning--empty journal in testolin2013controllori
 Warning--can't use both volume and number fields in sandou2005predictive
-You've used 4 entries,
+Warning--empty journal in zinko
+Warning--can't use both volume and number fields in arvastson2001stochastic
+Warning--empty journal in saarinen2008modelling
+Warning--empty journal in appunti
+Warning--empty year in appunti
+Warning--empty booktitle in iea
+Warning--empty year in iea
+Warning--empty booktitle in idea
+Warning--empty year in idea
+Warning--empty booktitle in ugi
+Warning--empty year in ugi
+You've used 26 entries,
             1838 wiz_defined-function locations,
-            477 strings with 4006 characters,
-and the built_in function-call counts, 794 in all, are:
-= -- 64
-> -- 29
-< -- 2
-+ -- 12
-- -- 8
-* -- 47
-:= -- 126
-add.period$ -- 5
-call.type$ -- 4
-change.case$ -- 2
+            583 strings with 7281 characters,
+and the built_in function-call counts, 4647 in all, are:
+= -- 375
+> -- 202
+< -- 3
++ -- 81
+- -- 55
+* -- 305
+:= -- 752
+add.period$ -- 28
+call.type$ -- 26
+change.case$ -- 13
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 49
-empty$ -- 85
-format.name$ -- 8
-if$ -- 184
+cite$ -- 40
+duplicate$ -- 233
+empty$ -- 507
+format.name$ -- 55
+if$ -- 1037
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 5
-newline$ -- 23
-num.names$ -- 4
-pop$ -- 23
+int.to.str$ -- 26
+missing$ -- 30
+newline$ -- 129
+num.names$ -- 26
+pop$ -- 132
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 20
+skip$ -- 77
 stack$ -- 0
-substring$ -- 8
-swap$ -- 15
-text.length$ -- 2
+substring$ -- 139
+swap$ -- 33
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 3
-while$ -- 5
-width$ -- 5
-write$ -- 44
-(There were 3 warnings)
+warning$ -- 14
+while$ -- 37
+width$ -- 28
+write$ -- 260
+(There were 16 warnings)

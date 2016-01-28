@@ -1,10 +1,12 @@
-\documentclass[laurea,oneside,11pt]{USiena_tesiLM}
+\documentclass[laurea,oneside,11pt]{USiena_tesiLM3}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage[italian]{babel}
 \usepackage[T1]{fontenc} 
 \usepackage{graphicx} % Required for the inclusion of images
 \usepackage[normal]{subfigure}
+\usepackage{url}
+\DeclareUrlCommand\uri{}
 
 \usepackage[utf8]{inputenc}
 \usepackage[swapnames,signatures]{frontespizio}
@@ -34,7 +36,7 @@
 \author{Marco Becattini\\~\\}
 \date{8 Febbraio 2016}
 \titolocorso{Computer and Automation Engineering\\curriculum: Robotics and Automation}
-\degreeyear{2015/2016}
+\degreeyear{2014/2015}
 % Relatore principale
 \chair{Prof. A. Vicino \medskip}
 %
@@ -114,13 +116,13 @@
 
 Desidero ricordare tutti coloro che mi hanno aiutato nella stesura della tesi con suggerimenti, critiche ed osservazioni: a loro va la mia gratitudine, anche se a me spetta la responsabilità per ogni errore contenuto in questa tesi.\\
 
-Ringrazio anzitutto il  professor A. Vicino, Relatore,  ed i professori A. Giannitrapani e S. Paoletti,  Co-relatori, per i  preziosi insegnamenti e per la loro disponibilità. \\
+Ringrazio anzitutto il  professor A. Vicino ed i professori A. Giannitrapani e S. Paoletti per i preziosi insegnamenti e per la loro disponibilità. \\
 
-Un ringraziamento particolare all'Ing. R. Parri che senza il suo supporto la sua guida sapiente e sopratutto pazienza questa tesi non esisterebbe. \\
+Un ringraziamento particolare all'Ing. R. Parri che senza il suo supporto, la sua guida sapiente e sopratutto pazienza, questa tesi non esisterebbe. \\
 
 Proseguo con l'Ing. R. Amidei che mi ha aiutato facilitandomi le ricerche e la raccolta dei dati utili per questo lavoro di Tesi.\\
 
-Un ringraziamento particolare va ai colleghi ed agli amici che mi hanno incoraggiato e sopportato durante questo lungo periodo di studi in particolare a Poppo, Matt , Mike e Bugs. \\
+Ringrazio sentitamente tutti i colleghi ed agli amici che mi hanno incoraggiato e sopportato durante questo lungo periodo di studi in particolare a Poppo, Ciccio, Matt, Mike e Bugs. \\
 
 Vorrei infine ringraziare la mia famiglia per avermi sempre sostenuto in ogni mia scelta e per aver reso possibile questo traguardo.            % ringraziamenti
 \
@@ -139,7 +141,7 @@ Vorrei infine ringraziare la mia famiglia per avermi sempre sostenuto in ogni mi
 \chapter*{Introduzione}
 \markboth{Introduzione}{Introduzione}
 
-Il teleriscaldamento è un  servizio  di  distribuzione  urbana  del calore per  riscaldamento di ambienti e produzione di acqua calda sanitaria con produzione centralizzata. Il calore viene trasportato attraverso una rete di tubazioni interrate dove possono scorrere  fluidi termovettori come acqua calda, acqua surriscaldata o vapore, provenienti da una grossa centrale di produzione per arrivare alle abitazioni con successivo ritorno dei suddetti alla stessa centrale. È annoverato come una delle tecnologie più efficienti per operare il cambiamento delle politiche energetiche che si sta sviluppando a livello mondiale, infatti, tutti i progetti proposti per effettuare la transizione energetica dalle fonti fossili a quelle rinnovabili includono il teleriscaldamento. 
+Il teleriscaldamento è un  servizio  di  distribuzione  urbana  del calore per  riscaldamento di ambienti e produzione di acqua calda sanitaria con produzione centralizzata. Il calore viene trasportato attraverso una rete di tubazioni interrate dove possono scorrere  fluidi termovettori come acqua calda, acqua surriscaldata o vapore, provenienti da una grossa centrale di produzione per arrivare alle abitazioni con successivo ritorno alla stessa centrale. È annoverato come una delle tecnologie più efficienti per operare il cambiamento delle politiche energetiche che si sta sviluppando a livello mondiale. Infatti, tutti i progetti proposti per effettuare la transizione energetica dalle fonti fossili a quelle rinnovabili includono il teleriscaldamento. 
 
 La realizzazione di questi sistemi di riscaldamento è giustificata dal fatto che si riesca a recuperare calore che andrebbe altrimenti disperso, oppure si utilizzino energie rinnovabili. Il tutto ha come conseguenza la riduzione sia dell'utilizzo di fonti energetiche primarie che delle emissioni di anidride carbonica nell'atmosfera.
 
@@ -156,22 +158,23 @@ Dalle centraline si possono fare anche analisi predittive sullo stato di funzion
 Le centraline di utenza "intelligenti " possono inoltre aiutare i proprietari degli immobili a fare efficienza e ad evitare picchi di consumo nel circuito .
 Tutte le soluzioni studiate sono state simulate in ambiente \textsc{Matlab} e confrontate con dati reali misurati sul campo.\\
 
-Nel seguente lavoro di tesi  ... :
-\begin{itemize}
-\item[]Nel Capitolo 1 vengono descritti i vantaggi e benefici generali degli impianti di  teleriscaldamento, facendo una panoramica sugli impianti già esistenti presenti nel mondo e più in particolare in Italia. Si sofferma l'attenzione su quegli impianti che utilizzano fonti rinnovabili per la produzione di calore.\\
+La presente tesi è organizzata come descritto nel seguito.
 
-\item[]Nel Capitolo 2  sono descritti in generale la struttura e gli elementi principali che caratterizzano un impianto di teleriscaldamento. Si analizzano anche gli effetti che comportano le diverse temperature di esercizio dell'acqua in mandata alla rete di distribuzione e gli effetti che gli utenti hanno sull'impianti. Si fa anche una panoramica delle possibili soluzioni per limitare la portata in ingresso agli scambiatori per avere una temperatura di ritorno più bassa.
+\begin{itemize}
+\item[]Nel Capitolo 1 vengono descritti i vantaggi e benefici generali degli impianti di  teleriscaldamento, facendo una panoramica su quelli già esistenti presenti nel mondo e più in particolare in Italia. Si sofferma l'attenzione sugli impianti che utilizzano fonti rinnovabili per la produzione di calore.\\
+
+\item[]Nel Capitolo 2  sono descritti la struttura generale e gli elementi principali che caratterizzano un impianto di teleriscaldamento. Si analizzano anche gli effetti che comportano le diverse temperature di esercizio dell'acqua in mandata alla rete di distribuzione e gli effetti che gli utenti hanno sull'impianto. Si fa anche una panoramica delle possibili soluzioni per limitare la portata in ingresso agli scambiatori per avere una temperatura di ritorno più bassa.
 
 \item[]Nel Capitolo 3 sono elencati e spiegati tutti i modelli matematici  che verranno utilizzati nella simulazione riguardanti la dinamica dell'utenza, il funzionamento di uno scambiatore , lo scambio di calore dei radiatori, le perdite di pressione nella rete di distribuzione e il funzionamento delle pompe di circolazione.
 
 \item[]Nel Capitolo 4 si studiano le possibili soluzioni che permettono la riduzione dei costi di gestione di un impianto di teleriscaldamento. Sono inoltre mostrati ed analizzati i risultati delle simulazioni effettuate.
 
-\item[]Nel Capitolo 5 si trae le conclusioni sul seguente elaborato e si descrivono i possibili sviluppi futuri. 
+\item[]Nel Capitolo 5 si traggono le conclusioni sul lavoro svolto e si descrivono i possibili sviluppi futuri. 
 
 \end{itemize}
 \chapter{Teleriscaldamento e Geotermia}
 L'efficienza energetica è oggi non solo una prospettiva condivisa ma viene riconosciuta come la più efficace strada per ridurre la spesa energetica e le emissioni di gas serra. Tra i tanti cambiamenti avvenuti in questi anni proprio l'innovazione delle tecnologie, la ricerca e diffusione stanno permettendo di realizzare risultati fino a qualche tempo fa impensabili. Tutti i progetti proposti per effettuare la transizione energetica dalle fonti fossili a quelle rinnovabili, che hanno lo scopo di ridurre le emissioni in atmosfera ai livelli prefissati dai vari accordi internazionali, includono il teleriscaldamento.
-Il principale vantaggio che otteniamo con questi impianti è infatti quello di usare, attraverso il recupero del calore, energia già disponibile ma che andrebbe altrimenti dispersa, con conseguente riduzione sia dell'utilizzo di fonti energetiche primarie che delle emissioni di $CO_2$ in atmosfera.\\
+Il principale vantaggio che otteniamo con questi impianti è infatti quello di usare, attraverso il recupero del calore, energia già disponibile ma che andrebbe altrimenti dispersa, con conseguente riduzione sia dell'utilizzo di fonti energetiche primarie che delle emissioni di $CO_2$ in atmosfera \cite{lund_}.\\
 
 In Europa secondo i dati AIE, riportati nel rapporto District Heating and Cooling Country by Country Survey 2015 redatto da Euroheat and Power (EHP) \cite{heating2015cooling}, agli edifici è imputabile il 40\% del consumo finale di energia e di questi il 68\% viene utilizzato per il riscaldamento mentre il 14\% per la fornitura di acqua calda; inoltre il mix energetico utilizzato per la produzione di calore è in gran parte basato sui combustibili fossili. In Europa, ci sono oltre 6.000 impianti di teleriscaldamento che soddisfano il 12\% della richiesta di calore nei ventotto paesi dell'Unione, il 23,3\% del mix energetico che li alimenta proviene da fonti rinnovabili, ma esistono ampi margini di crescita. Importanti ed appropriati investimenti in questo ambito potrebbero portare a soddisfare il 50\% della richiesta di calore europea entro il 2050 con conseguente riduzione sia dei costi dell'energy transition, che sfrutterebbe il connubio fra cogenerazione e fonti rinnovabili, che della dipendenza dall'importazione di fonti energetiche fossili.\\
 
@@ -625,7 +628,7 @@ Dalla (\ref{eq:Potenza}) è possibile notare come la potenza inviata alla rete d
 
 Un sistema di teleriscaldamento efficiente ha due caratteristiche: una temperatura in mandata bassa e una differenza di temperatura tra mandata e ritorno alta. Una temperatura in mandata bassa fa diminuire le perdite di calore durante il trasporto, mentre un $\Delta T$ alto consente una riduzione della portata a parità di potenza termica inviata.
 
-Dal momento che la temperatura di ritorno non è un parametro che può essere deciso a priori, il maggiore sforzo per aumentare l'efficienza delle reti di teleriscaldamento si concentra sull'ottimizzazione delle sotto-stazioni di scambio delle utenze, così da minimizzare la temperatura di ritorno. L'obiettivo si raggiunge fornendo alle abitazioni il loro reale fabbisogno di calore e individuando i malfunzionamenti che riducono l'efficienza degli scambiatori. 
+Dal momento che la temperatura di ritorno non è un parametro che può essere deciso a priori, il maggiore sforzo per aumentare l'efficienza delle reti di teleriscaldamento si concentra sull'ottimizzazione delle sotto-stazioni di scambio delle utenze, così da minimizzare la temperatura di ritorno \cite{snoek2002optimization}. L'obiettivo si raggiunge fornendo alle abitazioni il loro reale fabbisogno di calore e individuando i malfunzionamenti che riducono l'efficienza degli scambiatori. 
 %Return temperatures depends mostly on the house heating systems. The old systems are designed to work with supply temperatures of 80 oC and return of 60 oC, whereas the modern ones use 60/45 oC
 \subsection{Influenza sull'energia di pompaggio}
 L'energia di pompaggio è l'energia necessaria al trasporto dell'acqua calda dalla centrale termica verso le utenze e a riportarla indietro alla centrale stessa. La perdita di pressione della rete deve essere misurata lontano dalla stazione di pompaggio, e se la differenza di pressione tra mandata e ritorno non è sufficientemente elevata si ordina alla pompa di dare più pressione.
@@ -652,7 +655,7 @@ comportando un aumento dell'energia di pompaggio.
 La differenza di temperatura deve essere massimizzata al fine di lavorare con il minimo flusso di acqua richiesto. Questa considerazione è valida sia per la rete di distribuzione che per il circuito dell'utenza a causa di una stretta relazione tra i due. 
 Quando c'è una diminuzione del $\Delta T$ nel lato utenze si avrà un aumento della temperatura di ritorno anche dal lato della rete di distribuzione. Per mantenere la stessa potenza, occorre aumentare la portata. Questo aumento di flusso da una parte aumenta la quantità di energia termica, dall'altra, la maggiore velocità del liquido fa raffreddare meno il fluido per unità di tempo. 
 
-Nella rete di distribuzione il flusso di acqua è regolato in accordo al carico termico richiesto. Durante l'inverno, dove la domanda è più alta, il flusso di fluido termovettore sarà più alto rispetto all'estate. Un flusso variabile nella rete è la strada necessaria da percorrere per ottimizzare le spese di pompaggio.
+Nella rete di distribuzione il flusso di acqua è regolato in accordo al carico termico richiesto. Durante l'inverno, dove la domanda è più alta, il flusso di fluido termovettore sarà più alto rispetto all'estate. Un flusso variabile nella rete è la strada necessaria da percorrere per ottimizzare le spese di pompaggio \cite{woods1999optimisation}.
 
 Nel circuito delle utenze può essere fatta la stessa considerazione. Quattro differenti soluzioni per regolare la portata in arrivo alle sotto-centrali di scambio delle utenze verranno analizzate in seguito.
 
@@ -755,7 +758,7 @@ Le variabili in gioco sono elencate in seguito:
 \end{center}
 \end{figure}
 
-Applicando le equazioni di bilancio di massa e di energia al fluido caldo ed al fluido freddo, assumendo che non vi siano dispersioni di calore durante lo scambio, si ottengono le seguenti formule per il calcolo della potenza termica globale $\dot{Q}$. Nello studio degli scambiatori di calore è  utile riferirsi alla cosiddetta portata termica (oraria), $C$, data dal prodotto tra la portata massica ed il calore specifico:
+Applicando le equazioni di bilancio di massa e di energia al fluido caldo ed al fluido freddo, assumendo che non vi siano dispersioni di calore durante lo scambio, si ottengono le seguenti formule per il calcolo della potenza termica globale $\dot{Q}$ \cite{pistocchini2010ottimizzazione}. Nello studio degli scambiatori di calore è  utile riferirsi alla cosiddetta portata termica (oraria), $C$, data dal prodotto tra la portata massica ed il calore specifico:
 \begin{equation}
 C_p=G_p c_s  \ \ \ ; \ \ \ C_u=G_u c_s
 \end{equation}
@@ -829,21 +832,21 @@ Dal momento che, come detto in precedenza, le pompe solitamente lavorano a veloc
 \section{Dinamica dell'utenza}
 \label{sec:dinamicautenza}
 In seguito è descritto il modello utilizzato in simulazione per modellizzare gli scambi termici all'interno di un edificio. 
-Il trasferimento di calore tra due mezzi può avvenire per conduzione o convezione ed è proporzionale alla differenza di temperatura tra i due mezzi coinvolti. Il trasferimento di calore per conduzione e convezione può quindi essere modellizzato utilizzando una resistenza termica,
+Il trasferimento di calore tra due mezzi può avvenire per conduzione o convezione ed è proporzionale alla differenza di temperatura tra i due mezzi coinvolti \cite{Beretti_ele}. Il trasferimento di calore per conduzione e convezione può quindi essere modellizzato utilizzando una resistenza termica,
 \begin{equation}
-\dot{Q} = \frac{1}{R} (T_1-T_2)
+\dot{Q} = \frac{1}{R} (T_1-T_2) ,
 \label{eq:q1}
 \end{equation}
 dove $T_1$ e $T_2$ sono le temperature di ogni mezzo coinvolto nello scambio di calore mentre $R$ è la resistenza opposta al trasferimento l'energia termica.
 
 L'altro aspetto importante da tenere in considerazione è la capacità termica, la quale descrive quanto un materiale  è in grado di accumulare calore. Nella seguente equazione è descritta la relazione che lega la capacità termica $C$ con il calore trasferito $\dot{Q}$ e la temperatura $T$.
 \begin{equation}
-\dot{Q} = C(T) \frac{dT}{dt} \approx C \frac{dT}{dt}
+\dot{Q} = C(T) \frac{dT}{dt} \approx C \frac{dT}{dt} .
 \label{eq:q2}
 \end{equation}
 Dal momento che l'intervallo di temperature in cui opera la casa è piccolo, possiamo  assumere la capacità termica come costante.
 
-La termodinamica dell'utenza è modellata come una grande stanza circondata da pareti. I relativi flussi termici sono schematizzati in Figura \ref{fig:scambio}. Gli scambi di calore che possono avvenire sono: scambio di calore tra i radiatori e l'aria della stanza, scambio di calore tra l'aria della stanza e le pareti, scambio di calore tra le pareti e l'esterno.
+La termodinamica dell'utenza è modellata come una grande stanza circondata da pareti. I relativi flussi termici sono schematizzati in Figura \ref{fig:scambio}. Gli scambi di calore che possono avvenire sono: scambio di calore tra i radiatori e l'aria della stanza, scambio di calore tra l'aria della stanza e le pareti, scambio di calore tra l'aria della stanza e l'esterno attraverso le finestre e scambio di calore tra le pareti e l'esterno.
 
 \begin{figure}[h]
 \begin{center}
@@ -874,7 +877,7 @@ Le grandezze che verranno usate nel modello da questo punto in avanti sono le se
 \end{itemize}
 
 
-A causa delle analogie tra le equazioni (\ref{eq:q1}) e (\ref{eq:q2}) con resistenze e capacità elettriche, possiamo modellizzare la termodinamica dell'abitazione come una rete elettrica, costituita da resistenze e condensatori, con le temperature equivalenti alle tensioni e il flusso di calore equivalente al flusso di cariche elettriche, ovvero alla corrente. Il circuito elettrico equivalente degli scambi di calore è mostrato in Figura \ref{fig:RC}.
+A causa delle analogie tra le equazioni (\ref{eq:q1}) e (\ref{eq:q2}) con resistenze e capacità elettriche, possiamo modellizzare la termodinamica dell'abitazione come una rete elettrica, costituita da resistenze e condensatori, con le temperature equivalenti alle tensioni e il flusso di calore equivalente al flusso di cariche elettriche, ovvero alla corrente \cite{thavlov2020thermal}. Il circuito elettrico equivalente degli scambi di calore è mostrato in Figura \ref{fig:RC}.
 
 \begin{figure}[h]
 \begin{center}
@@ -894,16 +897,16 @@ e cede calore direttamente all'esterno per mezzo delle finestre secondo la legge
 \end{equation} 
 Dal momento che la temperatura delle pareti a cui facciamo riferimento è quella della superficie interna dell'edificio, la resistenza termica sarà data soltanto dalla resistenza termica per convezione, ovvero:
 \begin{center}
-$R_{ip} = R_{conv,i}$
+$R_{ip} = R_{conv,i}$ .
 \end{center}
 
 Lo scambio tra la parete e l'ambiente esterno è dato dalla differenza di temperatura tra la parete interna e l'aria  esterna, considerando come resistenza termica la resistenza conduttiva $R_{cond}$ degli strati della parete e la resistenza convettiva sulla superficie esterna $R_{conv,e}$ per cui:
 \begin{equation}
-\dot{Q} = \frac{(\Theta_p - \Theta_e)}{R_{pe}} 
-%R_{conv,e} = \frac{1}{h_{conv,e}}
+\dot{Q} = \frac{(\Theta_p - \Theta_e)}{R_{pe}}  ,
+%R_{conv,e} = \frac{1}{h_{conv,e}} 
 \end{equation} 
 \begin{center}
-$R_{pe} = R_{cond} + R_{conv_e}$
+$R_{pe} = R_{cond} + R_{conv_e}$ .
 \end{center}
 
 Il modello può essere formulato come un modello a parametri concentrati a due stati di temperatura: la temperatura dell'aria all'interno della casa $\Theta_i$ e la temperatura delle pareti $\Theta_p$.
@@ -942,27 +945,27 @@ In Figura \ref{fig:scamb_utenza} è rappresentato lo schema che descrive le inte
 %Come descritto nella sezione \ref{sec:dinamicautenza} 
 Faremo riferimento a un sistema dinamico con due variabili di stato: la temperatura interna all'utenza  $\Theta_i$  e  temperatura della superficie interna delle pareti  $\Theta_p$. Il sistema è  descritto  da due equazioni differenziali:
 \begin{center}
-$M_ac_a \dot{\Theta}_i = \dot{Q}_{ri} - \dot{Q}_{ip} - \dot{Q}_{if}$ 
+$M_ac_a \dot{\Theta}_i = \dot{Q}_{ri} - \dot{Q}_{ip} - \dot{Q}_{if}$ ,
 \end{center}
 \begin{center}
-$M_pc_p \dot{\Theta}_p = \dot{Q}_{ip} - \dot{Q}_{pe}$
+$M_pc_p \dot{\Theta}_p = \dot{Q}_{ip} - \dot{Q}_{pe}$ ,
 \end{center}
 con $\dot{Q}_{ri}$ il\ calore scambiato tra i radiatori e l'aria interna alla casa, $\dot{Q}_{ip}$ il calore scambiato tra l'aria e la parete interna,$\dot{Q}_{if}$ il calore scambiato tra l'aria e l'esterno attraverso le finestre, $M_a$ la massa dell'aria all'interno dell'abitazione e $c_a$ è il calore specifico dell'aria. Per la seconda equazione $ \dot{Q}_{pe}$ è il calore scambiato tra le pareti e l'ambiente esterno, $M_p$ la massa delle pareti e $c_p$ il calore specifico delle pareti.
 Più in particolare:
 \begin{equation}
-K_m\left(\frac{t_u + t_i}{2} - \Theta_{i}\right)^n - \left(\frac{\Theta_{i} - \Theta_p}{R_{ip}}\right) - \left(\frac{\Theta_{i} - \Theta_e}{R_{f}}\right) = M_ac_a \dot{\Theta_i}
+K_m\left(\frac{t_u + t_i}{2} - \Theta_{i}\right)^n - \left(\frac{\Theta_{i} - \Theta_p}{R_{ip}}\right) - \left(\frac{\Theta_{i} - \Theta_e}{R_{f}}\right) = M_ac_a \dot{\Theta_i} ,
 \end{equation}
 \begin{equation}
-\left(\frac{\Theta_{i} - \Theta_p}{R_{ip}}\right) - \left(\frac{\Theta_{p} - \Theta_e}{R_{pe}}\right) = M_pc_p \dot{\Theta_p}
+\left(\frac{\Theta_{i} - \Theta_p}{R_{ip}}\right) - \left(\frac{\Theta_{p} - \Theta_e}{R_{pe}}\right) = M_pc_p \dot{\Theta_p} .
 \end{equation}
 
 
 
 \`E possibile analizzare due differenti scenari:
 \begin{itemize}
-\item \textbf{Scambiatore senza regolazione di portata}: si tratta di avere uno scambiatore d'utenza senza alcun tipo di regolazione sulla portata. In questo caso non è possibile definire nessun set point di temperatura in mandata ai radiatori. Le variabili note sono $G_u, T_i, G_p$ mentre quelle incognite sono: $T_u, t_u, t_i$
+\item \textbf{Scambiatore senza regolazione di portata}: si tratta di avere uno scambiatore d'utenza senza alcun tipo di regolazione sulla portata. In questo caso non è possibile definire nessun set point di temperatura in mandata ai radiatori. Le variabili note sono $G_u, T_i, G_p$ mentre quelle incognite sono: $T_u, t_u, t_i$.
 
-\item \textbf{Scambiatore con regolazione di portata}: si analizza uno scambiatore con regolazione sulla portata. Con questo tipo di configurazione vi è la possibilità di fissare la temperatura in mandata ai radiatori. Questa temperatura viene mantenuta costante agendo su una valvola di laminazione che regola la portata in arrivo allo scambiatore dal lato della rete di distribuzione.   Le  variabili note sono $G_u, T_i, t_u$ mentre quelle incognite sono: $G_p, T_u, t_i$
+\item \textbf{Scambiatore con regolazione di portata}: si analizza uno scambiatore con regolazione sulla portata. Con questo tipo di configurazione vi è la possibilità di fissare la temperatura in mandata ai radiatori. Questa temperatura viene mantenuta costante agendo su una valvola di laminazione che regola la portata in arrivo allo scambiatore dal lato della rete di distribuzione.   Le  variabili note sono $G_u, T_i, t_u$ mentre quelle incognite sono: $G_p, T_u, t_i$.
 \end{itemize}
 Assumendo che la potenza termica scambiata dallo scambiatore sia uguale alla potenza emessa dai radiatori, le incognite degli scenari sopra citati, si possono ricavare dal seguente sistema di  tre equazioni in tre incognite: 
 \begin{equation}
@@ -974,7 +977,7 @@ G_p c_s (T_i - T_u) = G_u c_s (t_u - t_i)\\
 \\
 G_u c_s (t_u - t_i) = \alpha S \dfrac{(T_i - t_u)-(T_u - t_i )}{log\left( \dfrac{T_i - t_u}{T_u - t_i } \right)}\\
 \end{array}
-\right.
+\right. ,
 \end{equation}
 
 Le equazioni mettono in relazione la potenza emessa dai radiatori descritta nell' equazione (\ref{eq:potenza_radiatori}) con il bilancio termico e la potenza scambiata dallo scambiatore descritta nelle equazioni (\ref{eq:scambiatore1}) e (\ref{eq:scambiatore2}) rispettivamente.
@@ -982,16 +985,16 @@ Le equazioni mettono in relazione la potenza emessa dai radiatori descritta nell
 \section{Dinamica della rete di distribuzione}
 Qualsiasi rete di tubature attraversata da fluidi in pressione è affetta da perdite di carico ovvero da perdite di pressione dovute all'insieme delle forze passive (scabrezza dei materiali, dislivelli, curve e derivazioni) che oppongono una resistenza allo scorrimento dell'acqua. L'espressione più generale che lega la perdita di carico $J$ per unità di lunghezza della condotta di un fluido incomprimibile in moto stazionario è quella di Darcy-Weisbach \cite{darcy}:
 \begin{equation}
-J = \frac{\lambda \ v^2}{2 \ g \ D}
+J = \frac{\lambda \ v^2}{2 \ g \ D} ,
 \end{equation}
 avendo indicato con $D$ il diametro della condotta, $v$ la velocità del fluido, $g$ l'accelerazione di gravità e $\lambda$ un coefficiente adimensionale di resistenza, che è funzione, in generale, della scabrezza relativa del tubo e del numero di Reynolds:
 \begin{equation}
-R_e = \frac{\rho \ v \ D}{\mu}
+R_e = \frac{\rho \ v \ D}{\mu} ,
 \end{equation}
 con $\rho$ e $\mu$ la densità e la viscosità dinamica del fluido, rispettivamente. 
 Per trovare la perdita di carico in una condotta dal punto $i$ al punto $j$ di lunghezza $L$ non si dovrà altro che moltiplicare la perdita di carico per unità di lunghezza $J$ per la lunghezza del tubo:
 \begin{equation}
-\Delta P_{ij} = J \ L
+\Delta P_{ij} = J \ L .
 \end{equation} 
  
 Più in particolare in Figura \ref{fig:perdite_carico} è illustrato uno schema di una piccola parte della rete di distribuzione dell'impianto.
@@ -1010,7 +1013,7 @@ Il punto 2 è il punto in cui avviene il prelievo dalla rete principale per port
 
 Ad ogni condotta può essere associata una certa resistenza che  indica quanto questa si oppone al flusso dell'acqua. Da 2 a 3 oltre alle perdita di carico dovute alle tubazioni vi è anche la perdita di carico che offre lo scambiatore di calore:
 \begin{equation}
-\Delta P_s = K \ G^2_u
+\Delta P_s = K \ G^2_u \ ,
 \end{equation}
 con K costante che dipende dal tipo di scambiatore.
 
@@ -1020,8 +1023,8 @@ Le equazioni che descrivono le perdite di carico del sistema sono:
 \begin{cases}
 \Delta P_{12} = \dfrac{\lambda v^2}{2 g D} L = \Delta P_{34} \\
 \\
-\Delta P_{23} = \dfrac{\lambda v_u^2}{ g D_u} l_u + \Delta P_s
-\end{cases}
+\Delta P_{23} = \dfrac{\lambda v_u^2}{ g D_u} l_u + \Delta P_u
+\end{cases} .
 \end{equation}
 
 Le precedenti equazioni sono usate per ricavare le portate in arrivo alle utenze $G_u$, che rappresentano le variabili incognite d'interesse del sistema descritto. Le portate $G_u$ dipendono principalmente dalla differenza di pressione $\Delta P_{23}$: infatti se questa non è sufficientemente grande, non sarà garantito il corretto funzionamento dello scambiatore.
@@ -1032,12 +1035,12 @@ Nel caso in cui lo scambiatore d'utenza disponga di una regolazione della portat
 
 \section{Perdite di calore nella rete}
 Per perdita di calore si intende un trasferimento di 
-energia termica tra due sistemi, che è causato da una differenza di temperatura tra i due sistemi in questione. Il calore ceduto da un sistema, a temperatura maggiore, viene acquistato dal secondo sistema, in accordo con la legge di conservazione dell'energia. 
+energia termica tra due sistemi, che è causato da una differenza di temperatura tra i due sistemi in questione. Il calore ceduto da un sistema, a temperatura maggiore, viene acquisito dal secondo sistema, in accordo con la legge di conservazione dell'energia. 
 Le perdite di calore in una rete di teleriscaldamento sono proporzionali alla differenza di temperatura tra l'acqua che circola nelle condotte e il terreno. Le tubazioni a cui facciamo riferimento sono composte da tubi in acciaio rivestiti da una schiuma isolante poliuretanica, interrati a qualche decina di centimetri.
 Le perdite sono quantificate secondo le indicazioni delle norme B.S. (British Standard), assumendo per il coefficiente di conducibilità della schiuma il valore indicato dalle norme CEN EN253 ed utilizzando la formula:
 
 \begin{equation}
-\dot{Q}_{disp} = \dfrac{4 \varphi (T_M - T_S)}{\dfrac{1}{\lambda_{PU}} \cdot ln \left(  \dfrac{D - 2t}{d}\right)  + \dfrac{1}{\lambda_S} \cdot ln \left(  \dfrac{2H_S + D}{D}\right) }
+\dot{Q}_{disp} = \dfrac{4 \varphi (T_M - T_S)}{\dfrac{1}{\lambda_{PU}} \cdot ln \left(  \dfrac{D - 2t}{d}\right)  + \dfrac{1}{\lambda_S} \cdot ln \left(  \dfrac{2H_S + D}{D}\right) } ,
 \end{equation}
 dove:
 \begin{itemize}
@@ -1090,10 +1093,10 @@ Il rendimento della pompa per il regime considerato è massimo solo in un determ
 Congiungendo tutti i punti nei quali il rendimento ha lo stesso valore, si ottengono delle curve chiuse e concentriche, dette curve di uguale rendimento, o di isorendimento; la linea che unisce i punti di massimo rendimento ($\eta_{max}$) risulta però aperta, perché non esistono in una curva due punti di massimo rendimento.
 
 \subsection{Legge di affinità}
-Per le pompe centrifughe esiste una legge che mette in relazione portata, prevalenza e potenza con il numero di giri $n$.
+Per le pompe centrifughe esiste una legge \cite{lobanoff2013centrifugal} che mette in relazione portata, prevalenza e potenza con il numero di giri $n$.
 La portata $G$ di una pompa centrifuga varia proporzionalmente al numero di giri; la prevalenza $H_m$ varia proporzionalmente al quadrato del numero di giri; la potenza utile $P$, proporzionale al prodotto della portata per la prevalenza, varia proporzionalmente al cubo del numero di giri:
 \begin{equation}
-\frac{Q_1}{Q_2}=\frac{n_1}{n_2} \quad \qquad  \frac{H_{m1}}{H_{m2}}=\left( \frac{n_1}{n_2}\right)^2 \quad \qquad  \frac{P_1}{P_2}=\left( \frac{n_1}{n_2}\right)^3
+\frac{Q_1}{Q_2}=\frac{n_1}{n_2} \quad , \qquad  \frac{H_{m1}}{H_{m2}}=\left( \frac{n_1}{n_2}\right)^2 \quad , \qquad  \frac{P_1}{P_2}=\left( \frac{n_1}{n_2}\right)^3 .
 \label{eq:affinita}
 \end{equation}
 Queste tre espressioni esprimono la legge d'affinità, la quale permette di tracciare la curva caratteristica di una pompa a un regime di rotazione $n_2$ quando è nota la curva relativa a un regime di rotazione $n_1$, non molto dissimile da $n_2$.
@@ -1108,7 +1111,7 @@ Queste tre espressioni esprimono la legge d'affinità, la quale permette di trac
 Facendo riferimento alla Figura \ref{fig:affinita}, noti per il punto $A_1$ i valori di $G_1$ e $H_{m1}$, si possono determinare:
 
 \begin{center}
-$G_2 = \dfrac{n_2}{n_1} \ G_1 \qquad e \qquad H_{m2} = \left( \dfrac{n_2}{n_1}\right)^2  H_{m1}$
+$G_2 = \dfrac{n_2}{n_1} \ G_1 \qquad e \qquad H_{m2} = \left( \dfrac{n_2}{n_1}\right)^2  H_{m1}$ ,
 \end{center}
 
 che individuano il punto $A_2$. Procedendo in modo analogo per i punti $B_1$, $C_1$ si determinano i corrispondenti punti $B_2$, $C_2$.La curva ottenuta unendo tutti questi punti rappresenta la caratteristica della pompa al regime di rotazione $n_2$.
@@ -1125,50 +1128,50 @@ La legge di affinità implica che il rendimento della pompa resti invariato alle
 \subsection{Potenza assorbita da una pompa}
 La pompa, per sollevare una portata d'acqua $G$ fornendole una prevalenza totale $H_m$ compie un lavoro di sollevamento che richiede una potenza $P_u$ (misurata in watt), cioè un'energia, fornitale attraverso un motore, definita dalla seguente espressione:
 \begin{equation}
-P_u = \rho \ g \ Q \ H_m
+P_u = \rho \ g \ G \ H_m
 \end{equation}
 con $\rho$ uguale alla densità del fluido e $g$ l'accelerazione di gravità.
-La potenza così espressa è la potenza utile, cioè quella strettamente necessaria per sollevare la portata d'acqua $Q$ all'altezza $H_m$. A causa delle inevitabili perdite d'energia la potenza utilizzata, cioè quella realmente necessaria per far funzionare la pompa, è maggiore e viene definita potenza assorbita $P_a$:
+La potenza così espressa è la potenza utile, cioè quella strettamente necessaria per sollevare la portata d'acqua $G$ all'altezza $H_m$. A causa delle inevitabili perdite d'energia, la potenza utilizzata, cioè quella realmente necessaria per far funzionare la pompa, è maggiore e viene definita potenza assorbita $P_a$:
 \begin{equation}
-P_a = \dfrac{\rho \ g \ Q \ H_m}{\eta}
+P_a = \dfrac{\rho \ g \ G \ H_m}{\eta}
 \label{eq:pot}
 \end{equation}
 Il rapporto fra la potenza utile e quella assorbita è definito rendimento ($\eta$). Il rendimento è sempre inferiore all'unità perché in qualsiasi macchina operatrice la potenza utile è sempre minore di quella assorbita. 
 
 \section{Controllo PID}
-Il controllo Proporzionale-Integrale-Derivativo, comunemente abbreviato come PID \cite{testolin2013controllori}, è un sistema in retroazione negativa ampiamente impiegato nei sistemi di controllo. È il sistema di controllo in retroazione di gran lunga più comune nell'industria, in particolare nella versione PI (senza azione derivativa). 
+Il controllo Proporzionale-Integrale-Derivativo, comunemente abbreviato come PID \cite{testolin2013controllori}, è un sistema in retroazione negativa. È il sistema di controllo in retroazione di gran lunga più comune nell'industria, in particolare nella versione PI (senza azione derivativa). 
 La reazione all'errore può essere regolata e ciò rende questo sistema molto versatile.
 
 Il controllore acquisisce in ingresso un valore da un processo, e lo confronta con un valore di riferimento. La differenza, il cosiddetto segnale di errore, viene  usato per determinare il valore della variabile di uscita del controllore, che è la variabile manipolabile del processo, in maniera da tendere verso un errore nullo.\\
 
 Il PID regola l'uscita in base a:
 \begin{itemize}
-\item il valore del segnale di errore (azione proporzionale);
-\item i valori passati del segnale di errore (azione integrale);
-\item quanto velocemente il segnale di errore varia (azione derivativa).
+\item il valore del segnale errore (azione proporzionale);
+\item i valori passati del segnale errore (azione integrale);
+\item quanto velocemente il segnale  errore varia (azione derivativa).
 \end{itemize}
 
 Le tre azioni di un PID vengono calcolate separatamente e semplicemente sommate algebricamente:
 \begin{equation}
-u=u_P + u_I + u_D 
+u=u_P + u_I + u_D .
 \end{equation}
 
-L'azione proporzionale è ottenuta moltiplicando il segnale d'errore $e$ con un'opportuna costante $K_P$:
+L'azione proporzionale è ottenuta moltiplicando il segnale errore $e$ con un'opportuna costante $K_P$:
 \begin{equation}
-u_P = K_P \ e
+u_P = K_P \ e .
 \end{equation}
 
-L'azione integrale è proporzionale all'integrale nel tempo del segnale di errore $e$, moltiplicato per la costante $K_I$:
+L'azione integrale è proporzionale all'integrale nel tempo del segnale errore $e$, moltiplicato per una costante $K_I$:
 \begin{equation}
-u_I = K_I \int e(t) dt
+u_I = K_I \int e(t) dt .
 \end{equation}
-Questa definizione dell'azione integrale fa sì che il controllore abbia memoria dei valori passati del segnale d'errore; in particolare, il valore dell'azione integrale non è necessariamente nullo se è nullo il segnale d'errore. Questa proprietà dà al PID la capacità di portare il processo esattamente al punto di riferimento richiesto, dove la sola azione proporzionale risulterebbe assente.
+Questa definizione dell'azione integrale fa sì che il controllore abbia memoria dei valori passati del segnale errore; in particolare, il valore dell'azione integrale non è necessariamente nullo se è nullo il segnale d'errore. Questa proprietà dà al PID la capacità di portare il processo esattamente al punto di riferimento richiesto, dove la sola azione proporzionale risulterebbe assente.
 
 Per migliorare le prestazioni del controllore si può aggiungere l'azione derivativa:
 \begin{equation}
-u_D = K_d \ \dfrac{de}{dt} 
+u_D = K_d \ \dfrac{de}{dt}  .
 \end{equation}
-L'idea è compensare rapidamente le variazioni del segnale di errore: se vediamo che $e$ sta aumentando, l'azione derivativa cerca di compensare questa deviazione in ragione della sua velocità di cambiamento, senza aspettare che l'errore diventi significativo (azione proporzionale) o che persista per un certo tempo (azione integrale).
+L'idea è compensare rapidamente le variazioni del segnale errore: se vediamo che $e$ sta aumentando, l'azione derivativa cerca di compensare questa deviazione in ragione della sua velocità di cambiamento, senza aspettare che l'errore diventi significativo (azione proporzionale) o che persista per un certo tempo (azione integrale).
 Il funzionamento è riassunto nello  schema a blocchi in Figura \ref{fig:PID2}.
 
 \begin{figure}[!ht]
@@ -1181,12 +1184,12 @@ Il funzionamento è riassunto nello  schema a blocchi in Figura \ref{fig:PID2}.
 Questo particolare controllore verrà in seguito utilizzato per regolare la portata in ingresso ad uno scambiatore agendo su una valvola di laminazione definendo in ogni istante quale dovrà essere la temperatura di mandata ai radiatori desiderata.
 
 \chapter{Risultati di simulazione}
-L'ottimizzazione e il controllo delle reti di teleriscaldamento è di grande interesse per industria energetica a causa dei vantaggi tecnici, economici e ambientali che potrebbero essere guadagnati da una gestione adeguata. Tuttavia, i modelli di questi sistemi complessi sono fortemente non lineari  e soffrono di incertezze rilevanti. in questo lavoro di tesi, è stato implementato un simulatore di una rete di teleriscaldamento per analizzare e confrontare diverse strategie di controllo che riducano al minimo i costi di gestione di un impianto.
-Il punto di partenza per ottimizzare l'intero impianto consiste nell'incrementare l'efficienza delle utenze, abbattendo al massimo la temperatura dell'acqua di ritorno dagli scambiatori 
+L'ottimizzazione e il controllo delle reti di teleriscaldamento è di grande interesse per l'industria energetica a causa dei vantaggi tecnici, economici e ambientali che potrebbero essere ottenuti tramite da una gestione adeguata. Tuttavia, i modelli di questi sistemi complessi sono fortemente non lineari  e soffrono di incertezze rilevanti. In questo lavoro di tesi, è stato implementato un simulatore di una rete di teleriscaldamento per analizzare e confrontare diverse strategie di controllo che riducano al minimo i costi di gestione di un impianto.
+Il punto di partenza per ottimizzare il funzionamento dell'intero impianto consiste nell'incrementare l'efficienza delle utenze, abbattendo al massimo la temperatura dell'acqua di ritorno dagli scambiatori 
 e riducendo gli sprechi, anche a fronte di una poco oculata gestione della regolazione della temperatura all'interno delle abitazioni.
 
 La calibrazione del modello di simulazione è stata eseguita confrontando le uscite del modello con dati misurati sul campo.
-In particolare, è stato preso in esame un piccolo impianto di teleriscaldamento composto da undici utenze. Nonostante le ridotte dimensioni, il suo studio risulta di particolare interesse in quanto l'impianto, a causa di un cattivo sistema di regolazioni, fa registrare costi di gestione siano quasi sempre vicini al massimo stagionale (consumi che si hanno nel periodo più freddo dell'anno). Inoltre, le ridotte dimensioni  hanno semplificato l'implementazione del modello di simulazione e la raccolta dei dati necessari alla calibrazione del sistema.  
+In particolare, è stato preso in esame un piccolo impianto di teleriscaldamento composto da undici utenze. Nonostante le ridotte dimensioni, il suo studio risulta di particolare interesse in quanto l'impianto, a causa di un cattivo sistema di regolazioni, fa registrare costi di gestione specifici quasi sempre pari ai massimi stagionali (corrispondenti al periodo più freddo dell'anno). Inoltre, le ridotte dimensioni  semplificano l'implementazione del modello di simulazione e la raccolta dei dati necessari alla calibrazione del sistema.  
 
 \section{Influenza della temperatura esterna sulla gestione di un sistema di teleriscaldamento}
 Le stazioni termiche sono progettate in modo da fornire agli utenti il calore necessario per il riscaldamento delle abitazioni nei periodi più freddi dell'anno.
@@ -1196,25 +1199,25 @@ In Figura \ref{fig:profilo_temp} è mostrato l'andamento della temperatura media
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.95\textwidth]{figure/profilo_temp} 
-\caption{Andamento della temperatura minima media, massima media e media durante l'arco di 1 anno nel comune di Pomarance (PI). La zona del grafico evidenziata in rosso rappresenta il periodo in cui per legge il riscaldamento deve essere spento. }
+\caption{Andamento della temperatura minima media, massima media e media durante l'arco di un anno nel comune di Pomarance (PI). La zona del grafico evidenziata in rosso rappresenta il periodo in cui per legge il riscaldamento deve essere spento. }
 \label{fig:profilo_temp}
 \end{figure}
 
- Il grafico mostra che le temperature più basse rappresentano circa il 5\%. Quindi, se l'impianto di teleriscaldamento è dimensionato per coprire la richiesta massima di energia, vuol dire che nel restante 95\% dell'anno, il sistema risulta sovradimensionato e fornisce più calore del necessario.  Per il 60\% dell'anno il riscaldamento rimane spento per legge (da Maggio fino a Novembre circa) e l'energia termica fornita dall'impianto servirà soltanto per la produzione di acqua igenico sanitaria.
+ Il grafico mostra come le temperature minime esterne si hanno per circa il 5\% della durata dell'anno. Quindi, se l'impianto di teleriscaldamento è dimensionato per coprire la richiesta massima di energia, vuol dire che nel restante 95\% dell'anno, il sistema risulta sovradimensionato e fornisce più calore del necessario.  Per il 60\% dell'anno il riscaldamento rimane spento per legge (da Maggio fino a Novembre circa) e l'energia termica fornita dall'impianto servirà soltanto per la produzione di acqua igenico sanitaria.
 
-Le utenze hanno bisogno di più calore tanto più la temperatura esterna è bassa. Ciò si verifica perché cresce la differenza di temperatura tra interno ed esterno e di conseguenza aumentano le perdite di calore. 
+Le utenze hanno bisogno di tanto più calore quanto più la temperatura esterna è bassa. Ciò si verifica perché cresce la differenza di temperatura tra interno ed esterno e di conseguenza aumentano le perdite di calore. 
 
-Generalmente, fornendo una temperatura dell'acqua in uscita dalla centrale costante, la temperatura di ritorno è più alta quando la domanda diminuisce e viceversa.
+Generalmente, in uscita dalla centrale costante acqua a temperatura costante, la temperatura di ritorno è più alta quando la domanda diminuisce e viceversa.
 
 Uno degli obiettivi principali nella gestione di un sistema di teleriscaldamento è quello  di fornire ai consumatori la corretta quantità di calore secondo le condizioni climatiche esterne,  evitando gli sprechi.
 
-Per controllare al meglio l'impianto si può optare su due diverse soluzioni: la prima consiste nel mantenere la temperatura di mandata dell'acqua costante facendo però variare la portata; l'altra invece mantiene costante il numero di giri della pompa e fa variare la temperatura di mandata dell'acqua. Quest'ultimo metodo è più complicato perché mentre la variazione di portata risulta istantanea, la variazione di temperatura ha bisogno di una certa quantità di tempo  che dipende dalla velocità con cui si propaga l'acqua nella rete, rendendo complicata la gestione in caso di picchi di richiesta di calore. 
+Per controllare al meglio l'impianto si può optare per due diverse soluzioni: la prima consiste nel mantenere la temperatura di mandata dell'acqua calda costante facendo però variare la portata; l'altra mantiene costante la velocità della pompa facendo variare la temperatura di mandata dell'acqua. Quest'ultimo metodo è più complicato perché mentre la variazione di portata risulta istantanea, la variazione di temperatura ha bisogno di una certa quantità di tempo  che dipende dalla velocità con cui si propaga l'acqua nella rete, rendendo complicata la gestione in caso di picchi di richiesta di calore. 
 
-Come già citato la potenza termica fornita alle utenze dipende dalla portata e dalla differenza di temperatura tra mandata e ritorno dell'acqua secondo una relazione direttamente proporzionale. Facendo riferimento a regolazioni con pompe a giri variabili, avere una temperatura di ritorno più bassa possibile, permette di ridurre la portata a parità di calore fornito, in quanto aumenta il $\Delta T$, riducendo così i costi di pompaggio.
+Come già citato nell'equazione (\ref{eq:Potenza}), la potenza termica fornita alle utenze dipende dalla portata e dalla differenza di temperatura tra mandata e ritorno dell'acqua secondo una relazione di proporzionalità diretta. Facendo riferimento a regolazioni con pompe a velocità variabile, avere una temperatura di ritorno più bassa possibile permette di ridurre la portata a parità di calore fornito, in quanto aumenta il $\Delta T$, riducendo così i costi di pompaggio.
 
-Per ridurre le perdite di calore invece, è necessario avere una temperatura di mandata più bassa possibile. Il limite minimo di questo parametro è dato dai tipi di impianto che sono installati nelle utenze. I riscaldamenti con radiatori sono i più diffusi, ma sono anche quelli che necessitano una temperatura di funzionamento più alta. Il riscaldamento a pavimento è quello invece che necessita temperature di funzionamento più basse come è mostrato in Figura \ref{fig:elem_scaldanti}. 
+Per ridurre le perdite di calore invece, è necessario avere una temperatura di mandata più bassa possibile. Il limite minimo di questo parametro è dato dai tipi di impianto che sono installati nelle utenze. I riscaldamenti con radiatori sono i più diffusi, ma sono anche quelli che necessitano di una temperatura di funzionamento più alta. Il riscaldamento a pavimento è quello invece che necessita di temperature di funzionamento più basse, come è mostrato in Figura \ref{fig:elem_scaldanti}. 
 
-Data l'eterogeneità degli impianti di riscaldamento presenti nelle utenze abitative di una normale rete il gestore dovrà garantire una temperatura in mandata che permetta il corretto funzionamento dell'elemento riscaldante che lavora a temperatura più alta.
+Data l'eterogeneità degli impianti di riscaldamento presenti nelle utenze abitative di una normale rete, il gestore dovrà garantire una temperatura in mandata che permetta il corretto funzionamento dell'elemento riscaldante che lavora a temperatura più alta.
 
 \begin{figure}[!ht]
 \centering
@@ -1223,13 +1226,13 @@ Data l'eterogeneità degli impianti di riscaldamento presenti nelle utenze abita
 \label{fig:elem_scaldanti}
 \end{figure}
 
-\section{Fabbisogno termico massimale di un'abitazione}
-Esiste ovviamente una formula matematica che consente un calcolo approssimativo del fabbisogno termico. Bisogna però tenere presente che è  un risultato indicativo, poiché ci sono moltissime variabili che possono incidere sul reale fabbisogno dell'abitazione, alcune delle quali difficilmente quantificabili. 
+\section{Fabbisogno termico di un'abitazione}
+Esiste una formula matematica che consente un calcolo approssimativo del fabbisogno termico. Bisogna però tenere presente che è  un risultato approssimativo, poiché ci sono moltissime variabili che possono incidere sul reale fabbisogno dell'abitazione, alcune delle quali difficilmente quantificabili. 
 
 Il calcolo matematico fornisce il totale delle kcal necessarie a scaldare l'abitazione utilizzando come dati di partenza
 \begin{itemize}
 \item  il totale dei metri cubi da scaldare;
-\item  un coefficiente termico che indica le calorie necessarie. per metro cubo e che può  oscillare tra un valore che va da 30 a 40 $\frac{Kcal}{m^3}$, a seconda delle condizioni termiche dell'abitazione.
+\item  un coefficiente termico che indica le calorie necessarie per metro cubo, e che può  oscillare tra un valore che va da 30 a 40 $\frac{Kcal}{m^3}$, a seconda delle condizioni termiche dell'abitazione.
 \end{itemize}
 Dunque il fabbisogno termico della casa può essere descritto dal prodotto tra il volume dell'utenza per il coefficiente termico scelto in base al tipo di abitazione.
 
@@ -1256,11 +1259,11 @@ In Figura \ref{fig:centralina} è mostrato come si presenta una sotto-centrale c
 \label{fig:schema_centralina2}
 \end{figure}
 
-Si tratta di una sotto-centrali compatte appositamente studiate e progettate con dimensioni pari ad una caldaia tradizionale.
-Il comando di accensione del circuito riscaldamento avviene dal cronotermostato ambiente. Durante il funzionamento in riscaldamento la temperatura di mandata dell'acqua all'impianto potrà essere liberamente modificata in base al tipo di regolazione installata. Il controllo  avviene direttamente sul circuito primario tramite la valvola termoregolatrice a due vie.
+Si tratta di sotto-centrali compatte appositamente studiate e progettate con dimensioni pari ad una caldaia tradizionale.
+Il comando di accensione del circuito di riscaldamento avviene tramite il cronotermostato ambiente. Durante il funzionamento in riscaldamento, la temperatura di mandata dell'acqua all'impianto potrà essere liberamente modificata in base al tipo di regolazione installata. Il controllo  avviene direttamente sul circuito primario tramite la valvola termoregolatrice a due vie.
 Il funzionamento sanitario si attiva attraverso il flussostato in modalità prioritaria o parallela; la regolazione modulerà la valvola termoregolatrice primaria per erogare l’acqua sanitaria alla temperatura desiderata.
 
-Il grado di chiusura della valvola di laminazione è determinato da una centralina in base al criterio di controllo scelto. Le regolazioni che possono essere implementate sono le seguenti e verranno approfondite in seguito:
+Il grado di chiusura della valvola di laminazione è determinato da una centralina in base al criterio di controllo scelto. Le regolazioni che possono essere implementate  e che verranno approfondite in seguito sono le seguenti:
 
 \begin{itemize}
 \item regolazione a punto fisso;
@@ -1278,30 +1281,30 @@ In Figura \ref{fig:schema_centralina} è  rappresentato lo schema che mostra qua
 \end{figure}
 
 
-Le sottostazioni d'utenza con centralina, e quindi con regolazione della portata in ingresso allo scambiatore, devono permettere anche un'analisi di predittiva sullo stato di funzionamento degli scambiatori con segnalazione di anomalie che portano ad interventi programmati invece che in accidentale, il tutto per avere un sistema sempre funzionante al massimo dell'efficienza.
+Le sottostazioni d'utenza con centralina, e quindi con regolazione della portata in ingresso allo scambiatore, devono permettere anche un'analisi  predittiva sullo stato di funzionamento degli scambiatori con segnalazione di anomalie che portino ad interventi programmati invece che in accidentale, il tutto per avere un sistema sempre funzionante al massimo dell'efficienza.
 
-Di notevole importanza è la possibilità che le centraline delle utenze più svantaggiate (ovvero quelle che hanno la portata più bassa nel sistema), oppure quelle di tutte le utenze se la rete è di piccole dimensioni, comunichino informazioni alla stazione di pompaggio per ottimizzare la portata delle pompe e garantire a tutte le utenze il necessario flusso di acqua per il proprio fabbisogno. Attualmente gli unici sensori di pressione e misuratori di portata esistenti nell'impianto sono posizionati nella centrale di scambio. Questo posizionamento non è il più conveniente. Infatti, è possibile misurare se viene raggiunta una certa differenza di pressione tra mandata e ritorno ma non sapremo se tale valore  è sufficiente al passaggio di acqua negli scambiatori delle utenze più svantaggiate. Attualmente, eventuali carenze di pressione e/o portata sono comunicate direttamente dagli utenti perché sentono i radiatori freddi.
+Di notevole importanza è la possibilità che le centraline delle utenze più svantaggiate (ovvero quelle che hanno la portata più bassa nel sistema), oppure quelle di tutte le utenze se la rete è di piccole dimensioni, comunichino informazioni alla stazione di pompaggio per ottimizzare la portata delle pompe e garantire a tutte le utenze il necessario flusso di acqua per il proprio fabbisogno. Attualmente gli unici sensori di pressione e misuratori di portata esistenti nell'impianto sono posizionati nella centrale di scambio. Questo posizionamento non è il più conveniente. Infatti, è possibile misurare se viene raggiunta una certa differenza di pressione tra mandata e ritorno ma non sapremo se tale valore  è sufficiente al passaggio di acqua negli scambiatori delle utenze più svantaggiate. Attualmente, eventuali carenze di pressione e/o portata sono comunicate direttamente dagli utenti sulla base delle loro sensazioni.
 
 Riassumendo, i sistemi di regolazione delle centraline d'utenza devono:
 \begin{itemize}
 \item controllare che i flussi nello scambiatore siano quelli ottimali, limitando la portata secondo la regolazione più opportuna;
 \item controllare che nello scambiatore vi sia il massimo abbattimento di temperatura possibile, evitando che circoli inutilmente acqua calda;
-\item aiutare a fare efficienza al cliente finale, utilizzando la termoregolazione climatica che definisce il carico termico massimo da fornire all'utenza in base alla temperatura esterna;
-\item permettere al gestore di avere utili indicazione per interventi manutentivi come nel caso di intasamento degli scambiatori oppure una bassa differenza di pressione ai capi dello scambiatore;
-\item almeno le centraline dei punti più svantaggiati devono fornire informazioni per ottimizzare i consumi delle pompe.
+\item aiutare il cliente finale a fare efficienza, utilizzando la termoregolazione climatica che definisce il carico termico massimo da fornire all'utenza in base alla temperatura esterna;
+\item permettere al gestore di avere utili indicazioni per interventi manutentivi come nel caso di intasamento degli scambiatori oppure una bassa differenza di pressione ai capi dello scambiatore;
+\item almeno per le centraline dei punti più svantaggiati devono fornire informazioni per ottimizzare i consumi delle pompe.
 \end{itemize}
 
-\section{Soluzioni per aumentare l'efficienza delle utenze diminuendo la temperatura dell'acqua di ritorno}
+\section{Soluzioni per aumentare l'efficienza delle utenze minimizzando la temperatura dell'acqua di ritorno}
 Nonostante i problemi che comportano le reti di distribuzione senza regolazioni di portata in arrivo alle utenze, sono ancora molte le abitazioni che ne sono prive.
-Dettò ciò andremo a studiare alcuni tipi di regolazioni che aumentino l'efficienza delle abitazioni. 
+Nel seguito andremo a studiare alcuni tipi di regolazioni che aumentino l'efficienza delle abitazioni. 
 Come base di paragone per tutte le simulazioni future verrà preso in considerazione uno scambiatore senza limitatore di portata: tutto il flusso di acqua in arrivo allo scambiatore verrà utilizzato per fornire calore all'acqua del circuito dell'utenza. 
 L'analisi è stata effettuata  simulando i diversi scenari esaminando quali di questi permettono di ottenere una portata e una temperatura di ritorno dell'acqua più bassa.
 
-Tutte le simulazioni di questo paragrafo si riferiscono ad un'abitazione con temperatura interna desiderata impostata a $20 ^{\circ}$C con le seguenti caratteristiche (le variabili che andremo a definire sono descritte nel capitolo 3):\\
-\textbf{parametri abitazione }
+Tutte le simulazioni di questo paragrafo si riferiscono ad un'abitazione con temperatura interna desiderata impostata a $20 ^{\circ}$C con le seguenti caratteristiche (vedi capitolo 3).\\
+\textbf{Parametri abitazione }
 \begin{itemize}
 \item[] Volumetria 300 $m^3$: abitazione di 100 $m^2$ con pareti alte 3 $m$
-\item[] $C_a = M_a \cdot c_a$ = $2487 \ kcal/^{\circ}$C (in questo prodotto oltre che considerare la massa e il calore specifico dell'aria, vi è sommato anche la massa delle pareti interne alla casa che formano le stanze e il loro calore specifico. Infatti, queste pareti assorbono molta energia e giocano un ruolo fondamentale per ottenere in simulazione un andamento realistico della temperatura interna dell'utenza)
+\item[] $C_a = M_a \cdot c_a$ = $2487 \ kcal/^{\circ}$C \\In questo prodotto oltre che considerare la massa e il calore specifico dell'aria, è integrata anche la massa delle pareti interne alla casa che formano le stanze per il loro calore specifico. Infatti, queste pareti assorbono molta energia e giocano un ruolo fondamentale per ottenere in simulazione un andamento realistico della temperatura interna dell'utenza
 
 \item[] $C_p = M_p \cdot c_p =12629 \ kcal/^{\circ}$C con:\\
  $\ \cdot \ M_p$ = 62725 $kg$ : pareti composte da due strati:
@@ -1320,40 +1323,39 @@ $\ \cdot \ c_p$ = 0,80 $kcal/kg \cdot ^{\circ}$C: pareti composte da due strati:
 \item[] $R_{f}^{-1}$ = $114.53 \ kcal/ ^{\circ}$C
 \end{itemize}
 
-\textbf{paramentri radiatore}
+\textbf{Paramentri radiatore}
 \begin{itemize}
 \item[]$Km = 51,5 \ kcal/^{\circ}$C  
 \item[]$n = 1,32$
 \item[]$G_p = 600 \ l/h$
 \end{itemize}
 
-\textbf{parametri scambiatore}
+\textbf{Parametri scambiatore}
 \begin{itemize}
 \item[]$\alpha \cdot S = 900 \ kcal / ^{\circ}$C
 \item[]$T_i = 82 \ ^{\circ}$C
 \end{itemize}
 
-\textbf{parametri iniziali}
+\textbf{Parametri iniziali}
 \begin{itemize}
 \item[]$\Theta_i(0) = 18 \ ^{\circ}$C
 \item[]$\Theta_p(0) = 15 \ ^{\circ}$C
 \end{itemize}
 
-\textbf{parametri esterni}
+\textbf{Parametri esterni}
 \begin{itemize}
 \item[] La temperatura esterna $\Theta_e$ segue il profilo illustrato in Figura \ref{fig:temp_est} che mostra l'andamento di temperatura giornaliero (24 ore) in una giornata invernale dalle 8:00 del mattino fino alla stessa ora del giorno successivo. 
 \end{itemize}
 
-Il parametro $M_a$ oltre che
 
 \begin{figure}[!h]
 \centering
 \includegraphics[width=\textwidth]{figure/temp_est} 
-\caption{Andamento della temperatura esterna per 24h in una giornata invernale}
+\caption{Andamento della temperatura esterna per 24 ore in una giornata invernale}
 \label{fig:temp_est}
 \end{figure}
 
-Per convenzione quando la pompa di utenza è spenta le temperature $t_u$ e $t_i$ vanno a zero per indicare che non vi è scambio di calore con i radiatori. Nel caso di sottostazioni con regolazione anche $T_i$ e $T_u$ quando vanno a zero indica che la valvola di laminazione è completamente chiusa e non è quindi permesso il passaggio di acqua. 
+Per convenzione, quando la pompa di utenza è spenta le temperature $t_u$ e $t_i$ vanno a zero per indicare che non vi è scambio di calore con i radiatori. Nel caso di sottostazioni con regolazione, l'azzeramento di $T_i$ e $T_u$ significa che la valvola di laminazione è completamente chiusa e non è quindi permesso il passaggio di acqua. 
 
 %La regolazione dell'impianto può seguire due principi: a punto fisso, cioè con temperatura di mandata fissata indipendentemente dalle condizioni esterne; climatica, cioè con adeguamento continuo alla situazione di temperatura esterna. La climatica del futuro ormai prossimo, sarà una regolazione evoluta, che ottimizza i consumi in funzione del comfort, tutto questo sarà possibile grazie all'algoritmo PI.
 \subsection{Regolazione di portata assente}
@@ -1366,7 +1368,9 @@ In Figura \ref{fig:no_reg} è mostrato l'andamento della temperatura ambiente $\
 \label{fig:no_reg}
 \end{figure}
 
-Con questa configurazione quando si raggiunge la temperatura di set-point si spegne la pompa così da terminare lo scambio di calore. La pompa si riattiverà quando viene misurata una temperatura ambiente troppo bassa. Quando la pompa d'utenza è spenta, l'acqua calda $T_i$ in ingresso allo scambiatore non scambia calore, e la temperatura di uscita $T_u$ sarà più o meno uguale a $T_i$. Questo vale a dire che la temperatura di ritorno sarà molto alta e il sistema risulterà inefficiente perché utilizziamo energia elettrica per pompare acqua calda senza che vi sia alcuno scambio di energia termica.
+La temperatura interna è controllata da un termostato che funziona nel seguente modo: è presente una banda intorno al set point entro cui viene regolata la temperature e quando si supera il valore massimo della banda si spegne la pompa così da terminare lo scambio di calore per poi riattivarsi quando si rileva una temperatura al di sotto della banda minima. Il controllo della temperatura con termostato è applicato a tutte le regolazioni che andremo a studiare tranne che per quella che prevede un controllore PI. 
+
+Quando la pompa d'utenza è spenta, l'acqua calda $T_i$ in ingresso allo scambiatore non scambia calore, e la temperatura di uscita $T_u$ sarà più o meno uguale a $T_i$. Questo vuol dire che la temperatura di ritorno sarà molto alta e il sistema risulterà inefficiente perché utilizziamo energia elettrica per pompare acqua calda senza che vi sia alcuno scambio di energia termica.
 
 %valutare se inserire una Tabella con dati di altre simulazioni
 
@@ -1375,7 +1379,7 @@ Si tratta del sistema di regolazione più semplice. La regolazione a punto fisso
 
 Il valore viene impostato manualmente attraverso una valvola termostatica che regola la portata in ingresso allo scambiatore.  
 
-Il limite maggiore è la necessità, da parte dell'utilizzatore, di dover regolare l'impianto ogni volta che variano le condizioni esterne. Per ridurre questa esigenza si è diffusa la consuetudine di tarare la valvola termostatica sulla temperatura di progetto, uguale alla massima temperatura necessaria nel giorno più freddo dell'anno. In questo modo però nei giorni meno freddi si avrà un surplus di energia che riduce l'efficienza dell'abitazione.
+Il limite maggiore è la necessità, da parte dell'utilizzatore, di dover regolare l'impianto ogni volta che variano le condizioni esterne. Per ridurre questa esigenza si è diffusa la consuetudine di tarare la valvola termostatica sulla temperatura di progetto, uguale alla massima temperatura necessaria nel giorno più freddo dell'anno. In questo modo però nei giorni meno freddi si avrà un surplus di energia che riduce l'efficienza dell'abitazione in quanto la temperatura di ritorno $T_u$ sarà alta.
 
 Il termostato confronta la temperatura impostata dall'utilizzatore con quella presente e, se la temperatura in ambiente supera quella impostata, toglie corrente alla pompa di circolazione e chiude la valvola di laminazione, interrompendo il flusso di acqua nello scambiatore d'utenza. 
 
@@ -1388,7 +1392,7 @@ Quando la temperatura in ambiente è scesa fino ad essere inferiore a quella ric
 \label{fig:surplus}
 \end{figure}
 
-In Figura \ref{fig:reg_mandata} viene mostrato come si comporta uno scambiatore con regolazione di mandata a punto fisso. La temperatura di mandata ai radiatori $t_u$ è impostata a 70  $^{\circ}C$.  
+In Figura \ref{fig:reg_mandata} viene mostrato come si comporta una centralina d'utenza con regolazione di mandata a punto fisso. La temperatura di mandata ai radiatori $t_u$ è impostata a 70  $^{\circ}C$.  
 
 \begin{figure}[!ht]
 \centering
@@ -1418,12 +1422,12 @@ La centralina elabora il segnale della sonda esterna e in base al codice climati
 
 La curva climatica o curva di riscaldamento è il rapporto tra la temperatura esterna e la temperatura di mandata ai corpi scaldanti. Per un corretto dimensionamento di tale curva si necessita la conoscenza di due parametri:
 \begin{itemize}
-\item Temperatura esterna minima di progetto
-\item Temperatura massima di mandata all'impianto di riscaldamento
+\item temperatura esterna minima di progetto;
+\item temperatura massima di mandata all'impianto di riscaldamento.
 \end{itemize}
 
 %Per questo tipo di regolazione si deve definire una curva di compensazione la quale descrive in base alla temperatura esterna, misurata da una sonda, quale dovrà essere la temperatura in mandata ai radiatori.
-La curva deve garantire una temperatura interna alla casa teorica di 20 $^{\circ}$C  per temperature esterne comprese tra $+20$ $^{\circ}$C e $-20$ $^{\circ}$C. La curva  utilizzata per questa simulazione è rappresentata in Figura \ref{fig:curva_comp}.
+La curva deve garantire una temperatura interna alla casa teorica di 20 $^{\circ}$C  per temperature esterne comprese tra $+20$ $^{\circ}$C e $-20$ $^{\circ}$C. La curva  utilizzata per la simulazione è rappresentata in Figura \ref{fig:curva_comp}.
  
  \begin{figure}[!ht]
 \centering
@@ -1444,6 +1448,8 @@ In Figura \ref{fig:reg_climatica} è mostrato l'andamento della temperatura inte
 
 Ben si nota come le temperatura di ritorno $T_u$ e le portate più basse  $G_p$ si hanno quando la temperatura esterna è più alta. Questo indica che non è fornito un surplus di energia riuscendo comunque a raggiungere il livello di comfort desiderato.
 
+Il tempo di salita per questa configurazione è maggiore rispetto a quello visto nella regolazione a punto fisso, ma può comunque essere considerato accettabile in quanto assicura un buon livello di comfort. La termoregolazione a punto fisso scalda più velocemente perché fornisce sempre una potenza termica pari a quella necessaria a scaldare la casa in una giornata molto fredda mentre la potenza fornita dalla termoregolazione climatica si allinea alla temperatura esterna misurata. Il rapido riscaldamento dell'abitazione si traduce però in una temperatura di ritorno $T_u$ alta e una richiesta di portata elevata. 
+
 \subsection{La regolazione climatica evoluta PI}
 Una regolazione climatica evoluta è in grado di gestire in modo ottimale il comfort indoor per quanto riguarda la climatizzazione invernale.
 
@@ -1456,8 +1462,8 @@ Questa gestione ottimizzata  del comfort è possibile grazie ad un sistema di re
 
 Il sistema di controllo agisce direttamente sull'elettrovalvola di laminazione posizionata in ingresso allo scambiatore. In base al valore della differenza tra temperatura desiderata e temperatura ambiente il controllore decide la migliore temperatura in mandata ai radiatori. Il PI agisce sulla regolazione in base a 2 azioni:
 \begin{itemize}
-\item Azione proporzionale: funzione dell'errore di inseguimento tra temperatura desiderata e tempera corrente.
-\item  Azione integrale: funzione dell'integrale dell'errore di inseguimento.
+\item azione proporzionale, funzione dell'errore di inseguimento tra temperatura desiderata e tempera corrente;
+\item  azione integrale, funzione dell'integrale dell'errore di inseguimento.
 \end{itemize}
 Uno schema di funzionamento del controllo PI è mostrato in Figura \ref{fig:PI}.
 
@@ -1480,7 +1486,7 @@ Questo fenomeno fa sì che il sistema dopo aver raggiunto la condizione di error
 
 La soluzione che utilizza una regolazione climatica PI per regolare il calore fornito ai radiatori, elimina le oscillazioni della temperatura interna dell'abitazione e richiede in ogni momento sempre la minima quantità di calore necessario per il comfort richiesto. Le temperature di ritorno dell'acqua alla centrale di scambio, saranno tanto più basse quanto minore è il carico termico richiesto. 
 
-In Figura \ref{fig:reg_PID} è mostrato l'andamento delle temperature e portate di una sotto-centrale con regolazione PI.
+In Figura \ref{fig:reg_PID} è mostrato l'andamento delle temperature e portate di una centralina con regolazione climatica evoluta PI.
 
 \begin{figure}[!ht]
 \centering
@@ -1490,7 +1496,7 @@ In Figura \ref{fig:reg_PID} è mostrato l'andamento delle temperature e portate 
 \end{figure}
 
 La pompa di circolazione dell'utenza può rimanere sempre accesa in quanto è la centralina a determinare il giusto grado di laminazione della valvola per avere in casa la temperatura desiderata. 
- Una volta raggiunta la temperatura di comfort, questa regolazione è quella che spreca meno energia termica utilizzando esattamente il calore necessario a mantenere la temperatura interna costante. È la regolazione che richiede il minor flusso di acqua e fa tornare in centrale l'acqua alla più bassa temperatura possibile.  Inoltre, si evitano picchi di richiesta di calore dovuti all'accensione e allo spegnimento del riscaldamento che si hanno con i termostati comuni. 
+ Una volta raggiunta la temperatura di comfort, questa regolazione è quella che spreca meno energia termica utilizzando esattamente il calore necessario a mantenere la temperatura interna costante. È la regolazione che richiede il minor flusso di acqua e fa tornare in centrale l'acqua alla temperatura più bassa possibile.  Inoltre, si evitano picchi di richiesta di calore dovuti all'accensione e allo spegnimento del riscaldamento che si hanno con i termostati comuni. I tempi di salita si allineano con quelli della termoregolazione climatica.
 
 
 \subsection{Variazione della velocità delle pompe di circolazione interne all'utenza}
@@ -1516,9 +1522,9 @@ In conclusione possiamo affermare che la potenza scambiata e la temperatura di r
 Questo ci conferma ulteriormente che la regolazione da implementare dovrà essere necessariamente inserita sulla portata del circuito primario in modo da limitare il ritorno di temperatura al minimo possibile ma tale da garantire la temperatura ambiente impostata nel termostato di casa.
 
 \subsection{Regolazioni delle sotto-centrali di scambio a confronto}
-Utilizzando come base di riferimento uno scambiatore senza regolazioni, si esamina come varia l'andamento della temperatura di ritorno alla centrale $T_u$ e la portata $G_p$ in arrivo allo scambiatore dal lato della rete di distribuzione  confrontando i seguenti tipi di regolazione: termoregolazione a punto fisso, termoregolazione climatica e regolazione climatica evoluta PI.
+Utilizzando come base di riferimento uno scambiatore senza regolazioni, si esamina come varia l'andamento della temperatura di ritorno alla centrale $T_u$ e la portata $G_p$ in arrivo allo scambiatore dal lato della rete di distribuzione  confrontando i seguenti tipi di regolazione applicabili ad una centralina di utenza: termoregolazione a punto fisso, termoregolazione climatica e regolazione climatica evoluta PI.
 
-Utilizzando i dati ottenuti dalle simulazioni precedenti, in Figura \ref{fig:To_confronto}  si mostra l'andamento della  temperatura $T_u$ dei vari tipi di regolazione.
+Utilizzando i dati ottenuti dalle simulazioni precedenti, in Figura \ref{fig:To_confronto}  si mostra l'andamento della  temperatura $T_u$ dei vari tipi di regolazione. In Figura \ref{fig:portate_confronto} invece è rappresentato il grafico della portata in ingresso $G_p$ in ingresso allo scambiatore d'utenza delle regolazioni studiate. 
 
 \begin{figure}[!ht]
 \centering
@@ -1527,7 +1533,6 @@ Utilizzando i dati ottenuti dalle simulazioni precedenti, in Figura \ref{fig:To_
 \label{fig:To_confronto}
 \end{figure}
 
-In Figura \ref{fig:portate_confronto} invece è rappresentato il grafico della portata in ingresso $G_p$ in ingresso allo scambiatore d'utenza delle regolazioni studiate. 
 
 \begin{figure}[!ht]
 \centering
@@ -1540,7 +1545,7 @@ In Figura \ref{fig:portate_confronto} invece è rappresentato il grafico della p
 \begin{itemize}
 \item Scambiatore senza regolazione: non essendoci alcun tipo di regolazione, quando il sistema di riscaldamento dell'utenza è spento, l'acqua circola comunque nello scambiatore senza però cedere colore perciò l'acqua ritornerà in centrale alla stessa temperatura di quella a cui è stata mandata. La stazione di pompaggio spreca energia senza che sia consumato calore. Questa configurazione è sicuramente la meno efficiente.
 \item Termoregolazione a punto fisso: rispetto agli scambiatori senza regolazione si ha una riduzione della temperatura di ritorno $T_u$ e quando il riscaldamento è spento la valvola di laminazione si chiude in modo da non permettere il passaggio di acqua nello scambiatore. La temperatura di set point deve essere fissata ad una valore che permetta di scaldare la casa nelle condizioni peggiori possibili. Quindi, quando la temperatura esterna è maggiore di tale temperatura si fornirà surplus di  calore. Questo tipo di regolazione è economica ma sicuramente non la più efficiente.
-\item Termoregolazione climatica: il funzionamento è molto simile alla termoregolazione a punto fisso, ma il set point di temperatura in mandata ai radiatori varia secondo una curva di compensazione in funzione della temperatura esterna. Minore è la temperatura esterna, maggiore sarà la temperatura di mandata $t_u$. Gli sprechi sono dunque ridotti al minimo e quando la temperatura esterna non è critica abbiamo delle temperature più basse rispetto alla regolazione a punto fisso e di conseguenza anche la portata necessaria sarà minore. Tra le regolazioni che prevedono l'utilizzo di un termostato è sicuramente la migliore in termini di efficienza.
+\item Termoregolazione climatica: il funzionamento è molto simile alla termoregolazione a punto fisso, ma il set point di temperatura in mandata ai radiatori varia secondo una curva di compensazione in funzione della temperatura esterna. Minore è la temperatura esterna, maggiore sarà la temperatura di mandata $t_u$. Gli sprechi sono dunque ridotti al minimo in quanto otteniamo delle temperature più basse rispetto alla regolazione a punto fisso e di conseguenza anche la portata necessaria sarà minore. Tra le regolazioni che prevedono l'utilizzo di un termostato è sicuramente la migliore in termini di efficienza.
 \item Regolazione climatica evoluta PI: indubbiamente la migliore regolazione da installare in una sotto-centrale di utenza. Una volta che la temperatura ambiente si stabilizza al valore di comfort desiderato la  temperatura di ritorno $T_u$ sarà la minima raggiungibile. Utilizzando un controllore PI invece di un termostato (che produce un andamento oscillatorio tra due valori), si può mantenere sempre accesa la pompa di circolazione d'utenza limitando così i picchi di richiesta di calore sulla rete.
 
 
@@ -1556,7 +1561,7 @@ Il tutto è reso possibile da degli inverter i quali permettono di modificare il
 
 \subsection{Vantaggi di utilizzare pompe a velocità variabile}
 Un numero crescente di aziende si sta accorgendo dell'importanza dell'efficienza energetica e dell'impatto che essa esercita sui costi e sui profitti dell'azienda.
-In particolare, il prodotto che più immediatamente e in maniera consistente permette di conseguire dei risparmi energetici è l'inverter, soprattutto in applicazioni con movimentazione di fluidi, come ad esempio pompe centrifughe. Infatti, per tali applicazioni, è valida una legge fisica, chiamata "legge di affinità" descritta nell'equazione (\ref{eq:affinita}), la quale afferma che la potenza assorbita è proporzionale al cubo della velocità di rotazione del motore. Da tale condizione è facile capire come, dimezzando la velocità del motore, la potenza impiegata sarà di un ottavo della potenza a regime. 
+In particolare, il prodotto che più immediatamente e in maniera consistente permette di conseguire dei risparmi energetici è l'inverter, soprattutto in applicazioni con movimentazione di fluidi, come ad esempio pompe centrifughe. Infatti, per tali applicazioni, è valida una legge fisica, chiamata "legge di affinità" descritta nell'equazione (\ref{eq:affinita}), la quale afferma che la potenza assorbita è proporzionale al cubo della velocità di rotazione del motore. Da tale condizione è facile capire come, dimezzando la velocità del motore, la potenza impiegata sarà di ottavo della potenza a regime. 
 Variando la velocità di rotazione della pompa, si modifica la sua curva caratteristica. Quando si raggiungono basse velocità di rotazione si verifica un calo sensibile del rendimento. Variando il numero di giri della pompa variano sensibilmente gli assorbimenti della potenza, come evidenziato anche dalle relazioni di proporzionalità. Gli effetti benefici della variazione di velocità sono facilmente comprensibili mettendo in relazione la tecnica di controllo “con valvola di laminazione” e con l’utilizzo di inverter. 
 
 La valvola di laminazione effettua una riduzione della sezione della conduttura attraversata dal fluido, quindi in tale condizione se si desidera ridurre la portata della pompa centrifuga a portata inferiore, si sposta il punto di funzionamento, come risulta evidente dalla Figura \ref{fig:strozzatura}.
@@ -1577,14 +1582,14 @@ Il punto di funzionamento della pompa si sposta da $1$ a $2$, imponendo di fatto
 \label{fig:var_velocita}
 \end{figure}
 
-Dal punto di vista energetico la differenza è sostanziale: l'energia consumata è proporzionale alla differenza tra le due aree $A2$ e $A1$. Con la valvola di strozzatura il vantaggio è minimo, mentre nel secondo caso, grazie all'impiego di un inverter, l'incremento di efficienza energetica è decisamente più importante.
+Dal punto di vista energetico la differenza è sostanziale: l'energia consumata è proporzionale alla differenza tra le due aree $A1$ e $A2$. Con la valvola di strozzatura il vantaggio è minimo, mentre nel secondo caso, grazie all'impiego di un inverter, l'incremento di efficienza energetica è decisamente più importante.
 
 
 \section{Caratteristiche dell'impianto di Sant'Ippolito}
 Il sistema analizzato in simulazione è la rete di teleriscaldamento chiamata S. Ippolito. \`E costituito da una centrale di scambio con scambiatore di calore vapore - acqua. La temperatura dell'acqua in mandata alla rete di distribuzione è regolata da una valvola di laminazione che regola il flusso di vapore in ingresso allo scambiatore. La temperatura desiderata di mandata è decisa arbitrariamente in base alla stagione. Nella centrale di scambio è presente una stazione di pompaggio con pompe a velocità variabile.
 Le utenze allacciate ala rete dispongono di un sistema che regola il flusso in ingresso ai radiatori così da mantenere fissa la temperatura in mandata ai radiatori dell'abitazione. Questo tipo di regolazione aiuta ad abbattere la temperatura di ritorno rispetto a dei normali  scambiatori senza regolazioni di portata. La riduzione della temperatura di ritorno dovrebbe aiutare a limitare i consumi di energia di pompaggio, ma un sistema di regolazioni non adeguato rende il tutto vano. Le pompe sono controllate nel seguente modo. Si vuole mantenere la temperatura dell'acqua di ritorno alla centrale di scambio ad un certo valore di temperatura prestabilito. Dal momento che è possibile regolare la velocità delle pompe, questa regolazione   risulterebbe efficiente nel caso le utenze avessero una configurazione con valvole a tre vie come nel paragrafo \ref{subsec:3vie}. Nella situazione attuale, invece, quando le utenze richiedono poco calore, le valvole di laminazione si chiudono quasi totalmente facendo passare solo una piccola quantità di acqua nello scambiatore di utenza. L'acqua in circolo a causa della portata ridotta cederà gran parte del suo calore e l'abbattimento di temperatura sarà elevato. La situazione che si può verificare, è quella di avere l'acqua di ritorno a temperatura minore di quella impostata come set point cosicché i sensori ordineranno alle pompe di aumentare la velocità per incrementare la portata  nel circuito ed innalzare la temperatura dell'acqua. Ciò che si verifica è avere le pompe che lavorano quasi sempre al massimo dei giri sopratutto nei periodi con bassa richiesta di calore da parte delle utenze.
 
-In seguito verranno descritte tutte le caratteristiche della rete e i parametri utilizzati per la simulazione
+In seguito verranno descritte tutte le caratteristiche della rete e i parametri utilizzati in simulazione
 
 \subsection{Dati della rete di distribuzione}
 La rete che andremo ad analizzare è descritta nella Tabella \ref{tab:rete_ippolito}. La conduttura primaria ha una lunghezza totale di 1848 $m$ a doppio tubo. Le tubazioni presenti sono pre-isolate con schiuma poliuretanica ed hanno diametri variabili. In Tabella \ref{tab:condotte} sono elencate e descritte le varie tipologie di tubazioni utilizzate nella rete.
@@ -1645,7 +1650,7 @@ Le curva caratteristica della pompa e la sua curva di rendimento sono mostrate i
 
 \subsection{Dati delle utenze allacciate alla rete}
 In Tabella \ref{tab:par_utenze} sono mostrati tutti i parametri delle utenze utilizzati in simulazione. Un parametro comune a tutte le utenze è l'esponente $n$ dei radiatori uguale ad 1,32.
-La descrizione dettagliata dei parametri che andremo a definire si trova nel capitolo 3. 
+Per la descrizione dettagliata dei parametri, si rimanda al Capitolo 3. 
 
 \begin{table}[!ht]
 \centering
@@ -1672,18 +1677,18 @@ La descrizione dettagliata dei parametri che andremo a definire si trova nel cap
 \end{table}
 
 \section{Simulazioni}
-Nelle simulazioni che andremo ad effettuare, si vuole mostrare quale regolazione, ovvero quale sistema di limitazione della portata in ingresso allo scambiatore d'utenza, sia migliore al fine di ottenere i più bassi consumi di energia elettrica per il pompaggio dell'acqua nella rete di distribuzione. Verrà effettuata una simulazione per ogni tipo di regolazione esaminata nei paragrafi precedenti per un periodo di 24 ore. Inizialmente le utenze partiranno da una temperatura di 18 $^{\circ}C$ con pareti a 15 $^{\circ}C$ per arrivare ad una temperatura desiderata di 20 $^{\circ}C$. Inizialmente partiamo da una temperatura interna inferiore a quella di set-point per vedere come si comporta il sistema di fronte ad un picco di richiesta di energia termica. La temperatura esterna segue un andamento come quello della Figura \ref{fig:temp_est}.
+L'obiettivo dello studio di simulazione effettuato è capire quale regolazione, ovvero quale sistema di limitazione della portata in ingresso allo scambiatore d'utenza, sia migliore in termini di consumo di energia elettrica per il pompaggio dell'acqua nella rete di distribuzione. Verrà effettuata una simulazione per ogni tipo di regolazione esaminata nei paragrafi precedenti per un periodo di 24 ore. Inizialmente le utenze partiranno da una temperatura di 18 $^{\circ}C$ con pareti a 15 $^{\circ}C$ per arrivare ad una temperatura desiderata di 20 $^{\circ}C$. Inizialmente partiamo da una temperatura interna inferiore a quella di set-point per vedere come si comporta il sistema di fronte ad un picco di richiesta di energia termica. La temperatura esterna segue un andamento come quello della Figura \ref{fig:temp_est}.
 
-Quando le utenze hanno regolazioni sul flusso di acqua in ingresso allo scambiatore possiamo cercare di ottimizzare i consumi di energia elettrica per il pompaggio utilizzando una pompa a giri variabili che si adatta in base ai valori di portata richiesti dalle abitazioni. Dobbiamo immaginare come se tutte le utenze comunicassero alla centrale termica la portata in ingresso allo scambiatore a loro necessaria in quel momento, di conseguenza la pompa dovrà essere in grado di adattarsi ad una certa velocità tale da garantire una portata uguale alla somma delle portate richieste e allo stesso tempo la potenza istantanea dovrà essere la minima possibile.\\
+Quando le utenze hanno regolazioni sul flusso di acqua in ingresso allo scambiatore possiamo cercare di ottimizzare i consumi di energia elettrica per il pompaggio utilizzando una pompa a giri variabili che si adatta in base ai valori di portata richiesti dalle abitazioni. Si ipotizza che tutte le utenze comunichino alla centrale termica la portata in ingresso allo scambiatore a loro necessaria in quel momento. Di conseguenza, la pompa dovrà essere in grado di adattarsi ad una  velocità che garantisca una portata uguale alla somma delle portate richieste, e ad una prevalenza tale da minimizzare la potenza istantanea.\\
 
-In seguito si analizzeranno in consumi delle pompe a velocità variabile e a velocità fissa per ogni tipo di regolazione sull'utenza applicate alla rete di Sant'Ippolito. 
+In seguito si analizzeranno in consumi con una pompa a velocità variabile e una a velocità fissa per ogni tipo di regolazione applicabile ad una centralina d'utenza collegata alla rete di Sant'Ippolito. 
 
 \subsection{Simulazione rete senza regolazioni}
-Il sistema di teleriscaldamento preso in esame già dispone di regolazioni di portata anche se il controllo sulla velocità della pompa è completamente sbagliato. Detto questo, come primo caso, prendiamo la nostra rete con sotto-stazioni d'utenza prive di regolatori di portata per vedere come si comporta l'impianto e quali a conclusioni possiamo arrivare. 
+Il sistema di teleriscaldamento preso in esame già dispone di regolazioni di portata, sebbene il controllo sulla velocità della pompa non sia stato ottimizzato. Come primo caso, di considera la  rete con sotto-stazioni d'utenza prive di regolatori di portata.
 
-Dal momento che non sono presenti regolazioni a livello d'utenza è assolutamente inutile andare ad inserire ad esempio un inverter per controllare il numero di giri della pompa in base alla differenza di pressione tra mandata e ritorno misurata. Infatti, prevalenza e portata dipendono solamente da come è costruita la rete e non può variare nel tempo dato che non è presente nessun elemento di controllo che possa far variare i flussi d'acqua in ingresso agli scambiatori d'utenza.
+Dal momento che non sono presenti regolazioni a livello d'utenza, non è possibile inserire un inverter per controllare la velocità  della pompa. Infatti, prevalenza e portata dipendono solamente da come è costruita la rete e non può variare nel tempo dato che non è presente nessun elemento di controllo che possa far variare i flussi d'acqua in ingresso agli scambiatori d'utenza.
 
-Detto ciò in Figura \ref{fig:sim1_noreg} si può vedere quale sia il punto di funzionamento dell'impianto, ovvero il punto di intersezione tra la curva caratteristica della pompa e la curva caratteristica della rete di distribuzione.
+In Figura \ref{fig:sim1_noreg} si può vedere quale sia il punto di funzionamento dell'impianto, ovvero il punto di intersezione tra la curva caratteristica della pompa e la curva caratteristica della rete di distribuzione.
 
 \begin{figure}[!ht]
 \centering
@@ -1692,7 +1697,7 @@ Detto ciò in Figura \ref{fig:sim1_noreg} si può vedere quale sia il punto di f
 \label{fig:sim1_noreg}
 \end{figure}
 
-Si nota che il punto di funzionamento ha:
+Il punto di funzionamento è caratterizzato dai seguenti valori:
 \begin{itemize}
 \item[-] Portata : 23040 $l/h$
 \item[-] Prevalenza: 37,5 $m$
@@ -1717,18 +1722,18 @@ Andando più nel dettaglio, in Figura \ref{fig:sim2_noreg}, si può vedere le po
 \label{fig:sim2_noreg}
 \end{figure}
 
-Si può notare come le prime utenze possano disporre di un flusso maggiore di acqua rispetto le ultime. Le abitazioni posizionate più vicine alla centrale termica avranno un costante surplus di energia mentre le più lontane rischiano di avere i radiatori freddi. Essendo per di più le ultime utenze quelle con volumetrie maggiori, la portata entrante nello scambiatore dovrebbe essere di gran lunga superiore a quella fornitagli in questo caso. 
+Si nota come le prime utenze possano disporre di un flusso maggiore di acqua rispetto alle ultime. Le abitazioni posizionate più vicine alla centrale termica avranno un costante surplus di energia mentre le più lontane rischiano di avere i radiatori freddi. Essendo per di più le ultime utenze quelle con volumetrie maggiori, la portata entrante nello scambiatore dovrebbe essere di gran lunga superiore a quella fornitagli in questo caso. 
 
 Per funzionare correttamente uno scambiatore dovrebbe avere almeno una differenza di pressione tra ingresso e uscita di circa 5 $m$. Questo vincolo non è raggiunto dalle ultime sei utenze. 
 Ciò evidenzia come l'utilizzo di scambiatori senza regolazioni per questo tipo di rete sia assolutamente controindicato.
 
 
 \subsection{Simulazione della rete con termoregolazione a punto fisso sulle utenze}
-Nella prossima simulazione andremo a verificare il comportamento della rete quando sono presenti termoregolazioni a punto fisso sulle utenze. 
+Nella prossima simulazione andremo a verificare il comportamento della rete quando sono presenti nelle centraline d'utenza termoregolazioni a punto fisso. 
 
 La temperatura di set-point dell'acqua in ingresso ai radiatori è impostata a 70 $^{\circ}$C.
 
-In Figura \ref{fig:sim_regmandata} è mostrato l'andamento della prevalenza, portata e potenze istantanee della pompa di circolazione.
+In Figura \ref{fig:sim_regmandata} è mostrato l'andamento della prevalenza, portata e potenza istantanea della pompa di circolazione.
 
 \begin{figure}[!ht]
 \centering
@@ -1748,9 +1753,8 @@ In seguito andremo a verificare il comportamento della rete quando sono presenti
 
 La curva di compensazione fa riferimento alla seguente retta:
 \begin{equation}
-y = -1,65 x + 68
+t_u = -1,65 \Theta_e + 68
 \end{equation}
-Al posto della $x$ dovremmo sostituire i valori della temperatura esterna misurati dalla sonda ed otterremo la temperatura di set-point $t_u$ in mandata ai radiatori  desiderata.
 
 In Figura \ref{fig:sim_climatica} è mostrato l'andamento della prevalenza, portata e potenza istantanea della pompa di circolazione.
 
@@ -1768,7 +1772,7 @@ Il consumi della pompa risultano:
 \end{itemize}
 
 \subsection{Simulazione della rete con regolazione climatica evoluta PI sulle utenze}
-Nella sezione si andrà a studiare il comportamento della rete quando sono presenti regolazioni climatiche evolute PI sulle utenze.  La curva di compensazione fa riferimento alla curva descritta nell' equazione (4.1).
+Nella sezione si andrà a studiare il comportamento della rete quando sono presenti centraline con regolazioni climatiche evolute PI sulle utenze.  La curva di compensazione fa riferimento alla curva descritta nell' equazione (4.1).
 
 In Figura \ref{fig:sim_PID} è mostrato l'andamento della prevalenza, portata e potenza istantanea della pompa di circolazione.
 
@@ -1786,12 +1790,11 @@ Il consumi della pompa risultano:
 \end{itemize}
 
 \section{Confronto dei risultati ottenuti}
-
-Soffermiamo l'attenzione sui risultati ottenuti dalle simulazioni. Utenze con scambiatori senza regolazioni sono da evitare sopratutto perché nella rete presa in esame la pompa non riuscirebbe a fornire a tutte le utenze la portata necessaria a scaldare l'abitazione.
+Utenze con scambiatori senza regolazioni sono da evitare sopratutto perché nella rete presa in esame la pompa non riuscirebbe a fornire a tutte le utenze la portata necessaria a scaldare l'abitazione.
 
 Considerando questo fatto, ci focalizzeremo soltanto sui diversi tipi di regolazioni applicabili alle sotto-stazioni di utenza. 
 
-Se la stazione di pompaggio fosse a giri fissi i consumi di energia elettrica per il pompaggio più o meno si equivalgono, mentre se si considera una stazione di pompaggio che ha la possibilità di regolare la sua velocità al fine di trovare il punto di lavoro tale da ritornare una potenza istantanea più bassa possibile, le regolazioni che comportano un risparmio energetico maggiore sono: termoregolazione climatica e regolazione climatica evoluta PI. I consumi ed i risparmi ottenuti con le diverse regolazioni sono mostrati in Tabella \ref{tab:consumi_pompa}.
+Se la stazione di pompaggio fosse a giri fissi i consumi di energia elettrica per il pompaggio più o meno si equivalgono, mentre se si considera una stazione di pompaggio che ha la possibilità di regolare la sua velocità al fine di trovare il punto di lavoro tale da minimizzare la potenza istantanea, le regolazioni che comportano un risparmio energetico maggiore sono la termoregolazione climatica e la regolazione climatica evoluta PI. I consumi ed i risparmi ottenuti con le diverse soluzioni sono mostrati in Tabella \ref{tab:consumi_pompa}.
 
 La regolazione climatica evoluta PI può essere preferibile rispetto alla termoregolazione climatica perché limita i picchi di richiesta mantenendo l'andamento della portata della pompa più regolare.
  
@@ -1807,7 +1810,7 @@ La regolazione climatica evoluta PI può essere preferibile rispetto alla termor
 \textbf{\begin{tabular}[c]{@{}c@{}}Regolazione climatica \\ avanzata PI\end{tabular}} & 67,05
 & 15,92                                                                                           & 76                    \\ \hline
 \end{tabular}}
-\caption{Risparmi di energia ottenuti utilizzando una pompa a giri variabili rispetto ad una pompa a giri fissi }
+\caption{Risparmi di energia ottenuti utilizzando una pompa a giri variabili rispetto ad una pompa a giri fissi.}
 \label{tab:consumi_pompa}
 \end{table}
 
@@ -1828,7 +1831,7 @@ La regolazione della riga viene confrontata con quella indicata nella colonna.
 \textbf{\begin{tabular}[c]{@{}c@{}}Termoregolazione\\ climatica\end{tabular}}        & - no risparmio                                                                             & -                                                                             &  17                                                                                 \\ \hline
 \textbf{\begin{tabular}[c]{@{}c@{}}Regolazione climatica \\ evoluta PI\end{tabular}} & - no risparmio                                                                             & - no risparmio                                                                          & -                                                                                   \\ \hline
 \end{tabular}}
-\caption{Confronto incrociato sui risparmi tra le diverse regolazioni applicabili a livello utenza.}
+\caption{Confronto incrociato sui risparmi tra le diverse regolazioni applicabili a livello utenza, con stazione di pompaggio a velocità variabile.}
 \label{tab:risp_pompa}
 \end{table}
 
@@ -1851,23 +1854,23 @@ In Figura \ref{fig:To_confronto2} invece è mostrato l'andamento nel tempo della
 
 La portata della pompa è molto variabile nella rete con sotto-stazioni d'utenza con regolazione a punto fisso e con termoregolazione climatica. La regolazione climatica evoluta PI è quella che permette di avere un portata della pompa più costante evitando picchi di portata.
 
-La temperatura di ritorno $T_u$  è più alta con l'impianto avente le regolazioni a punto fisso. Per metà del tempo della simulazione la temperatura di ritorno è praticamente uguale sia per le reti con termoregolazioni climatiche che per quelle con regolazioni climatiche evolute PI. Questo è dovuto al fatto che nella prima parte della simulazione le utenze vogliono raggiungere la temperatura interna desiderata. Quindi per entrambe le regolazioni si vorrà la temperatura di mandata $t_u$ ai radiatori più alta possibile rispetto alla temperatura esterna misurata per scaldare il più velocemente l'abitazione. In questa prima parte il calore erogato all'utenza è determinato dalla curva di compensazione climatica. Dal momento che le utenze raggiungono la temperatura desiderata (circa all'ora 10 della simulazione), gli andamenti si differenziano. Per le termoregolazioni climatiche, la temperatura di ritorno si alza perché la  temperatura esterna è più bassa, e dovendo fornire più calore  si dovrà alzare la temperatura di mandata $t_u$ ad un livello più alto comportando un aumento della temperatura di ritorno $T_o$. Nel caso di regolazione climatica evoluta PI si manderà ai radiatori l'acqua ad una temperatura tale da mantenere l'abitazione alla temperatura desiderata, sicuramente inferiore rispetto a quella fornita dalla regolazione climatica. Questo si traduce con una temperatura di ritorno mediamente più bassa rispetto alla termoregolazione climatica.
+La temperatura di ritorno $T_u$  è più alta con l'impianto che possiede le regolazioni a punto fisso. Per metà del tempo della simulazione la temperatura di ritorno è praticamente uguale sia per le reti con termoregolazioni climatiche che per quelle con regolazioni climatiche evolute PI. Questo è dovuto al fatto che nella prima parte della simulazione le utenze vogliono raggiungere la temperatura interna desiderata. Quindi per entrambe le regolazioni si vorrà che la temperatura di mandata $t_u$ ai radiatori sia la più alta possibile rispetto alla temperatura esterna misurata, per scaldare il più velocemente l'abitazione. In questa prima parte il calore erogato all'utenza è determinato dalla curva di compensazione climatica. Dal momento che le utenze raggiungono la temperatura desiderata (circa all'ora 10 della simulazione), gli andamenti si differenziano. Per le termoregolazioni climatiche, la temperatura di ritorno si alza perché la  temperatura esterna è più bassa, e dovendo fornire più calore  si dovrà alzare la temperatura di mandata $t_u$ ad un livello più alto comportando un aumento della temperatura di ritorno $T_u$. Nel caso di regolazione climatica evoluta PI si manderà ai radiatori l'acqua ad una temperatura tale da mantenere l'abitazione alla temperatura desiderata, sicuramente inferiore rispetto a quella fornita dalla termoregolazione climatica. Questo si traduce con una temperatura di ritorno mediamente più bassa per la regolazione PI rispetto alla termoregolazione climatica.
 
 \chapter{Conclusioni e sviluppi futuri}
 
-Lo scopo di questa tesi è quello di esaminare delle soluzioni per ottimizzare un sistema di teleriscaldamento da fonte geotermica che permettano di ridurre i suoi costi di gestione. Per questo tipo di impianto gli unici consumi di energia non rinnovabile derivano dalle stazioni di pompaggio. L'ottimizzazione di tali consumi è resa possibile grazie all'introduzione di centraline di utenza le quali controllano che i flussi all'interno degli scambiatori d'utenza siano quelli ottimali. L'introduzione di questi elementi di regolazione permettono di inserire un'ulteriore controllo direttamente sulla pompa che fa circolare l'acqua nella rete di distribuzione. Si può introdurre pompe a velocità variabile  che dovranno lavorare sempre in condizioni di buon rendimento e con il minimo consumo garantendo alle utenze allacciate alla rete i flussi d'acqua calda necessaria al proprio fabbisogno. 
+Lo scopo di questa tesi è stato quello di esaminare delle politiche di gestione di un sistema di teleriscaldamento da fonte geotermica che permettano di ridurre i suoi costi di gestione. Per questo tipo di impianto, gli unici consumi di energia non rinnovabile derivano dalle stazioni di pompaggio. L'ottimizzazione di tali consumi è resa possibile grazie all'introduzione di centraline di utenza le quali controllano che i flussi all'interno degli scambiatori siano quelli ottimali. L'introduzione di questi elementi di regolazione permettono di inserire un ulteriore controllo direttamente sulla pompa che fa circolare l'acqua nella rete di distribuzione. Si possono introdurre pompe a velocità variabile  che dovranno lavorare sempre in condizioni di buon rendimento e con il minimo consumo garantendo alle utenze allacciate alla rete i flussi d'acqua calda necessari al proprio fabbisogno. 
 
-Per quanto riguarda la stazione di pompaggio il migliore controllo è il seguente: Le utenze appartenenti alla rete (oppure soltanto le utenze svantaggiate)  dovranno comunicare ad intervalli di tempo regolari alla pompa se la portata in ingresso allo scambiatore è sufficiente alle proprie necessità. Se una casa non ottiene il corretto flusso in ingresso allo scambiatore, la pompa provvederà subito aumentando la velocità ad un valore tale da garantire una portata sufficiente a tutte le utenze e tale da erogare una potenza istantanea più bassa possibile. La temperatura dell'acqua calda in mandata alla rete è mantenuta costante.
+Per quanto riguarda la stazione di pompaggio, il migliore controllo è il seguente: le utenze appartenenti alla rete (oppure soltanto le utenze svantaggiate)  dovranno comunicare ad intervalli di tempo regolari alla pompa se la portata in ingresso allo scambiatore è sufficiente alle proprie necessità. Se una casa non ottiene il flusso desiderato in ingresso allo scambiatore, la pompa provvederà subito aumentando la sua velocità ad un valore tale da garantire una portata sufficiente a tutte le utenze e tale da erogare una potenza istantanea più bassa possibile. La temperatura dell'acqua calda in mandata alla rete è mantenuta costante.
 
-Utilizzando pompe a giri variabili e una temperatura in mandata alla rete $T_i$ fissa, le centraline d'utenza che garantiscono i risparmi maggiori sono quelle che dispongono di termoregolazione climatica e quelle con regolazione climatica evoluta PI. I risparmi ottenuti sono paragonabili ed è difficile preferire una regolazione ad un'altra. La scelta dipenderà molto anche dai costi di installazione. Se però si volesse controllare anche la temperatura di mandata $T_i$, per un'ulteriore ottimizzazione dell'impianto, le centraline con regolazione climatica evoluta PI sono sicuramente le migliori. Nella rete, la variazione della temperatura di mandata $T_i$ non è immediata come la variazione di portata perciò una regolazione che limita a massimo i picchi di richiesta di calore è preferibile.
+Utilizzando pompe a giri variabili e una temperatura in mandata alla rete $T_i$ fissa, le centraline d'utenza che garantiscono i risparmi maggiori sono quelle che dispongono di termoregolazione climatica e quelle con regolazione climatica evoluta PI. I risparmi ottenuti sono paragonabili ed è difficile preferire una regolazione all'altra. La scelta dipenderà molto anche dai costi di installazione. Se però si volesse controllare anche la temperatura di mandata $T_i$, per un'ulteriore ottimizzazione dell'impianto, le centraline con regolazione climatica evoluta PI sono sicuramente le migliori. Nella rete, la variazione della temperatura di mandata $T_i$ non è immediata come la variazione di portata. Per questo motivo, una regolazione che limiti al massimo i picchi di richiesta di calore è preferibile.
 
-Per quanto riguarda il gestore dell'impianto le centraline di utenza risultano essere un elemento fondamentale per la regolazione e l'ottimizzazione di un impianto di teleriscaldamento permettendo di ridurre i consumi allo stretto indispensabile.  Inoltre possono rilevare e comunicare   molte informazioni sullo stato di funzionamento degli scambiatori.
+Per quanto riguarda il gestore dell'impianto, le centraline di utenza risultano essere un elemento fondamentale per la regolazione e l'ottimizzazione di un impianto di teleriscaldamento permettendo di ridurre i consumi di energia di pompaggio.  Inoltre, possono rilevare e comunicare   molte informazioni sullo stato di funzionamento degli scambiatori.
 
 
 \section{Sviluppi futuri}
-I futuri sviluppi possono essere suddivisi in due parti, di cui una più pratica e una che riguarda la modellistica e la risoluzione di problemi di ottimizzazione: 
+I futuri sviluppi possono essere suddivisi in due parti, di cui una più pratica e una riguardante la modellistica e la risoluzione di problemi di ottimizzazione: 
 \begin{itemize}
-\item  Realizzazione di una centralina d'utenza intelligente: una volta verificato che delle regolazioni sono necessarie per l'ottimizzazione dei consumi di un impianto si dovrà procedere alla costruzione di una centralina che permetta di soddisfare tutti le richieste descritte nella sezione \ref{sec:centraline} ed inoltre dovrà essere economica dato che è la stessa società  di gestione dell'impianto che fa carico dei costi di installazione e manutenzione delle sotto-centrali d'utenza.
+\item  Realizzazione di una centralina d'utenza intelligente: una volta verificato che delle regolazioni sono necessarie per l'ottimizzazione dei consumi di un impianto si dovrà procedere alla costruzione di una centralina che permetta di soddisfare tutti le richieste descritte nel paragrafo \ref{sec:centraline} ed inoltre dovrà essere economica, dato che è la stessa società  di gestione dell'impianto che si fa carico dei costi di installazione e manutenzione delle sotto-centrali d'utenza.
 \item Sviluppo di un modello predittivo per determinare quale sia la migliore temperatura dell'acqua in mandata dalla centrale termica in base alla situazione climatica.
 \end{itemize}
 Il secondo punto è molto importante perché può permettere ulteriormente la riduzione dei consumi di energia elettrica ed è quindi meritevole di un ulteriore approfondimento. 
@@ -1876,9 +1879,9 @@ Il secondo punto è molto importante perché può permettere ulteriormente la ri
 I modelli utilizzati nel simulatore implementato nello studio sono affetti da incertezza dovuta al fatto che molte grandezze che influenzano una rete non sono facilmente predicibili e/o quantificabili.
 Certamente in un primo futuro si potrà migliorare l'accuratezza del simulatore grazie ad una calibrazione dei modelli sulla base di un'estesa campagna di prove sperimentali. 
 %Inoltre, è possibile creare un sistema per determinare quale sia la migliore temperatura dell'acqua in mandata in base alla situazione climatica.
-Un altro aspetto molto importante riguardante la gestione di un impianto di teleriscaldamento è la determinazione della temperatura in mandata al circuito primario in funzione della temperatura esterna e del periodo temporale. Conoscere la stagione oppure anche l'ora del giorno può facilitare la previsione di picchi di richiesta di energia ed in tal caso fare le opportune regolazioni per affrontarli al meglio.
+Un altro aspetto molto importante riguardante la gestione di un impianto di teleriscaldamento è la determinazione della temperatura in mandata al circuito primario in funzione della temperatura esterna e dell'anno o della giornata. Conoscere la stagione oppure anche l'ora del giorno può facilitare la previsione di picchi di richiesta di energia ed in tal caso fare le opportune regolazioni per affrontarli al meglio \cite{sandou2005predictive}.
 
-Lo scopo è quello di indagare sulla possibilità di aumentare l'efficienza elettrica, cioè di ridurre i consumi di energia di pompaggio, regolando la temperatura di mandata.
+Lo scopo è quello di indagare sulla possibilità di aumentare l'efficienza elettrica, cioè di ridurre i consumi di energia di pompaggio, regolando la temperatura di mandata \cite{zinko}.
 Il controllo di questo parametro dovrebbe essere possibile applicando una strategia di controllo dinamico e predittivo, utilizzando un modello appropriato del sistema di teleriscaldamento ed evitando che l'affidabilità della distribuzione del calore ai clienti venga compromessa.
 
 Il bisogno di riscaldamento e acqua calda varia in funzione delle condizioni metereologiche (che determinano le perdite di calore dagli edifici) e il comportamento delle persone che le utilizzano. Se queste variazioni possono essere previste, la temperatura di mandata potrebbe seguire la richiesta di calore. Il calore fornito  dipende dalla temperatura dell'acqua in uscita dall'impianto (che è controllato dalla centrale termica) e il flusso di acqua che attraversa la rete. 
@@ -1908,9 +1911,9 @@ Una volta che si varia la temperatura di mandata, prima che l'acqua in tutta la 
 Si noti che mentre la temperatura di mandata in funzione del tempo è facile da determinare, poiché la temperatura dall'impianto si propaga attraverso la linea di alimentazione con l'acqua che scorre, il valore per la temperatura di ritorno, è data dalla miscelazione di tute la acque di ritorno dalle utenze. Non è perciò possibile distinguere la temperatura di ritorno in un momento specifico, ma l'espressione citata sopra fornirà un valore medio.
 
 \subsubsection{Termine feedforward}
-La temperatura di mandata di un impianto verrà controllata con l'aggiunta di un termine feedforward nella legge di controllo. L'idea è quella di usare le informazioni relative ad un disturbo del sistema misurabile (come la temperatura esterna) per compensare le variazioni sul carico della rete che esso stesso comporta. Ciò significa che un modello relativo al rapporto tra il carico e la temperatura esterna dovrà essere utilizzato per calcolare il punto di controllo della temperatura di mandata.
-La ragione per usare questo controllo è dovuta ai lunghi tempi di trasporto di acqua nel sistema. Se per il calcolo della temperatura di alimentazione si utilizzasse una retroazione, la risposta del sistema sarebbe si otterrebbe troppo in ritardo.
-La difficoltà del calcolo del termine feedforward è fare un buon modello che metta in relazione  il segnale di disturbo e l'uscita del sistema. Di solito, viene utilizzata una curva di controllo in cui la temperatura di mandata aumenta linearmente al diminuire della temperatura esterna sotto un certo punto di rottura. Il punto di rottura corrisponde alla temperatura più bassa di alimentazione che assicuri la giusta temperatura di acqua calda. 
+La temperatura di mandata di un impianto verrà controllata con l'aggiunta di un termine feedforward nella legge di controllo. L'idea è quella di usare le informazioni relative ad un disturbo del sistema misurabile (come la temperatura esterna) per compensare le variazioni sul carico della rete che esso stesso comporta \cite{arvastson2001stochastic}. Ciò significa che un modello relativo al rapporto tra il carico e la temperatura esterna dovrà essere utilizzato per calcolare il punto di controllo della temperatura di mandata.
+La ragione per usare questo controllo è dovuta ai lunghi tempi di trasporto di acqua nel sistema. Se per il calcolo della temperatura di alimentazione si utilizzasse una retroazione, la risposta del sistema sarebbe ritardata.
+Il calcolo del termine feedforward richiede la conoscenza di un modello che metta in relazione  il segnale di disturbo con l'uscita del sistema. Di solito, viene utilizzata una curva di controllo in cui la temperatura di mandata aumenta linearmente al diminuire della temperatura esterna sotto un certo punto di rottura. Il punto di rottura corrisponde alla temperatura più bassa di alimentazione che assicuri la giusta temperatura dell'acqua per usi domestici. 
 
 
 %\subsubsection{Modello sperimentale}
@@ -1945,10 +1948,10 @@ La difficoltà del calcolo del termine feedforward è fare un buon modello che m
 %%%%%%%%%%%%%%%
 % Appendici
 %%%%%%%%%%%%%%%
-\appendix
-\chapter{Appendice A: Dettagli}
+%\appendix
+%\chapter{Appendice A: Dettagli}
 %\input{introapp}
-\input{AppendiceA}
+%\input{AppendiceA}
 
 %%%%%%%%%%%%%%%
 % Bibliografia
@@ -1956,7 +1959,19 @@ La difficoltà del calcolo del termine feedforward è fare un buon modello che m
 %\input{biblio}           % Bibliografia
 %
 
-\cite{sandou2005predictive}
+\nocite{ccomakli2004evaluation}
+\nocite{saarinen2008modelling}
+\nocite{harvey2012handbook}
+\nocite{benonysson1995operational}
+\nocite{nielsen2000predicting}
+\nocite{bahadorani2009optimization}
+\nocite{sarbu1998energetic}
+\nocite{appunti}
+\nocite{airu}
+\nocite{hera}
+\nocite{iea}
+\nocite{idea}
+\nocite{ugi}
 
 \bibliographystyle{IEEEbib} %plain
 %\bibliographystyle{unsrt}
