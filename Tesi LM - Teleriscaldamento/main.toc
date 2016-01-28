@@ -41,7 +41,7 @@
 \contentsline {subsection}{\numberline {4.4.1}Regolazione di portata assente}{60}
 \contentsline {subsection}{\numberline {4.4.2}Termoregolazione a punto fisso}{61}
 \contentsline {subsection}{\numberline {4.4.3}Termoregolazione climatica}{62}
-\contentsline {subsection}{\numberline {4.4.4}La regolazione climatica evoluta PI}{66}
+\contentsline {subsection}{\numberline {4.4.4}La regolazione climatica evoluta PI}{65}
 \contentsline {subsection}{\numberline {4.4.5}Variazione della velocit\IeC {\`a} delle pompe di circolazione interne all'utenza}{68}
 \contentsline {subsection}{\numberline {4.4.6}Regolazioni delle sotto-centrali di scambio a confronto}{69}
 \contentsline {section}{\numberline {4.5}Soluzioni per ridurre i consumi di energia di pompaggio}{71}
